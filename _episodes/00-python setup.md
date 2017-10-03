@@ -1,11 +1,11 @@
 
 
 
-Setup instructions for python
+## Setup instructions for python
 
 In order to complete the materials for the Python lesson you will need Python to be installed on your machine. As many of the examples and exercises use Jupyter ntebooks this will also need to be available. 
 
-The Anaconda (link) distribution of python will allow you to install both Python and Jupyter notebooks as a single install. Anacondo will also install many other commonly used Python packages.
+The [Anaconda](https://www.anaconda.com/download/) distribution of python will allow you to install both Python and Jupyter notebooks as a single install. Anacondo will also install many other commonly used Python packages.
 
 ## How to install the Anaconda distribution of python
 
