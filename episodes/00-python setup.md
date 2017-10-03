@@ -33,8 +33,8 @@ The Anaconda (link) distribution of python will allow you to install both Python
 7.	The Jupyter package crerates a small web services and opens your browser pointing at it. If your browser does not open, you can open it manually and specify an IP address of ‘localhost:8888’. 
 8.	Port 8888 is the default port used by the Jupyter web service, but if it is already in use it will increment the port number automatically. Either way the port number it does use is given in a message in the cmd /powershell window.
 9.	Once running, the cmd /powershell window will display additional messages, about saving notebooks etc. but there is no need to interact with it directly. The window can be minimized and ignored.
-10.	To shut Jupyter down select the cmd/powershell window and type Ctrl+c twice.
+10.	To shut Jupyter down select the cmd/powershell window and type Ctrl+c twice and then close the window.
 
 
 ## Downloading the prepared Jupyter Notebooks
-For the purpose of this lesson a set of Jupyter notebooks have been prepared. They can be downloaded from [here](???)
+For the purpose of this lesson a set of Jupyter notebooks have been prepared. They can be downloaded from [here](???). However it may be more instructive for you to create your own set of notebook and type in the code directly.
