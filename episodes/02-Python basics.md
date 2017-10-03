@@ -27,7 +27,15 @@ objectives:
 - "List the native data types in Python"
 
 keypoints:
-- "First key point."
+- "The Jupyter environnment can be used to write code segments and display results"
+- "Datatypes in Pyhthon are implicit based on variable values"
+- "Basic datatypes are Integer, Float, String and Boolean"
+- "Lists and Dictionaries are structured datatypes"
+- "Arithmetic uses standard arithmetic operators, precedence can be changed using brackets "
+- "Help is available for builtin functions using the `help()` function further help and code examples are available online "
+- "In Jupyter you can get help on function parameters using  `shift`+`tab`
+- "Many functions are in fact methods associated with specific object types "
+
 ---
 
 
@@ -371,3 +379,84 @@ if bool_val :
 > > 
 > {: .solution}
 {: .challenge}
+
+## Structured datatypes
+
+A structured datatype is a datatype which is made up of some combination of the base datatypes in a well defined but potentially arbitarily complex ways. 
+
+### The list
+
+A list is a set of values, of any type seperated by commas and delimited by '[' and ']'
+
+~~~
+
+list1 = [6, 54, 89 ]
+print(list1)
+print(type(list1))
+
+list2 = [3.142, 2.71828, 9.8 ]
+print(list2)
+print(type(list2))
+
+myname = "Peter"
+list3 = ["Hello", 'to', myname ]
+print(list3)
+myname = "Fred"
+print(list3)
+print(type(list3))
+
+list4 = [6, 5.4, "numbers", True ]
+print(list4)
+print(type(list4))
+
+~~~
+
+### The range function
+
+In addition to explicitly creating lists as we have above it is very common to create and populate them automatically using the `range()` function in combination with the `list()` function
+
+~~~
+
+list5 = list(range(5))
+print(list5)
+
+~~~
+
+Unless told not to range() returns a sequence which starts at 0, counts up by 1 and ends 1 before the value of the provided parameter.
+
+This can be a cause of confusion. `range(5)` above does indeed have 5 values, but rather than being 1,2,3,4,5 which you might naturally think, they are in fact 0,1,2,3,4. The range starts at 0 and  stops one before the value of the single parameter we specified.
+
+If you want different sequences, then you can modify the behaviour of the `range()` function by using additional parameters.
+
+~~~
+
+list6 = list(range(1, 9))
+print(list6)
+list7 = list(range(2, 11, 2))
+print(list7)
+
+~~~
+
+When you specify 3 parameters as we have for list(7); the fisrt is start value, the second is one past the last value and the 3rd parameter is a step value by which to count. The step value can be negative
+
+`list(7)` produces the even numbers from 1 to 10.
+
+## Exercise
+
+1. What is produced if you change the step value in `list(7)` to -2 ? Is this what you expected?
+2. Create a list using the range() function which contains the even number between 1 and 10 in reverse order ([10,8,6,4,2])
+
+## Solution
+
+~~~
+
+list7 = list(range(2, 11, -2))
+print(list7)
+
+list8 = list(range(10, 1, -2))
+print(list8)
+
+~~~
+
+The other main structured data type is the Dictionary. We will introduce this in a later episode when we look at JSON.
+
