@@ -242,3 +242,87 @@ Points to note;
 
 
 ## The `for` loop
+
+The for loop, like the while loop repeatedly executes a set of statements. The difference is that in the for loop we know in at the outset how often the statements in the lop will be executed. We don't have to rely on a variable being changed within the looping statements.
+
+The basic format of the `for` statement is 
+
+~~~
+
+for variable_name in some_sequence :
+    statement1
+    statement2
+    ...
+    statementn
+    
+~~~
+
+The key part of this is the 'some_sequence'. The phrase used in the documentation is that it must be 'iterable'. That means; you can count through the sequence, starting at the beginning and stopping at the end.
+
+There are many examples of things which are iterable some of which we havew already come across.
+
+* Lists are iterable - they don't have to contain numbers, you iterate over the elements in the list.
+* The range() function 
+* The characters in a string
+
+~~~
+print("\nExample 1\n")
+for i in [1,2,3] :
+    print(i)
+    
+print("\nExample 2\n")
+for name in ["Tom", "Dick", "Harry"] :
+    print(name)
+
+print("\nExample 3\n")
+for name in ["Tom", 42, 3.142] :
+    print(name)
+
+print("\nExample 4\n")
+for i in range(3) :
+    print(i)
+
+print("\nExample 5\n")
+for i in range(1,4) :
+    print(i)
+
+print("\nExample 6\n")
+for i in range(2, 11, 2) :
+    print(i)
+    
+print("\nExample 7\n")
+for i in "ABCDE" :
+    print(i)
+    
+    
+print("\nExample 8\n")
+longString = "The quick brown fox jumped over the lazy sleeping dog"
+for word in longString.split() :
+    print(word)
+    
+~~~
+
+> ## Exercise
+> 
+> In example8 the split method is used to break the longString variable down into a list of individual words which are then iterated through. 
+> 
+> Suppose that we have a string containing a set of 4 different values seperated by ','  like this;
+> 
+> ~~~
+> variablelist = "01/01/2010,34.5,Yellow,True"
+> ~~~
+> 
+> Research the split() method and then rewrite example 8 so that it prints the 4 components of variablelist
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > variablelist = "01/01/2010,34.5,Yellow,True"
+> > for word in variablelist.split(",") :
+> >     print(word)
+> > ~~~
+> > 
+> > The format of variablelist is very much like that of a record in a csv file. In later episodes we will see how we can extract these values and assign them to variables for further processing rather tha just printing them out.
+> > 
+> {: .solution}
+{: .challenge}
