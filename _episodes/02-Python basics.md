@@ -182,6 +182,192 @@ print(...)
     
 ~~~
 
+There is a great deal of Python help and information as well as code examples avaialble from the Internet.  One popular site is [stackoverflow(https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
 
+You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
+
+A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will both in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solution so you can always just move on to the next.
 
 ## Datatype and how Python uses them
+
+### Changing datatypes
+The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable , you can change the data type.
+
+You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `float` to an `integer`. 
+
+Although you can always change an `integer` to a `float`, if you change a `float` to an `integer` then you can lose part of the value of the variable and you won't get an error message.
+
+~~~
+a = 3.142
+print(type(a))
+a = 3
+print(type(a))
+a = a*1.0
+print(type(a))
+a = int(a)
+print(type(a))
+a = 3.142
+a = int(a)
+print(type(a))
+print(a)
+~~~
+
+In some circimstances explicitly converting a datatype makes no sense; you cannot change a string with alphabetic characters into a number. 
+
+~~~
+
+a = "3.142"
+print(type(a))
+a = float(a)
+print(type(a))
+
+b = "Hello World"
+print(type(b))
+
+b = int(b)
+print(type(b))
+
+~~~
+
+## Strings
+
+A string is a simple datatype which holds a sequence of characters.
+
+Strings are placed in quotes when they are being assigned, but the quotes don't count as part of the string value.
+
+If you need to use quotes as part of your string you can arbitarily use either single of double qoutes to indicate the start and end of the string.
+
+~~~
+mystring = "Hello World"
+print(mystring) 
+
+name = "Peter"
+mystring = 'Hello ' + name + ' How are you?'
+print(mystring) 
+
+name = "Peter"
+mystring = 'Hello this is ' + name + "'s code"
+print(mystring) 
+
+~~~
+
+## String functions
+
+There are a variety of Python functions available for use with strings. In Python a string is an object. An object put simply is something which has `data`, in the case of our string it is the contents of the string and `methods`. `methods` is just another way of saying `functions`.
+
+Although `methods` and `functions` are very similar in practice, there is a difference in the way you call them.
+
+One typical bit of information you might want to know about a string is its length for this we use the `len()` `function`. For almost anything else you might want to do with strings, there is a method. If you want to see a list of all of the available methods for a string (or any other object) you can use the `dir()` function.
+
+~~~
+
+mystring = "Hello World"
+print(len(mystring))
+
+dir(mystring)
+
+~~~
+
+The methods that you can use are those that do NOT start with '__'.
+
+Some examples of the methods are given below. We will use others when we start reading files.
+
+~~~
+
+myString = "The quick brown fox"
+
+print(myString.startswith("The"))
+print(myString.find("The"))        # notice that string positions start with 0 like all indexing in Python
+print(myString.upper())            # The contents of myString is not changed, if you wanted an uppercase version 
+print(myString)                    # you woulf have to assign it to a new variable
+
+# The methods starting with 'is...' return a boolean value of either True or False
+
+print(myString.isalpha())  
+
+# the example above returns False because the space charater is not considered to be an Alphanumeric value.
+
+# In the example below, we can use the replace() method to remove the spaces and then check to see if the result 'isalpha'
+# chaining method in this way is quite common. The actions take place in a left to right manner. You can always avoid using chaining by 
+# using intermediary variables. 
+
+print(myString.replace(" ","").isalpha())
+
+~~~
+
+If you need to refer to a specific element (character ) in a string, 
+you can do so by specifying the index of the character in '[]'
+you can aslo use indexing to select a substring of the string
+
+~~~
+
+myString = "The quick brown fox"
+
+print(myString[0])
+print(myString[12])
+print(myString[18])
+
+print(myString[0:3])
+print(myString[0:])        # from index 0 to the end
+print(myString[:9])        # from the beginning to one before index 9
+print(myString[:9]) 
+
+~~~
+
+## Basic Python datatypes
+
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
+
+~~~
+
+# In the if statement, if the condition evaluates to True then the indented statement is executed. 
+# So in these examples only if python thinks that the value of bool_val is True will the print statement be executed.
+
+bool_val = True
+if bool_val :
+    print("bool_val is ",bool_val)
+    
+bool_val = False
+if bool_val :
+    print("bool_val is ",bool_val)
+    
+~~~
+
+> ## Exercise 
+> 
+> Can you predict what will be returned from the following code segments
+> 
+> ~~~
+> 
+> bool_val1 = 'TRUE'
+> if bool_val1 :
+>     print("bool_val1 is ",bool_val1)
+>     
+> bool_val2 = 'FALSE'
+> if bool_val2 :
+>     print("bool_val2 is ",bool_val2)
+> 
+> bool_val3 = 1
+> if bool_val3 :
+>     print("bool_val3 is ",bool_val3)
+> 
+> bool_val4 = 0
+> if bool_val4 :
+>     print("bool_val4 is ",bool_val4)
+> 
+> bool_val5 = -1
+> if bool_val5 :
+>     print("bool_val5 is ",bool_val5)
+> 
+> bool_val6 = -1
+> if not bool_val6 :
+>     print("bool_val6 is ",bool_val6)
+>     
+> ~~~
+> 
+> > ## solution
+> > 
+> > Essentially 0 is counted as False and everything else, whether a number or string is counted as True
+> > 
+> {: .solution}
+{: .challenge}
