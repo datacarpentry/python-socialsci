@@ -1,7 +1,7 @@
 ---
 title: "Processing data from a file"
-teaching: 25
-exercises: 15
+teaching: 45
+exercises: 25
 questions:
 - "How can I read and write files?"
 - "What kind of data files can I read?"
@@ -202,3 +202,154 @@ before the for loop
 > > 
 > {: .solution}
 {: .challenge}
+
+
+In our example of printing the counts for the roof types, we assumed that we knew what the likely roof types were. Although we did have an 'other' option to catch anything we missed. Had there been any we would still be non the wiser as to what they  represented. We were able to decide on the specific roof types by manually scanning the list of C01_respondent_roof_type values. This was only practical because of the small file size. For a multi-million record file we could not have done this.
+
+
+We would like a way of creating a list of the different roof types and at the same time counting them. We can do this by using not a Python list structure, but a Python Dictionary.
+
+
+
+## The Python dictionary structure
+
+In Python a dictionary object maps keys to values. A dictionary can hold any number of keys and values but a key cannot be duplicated.
+
+The following code shows examples of creating a dictionary object and manipulating keys and values.
+
+~~~
+
+# an empty dictionaary
+myDict = {}
+
+# A dictionary with a single Key-value pair
+
+personDict = {'Name' : 'Peter'}
+
+# I can add more about 'Peter' to the dictionary
+
+personDict['Location'] = 'Manchester'
+
+
+# I can print all of the keys and values from the dictionary
+
+print(personDict.items())
+
+# I can print all of the keys and values from the dictionary - and make it look a bit nicer
+
+for item in personDict:
+    print(item, "=", personDict[item])
+
+# or all of the keys
+
+print(personDict.keys())
+
+# or all of the values
+
+print(personDict.values())
+
+# I can access the value for a given key
+
+x = personDict['Name']
+print(x)
+
+# I can change value for a given key
+
+personDict['Name'] = "Fred"
+print(personDict['Name'])
+
+# I can check if a key exists
+
+key = 'Name'
+
+if key in personDict :
+    print("already exists")
+else :
+    personDict[key] = "New value"
+
+~~~
+
+> ## Exercise
+> 
+> 1. Create a dictionary called dict_roof_types with initial keys of 'type1'and 'type2' and give them values of 1 and 3.
+> 2. Add a third key 'type3' with a value of '6'.
+> 3. Add code to check if a key of 'type4' exists. If it does not add it to the dictionary with a value of 1 if it does, increment its value by 1
+> 4. Add code to check if a key of 'type2' exists. If it does not add it to the dictionary with a value of 1 if it does, increment its value by 1
+> 5. Print out all of the keys and values from the dictionary
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > 
+> > # 1
+> > dict_roof_types = {'type1' : 1 , 'type2' : 3}
+> > 
+> > #2
+> > dict_roof_types['type3'] = 6
+> > 
+> > #3
+> > key = 'type4'
+> > if key in dict_roof_types :
+> >     dict_roof_types[key] += 1
+> > else :
+> >     dict_roof_types[key] = 1
+> > 
+> > #4
+> > key = 'type2'
+> > if key in dict_roof_types :
+> >     dict_roof_types[key] += 1
+> > else :
+> >     dict_roof_types[key] = 1
+> >  
+> > #5
+> > for item in dict_roof_types:
+> >     print(item, "=", dict_roof_types[item])
+> >     
+> > ~~~
+> > 
+> {: .solution}
+{: .challenge}
+
+We are now in a position to re-write count of roof types example without know in advance what any of the roof types are.
+
+~~~
+
+# 1
+filename = "SAFI_results.csv"
+f = open(filename, "r") 
+
+# 2
+f.readline()
+
+# 3
+dict_roof_types = {}
+
+for line in f:
+# 4
+    roof_type = line.split(",")[18]
+# 5    
+    if roof_type in dict_roof_types :
+        dict_roof_types[roof_type] += 1
+    else :
+        dict_roof_types[roof_type] = 1
+#6
+f.close()
+
+#7
+
+for item in dict_roof_types:
+    print(item, "=", dict_roof_types[item])
+~~~
+
+What are we  doing here?
+
+1. Open the file
+2. Ignore the headerline
+3. Create an empty dictionary
+4. Extract the C01_respondent_roof_type information from each record
+5. Either add to the dictionary with a value of 1 or increment the current value for the key by 1
+6. close the file
+7. Print out the contents of the dictionary
+
+
+You appy the same approach to count values in any of the fields/columns of the file.
