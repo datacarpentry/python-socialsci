@@ -13,20 +13,19 @@ objectives:
 - "Understand where JSON is typically used"
 - "Appreciate some advantages of using JSON over tabular data"
 - "Appreciate some dis-advantages of processing JSON documents"
-
 - "Compare JSON to the Python Dict data type"
-
 - "Use the JSON package to read a JSON file"
-
 - "Display formatted JSON"
-
 - "Select and display specific fields from a JSON document"
-
-- "Create a tabular record from selected elements from a JSON document"
+- "Write tabular data from selected elements from a JSON document to a csv file"
 
 keypoints:
-- "First key point."
+- "JSON is a popular data format for transferring data used by a great many Web based APIs"
+- " The JSON data format is very similar to the Python Dictionary structure."
+- " The complex structure of a JSON document means that it cannot easily be 'flattened' into tabular data"
+- "We can use Python code to extract values of interest and place them in a csv file"
 ---
+
 ## More on Dictionaries
 
 In the last episode we introduced the dictionary object.
