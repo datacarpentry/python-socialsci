@@ -14,7 +14,12 @@ objectives:
 - "Explain what is meant by a record"
 
 keypoints:
-- "First key point."
+- "Reading data from files is far more common program 'input' requests or hard coding values"
+- "Python provides simple means of reading from a text file and writing to a text file"
+- "Tabular data is commonly recorded in a 'csv' file"
+- "Text files like csv files can be thought of as being a list of strings. Each string is a complete record"
+- "You can read and write a file one record at a time"
+- "Python has builtin functions to parse (split up) records into individual tokens"
 ---
 
 ## Reading and Writing datasets
@@ -352,4 +357,4 @@ What are we  doing here?
 7. Print out the contents of the dictionary
 
 
-You appy the same approach to count values in any of the fields/columns of the file.
+You can apply the same approach to count values in any of the fields/columns of the file.
