@@ -1,19 +1,22 @@
 ---
-title: "Extracting row and columns"
+title: 'Extracting row and columns'
 teaching: 0
 exercises: 0
 questions:
-- "How can I extract specific rows and columns from a data frame?"
+- 'How can I extract specific rows and columns from a dataframe?'
+- 'How can I add or delete columns from a dataframe?'
+- 'How can I find and change missing values in a dataframe?'
 objectives:
-- "Define indexing as it relates to data structures" 
-- "Select specific columns from a data frame"
-- "Select specific rows from a data frame based on conditional expressions"
-- "Using indexes to access rows and columns
-- "Copy a data frame"
-- "Add columns to a data frame"
-- "Analyse datasets having missing/null values"
+- 'Define indexing as it relates to data structures'
+- 'Select specific columns from a data frame'
+- 'Select specific rows from a data frame based on conditional expressions'
+- 'Using indexes to access rows and columns'
+- 'Copy a data frame'
+- 'Add columns to a data frame'
+- 'Analyse datasets having missing/null values'
 keypoints:
-- "First key point."
+- 'First key point.'
+
 ---
 
 We will continue this episode from where we left off in the last episode. If you have restarted Jupyter or you want to use a new notebook make sure that you import pandas and have read the 'SN7577.tab' dataset into a dataframe.
