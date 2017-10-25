@@ -25,7 +25,7 @@ pandas is a Python library containing a set of functions and specialised data st
 
 Most of the things that pandas can do can be done with basic Python, but the collected set of pandas functions and data structure makes the data analysis tasks more consistent in terms of syntax and therefore aids readabilty.
 
-Particular features of pandas that we will be looking at include:
+Particular features of pandas that we will be looking at over this and the next couple of episodes include:
 
 
 * Reading data stored in JSON and CSV files (other file formats can be read as well)
@@ -150,80 +150,3 @@ print(df_SN7577.dtypes)
 > ~~~
 {: .challenge}
 
-### Selecting rows and columns from a pandas dataframe
-
-If we know which columns we want before we read the data from the file we can tell the `read_csv` method to only import those columns by specfying columns either by their index number (starting at 0 of course) as a list to the 'usecols' parameter. Alternatively we can also provide a list of column names.  
-
-~~~
-df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= [0,1,2,173,174,175])
-print(df_SN7577_some_cols.shape)
-print(df_SN7577_some_cols.columns)
-df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= ['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'])
-print(df_SN7577_some_cols.columns)
-~~~
-
-
-Let us assume for now that we read in the complete file which is now in the dataframe 'df_SN7577', how can we now refer to specific columns?
-
-There are two ways of doing this using the column names (or labels)
-
-~~~
-# Both of these statements are the same
-print(df_SN7577['Q1'])
-# and
-print(df_SN7577.Q1)
-~~~
-
-If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are encliosed in '[]'
-
-~~~
-print(df_SN7577[['Q1', 'Q2', 'Q3']])
-~~~
-
-> ## Exercise  
-> 
-> What happens if you:
-> 
-> 1. List the columns you want out of order from the way they appear in the file?
-> 2. Put the same column namre in twice?
-> 3. Put in a non-existing column name? (a.k.a Typo)
-> 
-> > ## Solution
-> > 
-> > ~~~
-> > print(df_SN7577[['Q3', 'Q2']])
-> > print(df_SN7577[['Q3', 'Q2', 'Q3']])
-> > print(df_SN7577[['Q33', 'Q2']])
-> > ~~~
-> {: .solution}
-{: .challenge}
-
-## Filtering by Rows
- 
-You can filter by rows in the dataframe by specifying a range in the form of 'a:b'. 'a'; is the first row and 'b' is one beyond the last row required. 
-
-~~~
-# select row with index of 1, 2 and 3 (rows 2, 3 and 4 in the dataframe)
-df_SN7577_some_rows = df_SN7577[1:4]
-df_SN7577_some_rows
-~~~
-
-> ## Exercise 
-> 
-> What happens if we ask for a single row instead of a range?
-> 
-> > ## Solution
-> > 
-> > ~~~
-> > df_SN7577[1]
-> > ~~~
-> > 
-> > You get an error if you just specify '1'. You need to use ':1' or '0:1' to get the first row returned. The ':' is always required. You can use ':' by itself to return all of the rows
-> > 
-> {: .solution}
-{: .challenge}
-
-
-## Using criteria to filter rows
-
-It is more likely that you will want to select rows from the dataframe based on some criteria or other. Such as 'all rows where the value for Q2 is -1'
