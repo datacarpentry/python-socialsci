@@ -8,6 +8,7 @@ objectives:
 - "Define indexing as it relates to data structures" 
 - "Select specific columns from a data frame"
 - "Select specific rows from a data frame based on conditional expressions"
+- "Using indexes to access rows and columns
 - "Copy a data frame"
 - "Add columns to a data frame"
 - "Analyse datasets having missing/null values"
@@ -15,14 +16,165 @@ keypoints:
 - "First key point."
 ---
 
-## Using indexes to access datas frame elements 
+We will continue this episode from where we left off in the last episode. If you have restarted Jupyter or you want to use a new notebook make sure that you import pandas and have read the 'SN7577.tab' dataset into a dataframe.
 
-## Selecting columns from a data frame
+~~~
+import pandas as pd
+df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
+~~~
 
-## Selecting rows from a data frame 
+### Selecting rows and columns from a pandas dataframe
+
+If we know which columns we want before we read the data from the file we can tell the `read_csv` method to only import those columns by specfying columns either by their index number (starting at 0 of course) as a list to the 'usecols' parameter. Alternatively we can also provide a list of column names.  
+
+~~~
+df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= [0,1,2,173,174,175])
+print(df_SN7577_some_cols.shape)
+print(df_SN7577_some_cols.columns)
+df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= ['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'])
+print(df_SN7577_some_cols.columns)
+~~~
+
+
+Let us assume for now that we read in the complete file which is now in the dataframe 'df_SN7577', how can we now refer to specific columns?
+
+There are two ways of doing this using the column names (or labels)
+
+~~~
+# Both of these statements are the same
+print(df_SN7577['Q1'])
+# and
+print(df_SN7577.Q1)
+~~~
+
+If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are encliosed in '[]'
+
+~~~
+print(df_SN7577[['Q1', 'Q2', 'Q3']])
+~~~
+
+> ## Exercise  
+> 
+> What happens if you:
+> 
+> 1. List the columns you want out of order from the way they appear in the file?
+> 2. Put the same column namre in twice?
+> 3. Put in a non-existing column name? (a.k.a Typo)
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > print(df_SN7577[['Q3', 'Q2']])
+> > print(df_SN7577[['Q3', 'Q2', 'Q3']])
+> > print(df_SN7577[['Q33', 'Q2']])
+> > ~~~
+> {: .solution}
+{: .challenge}
+
+## Filtering by Rows
+ 
+You can filter by rows in the dataframe by specifying a range in the form of 'a:b'. 'a'; is the first row and 'b' is one beyond the last row required. 
+
+~~~
+# select row with index of 1, 2 and 3 (rows 2, 3 and 4 in the dataframe)
+df_SN7577_some_rows = df_SN7577[1:4]
+df_SN7577_some_rows
+~~~
+
+> ## Exercise 
+> 
+> What happens if we ask for a single row instead of a range?
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > df_SN7577[1]
+> > ~~~
+> > 
+> > You get an error if you just specify '1'. You need to use ':1' or '0:1' to get the first row returned. The ':' is always required. You can use ':' by itself to return all of the rows
+> > 
+> {: .solution}
+{: .challenge}
+
+
+## Using criteria to filter rows
+
+It is more likely that you will want to select rows from the dataframe based on some criteria or other. Such as 'all rows where the value for Q2 is -1'
+
+
+~~~
+df_SN7577_some_rows = df_SN7577[(df_SN7577.Q2 == -1)]
+df_SN7577_some_rows
+~~~
+
+The criteria can be more complex and isn't limited to a single column's values
+
+~~~
+df_SN7577_some_rows = df_SN7577[ (df_SN7577.Q2 == -1) & (df_SN7577.numage > 60)]
+df_SN7577_some_rows
+~~~
+
+We can combine the row selection with column selection
+
+~~~
+df_SN7577_some_rows = df_SN7577[ (df_SN7577.Q2 == -1) & (df_SN7577.numage > 60)][['Q1', 'Q2','numage']]
+df_SN7577_some_rows
+~~~
+
+Selecting rows on the row index is of limited use unless you need to select a contiguous range of rows.
+
+There is however another way of selecting rows using the row index; shown here;
+
+~~~
+df_SN7577_some_rows = df_SN7577.iloc[1:4]
+df_SN7577_some_rows
+~~~
+
+Using the 'iloc' method gives the same results as our previous example.
+
+However now we can specify a single value and more importantly we can use the `range()` function to indicate the records that we want. This can be useful for making pseudo-random selections of rows from across the dataframe.
+
+~~~
+# Select the first row from the dataframe
+df_SN7577_some_rows = df_SN7577.iloc[0]
+df_SN7577_some_rows
+# select every 100th record from the dataframe.
+df_SN7577_some_rows = df_SN7577.iloc[range(0, len(df_SN7577), 100)]
+df_SN7577_some_rows
+
+~~~
+
+You can also specify column ranges using the 'iloc' method again using the column index numbers
+
+~~~
+# columns 0,1,2 and 3
+df_SN7577_some_rows = df_SN7577.iloc[range(0, len(df_SN7577), 100),0:4]
+df_SN7577_some_rows
+# columns 0,1,2,78 and 95
+df_SN7577_some_rows = df_SN7577.iloc[range(0, len(df_SN7577), 100),[0,1,2,78,95]]
+df_SN7577_some_rows
+~~~
+
+There is also a 'loc' method which allows you to use the column names.
+
+~~~
+# columns 0,1,2,78 and 95 using the column names and changing 'iloc' to 'loc'
+df_SN7577_some_rows = df_SN7577.loc[range(0, len(df_SN7577), 100),['Q1', 'Q2', 'Q3', 'Q18bii', 'access6' ]]
+df_SN7577_some_rows
+~~~
+
+## Sampling
+
+Pandas does have a `sample` method which allows you to extract a sample of the records from the dataframe.
+
+~~~
+df_SN7577.sample(10, replace=False)             # ten records, do not select same record twice (this is the default)
+df_SN7577.sample(frac=0.05, random_state=1)     # 5% of records , same records if run again
+~~~
+
 
 ## Copying  a data frame
 
 ## Adding columns to a data frame
 
-## Dealing with missing/null values in a data frame
+## Dealing with missing/null values in a dataframe
