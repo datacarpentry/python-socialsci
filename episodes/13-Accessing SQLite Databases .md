@@ -12,9 +12,187 @@ objectives:
 - "Describe the difference in interacting with data stored as a CSV file versus in SQLite"
 - "Describe the benefits of accessing data using a database compared to a CSV file"
 keypoints:
-- "First key point."
+- "The SQLite database system is directly available from within Python"
+- "A database table and a pandas dataframe can be considered similar structures"
+- "Using pandas to return all of the results from a query is simpler than using sqlite3 alone  "
 ---
 
 ## Introducing the sqlite3 module 
+
+SQLite is a relational database system. Despite the 'Lite' in the name it can handle databases in excess of a Terabyte. The 'Lite'part really relates to the fact that it is a 'bare bones' system. It provides the mechanisms to create and query databases via a simple command line interface but not much else. In the SQL lesson we used a Firefox plugin to provide a GUI (Graphical User Interface) to the SQLite database engine.
+
+In this lesson we will use Python code using the sqlite3 module to access the engine. We can use Python code and the sqlite3 module to create, delete and query database tables.
+
+In practice we spend a lot of the time querying database tables. 
+
+## Pandas dataframe v SQL table
+
+It is very easy and often very convenient to think of SQL tables and pandas dataframes as being similar types of objects. All of the data manipulations, slicing, dicing, aggragetions and joins associated with SQL and SQL tables can all be accomplished with pandas methods operating on a pandas dataframe.
+
+The difference is that the pandas dataframe is held in memory within the Python environment. The SQL table can largely be on disc and when you access it, it is the SQLite database engine which is doing the work. This allows you to work with very large tables which your Python environment may not have the memory to hold completely.  
+
+A typical use case for SQLite databases is to hold large datasets, you use SQL commands from Python to slice and dice and possibly aggregate the data within the database system to reduce the size to something that Python can comfortably process and then return the results to a dataframe.
+
 ## Accessing data stored in SQLite using Python
-## Advantages and dis-advantages of using a database
+
+We will illustrate the use of the `sqlite3` module by connecting to an SQLite database using both core Python and also using pandas.
+We wil execute
+
+The database that we will use is SN7577.sqlite This contains the data from the SN7577 dataset that we have used in other lessons.
+
+## Connecting to an SQlite database
+
+The first thing we need to do is import the `sqlite3` library, We will import pandas at the same time for convenience.
+
+~~~
+import sqlite3
+import pandas as pd
+~~~
+
+
+We will start looking at the sqlite3 library by connecting to an existing database and returning the results of running a query.
+
+Initially we will do this without using Pandas and then we will repreat the exercise so that you can see the difference.
+
+The first thing we need to do is to make a connection to the database. An SQLite database is just a file. To make a connection to it we only need to use the sqlite3 `connect` method and specify the database file as the first parameter.
+
+The connection is assigned to a variable. You could use any variable name, but 'con' is quite commonly used for this purpose
+
+~~~
+import sqlite3
+con = sqlite3.connect('SN7577.sqlite')
+~~~
+
+The next thing we need to do is to create a `cursor` for the connection and assign it to a variable. We do this using the `cursor` method of the connection object.
+
+The cursor allows us to pass SQL statements to the database, have them executed and then get the results back.
+
+To execute an SQL statement we use the `execute` method of the cursor object.
+
+The only paramater we need to pass to the `execute` method is a string which contains the SQL query we wish to execute.
+
+In our example we are passing a literal string. It could have been contained in a string variable. The string can contain any valid SQL query. It could also be a valid DDL statement such as a "CREATE TABLE ...". In this lesson however we will confine ourseleves to querying exiting database tables.
+
+~~~
+cur = con.cursor()
+cur.execute("SELECT * FROM SN7577")
+~~~
+
+The `execute` method doesn't actually return any data, it just indicates that we want the data provided by running the 'Select' statement.
+
+> ## Exercise 
+> 
+> 1. What happens if you if you ask for a non existent table?, field within a table? or just any kind of syntax error?
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > cur = con.cursor()
+> > # notice the mistyping of 'SELECT'
+> > cur.execute("SELET * FROM SN7577")
+> > ~~~
+> >
+> > In all cases an error message is returned. The error message is not from Python but from SQLite. It is the same error message that you would have got had you made the same errors in the SQLite plugin.
+> >
+> {: .solution}
+{: .challenge}
+
+
+
+In all cases an error message is returned. The error message is not from Python but from SQLite. It is the same error message that you would have got had you made the same errors in the SQLite plugin.
+
+Before we can make use of the results of the query we need to use the `fetchall` method of the cursor. 
+
+The `fetchall` method returns a list. Each item in the list is a tuple containing the values from one row of the table. You can iterate through the items in a tuple in the same way as you would do so for a list.
+
+~~~
+
+cur = con.cursor()
+cur.execute("SELECT * FROM SN7577")
+rows = cur.fetchall()
+for row in rows:
+    print(row)
+    
+~~~
+
+The output is the data only, you do not get the column names.
+
+The column names are available from the 'description' of the cursor.
+
+~~~
+colnames = []
+for description in cur.description :
+    colnames.append(description[0])
+
+print(colnames)
+
+~~~
+
+One reason for using a datbase is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
+
+An alternative is to use the `fetchone` method, which as the name suggestrs returns only a single row. The cursor keeps track of where you are in the results of the query, so the next call to `fetchone` will return the next record. When there are no more records it will return 'None'.
+
+~~~
+cur = con.cursor()
+cur.execute("SELECT * FROM SN7577")
+row = cur.fetchone()
+print(row)
+row = cur.fetchone()
+print(row)
+~~~
+
+> ## Exercise 
+> 
+> Can you write code to return the first 5 records from the SN7577 table in two different ways?
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > import sqlite3
+> > con = sqlite3.connect('SN7577.sqlite')
+> > cur = con.cursor()
+> > 
+> > # we can use the SQLite 'limit' clause to restrict the number of rows returned and then use 'fetchall'
+> > cur.execute("SELECT * FROM SN7577 Limit 5")
+> > rows = cur.fetchall()
+> > 
+> > for row in rows:
+> >     print(row)
+> > 
+> > # we can use 'fetchone' in a for loop
+> > cur.execute("SELECT * FROM SN7577")
+> > for i in range(1,6):
+> >     print(cur.fetchone())
+> > 
+> > # a third way would be to use the 'fetchmany()' method
+> > 
+> > cur.execute("SELECT * FROM SN7577")
+> > rows = cur.fetchmany(5)
+> > 
+> > for row in rows:
+> >     print(row)
+> > 
+> {: .solution}
+{: .challenge}
+
+## Using Pandas to read a database table.
+
+When you use Pandas to read a database table. you connect to the database in the same way as before using the SQLite3 `connect` method and providing the filename of the database file.
+
+Pandas has a method `read_sql_query` to which you provide both the string containing the SQL query you wish to run and also the connection variable.
+
+The results from running the query are placed in a pandas dataframe with the table column names automatically added.
+
+~~~
+con = sqlite3.connect('SN7577.sqlite')
+df = pd.read_sql_query("SELECT * from SN7577", con)
+
+# verify that result of SQL query is stored in the dataframe
+print(type(df))
+print(df.shape)
+print(df.head())
+
+con.close()
+
+~~~
+
