@@ -177,4 +177,94 @@ plt.legend( loc=4 )  # the locations 1,2,3 and 4 are top-right, top-left, bottom
 plt.show()
 ~~~
 
-In the call to the `scatter` method, the 'label' parameter values are used by the 
+In the call to the `scatter` method, the 'label' parameter values are used by the 'legend'. 
+The 'c' or'color' parameter can be set to any color matplotlib recognises. Full details of the available colours are available in the [matplotlib](http://matplotlib.org/api/colors_api.html) website.  The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also a s (size) parameter which allows you to change the size of the marker.
+
+## Boxplot
+
+A boxplot provides a simple representaion of a variety of statistical qualities of a single set of data values.
+
+![box_plot](../fig/vis_boxplot_01.png)
+
+~~~
+x = pd.Series(np.random.standard_normal(256))
+
+# Show a boxplot of the data 
+plt.boxplot(x)
+plt.show()
+
+~~~
+
+A common use of the boxplot is to compare the statistical variations across a set of variables.
+
+The variables can be independent series or they could be within a dataframe
+
+You can plot individual columns from the dataframe
+
+~~~
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+plt.boxplot(df.A, labels = 'A')
+plt.show()
+~~~
+
+> ## Exercise 
+> 
+> Can you change the code above so that columns 'A' , 'C' and 'D' are all displayed on the same graph?
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+> > plt.boxplot([df.A, df.C, df.D], labels = ['A', 'C', 'D'])
+> > plt.show()
+> > ~~~
+> > 
+> {: .solution}
+{: .challenge}
+
+What you cannot do is pass a complete dataframe to the boxplot function. The code
+
+~~~
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+plt.boxplot(df)
+plt.show()
+~~~
+
+will fail.
+
+However we can use the pandas plot method
+
+~~~
+
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df.plot(kind = 'box', return_type='axes') # the return_type='axes' is only needed for forward compatibility
+
+~~~
+
+We can add a title to the above by adding the 'title' parameter. However there are no parameters for adding the axis labels.
+To add labels we can use matplotlib directly.
+
+~~~
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df.plot(kind = 'box', return_type='axes')
+
+plt.title('Box Plot')
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
+plt.show()
+~~~
+
+## Saving a graph
+
+If you wish to save a your graph as an image you can do so using the 'savefig' function. The image can be saved as a pdf, jpg or png file by changing the file extension.
+
+~~~
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df.plot(kind = 'box', return_type='axes')
+
+plt.title('Box Plot')
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
+#plt.show()
+plt.savefig('boxplot_from_df.pdf')
+~~~
