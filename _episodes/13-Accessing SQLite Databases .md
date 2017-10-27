@@ -273,3 +273,6 @@ con.close()
 > > When we run it for the second time, the table has already has already been dropped, so this time the error message is from SQLite saying the table didn't exist. Pandas recognises that this is an SQLite error message and simply passes it on to the user.
 > > 
 > > The moral of the story: pandas may be better for getting data returned into a dataframe, but there are some things best left to the sqlite functions directly.
+> >
+> {: .solution}
+{: .challenge}
