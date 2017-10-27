@@ -217,7 +217,6 @@ df_undecided.to_sql("Q1_undecided", con)
 
 # If you want to overwrite an existing SQLite table you can use the 'if_exists' parameter
 #df_undecided.to_sql("Q1_undecided", con, if_exists="replace")
-
 con.close()
 
 ~~~
@@ -251,7 +250,7 @@ con.close()
 > 
 > Try using the following pandas code to delete (drop) the table.
 > 
-> ~~~~
+> ~~~
 > pd.read_sql_query("drop table Q1_undecided_v2", con)
 > ~~~
 > 
