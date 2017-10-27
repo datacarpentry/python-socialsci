@@ -196,3 +196,81 @@ con.close()
 
 ~~~
 
+## Pandas dataframe v SQL table
+
+It is very easy and often very convenient to think of SQL tables and pandas dataframes as being similar types of objects. All of the data manipulations, slicing, dicing, aggragetions and joins associated with SQL and SQL tables can all be accomplished with pandas methods operating on a pandas dataframe.
+
+## Saving a dataframe as an SQLite table
+
+There may be occasions when it is convenient to save the data in you pandas dataframe as an SQLite table for future use or for access to other systems. This can be done using the 'to_sql' method.
+
+~~~
+con = sqlite3.connect('SN7577.sqlite')
+df = pd.read_sql_query("SELECT * from SN7577", con)
+
+# select only the row where the response to Q1 is 10 meaning undecided voter
+df_undecided = df[df.Q1 == 10]
+print(df_undecided.shape)
+
+# Write the new DataFrame to a new SQLite table
+df_undecided.to_sql("Q1_undecided", con)
+
+# If you want to overwrite an existing SQLite table you can use the 'if_exists' parameter
+#df_undecided.to_sql("Q1_undecided", con, if_exists="replace")
+
+con.close()
+
+~~~
+
+## Deleting an SQLite table
+
+If you have created tables in an SQLite database, you may also want to delete them.
+You can do this by using the sqlite3 cursor `execute` method
+
+~~~
+con = sqlite3.connect('SN7577.sqlite')
+cur = con.cursor()
+
+cur.execute('drop table if exists Q1_undecided')
+
+con.close()
+
+~~~
+
+
+> ## Exercise
+> 
+> The code below creates an SQLite table as we have done in previous examples. Run this code to create the table.
+> 
+> ~~~
+> con = sqlite3.connect('SN7577.sqlite')
+> df_undecided = df[df.Q1 == 10]
+> df_undecided.to_sql("Q1_undecided_v2", con)
+> con.close()
+> ~~~
+> 
+> Try using the following pandas code to delete (drop) the table.
+> 
+> ~~~~
+> pd.read_sql_query("drop table Q1_undecided_v2", con)
+> ~~~
+> 
+> 1. What happens?
+> 2. Run this line of code again, What is different?
+> 3. Can you explain the difference and does the table now exist or not?
+> 
+> 
+> > ## Solution
+> > 
+> > 1. When the line of code is run the first time you get an error message : 'NoneType' object is not iterable.
+> > 
+> > 2. When you run it a second time you get a different error message:
+> > DatabaseError: Execution failed on sql 'drop table Q1_undecided_v2': no such table: Q1_undecided_v2
+> > 
+> > 3. the `read_sql_query` method is designed to send the SQL containing your query to the SQLite execution engine, which will execute the SQL and return the output to pandas which will create a dataframe from the results.  
+> > 
+> > The SQL statement we sent is valid SQL but it doesn't return rows from a table, it simply reports success of failure (in dropping the table in this case). The first time we run it the table is deleted and a response to the effect is returned. The resonse cannot be converted to a dataframe, hence the first error message, which is a pandas error.
+> > 
+> > When we run it for the second time, the table has already has already been dropped, so this time the error message is from SQLite saying the table didn't exist. Pandas recognises that this is an SQLite error message and simply passes it on to the user.
+> > 
+> > The moral of the story: pandas may be better for getting data returned into a dataframe, but there are some things best left to the sqlite functions directly.
