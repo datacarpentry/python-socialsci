@@ -403,9 +403,9 @@ A simpler way is to use the 'like' parameter of the `filter` method.
 df_papers2 = df_SN7577.filter(like= 'daily')
 ~~~
 
-the value supplied to 'like' can occur anywhere in the column name to be matched (and therefore selected)
+The value supplied to 'like' can occur anywhere in the column name to be matched (and therefore selected)
 
-To create the dataframe that  we will use, we wiull concatenate the two dataframes we have created. 
+To create the dataframe that we will use, we will concatenate the two dataframes we have created. 
 
 ~~~
 df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
@@ -417,4 +417,46 @@ We use 'axis = 1' because we are joining by columns not rows which is the defaul
 
 
 ## From 'wide' to 'long'
+
+Just to make the displays more maneagable we will use only the first eight 'daily' columns
+
+~~~
+## using df_papers
+daily_list = ['daily1', 'daily2','daily3', 'daily4','daily5', 'daily6','daily7', 'daily8']
+
+df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_list)
+
+# by default the new columns created will be called 'variable' which is the name of the 'daily'
+# and 'value' which is the value of that 'daily' for that 'Id'. So we will rename the columns
+
+df_daily_papers_long.columns = ['Id','Daily_paper','Value']
+df_daily_papers_long
+~~~
+
+We now have a dataframe that we can `groupby`. 
+
+We want to `groupby` the 'Daily_paper' and them sum the 'Value'.
+
+~~~
+a = df_daily_papers_long.groupby('Daily_paper')['Value'].sum()
+a
+~~~
+
+## From Long to Wide 
+
+The process can be reversed by using the `pivot` method. 
+Here we need to indicate which column (or columns) remain fixed (this will become an index in the new dataframe), which column contains the values which are to become column names and which column contains the values for the columns.
+
+In our case we want to use the 'Id' column as the fixed column, the 'Daily_paper' column contains the column names and the 'Value' column contains the values.
+
+~~~
+df_daily_papers_wide = df_daily_papers_long.pivot(index = 'Id', columns = 'Daily_paper', values = 'Value')
+~~~
+
+We can change our 'Id' index back to an ordinary column with 
+
+~~~
+df_daily_papers_wide.reset_index(level=0, inplace=True)
+~~~
+
 
