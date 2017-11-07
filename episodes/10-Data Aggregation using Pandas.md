@@ -340,3 +340,81 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 > {: .solution}
 {: .challenge}
 
+## Wide and long data formats
+
+In the SN7577 dataset that we have been using there is a group of columns which record which daily newspapers each respondent reads. Despite the un-informative names like 'daily1' each column refers to a current UK daily national or local newspaper. 
+
+Whether the paper is read or not is recorded using the values of 0 or 1 as a boolean indicator. The advantage of using a column for eah paper means that should a respondent read multiple newpapers, all of the required information can still be recorded in a single record.
+
+Recording information in this 'wide' format is not always beneficial when trying to analyse the data.
+
+Pandas provides methods for converting data from 'wide' to 'long' format and from 'long' to 'wide' format
+
+The SN7577 dataset does not contain a variable that can be used to uniquely identify a row. This is often referred to as a 'primary key' field (or column).
+
+A dataset doesn't need to have such a key. None of the work we have done so far has required it. 
+
+When we create a pandas dataframe by importing a csv file, we have seen that pandas will create an index  for the rows. This index can be used a bit like a key field, but as we have seen there can be problems with the index when we concatenate two dataframes together.
+
+In the version of SN7577 that we are going to use to demonstrate long and wide formats we will add a new variable with the name of 'Id' and we will restrict the other columns to those starting with the word 'daily'.
+
+~~~
+import pandas as pd
+df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
+~~~
+
+We will create a new dataframe with a single column of 'Id'. 
+
+~~~
+# create an 'Id' column
+df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
+~~~
+
+Using the range function I can create values of Id starting with 1 and going upto 1286 (remember the second parameter to re=ange is one past the last value used.) I have explicitly coded this value because I knew how many rows were in the dataset. If I didn't, I could have used 
+
+~~~
+len(df_SN7577.index) +1
+~~~
+
+
+We will create a 2nd dataframe, based on SN7577 but containing only the columns starting with the word 'daily'. 
+
+There are several ways odf doing this.
+
+we could use the `iloc` method and provide the index values of the range of columns we want.
+
+~~~
+df_papers2 = df_SN7577.iloc[:,118:143]
+~~~
+
+This isn't really very practical. I would need to know the position of all of the columns of interest. They may not be contiguous.
+
+We could use a regular expression. Regular expressions is a very complex topic which we won't be covering. Using the `filter` method the code
+
+~~~
+df_papers2 = df_SN7577.filter(regex= '^daily')
+~~~
+
+will do want we want. '^daily' is a simple regular exprerssion which says 'startswith the characters 'daily'
+
+A simpler way is to use the 'like' parameter of the `filter` method.
+
+~~~
+df_papers2 = df_SN7577.filter(like= 'daily')
+~~~
+
+the value supplied to 'like' can occur anywhere in the column name to be matched (and therefore selected)
+
+To create the dataframe that  we will use, we wiull concatenate the two dataframes we have created. 
+
+~~~
+df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
+print(df_papers.index)
+print(df_papers.columns)
+~~~
+
+We use 'axis = 1' because we are joining by columns not rows which is the default.
+
+
+## From 'wide' to 'long'
+
