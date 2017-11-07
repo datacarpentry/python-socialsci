@@ -459,4 +459,74 @@ We can change our 'Id' index back to an ordinary column with
 df_daily_papers_wide.reset_index(level=0, inplace=True)
 ~~~
 
-
+> ## Exercise
+> 
+> 1. Find out how many people take each of the daily newspapers by Title.
+> 2. Which titles don't appear to be read by anyone?
+> 
+> There is a file called Newspapers.csv which lists all of the newpapers Titles along with the corresponding 'daily' value
+> 
+> Help : Newspapers.csv cotains both daily and Sunday newspapers. you can filter out the Sunday papers with the following code;
+> 
+> 
+> ~~~
+> df_newspapers = df_newspapers[(df_newspapers.Column_name.str.startswith('daily'))]
+> ~~~
+> 
+> > ## Solution
+> > 
+> > 1. Read in Newspapers.csv file and keep only the dailies.
+> > 
+> > ~~~
+> > df_newspapers = pd.read_csv("Newspapers.csv")
+> > df_newspapers = df_newspapers[(df_newspapers.Column_name.str.startswith('daily'))]
+> > df_newspapers
+> > ~~~
+> > 
+> > 2. Create the df_papers dataframe as we did before.
+> > 
+> > ~~~
+> > import pandas as pd
+> > df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
+> > #create an 'Id' column
+> > df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
+> > df_papers2 = df_SN7577.filter(like= 'daily')
+> > df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
+> > df_papers
+> > 
+> > ~~~~
+> > 
+> > 3. Create a list of all of the dailies, one way would be
+> > 
+> > ~~~
+> > 
+> > daily_list = []
+> > for i in range(1,26):
+> >     daily_list.append('daily'+str(i))
+> >     
+> > ~~~
+> > 
+> > 4. Pass the list as the 'value_vars' parameter to the `melt` method
+> > 
+> > 
+> > ~~~
+> > #use melt to create df_daily_papers_long  
+> > df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_list )
+> > #Change the column names
+> > df_daily_papers_long.columns = ['Id','Daily_paper','Value']
+> > ~~~
+> > 
+> > 5. `merge` the two dataframes with a left join, because we want all of the Newspaper Titles to be included.
+> > 
+> > ~~~
+> > df_papers_taken = pd.merge(df_newspapers, df_daily_papers_long, how='left', left_on = 'Column_name',right_on = 'Daily_paper')
+> > ~~~
+> > 
+> > 6. Then `groupby` the 'Title' and sum the 'Value'
+> > 
+> > ~~~
+> > df_papers_taken.groupby('Title')['Value'].sum()
+> > ~~~
+> > 
+> {: .solution}
+{: .challenge}
