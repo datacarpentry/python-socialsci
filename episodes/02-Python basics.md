@@ -1,4 +1,5 @@
 ---
+
 title: "Python basics"
 teaching: 0
 exercises: 0
@@ -10,30 +11,25 @@ questions:
 - "What data types are supported in Python?"
 
 objectives:
+
 - "Create variables and assign values to them"
-
 - "Perform simple arithmetic operations"
-
 - "Recognise built-in functions"
-
 - "Understand how to specify parameters when using built-in functions"
-
 - "Know how to get help for built-in functions and any other aspect of the Python language"
-
 - "Use the Jupyter environment to show or hide output"
-
 - "Define datatype and understand how Python uses them"
-
 - "List the native data types in Python"
 
 keypoints:
+
 - "The Jupyter environnment can be used to write code segments and display results"
 - "Datatypes in Pyhthon are implicit based on variable values"
 - "Basic datatypes are Integer, Float, String and Boolean"
 - "Lists and Dictionaries are structured datatypes"
 - "Arithmetic uses standard arithmetic operators, precedence can be changed using brackets "
 - "Help is available for builtin functions using the `help()` function further help and code examples are available online "
-- "In Jupyter you can get help on function parameters using  `shift`+`tab`
+- "In Jupyter you can get help on function parameters using  `shift`+`tab` "
 - "Many functions are in fact methods associated with specific object types "
 
 ---
