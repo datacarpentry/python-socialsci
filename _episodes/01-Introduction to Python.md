@@ -23,7 +23,7 @@ keypoints:
 Python is a general purpose programming language. It is an interpreted language which makes it suitable for rapid development and proto-typing of programming segments or complete small programs
 Python’s main advantages:
 
-* Open Source software, supported by [Python Software Foundation] (https://www.python.org/psf/)
+* Open Source software, supported by [Python Software Foundation](https://www.python.org/psf/)
 * Available on all major platforms (Windows, macOS, Linux )
 * It is relatively straightforward for new programmers to pick up the basics 
 * It is well structured which aids readability
