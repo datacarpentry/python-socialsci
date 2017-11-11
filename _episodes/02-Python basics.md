@@ -190,7 +190,7 @@ print(...)
     
 ~~~
 
-There is a great deal of Python help and information as well as code examples avaialble from the Internet.  One popular site is [stackoverflow(https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
+There is a great deal of Python help and information as well as code examples avaialble from the Internet.  One popular site is [stackoverflow](https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
 
 You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
 
