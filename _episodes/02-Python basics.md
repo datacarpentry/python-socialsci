@@ -55,11 +55,11 @@ keypoints:
 ## Using the Jupyter environment
 
 ### New cells
-from the insert menu item you can insert a new cell anywhere in the notebook either above or below the current cell. You can also us the + button on the toolbar to insert a new cell below.
+From the insert menu item you can insert a new cell anywhere in the notebook either above or below the current cell. You can also us the + button on the toolbar to insert a new cell below.
 
 ### Change cell type
 
-from the cell menu item you can change the type of a cell from code to markdown. By default new cells are created as code cells.
+From the cell menu item you can change the type of a cell from code to markdown. By default new cells are created as code cells.
 
 ### Hiding output
 
@@ -89,12 +89,13 @@ s = "Hello World"
 type(s)
 ~~~
 
-There are many more data types available, a full list is available in the Python documentation.
+There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
 We will be looking a few of them later on.
 
 ## Simple arithmetic operations
 
 For now we will stick with the numeric types and do some arithmetic. 
+
 All of the usual arithmetic operators are available.
 
 In the examples below we also introduce the Python comment symbol '#'. 
@@ -126,15 +127,18 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 
 > ### Exercise
 > 
-> 1. Create a new cell and paste into it the code cell above. Remove all of the calls to the print function and run the code. What is returned?
+> 1. Create a new cell and paste into it the assignments to the variables a and b and the contents of the code cell above with all of the print statements. Remove all of the calls to the print function so you only have the expressions that were to be printed and run the code. What is returned?
 > 
-> 2. Now remove all but the first line (with the 4 items in it) and run the cell again. How does this ourput differ from when we used the print function?
+> 2. Now remove all but the first line (with the 4 items in it) and run the cell again. How does this output differ from when we used the print function?
 > 
 > 3. Practice assigning values to variables using as many different operators as you can think of.
 > 4. Create some expressions to be evaluated using brackets to enforce the precedence that you require
 > 
 > 
 > > ## Solution
+> > 
+> > 1. Only the last result is printed.
+> > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as seperate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in brackets.
 > > 
 > > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
 > >
@@ -158,7 +162,7 @@ In order to answer this from Jupyter, you can type the function name and then ty
 > > ### Solution
 > > Type 'print' into a code cell and then type `shift`+`tab`. The following pop-up should appear.
 > > 
-> > ![Print parameter information](..\\..\\Pictures\\Python_function_parameters_9.png) 
+> > ![Print parameter information](../fig/Python_function_parameters_9.png) 
 > > 
 > > 
 > {: .solution}
@@ -190,14 +194,21 @@ There is a great deal of Python help and information as well as code examples av
 
 You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
 
-A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will both in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solution so you can always just move on to the next.
+A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will both in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solutions so you can always just move on to the next.
 
 ## Datatype and how Python uses them
 
 ### Changing datatypes
-The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable , you can change the data type.
+The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the data type.
 
-You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `float` to an `integer`. 
+You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `string` to a `float`. 
+
+~~~
+a = "3.142"
+print(type(a))
+a = float(a)
+print(type(a))
+~~~
 
 Although you can always change an `integer` to a `float`, if you change a `float` to an `integer` then you can lose part of the value of the variable and you won't get an error message.
 
@@ -219,11 +230,6 @@ print(a)
 In some circimstances explicitly converting a datatype makes no sense; you cannot change a string with alphabetic characters into a number. 
 
 ~~~
-
-a = "3.142"
-print(type(a))
-a = float(a)
-print(type(a))
 
 b = "Hello World"
 print(type(b))
@@ -324,7 +330,7 @@ So far we have seen three basic Python data types; Integer, Float and String. Th
 
 ~~~
 
-# In the if statement, if the condition evaluates to True then the indented statement is executed. 
+# In the `if` statement, if the condition evaluates to True then the indented statement is executed. 
 # So in these examples only if python thinks that the value of bool_val is True will the print statement be executed.
 
 bool_val = True
