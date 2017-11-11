@@ -60,7 +60,7 @@ You are not restricted to single line statements. If the Python interpreter deci
 ## Introducing Jupyter notebooks
 
 Jupyter is the successor to a system called IPython.  Originally IPython was a notebook system only for Python code. Now it is available for a variety of other languages as well so it was appropriate to change the name. We will be using Jupyter notebooks only for Python code.
-We access the Jupyter notebook system from a web browser.  When the Jupter system is started see [setup instructions]('./00-python setup.md') from the command line prompt your browser should start automatically and look something like this;
+We access the Jupyter notebook system from a web browser.  When the Jupter system is started from the command line prompt your browser should start automatically and look something like this;
 
 ![Jupyter_notebook_list](../fig/Python_jupyter_6.png)
 
