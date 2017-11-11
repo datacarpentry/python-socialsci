@@ -28,13 +28,11 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of python will a
 3.	The pop-up menu items will include an option to start a ‘cmd’ window or in the latest Windows release start a ‘PowerShell’ window. Select whichever appears.
 4.	When the window opens, type the command ‘jupyter notebook’.
 5.	Several messages will appear in the command window. In addition your default web browser will open and display the Jupyter notebook home page. The main part of this is a file browser window starting at the folder you selected in step 1.
-6.	There may be existing notebooks which you can select and open in a new window or there is a menu option to create a new notebook.
+6.	There may be existing notebooks which you can select and open in a new tab in your browser or there is a menu option to create a new notebook.
 ![Python Install](../fig/Python_install_2.png)
-7.	The Jupyter package crerates a small web services and opens your browser pointing at it. If your browser does not open, you can open it manually and specify an IP address of ‘localhost:8888’. 
+7.	The Jupyter package creates a small web services and opens your browser pointing at it. If your browser does not open, you can open it manually and specify ‘localhost:8888’ as the URL. 
 8.	Port 8888 is the default port used by the Jupyter web service, but if it is already in use it will increment the port number automatically. Either way the port number it does use is given in a message in the cmd /powershell window.
 9.	Once running, the cmd /powershell window will display additional messages, about saving notebooks etc. but there is no need to interact with it directly. The window can be minimized and ignored.
 10.	To shut Jupyter down select the cmd/powershell window and type Ctrl+c twice and then close the window.
 
 
-## Downloading the prepared Jupyter Notebooks
-For the purpose of this lesson a set of Jupyter notebooks have been prepared. They can be downloaded from [here](???). However it may be more instructive for you to create your own set of notebook and type in the code directly.
