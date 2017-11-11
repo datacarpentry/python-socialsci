@@ -64,7 +64,7 @@ We access the Jupyter notebook system from a web browser.  When the Jupter syste
 
 ![Jupyter_notebook_list](../fig/Python_jupyter_6.png)
 
-When you create a notebook from the `New` option the new notebook will be displayed in a new browser and look like this.
+When you create a notebook from the `New` option the new notebook will be displayed in a new browser tab and look like this.
 
 ![Jupyter_notebook](../fig/Python_jupyter_7.png)
 
@@ -82,7 +82,7 @@ When a cell is `Run` it is given a number along with the corresponding output ce
 
 Although there is an option to do so on the toolbar, you do not have to manually save the notebook. This is done automatically by the Jupyter system.
 
-Not only is the contents of the `In` cells saved, but also the `Out` cells.  This allows you to create complete documents with both you code and the output of the code in a single place.  You can also change the cell type of a cell from Python code to  `Markdown` using the `Cell | Cell Type` option. `Markdown’ is a simple formatting system which allows you to create documentation for your code, again all within the same notebook structure.
+Not only is the contents of the `In` cells saved, but also the `Out` cells.  This allows you to create complete documents with both your code and the output of the code in a single place.  You can also change the cell type of a cell from Python code to  `Markdown` using the `Cell | Cell Type` option. `Markdown` is a simple formatting system which allows you to create documentation for your code, again all within the same notebook structure.
 
 The Notebook itself is stored as a JSON file with an ‘.ipynb’ extension. These JSON files are text based and can be exported  and imported into another Jupyter system. This allows you to share you code, results and documentation with others.
 
