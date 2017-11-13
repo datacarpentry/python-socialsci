@@ -27,7 +27,7 @@ In addition to the functions provided by Python, you can write your own function
 
 Functions are used when a section of code needs to be repeated at variaous different points in a program. It saves you re-writing it all. In reality you rarely need to repeat the exact same code. Usually there will be some variation in variable values needed. Because of this, when you create a function you are allowed to specify a set of `parameters` which represent variables in the function.
 
-In our use of the `print` function we have provided as a parameter, whatever it is we want to `print`. Typically wheneveer we use the print function we pass a different parameter value.
+In our use of the `print` function we have provided as a parameter, whatever it is we wanted to `print`. Typically whenever we use the print function we pass a different parameter value.
 
 The ability to specify parameters make functions very flexible.
 
@@ -49,7 +49,7 @@ Points to note;
 
 1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets. 
 2.	The definition clause is terminated with a ‘:’ which causes indentation on the next and subsequent lines. All of these lines form the statements which make up the function. The function ends after the indentation is removed.
-3.	Within the function, the parameters behave just like variables whose initial values will those that they were given when the function was called. 
+3.	Within the function, the parameters behave just like variables whose initial values will be those that they were given when the function was called. 
 4.	functions have a return statement which specifies the value to be returned. This is the value assigned to the variable on the left-hand side of the call to the function. (power in the example above)
 5.	You call (run the code) of a function simply by providing its name and values for its parameters just as you would for any builtin function.
 6.  Once the definition of the function has been executed, it becomes part of python for the current session and can be used anywhere. 
@@ -58,7 +58,7 @@ Points to note;
 9. The variable `x` defined within the function only exists within the function, it cannot be used outside in the main program.
 
 
-In our `power` function we have two parameters which must be provided everytime the function is used. You need to  provide the parameters in the right order or to explicity name the parameter you are referring to and use the `=` sign to give it a value.
+In our `power` function we have two parameters which must be provided everytime the function is used. You need to  provide the parameters in the right order or to explicitly name the parameter you are referring to and use the `=` sign to give it a value.
 
 In many cases of functions we want to provide default values for parameters so the user doesn't have to. We can do this in the following way
 
@@ -115,13 +115,13 @@ The functions we have created above only exist for the duration of the session i
 
 If all of your code is in a single file or notebook this isn't really a problem.
 
-There are however many (thousands) of useful functions which other people have written and have made available to all python users by creating libraries (also referred to as packages or modules) of functions. 
+There are however many (thousands) of useful functions which other people have written and have made available to all Python users by creating libraries (also referred to as packages or modules) of functions. 
 
 You can find out what all of these libraries are and their contents by visiting the main python.org site. 
 
 We need to go through a 2-step process before we can use them in our own programs.
 
-Step 1.  use the `pip` command which is installed as part of the Python install to fetch the package from the Internet
+Step 1.  use the `pip` command from the commandline. `pip` is installed as part of the Python install and is used to fetch the package from the Internet and install it in your Python configuration.
 
 ~~~
 pip install <package name>
@@ -146,7 +146,7 @@ import matplotlib.pyplot as plt
 
 ~~~
 
-The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the 'pyplot' sublibrary we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
+The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the 'pyplot' sub-library we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
 
 The `alias'` we use (specified after the `as` keyword) is entirely up to us. However those shown here for `pandas`, `numpy` and `matplotlib` are almost universaly used for these popular libraries. If you are searching for code examples for these libraries on the Internet, they will almost certainly use the same alias' as we have here. 
 
