@@ -36,7 +36,6 @@ A typical use case for SQLite databases is to hold large datasets, you use SQL c
 ## Accessing data stored in SQLite using Python
 
 We will illustrate the use of the `sqlite3` module by connecting to an SQLite database using both core Python and also using pandas.
-We wil execute
 
 The database that we will use is SN7577.sqlite This contains the data from the SN7577 dataset that we have used in other lessons.
 
@@ -98,9 +97,6 @@ The `execute` method doesn't actually return any data, it just indicates that we
 {: .challenge}
 
 
-
-In all cases an error message is returned. The error message is not from Python but from SQLite. It is the same error message that you would have got had you made the same errors in the SQLite plugin.
-
 Before we can make use of the results of the query we need to use the `fetchall` method of the cursor. 
 
 The `fetchall` method returns a list. Each item in the list is a tuple containing the values from one row of the table. You can iterate through the items in a tuple in the same way as you would do so for a list.
@@ -128,7 +124,7 @@ print(colnames)
 
 ~~~
 
-One reason for using a datbase is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
+One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
 
 An alternative is to use the `fetchone` method, which as the name suggestrs returns only a single row. The cursor keeps track of where you are in the results of the query, so the next call to `fetchone` will return the next record. When there are no more records it will return 'None'.
 
@@ -195,10 +191,6 @@ print(df.head())
 con.close()
 
 ~~~
-
-## Pandas dataframe v SQL table
-
-It is very easy and often very convenient to think of SQL tables and pandas dataframes as being similar types of objects. All of the data manipulations, slicing, dicing, aggragetions and joins associated with SQL and SQL tables can all be accomplished with pandas methods operating on a pandas dataframe.
 
 ## Saving a dataframe as an SQLite table
 
