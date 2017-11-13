@@ -67,8 +67,9 @@ print(personDict)
 
 > ## Exercise
 > 
-> 1. Using the personDict asa base add information realting to the persons home and work addresses including postcodes. Print out the postcode for the work address.
-> 2. Print out the names of the children on seperate lines (i.e. not as a list)
+> 1. Using the personDict as a base add information relating to the persons home and work addresses including postcodes. 
+> 2. Print out the postcode for the work address.
+> 3. Print out the names of the children on seperate lines (i.e. not as a list)
 > 
 > > ## Solution
 > > 
@@ -130,11 +131,11 @@ with open('SAFI.json') as json_data:
 
 Points to note;
 
-1. We import the json package with an import statement
+1. We import the json package with an import statement.
 2. We have chosen to use the `with` statement to open the SAFI.json file. Notice the ':' at the end of the line and the subsequent indentation. The `with` statement is in effect until we un-indent. At which time the file will automatically be closed. So we don't need to do so explicitly. 
-3. 'json_data' is the file handle
-4. The `json.load` method is passed the file handle and reads the complete file
-5. The variable 'd' is a list of dictionaries. (When we read the csv file we considered it to be a list of strings)
+3. 'json_data' is the file handle.
+4. The `json.load` method is passed the file handle and reads the complete file.
+5. The variable 'd' is a list of dictionaries. (When we read the csv file we considered it to be a list of strings).
 6. The `json.dumps` method can be used to print either the entire file or a specific dictionary from the list in a formatted manner by using the indent parameter) 
 
 
@@ -158,7 +159,7 @@ line. 'd' a list object and each entry in the list is a Dictionary object.
 
 Despite the arbitary complexity of a JSON document or a Python dictionary object, we can adopt a very systematic approach to extracting individual fields form the structure.
 
-The story so far: Our JSON file has been read into a a variable 'd'. We know that 'd' is a list of dictionaries. Each dictionary represents a JSON document ( a record).
+The story so far: Our JSON file has been read into a variable 'd'. We know that 'd' is a list of dictionaries. Each dictionary represents a JSON document ( a record).
 
 We can print the contents of the first dictionary in the list with 
 
@@ -169,7 +170,9 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 
 > ## Exercise
 > 
-> In the output from the code above there is a key with the name of 'D_curr_crop'. Find it and by looking at the indentation and the '[' (lists) and '{' (dictionaries) describe in English how you could find the first occurrence of  'D_curr_crop' starting with 'd'.
+> 1. In the output from the code above there is a key with the name of 'D_curr_crop'. Find it and by looking at the indentation and the '[' (lists) and '{' (dictionaries) describe in English how you could find the first occurrence of  'D_curr_crop' starting with 'd'.
+> 
+> 2. Use a print statement to find out what it is.
 > 
 > > ## Solution
 > > 
@@ -183,13 +186,13 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 > > 
 > > Being able to start at the outermost level and work your way in is very important when you need to extract specific items.
 > > 
+> > ~~~
+> > print(d[0]['D_plots'][0]['D_crops'][0]['D_curr_crop']) 
+> > ~~~
+> > 
 > {: .solution}
 {: .challenge}
 
-
-~~~
-print(d[0]['D_plots'][0]['D_crops'][0]['D_curr_crop']) 
-~~~
 
 Being able to drill down in this way is very useful in helping you get a feel for the JSON data structure. But in practice it is more likely that instead of returning the first occurance of 'D_curr_crop' you will want to return all of them.
 
@@ -243,7 +246,7 @@ for farms in d:
 print(unique_crops)
 ~~~
 
-Simply having a list of all of the crops is unlikely to be enough. What you are really interested in is which farm grow which crops in which plot. 
+Simply having a list of all of the crops is unlikely to be enough. What you are really interested in is which farm grows which crops in which plot. 
 
 We can accumulate this information as we move through the list of dictionary objects. At the top level, 'farm', there is a unique identifier 'A03_quest_no' which we can use. for the plot and the crop within the plot we will create our own simple indexing system (plot_no and crop_no). At the end instead of just printing the crop name, we also print the details of where this crop is being grown.
 
@@ -268,13 +271,10 @@ The final stage of this data extraction process is to save the extracted data to
 
 Rather than manually appending all of the information items into a string with ',' seperating each, we can use the `csv` module.
 
-To do this we need to create a `csv.writer` object and use it to write complete rows of data at a time. `csv.writer` expects the datato be provided as a list of items. 
+To do this we need to create a `csv.writer` object and use it to write complete rows of data at a time. `csv.writer` expects the data to be provided as a list of items. 
 
 For the header row we provide a list of strings containing the colmn names we want and at the end we proivide the data items in a list as well.
 
-
-Now that we can extract the columns that we want from the dictionary, the final step is to write them to a csv file.
-To do this we are going to use the `csv` package. This makes reading and writing csv files easy. We are only writing to a file,and to do this we use the `writerow` method and pass it a list of the values we want written.
 ~~~
 import csv
 filename = "SAFI_crops.csv"
