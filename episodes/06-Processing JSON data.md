@@ -50,7 +50,7 @@ So far the keys in the dictionary each relate to a single piece of information a
 ~~~
 personDict['Children'] = ['John', 'Jane', 'Jack']
 personDict['Children_count'] = 3
-print(personDict.values())
+print(personDict)
 ~~~
 
 Not only can I have a key where the value is a list, the value could also be another dictionary object. Suppose I want to add some telephone numbers
@@ -61,7 +61,7 @@ print(personDict.values())
 
 # adding another phone
 personDict['phones']['business'] =  '0161234234546'
-print(personDict.values())
+print(personDict)
 
 ~~~
 
