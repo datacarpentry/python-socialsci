@@ -50,7 +50,7 @@ print(df_SN7577['Q1'])
 print(df_SN7577.Q1)
 ~~~
 
-If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are encliosed in '[]'
+If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are enclosed in '[]'
 
 ~~~
 print(df_SN7577[['Q1', 'Q2', 'Q3']])
@@ -176,8 +176,4 @@ df_SN7577.sample(frac=0.05, random_state=1)     # 5% of records , same records i
 ~~~
 
 
-## Copying  a data frame
 
-## Adding columns to a data frame
-
-## Dealing with missing/null values in a dataframe
