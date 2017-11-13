@@ -28,7 +28,7 @@ Most of the things that pandas can do can be done with basic Python, but the col
 Particular features of pandas that we will be looking at over this and the next couple of episodes include:
 
 
-* Reading data stored in JSON and CSV files (other file formats can be read as well)
+* Reading data stored in CSV files (other file formats can be read as well)
 * Slicing and subsetting data in dataframes (tables!)
 * Dealing with missing data
 * Reshaping data (long -> wide,  wide -> long)
@@ -51,7 +51,7 @@ import pandas as pd
 
 ## Pandas data structures
 
-There are 2 main data structure used by pandas , they are the Series and the Dataframe. The Series equates in general to a vector or a list. The data frame is equivalent to a table. Each column in a pandas dataframe is a pandas Series data structure.
+There are 2 main data structure used by pandas, they are the Series and the Dataframe. The Series equates in general to a vector or a list. The data frame is equivalent to a table. Each column in a pandas dataframe is a pandas Series data structure.
 
 We will mainly be looking at the Dataframe. 
 
@@ -63,10 +63,10 @@ When we read a csv dataset in base Python we did so by opening the dataset, read
 
 The main advantage of this approach, however, is that you only have to store one dataset record in memory at a time. This means that if you have the time, you can process datasets of arbitarily large sizes.
 
-In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a dataframe. If your dataset has column headers in the first record then these can be used as the dataframe column names. You can explicitly state this in the parameters to the call, but Pandas is usually able to infer that there ia a header row and use it automatically.
+In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a dataframe. If your dataset has column headers in the first record then these can be used as the dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
 
 
-We are going to read in our SN7577.tab file. Although this is a tab delimited file we will still use the pandas read_csv method, but we will explicitly tell the method that the seperator is the tab character and not a comma which is the default.
+We are going to read in our SN7577.tab file. Although this is a tab delimited file we will still use the pandas `read_csv` method, but we will explicitly tell the method that the seperator is the tab character and not a comma which is the default.
 
 ~~~
 df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
@@ -85,7 +85,7 @@ df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 > > ~~~
 > > 
 > > If you allow pandas to assume that your columns are seperated by commas (the default) and there aren't any, then each record will be treated as a single column. So the shape is given as 1286 rows (correct) but only one column. 
-> > When the contents is display the only column name is the complete first record. Notice the '\t' used to represent the tab character in the output. This is the same format we used to specify the tab seperator when we correctly read in the file.
+> > When the contents is display the only column name is the complete first record. Notice the '\t' used to represent the tab characters in the output. This is the same format we used to specify the tab seperator when we correctly read in the file.
 > > 
 > > 
 > {: .solution}
