@@ -20,11 +20,11 @@ keypoints:
 
 ## Programs are rarely linear
 
-Most programs do not work by executing a simple sequential set statements. The code is constructed so that decisions and different paths through the program can be taken based on changes in variable values.
+Most programs do not work by executing a simple sequential set of statements. The code is constructed so that decisions and different paths through the program can be taken based on changes in variable values.
 
 To make this possible all programming language have a set of control structures which allow this to happen.
 
-In this section we are going to look at how we can create loops and branches in our Python code
+In this episode we are going to look at how we can create loops and branches in our Python code
 Specifically we will look at three control structures, namely; 
 
 * If..Else..
@@ -43,6 +43,8 @@ The basic format of the `if` statement is:
     ...
     statement n
 next statement
+
+If the expression evalutes to `True` then the statements 1 to n will be executed followed by 'next statement' . If the expression is `False` the 'next statement only is executed. Python know which lines of code are relatd to the `if` statement by the indentation. 
 
 Below are some examples
 
@@ -234,7 +236,7 @@ Points to note;
 > > 
 > > 1. Because i is incremented before the sum, you are summing 1 to 11.
 > > 2. The Boolean value is set to False the lopp will never be executed.
-> > 3. When i does equal 10 the expression is False and the lop does not execute so we have only summed 1 to 9
+> > 3. When i does equal 10 the expression is False and the loop does not execute so we have only summed 1 to 9
 > > 4. Because you cannot guarantee the internal representation of Float, you should never try to compare them for eqaulity. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it using `Ctrl+c`
 > > {: .solution}
 > {: .challenge}
@@ -312,7 +314,7 @@ for word in longString.split() :
 > variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
 > 
-> Research the split() method and then rewrite example 8 so that it prints the 4 components of variablelist
+> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of variablelist
 > 
 > > ## Solution
 > > 
