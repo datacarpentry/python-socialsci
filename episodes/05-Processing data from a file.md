@@ -61,7 +61,7 @@ f = open(filename, "r")    # open the file whose name is in filename, the 'r' me
 for line in f:             # We use a for loop to iterate through the file one line at a time. 
     print(line)            # we simply print the line
 
-f.close                    # Always close th file at the end.
+f.close                    # Always close the file at the end.
 ~~~
 
 You can think of the file as being a list of strings. Each string in the list is one complete line from the file.
@@ -70,7 +70,7 @@ If you look at the output, you can see that the first record in the file is a he
 
 ### Step 2 - Select a specific 'column' from the records in the file
 
-We know that the first record in the file is a header record and we want to ignore it. To do this we call the readline() method of the file handle f. We don't need to assign the line that it will return to a variable as we are not going to use it. 
+We know that the first record in the file is a header record and we want to ignore it. To do this we call the `readline()` method of the file handle f. We don't need to assign the line that it will return to a variable as we are not going to use it. 
 
 As we read the file the line variable is a string containing a complete record. The fields or columns of the record are seperated by each other by "," as it is a csv file.
 
@@ -161,7 +161,7 @@ fw.close()
 
 What are we  doing here?
 
-1. Open the files. Because there are now two files, each has its own file handle. fr for the file we read and fw for the file we are going to write. (They are just variable names so you can use anything you like). For the file we are going to write to we use 'w' for the second parameter. If the file does not exist it will be created. If it does exist, then the contents will be overwritten. If we want to append to a file we can use 'a'; as the second parameter.
+1. Open the files. Because there are now two files, each has its own file handle. fr for the file we read and fw for the file we are going to write. (They are just variable names so you can use anything you like). For the file we are going to write to we use 'w' for the second parameter. If the file does not exist it will be created. If it does exist, then the contents will be overwritten. If we want to append to an existing file we can use 'a' as the second parameter.
 2. Because we are just testing a specific field from the record to have a certain value, we don't need to put it into a variable first. If the expression is True, then we use write() method to write the complete line just as we read it to the output file.
 3. Close the files
 
@@ -315,7 +315,7 @@ else :
 > {: .solution}
 {: .challenge}
 
-We are now in a position to re-write count of roof types example without know in advance what any of the roof types are.
+We are now in a position to re-write our count of roof types example without knowing in advance what any of the roof types are.
 
 ~~~
 
@@ -337,10 +337,10 @@ for line in f:
         dict_roof_types[roof_type] += 1
     else :
         dict_roof_types[roof_type] = 1
-#6
+# 6
 f.close()
 
-#7
+# 7
 
 for item in dict_roof_types:
     print(item, "=", dict_roof_types[item])
