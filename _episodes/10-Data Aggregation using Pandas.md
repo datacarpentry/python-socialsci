@@ -34,7 +34,9 @@ For numeric variables we can obtain a variety of basic statistical information b
 df_SAFI.describe()
 ~~~
 
-This can be done for the dataframe as a whole, in which case some of the results might have no sensible meaning, or on a single variable basis
+This can be done for the dataframe as a whole, in which case some of the results might have no sensible meaning. If there are any missing values, reprtesented in the display as 'NaN' you will get a warning message. 
+
+You can also 'describe' on a single variable basis.
 
 ~~~
 df_SAFI['B_no_membrs'].describe()
@@ -138,7 +140,7 @@ print(df_SAFI.shape)
 
 ### Replace NaN with a value of our choice
 
-The 'E19_period_use' variBLE answers the question; 'For how many years have you been irrigating the land?'. In some cases the land is not irrigated and these are represented by NaN in the dataset. So when we run 
+The 'E19_period_use' variable answers the question; 'For how many years have you been irrigating the land?'. In some cases the land is not irrigated and these are represented by NaN in the dataset. So when we run 
 
 ~~~
 df_SAFI['E19_period_use'].describe()
@@ -146,7 +148,7 @@ df_SAFI['E19_period_use'].describe()
 
 we get a count value of 92 and all of the other statistics are based on this count value.
 
-Now supposing that instead of NaN the interviewer entered a value of 0 to indicated the land which is *not* irrigated has been irrigated for 0 years, technically correct.
+Now supposing that instead of NaN the interviewer entered a value of 0 to indicate the land which is *not* irrigated has been irrigated for 0 years, technically correct.
 
 To see what happens we can convert all of the NaN values in the 'E19_period_use' column to 0 with the following code;
 
@@ -175,6 +177,7 @@ For categorical variables, nuumerical statistics don't make any sense.
 For a categorical cariable we can obtain a list of unique values used by the variable by using the `unique` method. 
 
 ~~~
+df_SAFI = pd.read_csv("SAFI_results.csv") 
 pd.unique(df_SAFI['C01_respondent_roof_type'])
 ~~~
 
@@ -201,6 +204,45 @@ A11_years_farm = df_SAFI.groupby(['C01_respondent_roof_type', 'C02_respondent_wa
 A11_years_farm
 ~~~
 
+> ## Exercise
+> 
+> 1. Read in the SAFI_results.csv dataset.
+> 2. Get a list of the different 'C01_respondent_roof_type' values.
+> 3. Groupby 'C01_respondent_roof_type' and desvribe the results.
+> 4. Remove rows with NULL values for 'E_no_group_count'.
+> 5. repeat steps 2 & 3 and compare the results.
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > # Steps 1 and 2
+> > import numpy as np
+> > df_SAFI = pd.read_csv("SAFI_results.csv") 
+> > print(df_SAFI.shape)
+> > print(pd.unique(df_SAFI['C01_respondent_roof_type']))
+> > ~~~
+> > 
+> > ~~~
+> > # Step 3
+> > grouped_data = df_SAFI.groupby('C01_respondent_roof_type')
+> > grouped_data.describe()
+> > ~~~
+> > 
+> > ~~~
+> > # steps 4 and 5
+> > df_SAFI = df_SAFI[(df_SAFI['E_no_group_count'].notnull())]
+> > grouped_data = df_SAFI.groupby('C01_respondent_roof_type')
+> > print(df_SAFI.shape)
+> > print(pd.unique(df_SAFI['C01_respondent_roof_type']))
+> > grouped_data.describe()
+> > ~~~
+> > 
+> > 'E_no_group_count' is related to whether or not farm plots are irrigated or not. It has no obvious connection to farm buildings.
+> > But by restricting the data to non-irrigated plots we have accidently? removed one of the roof_types completely. 
+> > 
+> {: .solution}
+{: .challenge}
+
 ## Joining dataframes
 
 ### Why do we want to do this
@@ -208,7 +250,7 @@ A11_years_farm
 
 There are many occasions when we have related data spread across multiple files.
 
-The data can be realted to each other in different ways. How they are related will how and how completely we can join the data from the datasets. 
+The data can be realted to each other in different ways. How they are related and how completely we can join the data from the datasets will vary. 
 
 In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset just to make the displays more manageable.
 
@@ -258,7 +300,7 @@ df_all_rows = pd.concat([df_SN7577i_aa, df_SN7577i_bb])
 df_all_rows
 ~~~
 
-In this case 'df_SN7577i_aa' has no Q4 column and 'df_SN7577i_bb' has no Q3 column. When they are concatenated, the resulting dataframe has a column for for Q3 and Q4. For the rows corresponding to 'df_SN7577i_aa' the values in the Q4 column are missing and denoted by 'NaN'. The same applies to Q3 for the 'df_SN7577i_bb' rows 
+In this case 'df_SN7577i_aa' has no Q4 column and 'df_SN7577i_bb' has no Q3 column. When they are concatenated, the resulting dataframe has a column for for Q3 and Q4. For the rows corresponding to 'df_SN7577i_aa' the values in the Q4 column are missing and denoted by 'NaN'. The same applies to Q3 for the 'df_SN7577i_bb' rows. 
 
 
 ### Scenario 2 - Adding the columns from one dataframe to those of another dataframe
@@ -293,7 +335,7 @@ Leaving the join column to default in this way is not best practice. It is bette
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', on = 'Id')
 ~~~
 
-In many circumstances, the column names that you wish to join on are not the  same in both dataframes, in which case you can use the 'left_on' and 'right_on' parameters to specify them separately.
+In many circumstances, the column names that you wish to join on are not the same in both dataframes, in which case you can use the 'left_on' and 'right_on' parameters to specify them separately.
 
 ~~~
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_on = 'Id')
@@ -344,7 +386,7 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 
 In the SN7577 dataset that we have been using there is a group of columns which record which daily newspapers each respondent reads. Despite the un-informative names like 'daily1' each column refers to a current UK daily national or local newspaper. 
 
-Whether the paper is read or not is recorded using the values of 0 or 1 as a boolean indicator. The advantage of using a column for eah paper means that should a respondent read multiple newpapers, all of the required information can still be recorded in a single record.
+Whether the paper is read or not is recorded using the values of 0 or 1 as a boolean indicator. The advantage of using a column for each paper means that should a respondent read multiple newpapers, all of the required information can still be recorded in a single record.
 
 Recording information in this 'wide' format is not always beneficial when trying to analyse the data.
 
@@ -370,7 +412,7 @@ We will create a new dataframe with a single column of 'Id'.
 df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
 ~~~
 
-Using the range function I can create values of Id starting with 1 and going upto 1286 (remember the second parameter to re=ange is one past the last value used.) I have explicitly coded this value because I knew how many rows were in the dataset. If I didn't, I could have used 
+Using the range function I can create values of Id starting with 1 and going upto 1286 (remember the second parameter to range is one past the last value used.) I have explicitly coded this value because I knew how many rows were in the dataset. If I didn't, I could have used 
 
 ~~~
 len(df_SN7577.index) +1
@@ -387,7 +429,7 @@ we could use the `iloc` method and provide the index values of the range of colu
 df_papers2 = df_SN7577.iloc[:,118:143]
 ~~~
 
-This isn't really very practical. I would need to know the position of all of the columns of interest. They may not be contiguous.
+This isn't really very practical. I would need to know the position of all of the columns of interest. They may not be contiguous. This method would be very prone to human error.
 
 We could use a regular expression. Regular expressions is a very complex topic which we won't be covering. Using the `filter` method the code
 
@@ -395,7 +437,7 @@ We could use a regular expression. Regular expressions is a very complex topic w
 df_papers2 = df_SN7577.filter(regex= '^daily')
 ~~~
 
-will do want we want. '^daily' is a simple regular exprerssion which says 'startswith the characters 'daily'
+will do want we want. '^daily' is a simple regular exprerssion which says 'startswith' the characters 'daily'
 
 A simpler way is to use the 'like' parameter of the `filter` method.
 
