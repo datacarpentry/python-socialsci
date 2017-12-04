@@ -1,7 +1,7 @@
 ---
 title: "Reading data from a file using Pandas"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "What is Pandas?"
 - "How do I read files using Pandas?"
