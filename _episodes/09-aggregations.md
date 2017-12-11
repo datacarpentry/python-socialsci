@@ -27,12 +27,14 @@ import pandas as pd
 df_SAFI = pd.read_csv("SAFI_results.csv") 
 df_SAFI
 ~~~
+{: .python}
 
 For numeric variables we can obtain a variety of basic statistical information by using the `describe` method.
 
 ~~~
 df_SAFI.describe()
 ~~~
+{: .python}
 
 This can be done for the dataframe as a whole, in which case some of the results might have no sensible meaning. If there are any missing values, reprtesented in the display as 'NaN' you will get a warning message. 
 
@@ -41,6 +43,7 @@ You can also 'describe' on a single variable basis.
 ~~~
 df_SAFI['B_no_membrs'].describe()
 ~~~
+{: .python}
 
 There are also a set of methods which allow us to obtain individual values.
 
@@ -52,6 +55,7 @@ print(df_SAFI['B_no_membrs'].std())
 print(df_SAFI['B_no_membrs'].count())
 print(df_SAFI['B_no_membrs'].sum())
 ~~~
+{: .python}
 
 Unlike the `describe` method which converts the variable to a float (when it was originally an integer), the individual summary methods only does so for the returned result if needed. 
 
@@ -65,6 +69,7 @@ print(df_SAFI['E19_period_use'].std())
 print(df_SAFI['E19_period_use'].count())
 print(df_SAFI['E19_period_use'].sum())
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -80,6 +85,7 @@ print(df_SAFI['E19_period_use'].sum())
 > > ~~~
 > > df_SAFI['E19_period_use']
 > > ~~~
+> > {: .python}
 > > 
 > > you will see that there are several 'NaN' values. They also occurred when we used `describe()` on the full dataframe. NaN stands for Not a Number, ie. the value is missing. There are only 92 non-missing values and this is what is reported by the `count()` method. This value is also used in the caclulation of the mean and std values.
 > > 
@@ -93,12 +99,14 @@ We can find out how many variables in our dataframe contains any 'NaN' values wi
 ~~~
 df_SAFI.isnull().sum()
 ~~~
+{: .python}
 
 or for a specific variable 
 
 ~~~
 df_SAFI['E19_period_use'].isnull().sum()
 ~~~
+{: .python}
 
 Data from most sources has the potential to include missing data. Whether or not this presents a problem at all depends on what you are planning to do. 
 
@@ -128,6 +136,7 @@ print(df_SAFI.shape)
 df_SAFI.dropna(inplace=True)
 print(df_SAFI.shape)
 ~~~
+{: .python}
 
 Because there are variables in the SAFI dataset which are all NaN using the `dropna` method effectively deletes all of the rows from the dataframe, probably not what you wanted. Instead we can use the `notnull()` method as a row selection criteria and delete the rows where a specific variable has NaN values.
 
@@ -137,6 +146,7 @@ print(df_SAFI.shape)
 df_SAFI = df_SAFI[(df_SAFI['E_no_group_count'].notnull())]
 print(df_SAFI.shape)
 ~~~
+{: .python}
 
 ### Replace NaN with a value of our choice
 
@@ -155,6 +165,7 @@ To see what happens we can convert all of the NaN values in the 'E19_period_use'
 ~~~
 df_SAFI['E19_period_use'].fillna(0, inplace=True)
 ~~~
+{: .python}
 
 If we now run the `describe()` again you can see that all of the statistic have been changed because the calculations are NOW based on a count of 131. Probably not what we would have wanted.
 
@@ -170,6 +181,7 @@ import numpy as np
 df_SAFI['E19_period_use'].replace(0, np.NaN, inplace = True)
 df_SAFI['E19_period_use'].describe()
 ~~~
+{: .python}
 
 ## Categorical variables
 
@@ -180,6 +192,7 @@ For a categorical cariable we can obtain a list of unique values used by the var
 df_SAFI = pd.read_csv("SAFI_results.csv") 
 pd.unique(df_SAFI['C01_respondent_roof_type'])
 ~~~
+{: .python}
 
 Knowing all of the unique values is useful but what is more useful is knowing how many occurences of each there are. In order to do this we can use the `groupby` method. 
 
@@ -189,6 +202,7 @@ Having performed the `groupby` we can them `describe()` the results. The format 
 grouped_data = df_SAFI.groupby('C01_respondent_roof_type')
 grouped_data.describe()
 ~~~
+{: .python}
 
 You can group by more than on variable at a time by providing them as a list.
 
@@ -196,6 +210,7 @@ You can group by more than on variable at a time by providing them as a list.
 grouped_data = df_SAFI.groupby(['C01_respondent_roof_type', 'C02_respondent_wall_type'])
 grouped_data.describe()
 ~~~
+{: .python}
 
 You can also obtain individual statistics if you want.
 
@@ -203,6 +218,7 @@ You can also obtain individual statistics if you want.
 A11_years_farm = df_SAFI.groupby(['C01_respondent_roof_type', 'C02_respondent_wall_type'])['A11_years_farm'].count()
 A11_years_farm
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -221,12 +237,14 @@ A11_years_farm
 > > print(df_SAFI.shape)
 > > print(pd.unique(df_SAFI['C01_respondent_roof_type']))
 > > ~~~
+> > {: .python}
 > > 
 > > ~~~
 > > # Step 3
 > > grouped_data = df_SAFI.groupby('C01_respondent_roof_type')
 > > grouped_data.describe()
 > > ~~~
+> > {: .python}
 > > 
 > > ~~~
 > > # steps 4 and 5
@@ -236,6 +254,7 @@ A11_years_farm
 > > print(pd.unique(df_SAFI['C01_respondent_roof_type']))
 > > grouped_data.describe()
 > > ~~~
+> > {: .python}
 > > 
 > > 'E_no_group_count' is related to whether or not farm plots are irrigated or not. It has no obvious connection to farm buildings.
 > > But by restricting the data to non-irrigated plots we have accidently? removed one of the roof_types completely. 

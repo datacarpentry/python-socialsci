@@ -48,6 +48,7 @@ Importing the pandas library is done in exactly the same way as for any other li
 ~~~
 import pandas as pd
 ~~~
+{: .python}
 
 ## Pandas data structures
 
@@ -71,6 +72,7 @@ We are going to read in our SN7577.tab file. Although this is a tab delimited fi
 ~~~
 df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -83,6 +85,7 @@ df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 > > print(df_SN7577_oops.shape)
 > > print(df_SN7577_oops)
 > > ~~~
+> > {: .python}
 > > 
 > > If you allow pandas to assume that your columns are seperated by commas (the default) and there aren't any, then each record will be treated as a single column. So the shape is given as 1286 rows (correct) but only one column. 
 > > When the contents is display the only column name is the complete first record. Notice the '\t' used to represent the tab characters in the output. This is the same format we used to specify the tab seperator when we correctly read in the file.
@@ -98,6 +101,7 @@ You can find out the type of the variable df_SN7577 by using the `type` function
 ~~~
 print(type(df_SN7577))
 ~~~
+{: .python}
 
 You can see the contents by simply entering the variable name. You can see from the output that it is a tablular format. The column names have been taken from the first record of the file. On the left hand side is a column with no name. The entries here have been provided by pandas and act as an index to reference the individual rows of the dataframe. 
 
@@ -108,18 +112,19 @@ Another thing to notice about the display is that it is truncated. By default yo
 ~~~
 df_SN7577
 ~~~
+{: .python}
 
 Similar information can be obtained with `df_SN7577.head()` But here you are only returned the first 5 rows by default.
 
 ~~~
 df_SN7577.head()
 ~~~
+{: .python}
 
 > ## Exercise
 > 
 > 1. As well as the `head()` method there is a `tail()` method. What do you think it does? Try it.
 > 2. Both methods accept a single numeric parameter. What do you think it does? Try it.
-> 
 {: .challenge}
 
 You can obtain other basic information about your dataframe of data  with:
@@ -135,18 +140,20 @@ print(df_SN7577.size)
 print(df_SN7577.columns)
 # what are the datatypes of the columns?
 print(df_SN7577.dtypes)
-
 ~~~
+{: .python}
 
 > ## Exercise
 > 
 > When we asked for the column names and their datatypes, the output was abridged, i.e. we didn't get the values for all of the columns. Can you write a small piece of code which will return all of the values
 > 
-> ## Solution
-> 
-> ~~~
-> for name in df_SN7577.columns:
->     print(name)
-> ~~~
+> > ## Solution
+> > 
+> > ~~~
+> > for name in df_SN7577.columns:
+> >     print(name)
+> > ~~~
+> > {: .python}
+> {: .solution} 
 {: .challenge}
 

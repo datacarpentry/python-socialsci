@@ -74,8 +74,8 @@ b= 4
 print("a is", a, "b is",b)
 if a == b :
     print(a, "is equal to", b)
-    
 ~~~
+{: .python}
 
 In the examples above there are three things to notice;
 
@@ -119,8 +119,8 @@ if a > b :
     print(a, " is greater than ", b)
 else :
     print(a, " is NOT greater than ", b)
-
 ~~~
+{: .python}
 
 > ## Exercise 
 > 
@@ -145,6 +145,7 @@ elif a == b :
 else :
     print(a, " is less than ", b)
 ~~~
+{: .python}
 
 The overall structure is similar to the ‘if … Else’ statement. There are three additional things to notice;
 
@@ -170,6 +171,7 @@ while  i <= n :
     i = i + 1
 print("The sum of the numbers from 1 to", n, "is ", sum)
 ~~~
+{: .python}
 
 Points to note;
 
@@ -231,6 +233,7 @@ Points to note;
 > #    
 > #print("The sum of the numbers from 1.1 to", n, "is ", sum)
 > ~~~
+> {: .python}
 > 
 > > ## Solution
 > > 
@@ -250,14 +253,13 @@ The for loop, like the while loop repeatedly executes a set of statements. The d
 The basic format of the `for` statement is 
 
 ~~~
-
 for variable_name in some_sequence :
     statement1
     statement2
     ...
     statementn
-    
 ~~~
+{: .python}
 
 The key part of this is the 'some_sequence'. The phrase used in the documentation is that it must be 'iterable'. That means; you can count through the sequence, starting at the beginning and stopping at the end.
 
@@ -296,13 +298,12 @@ print("\nExample 7\n")
 for i in "ABCDE" :
     print(i)
     
-    
 print("\nExample 8\n")
 longString = "The quick brown fox jumped over the lazy sleeping dog"
 for word in longString.split() :
     print(word)
-    
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -313,6 +314,7 @@ for word in longString.split() :
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
+> {: .python}
 > 
 > Research the `split()` method and then rewrite example 8 so that it prints the 4 components of variablelist
 > 
@@ -323,6 +325,7 @@ for word in longString.split() :
 > > for word in variablelist.split(",") :
 > >     print(word)
 > > ~~~
+> > {: .python}
 > > 
 > > The format of variablelist is very much like that of a record in a csv file. In later episodes we will see how we can extract these values and assign them to variables for further processing rather tha just printing them out.
 > > 

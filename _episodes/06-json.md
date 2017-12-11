@@ -6,10 +6,8 @@ questions:
 - "What is JSON format?"
 - "How can I extract specific data items from a JSON record?"
 - "How can I convert an array of  JSON record into a table?"
-
 objectives:
 - "Describe the JSON data format"
-
 - "Understand where JSON is typically used"
 - "Appreciate some advantages of using JSON over tabular data"
 - "Appreciate some dis-advantages of processing JSON documents"
@@ -18,7 +16,6 @@ objectives:
 - "Display formatted JSON"
 - "Select and display specific fields from a JSON document"
 - "Write tabular data from selected elements from a JSON document to a csv file"
-
 keypoints:
 - "JSON is a popular data format for transferring data used by a great many Web based APIs"
 - " The JSON data format is very similar to the Python Dictionary structure."
@@ -44,6 +41,7 @@ personDict['Location'] = 'Manchester'
 
 print(personDict)
 ~~~
+{: .python}
 
 So far the keys in the dictionary each relate to a single piece of information about the person. What if we wanted to to add a list of items? 
 
@@ -52,6 +50,7 @@ personDict['Children'] = ['John', 'Jane', 'Jack']
 personDict['Children_count'] = 3
 print(personDict)
 ~~~
+{: .python}
 
 Not only can I have a key where the value is a list, the value could also be another dictionary object. Suppose I want to add some telephone numbers
 
@@ -62,8 +61,8 @@ print(personDict.values())
 # adding another phone
 personDict['phones']['business'] =  '0161234234546'
 print(personDict)
-
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -128,6 +127,7 @@ with open('SAFI.json') as json_data:
     print(type(d[0]))
     print(json.dumps(d[0], indent=2))
 ~~~
+{: .python}
 
 Points to note;
 
@@ -144,6 +144,7 @@ By default the order in which the keys of the dictionary are printed is not guar
 ~~~
 print(json.dumps(d[0], indent=2, sort_keys=True))
 ~~~
+{: .python}
 
 ## Extracting specific fields from a JSON document
 
@@ -152,6 +153,7 @@ If we want to extract fields from a JSON document, the first step isto convert t
 ~~~
 d = json.load(json_data)
 ~~~
+{: .python}
 
 line. 'd' a list object and each entry in the list is a Dictionary object.
 
@@ -166,7 +168,7 @@ We can print the contents of the first dictionary in the list with
 ~~~
 print(json.dumps(d[0], indent=2, sort_keys=True))
 ~~~
-
+{: .python}
 
 > ## Exercise
 > 
@@ -189,7 +191,7 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 > > ~~~
 > > print(d[0]['D_plots'][0]['D_crops'][0]['D_curr_crop']) 
 > > ~~~
-> > 
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -201,7 +203,8 @@ We need to do a bit more proramming to do this and to be aware of two potential 
 1. 'D_curr_crop' may not exist in any particular dictionary within 'D_crops'
 2. any of the lists 'D_plots' or 'D_crops' could be missing or just empty lists ( '[]' )
 
-In our first attempt we will ignore these problems
+In our first attempt we will ignore these problems  
+
 ~~~
 for farms in d:
     plot = farms['D_plots']
@@ -210,9 +213,11 @@ for farms in d:
         for curr_crops in crop:
             print(curr_crops['D_curr_crop']) 
 ~~~
+{: .python}
 
 In this version we test if all of the keys exists. 
 This could be extended to check that the lists are not empty.
+
 ~~~
 for farms in d:
     if 'D_plots' in farms :
@@ -223,15 +228,14 @@ for farms in d:
                 for curr_crops in crop:
                     if 'D_curr_crop' in curr_crops:
                         print(curr_crops['D_curr_crop'])
-
 ~~~
+{: .python}
 
 We can now produce a list of all of the crops in all of the plots in all of the farms. 
 
 We can also create a unique set of all of the crops grown using the Python `set` data structure as shown in the code below. A set is like a list but does not allow duplicate values. ( but doesn't raise an error if you try to add a duplicate)
 
 ~~~
-
 unique_crops = set()
 for farms in d:
     if 'D_plots' in farms :
@@ -245,6 +249,7 @@ for farms in d:
                         unique_crops.add(curr_crops['D_curr_crop'])
 print(unique_crops)
 ~~~
+{: .python}
 
 Simply having a list of all of the crops is unlikely to be enough. What you are really interested in is which farm grows which crops in which plot. 
 
@@ -266,6 +271,7 @@ for farms in d:
                     if 'D_curr_crop' in curr_crops:
                         print("Farm no ", id, " grows ", curr_crops['D_curr_crop'], " in plot ", plot_no , " and it is crop number ", crop_no)
 ~~~
+{: .python}
 
 The final stage of this data extraction process is to save the extracted data to a file for subsequent use. 
 
@@ -303,3 +309,4 @@ for farms in d:
                         
 fw.close()
 ~~~
+{: .python}
