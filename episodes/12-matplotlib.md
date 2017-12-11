@@ -6,7 +6,6 @@ questions:
 - "How can I create simple visualisations of my data?"
 objectives:
 - "Import pyplot from the matplotlib library" 
-
 - "Create simple plots using pyplot"
 keypoints:
 - "Graphs can be drawn directly from pandas, but it still uses matplotlib"
@@ -35,7 +34,7 @@ If you forget to to this your graphs will not appear.
 import matplotlib.pyplot as plt
 %matplotlib inline
 ~~~
-
+{: .python}
 
 ## Numpy 
 
@@ -48,6 +47,7 @@ numpy is usually given the alias of 'np', a convention we will follow.
 ~~~
 np.random.rand(20)
 ~~~
+{: .python}
 
 will generate 20 random numbers between 0 and 1.
 
@@ -68,8 +68,8 @@ s = pd.Series(np.random.rand(20) )
 #s
 # plot the bar chart
 s.plot(kind='bar')
-
 ~~~
+{: .python}
 
 Internally the pandas 'plot' method has called the 'bar' method of matplotlib and provided a set of parameters, including the pandas.Series s to generate the graph.
 
@@ -80,8 +80,8 @@ We also have to explicitly call the 'show' function to produce the graph.
 ~~~
 plt.bar(range ( len ( s )), s) 
 plt.show ()
-
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -95,9 +95,8 @@ plt.show ()
 > > 
 > > ~~~
 > > plt.bar(range ( len ( s )), s, width = 0.5)   # the default width is 0.8
-> > 
 > > ~~~
-> > 
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -112,6 +111,7 @@ s = pd.Series(np.random.rand(20))
 # plot the bar chart
 s.plot(kind='hist')
 ~~~
+{: .python}
 
 and the matplotlib way
 
@@ -119,6 +119,7 @@ and the matplotlib way
 plt.hist(s) 
 plt.show()
 ~~~
+{: .python}
 
 For the Histogram, each data point is allocated to 1 of 10 (by default) equal 'bins' of equal size (range of numbers) which are indicated along the x axis and the number of points (frequency) is shown on the y axis.
 
@@ -131,6 +132,7 @@ plt.ylabel('Frequency')
 plt.hist(s)
 plt.show()
 ~~~
+{: .python}
 
 In general most graphs can be broken down into a series of elelments which, although typically related in some way, can all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
 
@@ -176,6 +178,7 @@ plt.legend( loc=4 )  # the locations 1,2,3 and 4 are top-right, top-left, bottom
 # Show the graph with the two sets of points
 plt.show()
 ~~~
+{: .python}
 
 In the call to the `scatter` method, the 'label' parameter values are used by the 'legend'. 
 The 'c' or'color' parameter can be set to any color matplotlib recognises. Full details of the available colours are available in the [matplotlib](http://matplotlib.org/api/colors_api.html) website.  The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also an s (size) parameter which allows you to change the size of the marker. 
@@ -214,9 +217,8 @@ The 'c' or'color' parameter can be set to any color matplotlib recognises. Full 
 > > 
 > > plt.legend( loc=4 ) 
 > > plt.show()
-> > 
 > > ~~~
-> > 
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -232,8 +234,8 @@ x = pd.Series(np.random.standard_normal(256))
 # Show a boxplot of the data 
 plt.boxplot(x)
 plt.show()
-
 ~~~
+{: .python}
 
 A common use of the boxplot is to compare the statistical variations across a set of variables.
 
@@ -246,6 +248,7 @@ df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creat
 plt.boxplot(df.A, labels = 'A')
 plt.show()
 ~~~
+{: .python}
 
 > ## Exercise 
 > 
@@ -258,7 +261,7 @@ plt.show()
 > > plt.boxplot([df.A, df.C, df.D], labels = ['A', 'C', 'D'])
 > > plt.show()
 > > ~~~
-> > 
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -269,17 +272,17 @@ df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 plt.boxplot(df)
 plt.show()
 ~~~
+{: .python}
 
 will fail.
 
 However we can use the pandas plot method
 
 ~~~
-
 df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 df.plot(kind = 'box', return_type='axes') # the return_type='axes' is only needed for forward compatibility
-
 ~~~
+{: .python}
 
 We can add a title to the above by adding the 'title' parameter. However there are no parameters for adding the axis labels.
 To add labels we can use matplotlib directly.
@@ -293,6 +296,7 @@ plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 plt.show()
 ~~~
+{: .python}
 
 ## Saving a graph
 
@@ -308,3 +312,4 @@ plt.ylabel('ylabel')
 #plt.show()
 plt.savefig('boxplot_from_df.pdf')
 ~~~
+{: .python}

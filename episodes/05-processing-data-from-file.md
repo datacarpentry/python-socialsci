@@ -63,6 +63,7 @@ for line in f:             # We use a for loop to iterate through the file one l
 
 f.close                    # Always close the file at the end.
 ~~~
+{: .python}
 
 You can think of the file as being a list of strings. Each string in the list is one complete line from the file.
 
@@ -88,6 +89,7 @@ for line in f:
 
 f.close()
 ~~~
+{: .python}
 
 Having a list of the roof types from all of the records is one thing, but it is more likely that we would want a count of each type. By scanning up and down the previous output, there appears to be 3 different type, but we will play safe and assume there may be more.
 
@@ -128,6 +130,7 @@ print("There are ", mabatisloping_roof, " mabatisloping roofs")
 print("There are ", mabatipitched_roof, " mabatipitchedg roofs")
 print("There are ", roof_type_other, " other roof types")
 ~~~
+{: .python}
 
 What are we  doing here?
 
@@ -158,6 +161,7 @@ for line in fr:
 fr.close()
 fw.close()
 ~~~
+{: .python}
 
 What are we  doing here?
 
@@ -168,9 +172,9 @@ What are we  doing here?
 In this example we didn't bother skipping the header line as it would fail the test in the if statement. If we did want to include it  we could have added the line 
 
 ~~~
-
 fw.write(fr.readline())
 ~~~
+{: .python}
 
 before the for loop
 
@@ -204,7 +208,8 @@ before the for loop
 > > fw1.close()
 > > fw2.close()
 > > ~~~
-> > 
+> > {: .python}
+> >
 > {: .solution}
 {: .challenge}
 
@@ -223,7 +228,6 @@ In Python a dictionary object maps keys to values. A dictionary can hold any num
 The following code shows examples of creating a dictionary object and manipulating keys and values.
 
 ~~~
-
 # an empty dictionaary
 myDict = {}
 
@@ -271,8 +275,8 @@ if key in personDict :
     print("already exists")
 else :
     personDict[key] = "New value"
-
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -311,6 +315,7 @@ else :
 > >     print(item, "=", dict_roof_types[item])
 > >     
 > > ~~~
+> > {: .python}
 > > 
 > {: .solution}
 {: .challenge}
@@ -318,7 +323,6 @@ else :
 We are now in a position to re-write our count of roof types example without knowing in advance what any of the roof types are.
 
 ~~~
-
 # 1
 filename = "SAFI_results.csv"
 f = open(filename, "r") 
@@ -345,6 +349,7 @@ f.close()
 for item in dict_roof_types:
     print(item, "=", dict_roof_types[item])
 ~~~
+{: .python}
 
 What are we  doing here?
 

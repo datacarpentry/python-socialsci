@@ -47,7 +47,7 @@ The first thing we need to do is import the `sqlite3` library, We will import pa
 import sqlite3
 import pandas as pd
 ~~~
-
+{: .python}
 
 We will start looking at the sqlite3 library by connecting to an existing database and returning the results of running a query.
 
@@ -61,6 +61,7 @@ The connection is assigned to a variable. You could use any variable name, but '
 import sqlite3
 con = sqlite3.connect('SN7577.sqlite')
 ~~~
+{: .python}
 
 The next thing we need to do is to create a `cursor` for the connection and assign it to a variable. We do this using the `cursor` method of the connection object.
 
@@ -76,6 +77,7 @@ In our example we are passing a literal string. It could have been contained in 
 cur = con.cursor()
 cur.execute("SELECT * FROM SN7577")
 ~~~
+{: .python}
 
 The `execute` method doesn't actually return any data, it just indicates that we want the data provided by running the 'Select' statement.
 
@@ -90,7 +92,8 @@ The `execute` method doesn't actually return any data, it just indicates that we
 > > # notice the mistyping of 'SELECT'
 > > cur.execute("SELET * FROM SN7577")
 > > ~~~
-> >
+> > {: .python}
+> > 
 > > In all cases an error message is returned. The error message is not from Python but from SQLite. It is the same error message that you would have got had you made the same errors in the SQLite plugin.
 > >
 > {: .solution}
@@ -102,14 +105,13 @@ Before we can make use of the results of the query we need to use the `fetchall`
 The `fetchall` method returns a list. Each item in the list is a tuple containing the values from one row of the table. You can iterate through the items in a tuple in the same way as you would do so for a list.
 
 ~~~
-
 cur = con.cursor()
 cur.execute("SELECT * FROM SN7577")
 rows = cur.fetchall()
 for row in rows:
     print(row)
-    
 ~~~
+{: .python}
 
 The output is the data only, you do not get the column names.
 
@@ -121,8 +123,8 @@ for description in cur.description :
     colnames.append(description[0])
 
 print(colnames)
-
 ~~~
+{: .python}
 
 One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
 
@@ -136,6 +138,7 @@ print(row)
 row = cur.fetchone()
 print(row)
 ~~~
+{: .python}
 
 > ## Exercise 
 > 
@@ -167,7 +170,8 @@ print(row)
 > > 
 > > for row in rows:
 > >     print(row)
-> > 
+> > ~~~
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -189,8 +193,8 @@ print(df.shape)
 print(df.head())
 
 con.close()
-
 ~~~
+{: .python}
 
 ## Saving a dataframe as an SQLite table
 
@@ -210,8 +214,8 @@ df_undecided.to_sql("Q1_undecided", con)
 # If you want to overwrite an existing SQLite table you can use the 'if_exists' parameter
 #df_undecided.to_sql("Q1_undecided", con, if_exists="replace")
 con.close()
-
 ~~~
+{: .python}
 
 ## Deleting an SQLite table
 
@@ -225,8 +229,8 @@ cur = con.cursor()
 cur.execute('drop table if exists Q1_undecided')
 
 con.close()
-
 ~~~
+{: .python}
 
 
 > ## Exercise
@@ -245,6 +249,7 @@ con.close()
 > ~~~
 > pd.read_sql_query("drop table Q1_undecided_v2", con)
 > ~~~
+> {: .python}
 > 
 > 1. What happens?
 > 2. Run this line of code again, What is different?

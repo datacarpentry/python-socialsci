@@ -16,8 +16,6 @@ keypoints:
 - "The `merge` method is equivalent to the SQL JOIN clause. 'left', 'right' and 'inner' joins are all possible."
 ---
 
-
-
 ## Joining dataframes
 
 ### Why do we want to do this
@@ -29,19 +27,17 @@ The data can be related to each other in different ways. How they are related an
 
 In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset just to make the displays more manageable.
 
-
-
 ### Scenario 1 - Two data sets contining the same columns but different rows of data
 
 Here we want to add the rows from one dataframe to the rows of the other dataframe. In order to do this we can use the `concat` method.
 
 ~~~
-
 import pandas as pd
 
 df_SN7577i_a = pd.read_csv("SN7577i_a.csv")
 df_SN7577i_b = pd.read_csv("SN7577i_b.csv")
 ~~~
+{: .python}
 
 Have a quick look at what these dataframes look like with 
 
@@ -49,6 +45,7 @@ Have a quick look at what these dataframes look like with
 print(df_SN7577i_a)
 print(df_SN7577i_b)
 ~~~
+{: .python}
 
 The `concat` method appends the rows from the two dataframes to create the df_all_rows dataframe. When you list this out you can see that all of the data rows are there, however there is a problem with the `index`.
 
@@ -56,6 +53,7 @@ The `concat` method appends the rows from the two dataframes to create the df_al
 df_all_rows = pd.concat([df_SN7577i_a, df_SN7577i_b])
 df_all_rows
 ~~~
+{: .python}
 
 We didn't explicitly set an index for any of the dataframes we have used. For 'df_SN7577i_a' and 'df_SN7577i_b' default indexes would have been created by pandas. When we concatenated the dataframes the indexes were also concatenated resulting in duplicate entries.
 
@@ -65,6 +63,7 @@ This is really only a problem if you need to access a row by its index. We can f
 df_all_rows=df_all_rows.reset_index(drop=True)
 df_all_rows
 ~~~
+{: .python}
 
 What if the columns in the dataframes are not the same?
 
@@ -74,6 +73,7 @@ df_SN7577i_bb = pd.read_csv("SN7577i_bb.csv")
 df_all_rows = pd.concat([df_SN7577i_aa, df_SN7577i_bb])
 df_all_rows
 ~~~
+{: .python}
 
 In this case 'df_SN7577i_aa' has no Q4 column and 'df_SN7577i_bb' has no Q3 column. When they are concatenated, the resulting dataframe has a column for for Q3 and Q4. For the rows corresponding to 'df_SN7577i_aa' the values in the Q4 column are missing and denoted by 'NaN'. The same applies to Q3 for the 'df_SN7577i_bb' rows. 
 
@@ -86,6 +86,7 @@ df_SN7577i_d = pd.read_csv("SN7577i_d.csv")
 df_all_cols = pd.concat([df_SN7577i_c, df_SN7577i_d], axis = 1)
 df_all_cols
 ~~~
+{: .python}
 
 We use the `axis=1` parameter to indicate that it is the columns that need to be joined together. Notice that the 'Id' column appears twice, because it was a column in each dataset. This is not particularly desirable, but also not necessarily a problem. However there are better ways of combining columns from two dataframes which avoid this problem.
 
@@ -101,6 +102,7 @@ In order to `merge` the dataframes we need to identify a column common to both o
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner')
 df_cd
 ~~~
+{: .python}
 
 In fact if there is only one column with the same name in each dataframe, it will be assumed to be the one you want to join on. In this example the 'Id' column
 
@@ -109,12 +111,14 @@ Leaving the join column to default in this way is not best practice. It is bette
 ~~~
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', on = 'Id')
 ~~~
+{: .python}
 
 In many circumstances, the column names that you wish to join on are not the same in both dataframes, in which case you can use the 'left_on' and 'right_on' parameters to specify them separately.
 
 ~~~
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_on = 'Id')
 ~~~
+{: .python}
 
 You specify the type of join you want using the `how` parameter. The default is the 'inner' join which returns the columns from both tables where the 'key' or common column values match in both dataframes.
 
@@ -137,23 +141,20 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 > > ## Solution
 > > 
 > > ~~~
-> > 
 > > df_SN7577i_aa = pd.read_csv("SN7577i_aa.csv")
 > > df_SN7577i_bb = pd.read_csv("SN7577i_bb.csv")
 > > df_aabb = pd.merge(df_SN7577i_aa, df_SN7577i_bb, how='outer', on = 'Id')
 > > df_aabb
+> > ~~~
+> > {: .python}
 > > 
 > > ~~~
-> > 
-> > ~~~
-> > 
 > > df_SN7577i_aa = pd.read_csv("SN7577i_aa.csv")
 > > df_SN7577i_bb = pd.read_csv("SN7577i_bb.csv")
 > > df_aabb = pd.merge(df_SN7577i_aa, df_SN7577i_bb, how='outer', on = 'Id',suffixes=('_aa', '_bb'), indicator = True)
 > > df_aabb
-> > 
 > > ~~~
-> > 
+> > {: .python}
 > {: .solution}
 {: .challenge}
 
