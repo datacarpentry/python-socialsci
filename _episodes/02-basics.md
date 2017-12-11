@@ -9,9 +9,7 @@ questions:
 - "What is a built-in function?"
 - "How do I see results?"
 - "What data types are supported in Python?"
-
 objectives:
-
 - "Create variables and assign values to them"
 - "Perform simple arithmetic operations"
 - "Recognise built-in functions"
@@ -20,9 +18,7 @@ objectives:
 - "Use the Jupyter environment to show or hide output"
 - "Define datatype and understand how Python uses them"
 - "List the native data types in Python"
-
 keypoints:
-
 - "The Jupyter environnment can be used to write code segments and display results"
 - "Datatypes in Pyhthon are implicit based on variable values"
 - "Basic datatypes are Integer, Float, String and Boolean"
@@ -31,7 +27,6 @@ keypoints:
 - "Help is available for builtin functions using the `help()` function further help and code examples are available online "
 - "In Jupyter you can get help on function parameters using  `shift`+`tab` "
 - "Many functions are in fact methods associated with specific object types "
-
 ---
 
 
@@ -77,6 +72,7 @@ In Python variables are created when you first assign values to them.
 a = 2
 b = 3.142
 ~~~
+{: .python}
 
 All variables have a data type associated with them.
 The datatype is an indication of the type of data contained in a variable. 
@@ -88,6 +84,7 @@ type(b)
 s = "Hello World"
 type(s)
 ~~~
+{: .python}
 
 There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
 We will be looking a few of them later on.
@@ -112,6 +109,7 @@ print(a / b)      # division
 print(b ** a)     # exponentiation
 print(2 * a % b)  # modulus - returns the remainder
 ~~~
+{: .python}
 
 We need to use the print function because by default only the last output from a cell is displayed in the output cell.
 
@@ -125,7 +123,7 @@ In the last expression 'a' is multiplied by 2 and then the modulus of the result
 
 Arithmetic expressions can be arbitarily complex, but remember people have to read and understand them as well.
 
-> ### Exercise
+> ## Exercise
 > 
 > 1. Create a new cell and paste into it the assignments to the variables a and b and the contents of the code cell above with all of the print statements. Remove all of the calls to the print function so you only have the expressions that were to be printed and run the code. What is returned?
 > 
@@ -155,11 +153,11 @@ For any function, a common question to ask is; Wwhat parameters does this functi
 
 In order to answer this from Jupyter, you can type the function name and then type `shift`+`tab` and a pop-up window will provide you with various details about the function including the parameters.
 
-> ### Exercise
+> ## Exercise
 > 
 > For the print function find out what parameters can be provided
 > 
-> > ### Solution
+> > ## Solution
 > > Type 'print' into a code cell and then type `shift`+`tab`. The following pop-up should appear.
 > > 
 > > ![Print parameter information](../fig/Python_function_parameters_9.png) 
@@ -175,6 +173,8 @@ You can get help on any Python function by using the help function. It takes a s
 ~~~
 help(print)
 ~~~
+{: .python}
+
 ~~~
 Help on built-in function print in module builtins:
 
@@ -187,8 +187,8 @@ print(...)
     sep:   string inserted between values, default a space.
     end:   string appended after the last value, default a newline.
     flush: whether to forcibly flush the stream.
-    
 ~~~
+{: .output}
 
 There is a great deal of Python help and information as well as code examples avaialble from the Internet.  One popular site is [stackoverflow](https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
 
@@ -209,6 +209,7 @@ print(type(a))
 a = float(a)
 print(type(a))
 ~~~
+{: .python}
 
 Although you can always change an `integer` to a `float`, if you change a `float` to an `integer` then you can lose part of the value of the variable and you won't get an error message.
 
@@ -226,18 +227,18 @@ a = int(a)
 print(type(a))
 print(a)
 ~~~
+{: .python}
 
 In some circimstances explicitly converting a datatype makes no sense; you cannot change a string with alphabetic characters into a number. 
 
 ~~~
-
 b = "Hello World"
 print(type(b))
 
 b = int(b)
 print(type(b))
-
 ~~~
+{: .python}
 
 ## Strings
 
@@ -258,8 +259,8 @@ print(mystring)
 name = "Peter"
 mystring = 'Hello this is ' + name + "'s code"
 print(mystring) 
-
 ~~~
+{: .python}
 
 ## String functions
 
@@ -270,20 +271,18 @@ Although `methods` and `functions` are very similar in practice, there is a diff
 One typical bit of information you might want to know about a string is its length for this we use the `len()` `function`. For almost anything else you might want to do with strings, there is a method. If you want to see a list of all of the available methods for a string (or any other object) you can use the `dir()` function.
 
 ~~~
-
 mystring = "Hello World"
 print(len(mystring))
 
 dir(mystring)
-
 ~~~
+{: .python}
 
 The methods that you can use are those that do NOT start with '__'.
 
 Some examples of the methods are given below. We will use others when we start reading files.
 
 ~~~
-
 myString = "The quick brown fox"
 
 print(myString.startswith("The"))
@@ -302,15 +301,14 @@ print(myString.isalpha())
 # using intermediary variables. 
 
 print(myString.replace(" ","").isalpha())
-
 ~~~
+{: .python}
 
 If you need to refer to a specific element (character ) in a string, 
 you can do so by specifying the index of the character in '[]'
 you can aslo use indexing to select a substring of the string
 
 ~~~
-
 myString = "The quick brown fox"
 
 print(myString[0])
@@ -321,15 +319,14 @@ print(myString[0:3])
 print(myString[0:])        # from index 0 to the end
 print(myString[:9])        # from the beginning to one before index 9
 print(myString[:9]) 
-
 ~~~
+{: .python}
 
 ## Basic Python datatypes
 
 So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
 
 ~~~
-
 # In the `if` statement, if the condition evaluates to True then the indented statement is executed. 
 # So in these examples only if python thinks that the value of bool_val is True will the print statement be executed.
 
@@ -340,15 +337,14 @@ if bool_val :
 bool_val = False
 if bool_val :
     print("bool_val is ",bool_val)
-    
 ~~~
+{: .python}
 
 > ## Exercise 
 > 
 > Can you predict what will be returned from the following code segments
 > 
 > ~~~
-> 
 > bool_val1 = 'TRUE'
 > if bool_val1 :
 >     print("bool_val1 is ",bool_val1)
@@ -371,11 +367,11 @@ if bool_val :
 > 
 > bool_val6 = -1
 > if not bool_val6 :
->     print("bool_val6 is ",bool_val6)
->     
+>     print("bool_val6 is ",bool_val6) 
 > ~~~
+> {: .python}
 > 
-> > ## solution
+> > ## Solution
 > > 
 > > Essentially 0 is counted as False and everything else, whether a number or string is counted as True
 > > 
@@ -391,7 +387,6 @@ A structured datatype is a datatype which is made up of some combination of the 
 A list is a set of values, of any type seperated by commas and delimited by '[' and ']'
 
 ~~~
-
 list1 = [6, 54, 89 ]
 print(list1)
 print(type(list1))
@@ -410,19 +405,18 @@ print(type(list3))
 list4 = [6, 5.4, "numbers", True ]
 print(list4)
 print(type(list4))
-
 ~~~
+{: .python}
 
 ### The range function
 
 In addition to explicitly creating lists as we have above it is very common to create and populate them automatically using the `range()` function in combination with the `list()` function
 
 ~~~
-
 list5 = list(range(5))
 print(list5)
-
 ~~~
+{: .python}
 
 Unless told not to range() returns a sequence which starts at 0, counts up by 1 and ends 1 before the value of the provided parameter.
 
@@ -431,34 +425,34 @@ This can be a cause of confusion. `range(5)` above does indeed have 5 values, bu
 If you want different sequences, then you can modify the behaviour of the `range()` function by using additional parameters.
 
 ~~~
-
 list6 = list(range(1, 9))
 print(list6)
 list7 = list(range(2, 11, 2))
 print(list7)
-
 ~~~
+{: .python}
 
 When you specify 3 parameters as we have for list(7); the fisrt is start value, the second is one past the last value and the 3rd parameter is a step value by which to count. The step value can be negative
 
 `list(7)` produces the even numbers from 1 to 10.
 
-## Exercise
-
-1. What is produced if you change the step value in `list(7)` to -2 ? Is this what you expected?
-2. Create a list using the range() function which contains the even number between 1 and 10 in reverse order ([10,8,6,4,2])
-
-## Solution
-
-~~~
-
-list7 = list(range(2, 11, -2))
-print(list7)
-
-list8 = list(range(10, 1, -2))
-print(list8)
-
-~~~
+> ## Exercise
+> 
+> 1. What is produced if you change the step value in `list(7)` to -2 ? Is this what you expected?
+> 2. Create a list using the range() function which contains the even number between 1 and 10 in reverse order ([10,8,6,4,2])
+> 
+> > ## Solution
+> > 
+> > ~~~
+> > list7 = list(range(2, 11, -2))
+> > print(list7)
+> > 
+> > list8 = list(range(10, 1, -2))
+> > print(list8)
+> > ~~~
+> > {: .python}
+> {: .solution}
+{: .challenge}
 
 The other main structured data type is the Dictionary. We will introduce this in a later episode when we look at JSON.
 
