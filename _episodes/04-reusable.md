@@ -5,14 +5,10 @@ exercises: 15
 questions:
 - "What are user defined functions?"
 - "How can I automate my code for re-use?" 
-
 objectives:
 - "Describe the syntax for a user defined function"
-
 - "Create and use simple functions" 
-
 - "Explain the advantages of using functions"
-
 keypoints:
 - "Functions are used to create re-usable sections of code"
 - "Using parameters with functions make them more flexible"
@@ -44,6 +40,7 @@ def power(num, raisedto):
 
 print(power(2,3))
 ~~~
+{: .python}
 
 Points to note;
 
@@ -62,7 +59,6 @@ In our `power` function we have two parameters which must be provided everytime 
 
 In many cases of functions we want to provide default values for parameters so the user doesn't have to. We can do this in the following way
 
-
 ~~~
 def power2(num, raisedto = 2):
     ''' 
@@ -76,6 +72,7 @@ def power2(num, raisedto = 2):
 
 power2(3)
 ~~~
+{: .python}
 
 The only cahange we have made is to provide a deafault value for the `raisdto` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `num` is the first parameter we can just specifiy its value by position. We could however have explicitly named the parameters we were referring to. 
 
@@ -83,6 +80,7 @@ The only cahange we have made is to provide a deafault value for the `raisdto` p
 print(power2(num = 4))
 print(power(raisedto = 6, num = 4))
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -102,6 +100,7 @@ print(power(raisedto = 6, num = 4))
 > > volume, surface_area, length_of_edges = cuboid(2,3,4)
 > > print("Volume = ", volume, " Surface_area = ", surface_area, " Sum of edges = ", length_of_edges)
 > > ~~~
+> > {: .python}
 > > 
 > > The cuboid function above returns all three values from a single call. This means that you need three variables in which to place the 3 returned values. If you do not provide three variables, you will get an error.
 > > Unless you are always going to use the 3 values, it would probably be better in this case to use distinct functions for these three cases.
@@ -124,8 +123,9 @@ We need to go through a 2-step process before we can use them in our own program
 Step 1.  use the `pip` command from the commandline. `pip` is installed as part of the Python install and is used to fetch the package from the Internet and install it in your Python configuration.
 
 ~~~
-pip install <package name>
+> pip install <package name>
 ~~~
+{: .bash}
 
 pip stands for Python install package and is a commandline function. Because we are using the Anaconda distribution of Python, all of the packages that we will be using in this lesson are already installed for us, so we can move straight on to step 2.
 
@@ -143,10 +143,10 @@ import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 ~~~
+{: .python}
 
 The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the 'pyplot' sub-library we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
 
-The `alias'` we use (specified after the `as` keyword) is entirely up to us. However those shown here for `pandas`, `numpy` and `matplotlib` are almost universaly used for these popular libraries. If you are searching for code examples for these libraries on the Internet, they will almost certainly use the same alias' as we have here. 
+The `alias` we use (specified after the `as` keyword) is entirely up to us. However those shown here for `pandas`, `numpy` and `matplotlib` are almost universaly used for these popular libraries. If you are searching for code examples for these libraries on the Internet, they will almost certainly use the same alias' as we have here. 
 

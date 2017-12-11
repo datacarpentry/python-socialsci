@@ -5,14 +5,10 @@ exercises: 10
 questions:
 - "How are dates and time represented in Python?"
 - "How can I manipulate dates and times?" 
-
 objectives:
 - "Describe some of the datetime functions available in Python"
-
 - "Describe the use of format strings to describe the layout of a date and/or time string" 
-
 - "Make use of date arithmetic"
-
 keypoints:
 - "Date and Time functions in Python come from the datetime library, which needs to be imported"
 - "You can use foramt strings to have dates/times displayed in any representation you like"
@@ -40,6 +36,7 @@ from datetime import datetime
 today = datetime.today()
 print('ISO     :', today)
 ~~~
+{: .python}
 
 We can however use our own formatting, for example if we wanted words instead of number and the 4 digit year at the end we could use the following.
 
@@ -54,6 +51,7 @@ d = datetime.strptime(s, format)
 print('strptime:', d.strftime(format))
 print(type(d))
 ~~~
+{: .python}
 
 `strftime` converts a datetime object to a string and `strptime` creates a datetime object from a string. 
 When you print them using the same format string, they look the same.
@@ -68,7 +66,6 @@ Only the character preceded with '%' have special meanings.
 Having converted the strings to datetime objects, there are a variety of methods that we can use to extract different components of the date/time.
 
 ~~~
-
 from datetime import datetime
 
 
@@ -115,8 +112,8 @@ print('formatted end time', time_end)
 
 
 f.close()
-
 ~~~
+{: .python}
 
 ### Components of dates and times
 
@@ -124,7 +121,6 @@ For a date or time we can also extract individual components of them.
 They are held internally in the datetime datastructure.
 
 ~~~
-
 # date parts.
 print('formatted end date', date_end)
 print(' end date year', date_end.year)
@@ -139,9 +135,8 @@ print(' end time hour', time_end.hour)
 print(' end time minutes', time_end.minute)
 print(' end time seconds', time_end.second)
 print(type(time_end.second))
-
 ~~~
-
+{: .python}
 
 ## Date arithmetic
 
@@ -157,14 +152,13 @@ print(date_diff)
 date_diff = datetime_start - datetime_end
 print(type(date_diff))
 print(date_diff)
-
 ~~~
+{: .python}
 
 
 > ## Exercise
 > 
 > How do you interpret the last result?
-> 
 {: .challenge}
 
 The code below calculates the time difference between supposedly starting the survey and ending the survey (for each respondent).
@@ -191,8 +185,8 @@ for line in f:
     
     
 f.close()
-
 ~~~
+{: .python}
 
 > ## Exercise
 > 
@@ -203,7 +197,6 @@ f.close()
 > > ## Solution
 > > 
 > > ~~~
-> > 
 > > from datetime import datetime
 > > 
 > > format1 = "%Y-%m-%dT%H:%M:%S.%fZ"
@@ -223,8 +216,8 @@ f.close()
 > >     print(datetime_A04, datetime_A01, date_diff.days )
 > >      
 > > f.close()
-> > 
 > > ~~~
+> > {: .python}
 > > 
 > {: .solution}
 {: .challenge}
