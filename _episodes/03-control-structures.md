@@ -77,6 +77,23 @@ if a == b :
 ~~~
 {: .python}
 
+~~~
+Example 1
+
+a is 5 b is 4
+5 is bigger than  4
+
+Example 2
+
+a is 3 b is 4
+
+Example 3
+
+a is 4 b is 4
+4 is equal to 4
+~~~
+{: .output}
+
 In the examples above there are three things to notice;
 
 1.	The colon ‘:’ at the end of the ‘if’ line. Missing this out is a common error. 
@@ -122,6 +139,12 @@ else :
 ~~~
 {: .python}
 
+~~~
+a = 4 and b = 5
+4 is NOT greater than 5
+~~~
+{: .output}
+
 > ## Exercise 
 > 
 > Repeat above with different operators '<' , '=='
@@ -146,6 +169,12 @@ else :
     print(a, " is less than ", b)
 ~~~
 {: .python}
+
+~~~
+a = 5 and b = 4
+5 is greater than 4
+~~~
+{: .output}
 
 The overall structure is similar to the ‘if … Else’ statement. There are three additional things to notice;
 
@@ -172,6 +201,11 @@ while  i <= n :
 print("The sum of the numbers from 1 to", n, "is ", sum)
 ~~~
 {: .python}
+
+~~~
+The sum of the numbers from 1 to 10 is 55
+~~~
+{: .output}
 
 Points to note;
 
@@ -304,6 +338,68 @@ for word in longString.split() :
     print(word)
 ~~~
 {: .python}
+
+~~~
+Example 1
+
+1
+2
+3
+
+Example 2
+
+Tom
+Dick
+Harry
+
+Example 3
+
+Tom
+42
+3.142
+
+Example 4
+
+0
+1
+2
+
+Example 5
+
+1
+2
+3
+
+Example 6
+
+2
+4
+6
+8
+10
+
+Example 7
+
+A
+B
+C
+D
+E
+
+Example 8
+
+The
+quick
+brown
+fox
+jumped
+over
+the
+lazy
+sleeping
+dog
+~~~
+{: .output}
 
 > ## Exercise
 > 
