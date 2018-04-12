@@ -384,11 +384,11 @@ if bool_val :
 
 ## Structured datatypes
 
-A structured datatype is a datatype which is made up of some combination of the base datatypes in a well defined but potentially arbitarily complex ways.
+A structured datatype is a datatype which is made up of some combination of the base datatypes in a well defined but potentially arbitrarily complex ways.
 
 ### The list
 
-A list is a set of values, of any type seperated by commas and delimited by '[' and ']'
+A list is a set of values, of any type separated by commas and delimited by '[' and ']'
 
 ~~~
 list1 = [6, 54, 89 ]
@@ -426,7 +426,7 @@ Unless told not to range() returns a sequence which starts at 0, counts up by 1 
 
 This can be a cause of confusion. `range(5)` above does indeed have 5 values, but rather than being 1,2,3,4,5 which you might naturally think, they are in fact 0,1,2,3,4. The range starts at 0 and  stops one before the value of the single parameter we specified.
 
-If you want different sequences, then you can modify the behaviour of the `range()` function by using additional parameters.
+If you want different sequences, then you can modify the behavior of the `range()` function by using additional parameters.
 
 ~~~
 list6 = list(range(1, 9))
@@ -436,13 +436,13 @@ print(list7)
 ~~~
 {: .python}
 
-When you specify 3 parameters as we have for list(7); the fisrt is start value, the second is one past the last value and the 3rd parameter is a step value by which to count. The step value can be negative
+When you specify 3 parameters as we have for list(7); the first is start value, the second is one past the last value and the 3rd parameter is a step value by which to count. The step value can be negative
 
-`list(7)` produces the even numbers from 1 to 10.
+`list7` produces the even numbers from 1 to 10.
 
 > ## Exercise
 >
-> 1. What is produced if you change the step value in `list(7)` to -2 ? Is this what you expected?
+> 1. What is produced if you change the step value in `list7` to -2 ? Is this what you expected?
 > 2. Create a list using the range() function which contains the even number between 1 and 10 in reverse order ([10,8,6,4,2])
 >
 > > ## Solution
