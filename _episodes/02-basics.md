@@ -34,16 +34,9 @@ keypoints:
 
 ##### In this episode we will look at the following
 
-* Create variables and assign values to them
 * List the native data types in Python
-* Perform simple arithmetic operations
-* Recognise built-in functions
-* Understand how to specify parameters when using built-in functions
-* Know how to get help for built-in functions and any other aspect of the Python language
-* Use the Jupyter environment to show or hide output
 * Use the Jupyter environment to insert cells
 * Use the Jupyter environment to change the cell type
-* Define datatype and understand how Python uses them 
 * Check the type of a variable
 * Convert from one datatype to another
 
