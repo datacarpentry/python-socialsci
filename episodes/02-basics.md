@@ -134,13 +134,13 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 > 2. Now remove all but the first line (with the 4 items in it) and run the cell again. How does this output differ from when we used the print function?
 >
 > 3. Practice assigning values to variables using as many different operators as you can think of.
-> 4. Create some expressions to be evaluated using brackets to enforce the precedence that you require
+> 4. Create some expressions to be evaluated using parentheses to enforce the order of mathematical operations that you require
 >
 >
 > > ## Solution
 > >
 > > 1. Only the last result is printed.
-> > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as seperate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in brackets.
+> > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as separate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in parentheses, a tuple is another datatype in Python that allows you to group things together and treat as a unit. We can tell that it is a tuple because of the `()`
 > >
 > > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
 > >
