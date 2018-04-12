@@ -8,10 +8,10 @@ questions:
 - "How can I perform the same task(s) on a set of items?"
 objectives:
 - "Change program flow using available language constructs"
- 
-- "Demonstrate how to execute a section of code a fixed number of times" 
 
-- "Demonstrate how to conditionally execute a section of code" 
+- "Demonstrate how to execute a section of code a fixed number of times"
+
+- "Demonstrate how to conditionally execute a section of code"
 
 - "Demonstrate how to execute a section of code on a list of items"
 keypoints:
@@ -25,13 +25,13 @@ Most programs do not work by executing a simple sequential set of statements. Th
 To make this possible all programming language have a set of control structures which allow this to happen.
 
 In this episode we are going to look at how we can create loops and branches in our Python code
-Specifically we will look at three control structures, namely; 
+Specifically we will look at three control structures, namely;
 
 * If..Else..
 * While...
 * For ...
- 
-## The `if` statement and variants 
+
+## The `if` statement and variants
 
 The Simple `if` statement allows the program to branch based on the evaluation of an expression
 
@@ -44,12 +44,12 @@ The basic format of the `if` statement is:
     statement n
 next statement
 
-If the expression evalutes to `True` then the statements 1 to n will be executed followed by 'next statement' . If the expression is `False` the 'next statement only is executed. Python know which lines of code are relatd to the `if` statement by the indentation. 
+If the expression evaluates to `True` then the statements 1 to n will be executed followed by 'next statement' . If the expression is `False` the 'next statement only is executed. Python know which lines of code are related to the `if` statement by the indentation, no extra syntax is necessary.
 
-Below are some examples
+Below are some examples:
 
 ~~~
-# if 
+# if
 
 print("\nExample 1\n")
 
@@ -79,21 +79,21 @@ if a == b :
 
 In the examples above there are three things to notice;
 
-1.	The colon ‘:’ at the end of the ‘if’ line. Missing this out is a common error. 
-2.	The indentation of the print statement. If you remembered the ‘:’ on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statement indented at this level are considered to be part of the ‘if’ statement
+1.	The colon ‘:’ at the end of the ‘if’ line. Missing this out is a common error.
+2.	The indentation of the print statement. If you remembered the ‘:’ on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statements indented at this level are considered to be part of the ‘if’ statement. This is a feature fairly unique to Python, that it cares about the indentation. If there is too much, or too little indentation, you will get an error.
 3.	The `if` statement is ended by removing the indent. There is no explicit end to the `if` statement as there is in many other programming languages
 
-In the last example, notice that in Python the operator used to check equality is ‘==’. 
+In the last example, notice that in Python the operator used to check equality is ‘==’.
 
-> ## Exercise 
-> 
-> Add another if statement to example two that will check if b is greater than or equal to a 
-> 
+> ## Exercise
+>
+> Add another if statement to example two that will check if b is greater than or equal to a
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > print("\nExample 2a\n")
-> > 
+> >
 > > a= 3
 > > b= 4
 > > print("a is", a, "b is",b)
@@ -102,7 +102,7 @@ In the last example, notice that in Python the operator used to check equality i
 > > if a <= b :
 > >     print(b, "is bigger than or equal to ", a)
 > > ~~~
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -122,8 +122,8 @@ else :
 ~~~
 {: .python}
 
-> ## Exercise 
-> 
+> ## Exercise
+>
 > Repeat above with different operators '<' , '=='
 {: .challenge}
 
@@ -177,16 +177,16 @@ Points to note;
 
 1.	The condition clause (i <= n) in the while statement can be anything which when evaluated would return a Boolean value of either True of False. Initially i has been set to 1 (before the start of the loop) and therefore the condition is `True`.
 2.	The clause can be made more complex by use of parentheses and `and` and `or`  operators amongst others
-3.	The statements after the while clause are only executed if the condition evaluates as True. 
+3.	The statements after the while clause are only executed if the condition evaluates as True.
 4.	Within the statements after the while clause there should be something which potentially will make the condition evaluate as `False` next time around. If not the loop will never end.
 5.  In this case the last statement in the loop changes the value of i which is part of the condition clause, so hopefully the loop will end.
 
 > ## Exercise - Things that can go wrong with while loops
-> 
+>
 > In the examples below, without running them try to decide why we will not get the required answer.
 > Run the first 3 to confirm your suspicions and then correct them.
 > Why should you not run the last example in it's current form?
-> 
+>
 > ~~~
 > # while loop - summing the numbers 1 to 10
 > n = 10
@@ -198,7 +198,7 @@ Points to note;
 >     sum = sum + i
 >     
 > print("The sum of the numbers from 1 to", n, "is ", sum)
-> 
+>
 > # while loop - summing the numbers 1 to 10
 > n = 10
 > sum = 0
@@ -210,7 +210,7 @@ Points to note;
 >     i = i + 1
 >     
 > print("The sum of the numbers from 1 to", n, "is ", sum)
-> 
+>
 > # while loop - summing the numbers 1 to 10
 > n = 10
 > sum = 0
@@ -221,7 +221,7 @@ Points to note;
 >     i = i + 1
 >     
 > print("The sum of the numbers from 1 to", n, "is ", sum)
-> 
+>
 > # while loop - summing the numbers 1.1 to 9.9 i. steps of 1.1 - no NOT run
 > #n = 9.9
 > #sum = 0
@@ -234,9 +234,9 @@ Points to note;
 > #print("The sum of the numbers from 1.1 to", n, "is ", sum)
 > ~~~
 > {: .python}
-> 
+>
 > > ## Solution
-> > 
+> >
 > > 1. Because i is incremented before the sum, you are summing 1 to 11.
 > > 2. The Boolean value is set to False the lopp will never be executed.
 > > 3. When i does equal 10 the expression is False and the loop does not execute so we have only summed 1 to 9
@@ -250,7 +250,7 @@ Points to note;
 
 The for loop, like the while loop repeatedly executes a set of statements. The difference is that in the for loop we know in at the outset how often the statements in the lop will be executed. We don't have to rely on a variable being changed within the looping statements.
 
-The basic format of the `for` statement is 
+The basic format of the `for` statement is
 
 ~~~
 for variable_name in some_sequence :
@@ -266,14 +266,14 @@ The key part of this is the 'some_sequence'. The phrase used in the documentatio
 There are many examples of things which are iterable some of which we havew already come across.
 
 * Lists are iterable - they don't have to contain numbers, you iterate over the elements in the list.
-* The range() function 
+* The range() function
 * The characters in a string
 
 ~~~
 print("\nExample 1\n")
 for i in [1,2,3] :
     print(i)
-    
+
 print("\nExample 2\n")
 for name in ["Tom", "Dick", "Harry"] :
     print(name)
@@ -293,11 +293,11 @@ for i in range(1,4) :
 print("\nExample 6\n")
 for i in range(2, 11, 2) :
     print(i)
-    
+
 print("\nExample 7\n")
 for i in "ABCDE" :
     print(i)
-    
+
 print("\nExample 8\n")
 longString = "The quick brown fox jumped over the lazy sleeping dog"
 for word in longString.split() :
@@ -306,28 +306,28 @@ for word in longString.split() :
 {: .python}
 
 > ## Exercise
-> 
-> In example8 the split method is used to break the longString variable down into a list of individual words which are then iterated through. 
-> 
+>
+> In example8 the split method is used to break the longString variable down into a list of individual words which are then iterated through.
+>
 > Suppose that we have a string containing a set of 4 different values seperated by ','  like this;
-> 
+>
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
 > {: .python}
-> 
+>
 > Research the `split()` method and then rewrite example 8 so that it prints the 4 components of variablelist
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > variablelist = "01/01/2010,34.5,Yellow,True"
 > > for word in variablelist.split(",") :
 > >     print(word)
 > > ~~~
 > > {: .python}
-> > 
+> >
 > > The format of variablelist is very much like that of a record in a csv file. In later episodes we will see how we can extract these values and assign them to variables for further processing rather tha just printing them out.
-> > 
+> >
 > {: .solution}
 {: .challenge}
