@@ -1,8 +1,7 @@
 ---
-
 title: "Python basics"
-teaching: 0
-exercises: 0
+teaching: 25
+exercises: 30
 questions:
 - "How do I assign values to variables?"
 - "How do I do arithmetic?"

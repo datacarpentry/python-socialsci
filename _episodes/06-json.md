@@ -1,7 +1,7 @@
 ---
 title: "Processing JSON data"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 15
 questions:
 - "What is JSON format?"
 - "How can I extract specific data items from a JSON record?"
