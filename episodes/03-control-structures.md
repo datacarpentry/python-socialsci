@@ -1,7 +1,7 @@
 ---
 title: "Python control structures"
-teaching: 0
-exercises: 0
+teaching: 20
+exercises: 25
 questions:
 - "What constructs are available for changing the flow of a program?"
 - "How can I repeat an action many times?"
