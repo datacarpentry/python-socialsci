@@ -3,4 +3,4 @@
 
 # python-socialsci
 
-Lesson on Python for social scientists.
+Lesson on Python for social scientists and others
