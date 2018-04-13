@@ -12,8 +12,8 @@ objectives:
 - "Understand the concept and benefits of using notebooks for coding"
 keypoints:
 - "Python is an Interpreted language"
-- "The REPL allows rapid development and testing of code segments"
-- "Jupyter notebooks builds on the REPPL concepts and allow code results and documentation to be maintained together and shared"
+- "The REPL (Read-Eval-Print loop) allows rapid development and testing of code segments"
+- "Jupyter notebooks builds on the REPL concepts and allow code results and documentation to be maintained together and shared"
 - "Jupyter notebooks is a complete IDE (Interactive Programming Environment) "
 
 ---
@@ -25,16 +25,16 @@ Python is a general purpose programming language. It is an interpreted language 
 Python’s main advantages:
 
 * Open Source software, supported by [Python Software Foundation](https://www.python.org/psf/)
-* Available on all major platforms (Windows, macOS, Linux )
-* It is relatively straightforward for new programmers to pick up the basics 
-* It is well structured which aids readability
-* It is extensible and is supported by a large community who provide a comprehensive range of 3rd party packages 
+* Available on all major platforms (Windows, macOS, Linux)
+* It is a good language for new programmers to learn due to its straightforward, object-oriented style
+* It is well-structured, which aids readability
+* It is extensible (i.e. modifiable) and is supported by a large community who provide a comprehensive range of 3rd party packages 
 
-## Interpreted v compiled languages
+## Interpreted vs. compiled languages
 
 In any programming language, before code is run, the code must be translated into ‘machine code’. It is the machine code which is executed and produces results. In a language like C++ you code is translated into machine code and stored in a separate file. You then execute the machine code from the file as a separate step. If you intend to run the same code many times this is efficient as you only have to do the translation once.
 
-On the other hand, if you are just trying stuff out, experimenting, then your code will have changed almost every time you run it so the benefits of compiled code is lost.
+On the other hand, if you are just trying stuff out or experimenting, then your code will have changed almost every time you run it so the benefits of compiled code is lost.
 
 This is where interpreted languages have the advantage. You don’t need a complete program to ‘run’ what has been written so far and see the results.  This rapid proto-typing is helped further by use of a system called REPL.
 
