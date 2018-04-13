@@ -139,19 +139,14 @@ else :
 ~~~
 {: .python}
 
-<<<<<<< HEAD
 ~~~
 a = 4 and b = 5
 4 is NOT greater than 5
 ~~~
 {: .output}
 
-> ## Exercise 
-> 
-=======
 > ## Exercise
 >
->>>>>>> upstream/gh-pages
 > Repeat above with different operators '<' , '=='
 {: .challenge}
 
