@@ -34,16 +34,9 @@ keypoints:
 
 ##### In this episode we will look at the following
 
-* Create variables and assign values to them
 * List the native data types in Python
-* Perform simple arithmetic operations
-* Recognise built-in functions
-* Understand how to specify parameters when using built-in functions
-* Know how to get help for built-in functions and any other aspect of the Python language
-* Use the Jupyter environment to show or hide output
 * Use the Jupyter environment to insert cells
 * Use the Jupyter environment to change the cell type
-* Define datatype and understand how Python uses them
 * Check the type of a variable
 * Convert from one datatype to another
 
@@ -329,55 +322,58 @@ print(myString[:9])
 ## Basic Python datatypes
 
 So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
+We can define variables to be of type boolean by setting their value accordingly.
 
 ~~~
-# In the `if` statement, if the condition evaluates to True then the indented statement is executed.
-# So in these examples only if python thinks that the value of bool_val is True will the print statement be executed.
+bool_val_t = True
+print(type(bool_val1))
+print(bool_val1)
+bool_val_f = False
+print(type(bool_val1))
+print(bool_val2)
+~~~
 
-bool_val = True
-if bool_val :
-    print("bool_val is ",bool_val)
+We can also get variables of this type using comparison operators, which you might have found in the exploratory exercise earlier
 
-bool_val = False
-if bool_val :
-    print("bool_val is ",bool_val)
+~~~
+a = 6
+b = 3
+print(a < b)
 ~~~
 {: .python}
 
+
 > ## Exercise
 >
-> Can you predict what will be returned from the following code segments
+> Try predict what will print for each of the following. Then run the code and summarize
+> your findings about what how to represent boolean values and how other values cast to
+> boolean type in either a markdown cell or a comment
 >
 > ~~~
 > bool_val1 = 'TRUE'
-> if bool_val1 :
->     print("bool_val1 is ",bool_val1)
+> print(type(bool_val1))
+> print(bool(bool_val1))
 >     
 > bool_val2 = 'FALSE'
-> if bool_val2 :
->     print("bool_val2 is ",bool_val2)
+> print(bool(bool_val2))
 >
 > bool_val3 = 1
-> if bool_val3 :
->     print("bool_val3 is ",bool_val3)
+> print(bool(bool_val3))
 >
 > bool_val4 = 0
-> if bool_val4 :
->     print("bool_val4 is ",bool_val4)
+> print(bool(bool_val4))
 >
 > bool_val5 = -1
-> if bool_val5 :
->     print("bool_val5 is ",bool_val5)
+> print(bool(bool_val5))
 >
 > bool_val6 = -1
-> if not bool_val6 :
->     print("bool_val6 is ",bool_val6)
+> print(bool(bool_val6))
 > ~~~
 > {: .python}
 >
 > > ## Solution
 > >
-> > Essentially 0 is counted as False and everything else, whether a number or string is counted as True
+> >  0 is represented as False and everything else, whether a number or string is counted as True
 > >
 > {: .solution}
 {: .challenge}
