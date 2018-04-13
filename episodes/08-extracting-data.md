@@ -1,7 +1,7 @@
 ---
 title: 'Extracting row and columns'
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 15
 questions:
 - 'How can I extract specific rows and columns from a dataframe?'
 - 'How can I add or delete columns from a dataframe?'
