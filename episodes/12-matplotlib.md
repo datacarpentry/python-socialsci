@@ -1,7 +1,7 @@
 ---
 title: "Data visualisation using Matplotlib"
-teaching: 0
-exercises: 0
+teaching: 25
+exercises: 25
 questions:
 - "How can I create simple visualisations of my data?"
 objectives:
