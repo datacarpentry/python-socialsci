@@ -17,8 +17,8 @@ keypoints:
 
 ## Introducing the Python programming language
 
-Python is a general purpose programming language. It is an interpreted language
-which, makes it suitable for rapid development and prototyping of programming segments or complete small programs.
+Python is a general purpose programming language. It is an interpreted language,
+which makes it suitable for rapid development and prototyping of programming segments or complete small programs.
 
 Python’s main advantages:
 
