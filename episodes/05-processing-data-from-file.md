@@ -65,6 +65,14 @@ f.close                    # Always close the file at the end.
 ~~~
 {: .python}
 
+~~~
+Column1,A01_interview_date,A03_quest_no,A04_start,A05_end,A06_province,A07_district,A08_ward,A09_village,A11_years_farm,A12_agr_assoc,B11_remittance_money,B16_years_liv,B17_parents_liv,B18_sp_parents_liv,B19_grand_liv,B20_sp_grand_liv,B_no_membrs,C01_respondent_roof_type,C02_respondent_wall_type,C02_respondent_wall_type_other,C03_respondent_floor_type,C04_window_type,C05_buildings_in_compound,C06_rooms,C07_other_buildings,D_plots_count,E01_water_use,E17_no_enough_water,E19_period_use,E20_exper_other,E21_other_meth,E23_memb_assoc,E24_resp_assoc,E25_fees_water,E26_affect_conflicts,E_no_group_count,E_yes_group_count,F04_need_money,F05_money_source_other,F06_crops_contr,F08_emply_lab,F09_du_labour,F10_liv_owned_other,F12_poultry,F13_du_look_aftr_cows,F_liv_count,G01_no_meals,_members_count,_note,gps:Accuracy,gps:Altitude,gps:Latitude,gps:Longitude,instanceID
+
+0,17/11/2016,1,2017-03-23T09:49:57.000Z,2017-04-02T17:29:08.000Z,Province1,District1,Ward2,Village2,11,no,no,4,no,yes,no,yes,3,grass,muddaub,,earth,no,1,1,no,2,no,,,,,,,,,2,,,,,no,no,,yes,no,1,2,3,,14,698,-19.11225943,33.48345609,uuid:ec241f2c-0609-46ed-b5e8-fe575f6cefef
+...
+~~~
+{: .output}
+
 You can think of the file as being a list of strings. Each string in the list is one complete line from the file.
 
 If you look at the output, you can see that the first record in the file is a header record containing column names. When we read a file in this way, the column headings have no significance, they are just another record in the file.
@@ -90,6 +98,19 @@ for line in f:
 f.close()
 ~~~
 {: .python}
+
+~~~
+grass
+grass
+mabatisloping
+mabatisloping
+grass
+grass
+grass
+mabatisloping
+...
+~~~
+{: .output}
 
 Having a list of the roof types from all of the records is one thing, but it is more likely that we would want a count of each type. By scanning up and down the previous output, there appears to be 3 different type, but we will play safe and assume there may be more.
 
@@ -131,6 +152,14 @@ print("There are ", mabatipitched_roof, " mabatipitchedg roofs")
 print("There are ", roof_type_other, " other roof types")
 ~~~
 {: .python}
+
+~~~
+There are 73 grass roofs
+There are 48 mabatisloping roofs
+There are 10 mabatipitchedg roofs
+There are 0 other roof types
+~~~
+{: .output}
 
 What are we  doing here?
 
@@ -278,6 +307,18 @@ else :
 ~~~
 {: .python}
 
+~~~
+dict_items([('Location', 'Manchester'), ('Name', 'Peter')])
+Location = Manchester
+Name = Peter
+dict_keys(['Location', 'Name'])
+dict_values(['Manchester', 'Peter'])
+Peter
+Fred
+already exists
+~~~
+{: .output}
+
 > ## Exercise
 > 
 > 1. Create a dictionary called dict_roof_types with initial keys of 'type1'and 'type2' and give them values of 1 and 3.
@@ -350,6 +391,13 @@ for item in dict_roof_types:
     print(item, "=", dict_roof_types[item])
 ~~~
 {: .python}
+
+~~~
+grass = 73
+mabatipitched = 10
+mabatisloping = 48
+~~~
+{: .output}
 
 What are we  doing here?
 
