@@ -23,7 +23,7 @@ All you have to do is tell Python how the various parts of the date and/or time 
 
 You can do this by creating a format. In a format different case sensitive letters preceded by the '%' character act as placeholders for parts of the date/time. 
 
-A full list of the letters used and what they represennt can be found towards the end of [this](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
+A full list of the letters used and what they represent can be found towards the end of [this](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
 To use the date and time functions you need to import the datetime module.
 
