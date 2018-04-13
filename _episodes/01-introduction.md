@@ -11,11 +11,10 @@ objectives:
 
 - "Understand the concept and benefits of using notebooks for coding"
 keypoints:
-- "Python is an Interpreted language"
+- "Python is an interpreted language"
 - "The REPL (Read-Eval-Print loop) allows rapid development and testing of code segments"
 - "Jupyter notebooks builds on the REPL concepts and allow code results and documentation to be maintained together and shared"
-- "Jupyter notebooks is a complete IDE (Interactive Programming Environment) "
-
+- "Jupyter notebooks is a complete IDE (Integrated Development Environment) "
 ---
 
 ## Introducing the Python programming language
@@ -32,7 +31,7 @@ Python’s main advantages:
 
 ## Interpreted vs. compiled languages
 
-In any programming language, before code is run, the code must be translated into ‘machine code’. It is the machine code which is executed and produces results. In a language like C++ you code is translated into machine code and stored in a separate file. You then execute the machine code from the file as a separate step. If you intend to run the same code many times this is efficient as you only have to do the translation once.
+In any programming language, before code is run, the code must be translated into ‘machine code’. It is the machine code which is executed and produces results. In a language like C++ your code is translated into machine code and stored in a separate file. You then execute the machine code from the file as a separate step. If you intend to run the same code many times this is efficient as you only have to do the translation once.
 
 On the other hand, if you are just trying stuff out or experimenting, then your code will have changed almost every time you run it so the benefits of compiled code is lost.
 
@@ -59,8 +58,14 @@ You are not restricted to single line statements. If the Python interpreter deci
 
 ## Introducing Jupyter notebooks
 
-Jupyter is the successor to a system called IPython.  Originally IPython was a notebook system only for Python code. Now it is available for a variety of other languages as well so it was appropriate to change the name. We will be using Jupyter notebooks only for Python code.
-We access the Jupyter notebook system from a web browser.  When the Jupyter system is started from the command line prompt your browser should start automatically and look something like this;
+[Jupyter](http://jupyter.org/) is the successor to a system called IPython. 
+Originally IPython was a notebook system only for Python code. This system later
+expanded to support Julia, Python, and R, so the name change references these
+core languages. Today, Jupyter supports many more languages. We will be using
+Jupyter notebooks only for Python code.
+We access the Jupyter notebook system from a web browser. When the Jupyter
+system is started from the command line prompt your browser should start
+automatically and look something like this:
 
 ![Jupyter_notebook_list](../fig/Python_jupyter_6.png)
 
