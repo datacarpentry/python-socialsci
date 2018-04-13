@@ -10,7 +10,7 @@ objectives:
 - "Appreciate the benefits of the Python programming language"
 
 - "Understand the concept and benefits of using notebooks for coding"
-key points:
+keypoints:
 - "Python is an Interpreted language"
 - "The REPL (Read-Eval-Print loop) allows rapid development and testing of code segments"
 - "Jupyter notebooks builds on the REPL concepts and allow code results and documentation to be maintained together and shared"
