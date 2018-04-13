@@ -43,6 +43,11 @@ print(personDict)
 ~~~
 {: .python}
 
+~~~
+{'Name': 'Peter', 'Location': 'Manchester'}
+~~~
+{: .output}
+
 So far the keys in the dictionary each relate to a single piece of information about the person. What if we wanted to to add a list of items? 
 
 ~~~
@@ -51,6 +56,11 @@ personDict['Children_count'] = 3
 print(personDict)
 ~~~
 {: .python}
+
+~~~
+{'Name': 'Peter', 'Children': ['John', 'Jane', 'Jack'], 'Children_count': 3, 'Location': 'Manchester'}
+~~~
+{: .output}
 
 Not only can I have a key where the value is a list, the value could also be another dictionary object. Suppose I want to add some telephone numbers
 
@@ -63,6 +73,12 @@ personDict['phones']['business'] =  '0161234234546'
 print(personDict)
 ~~~
 {: .python}
+
+~~~
+dict_values(['Peter', ['John', 'Jane', 'Jack'], {'home': '0102345678', 'mobile': '07770123456'}, 3, 'Manchester'])
+{'Name': 'Peter', 'Children': ['John', 'Jane', 'Jack'], 'phones': {'home': '0102345678', 'mobile': '07770123456', 'business': '0161234234546'}, 'Children_count': 3, 'Location': 'Manchester'}
+~~~
+{: .output}
 
 > ## Exercise
 > 
@@ -129,6 +145,20 @@ with open('SAFI.json') as json_data:
 ~~~
 {: .python}
 
+~~~
+<class 'list'>
+<class 'dict'>
+{
+  "G02_months_lack_food": [
+    "Jan"
+  ],
+  "G01_no_meals": 2,
+  "E_no_group_count": "2",
+  "A03_quest_no": "01",
+...
+~~~
+{: .output}
+
 Points to note;
 
 1. We import the json package with an import statement.
@@ -145,6 +175,18 @@ By default the order in which the keys of the dictionary are printed is not guar
 print(json.dumps(d[0], indent=2, sort_keys=True))
 ~~~
 {: .python}
+
+~~~
+{
+  "A01_interview_date": "2016-11-17",
+  "A03_quest_no": "01",
+  "A04_start": "2017-03-23T09:49:57.000Z",
+  "A05_end": "2017-04-02T17:29:08.000Z",
+  "A06_province": "province1",
+...
+}
+~~~
+{: .output}
 
 ## Extracting specific fields from a JSON document
 
@@ -215,6 +257,20 @@ for farms in d:
 ~~~
 {: .python}
 
+~~~
+maize
+maize
+maize
+tomatoes
+vegetable
+maize
+maize
+maize
+sorghum
+...
+~~~
+{: .output}
+
 In this version we test if all of the keys exists. 
 This could be extended to check that the lists are not empty.
 
@@ -251,6 +307,11 @@ print(unique_crops)
 ~~~
 {: .python}
 
+~~~
+{'peanut', 'potatoes', 'tomatoes', 'other', 'vegetable', 'amendoim', 'sunflower', 'bananas', 'sesame', None, 'cucumber', 'onion', 'sorghum', 'piri_piri', 'baby_corn', 'cabbage', 'ngogwe', 'maize', 'pigeonpeas', 'beans'}
+~~~
+{: .output}
+
 Simply having a list of all of the crops is unlikely to be enough. What you are really interested in is which farm grows which crops in which plot. 
 
 We can accumulate this information as we move through the list of dictionary objects. At the top level, 'farm', there is a unique identifier 'A03_quest_no' which we can use. for the plot and the crop within the plot we will create our own simple indexing system (plot_no and crop_no). At the end instead of just printing the crop name, we also print the details of where this crop is being grown.
@@ -269,9 +330,18 @@ for farms in d:
                 for curr_crops in crop:
                     crop_no += 1
                     if 'D_curr_crop' in curr_crops:
-                        print("Farm no ", id, " grows ", curr_crops['D_curr_crop'], " in plot ", plot_no , " and it is crop number ", crop_no)
+                        print("Farm no ", id," grows ", curr_crops['D_curr_crop']," in plot", plot_no , " and it is crop number ", crop_no)
 ~~~
 {: .python}
+
+~~~
+Farm no 01 grows maize in plot 1 and it is crop number 1
+Farm no 01 grows maize in plot 2 and it is crop number 1
+Farm no 01 grows maize in plot 1 and it is crop number 1
+Farm no 01 grows tomatoes in plot 2 and it is crop number 1
+Farm no 01 grows vegetable in plot 3 and it is crop number 1
+~~~
+{: .output}
 
 The final stage of this data extraction process is to save the extracted data to a file for subsequent use. 
 
