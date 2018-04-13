@@ -77,7 +77,14 @@ Initially the notebook has no name other than ‘Untitled’. If you click on �
 
 The notebook is divided up into `cells`. Initially there will be a single input cell.
 
-You can type Python code directly into the cell. You can split the code across several lines as needed. Unlike the REPL we looked at before, the code is not interpreted line by line. To interpret the code in a cell you need to click the run button in the toolbar or from the `Cell` menu option, at which point all of the code in that cell will be executed. 
+
+You can type Python code directly into the cell. You can split the code across
+several lines as needed. Unlike the REPL we looked at before, the code is not
+interpreted line by line. To interpret the code in a cell you can click the
+run button in the toolbar or from the `Cell` menu option, or use keyboard
+shortcuts (Mac: `shift` + `return`). All of the code in that cell will then be
+executed. 
+
 
 The results are shown in a separate `Out` cell immediately below. A new input cell is created for you automatically.
 

@@ -176,11 +176,11 @@ a = 5 and b = 4
 ~~~
 {: .output}
 
-The overall structure is similar to the ‘if … Else’ statement. There are three additional things to notice;
+The overall structure is similar to the `if ... else` statement. There are three additional things to notice;
 
-1.	Each ‘Elif’ clause has its own test expression.
-2.	You can have as many ‘Elif’ clauses as you need
-3.	Execution of the whole statement stops after an ‘Elif’ expression is found to be True. Therefore the ordering of the ‘Elif’ clause can be significant.
+1.	Each `elif` clause has its own test expression.
+2.	You can have as many `elif` clauses as you need
+3.	Execution of the whole statement stops after an `elif` expression is found to be True. Therefore the ordering of the `elif` clause can be significant.
 
 
 ## The `while` loop
