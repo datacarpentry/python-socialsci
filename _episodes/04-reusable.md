@@ -42,6 +42,11 @@ print(power(2,3))
 ~~~
 {: .python}
 
+~~~
+8
+~~~
+{: .output}
+
 Points to note;
 
 1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets. 
@@ -74,6 +79,11 @@ power2(3)
 ~~~
 {: .python}
 
+~~~
+9
+~~~
+{: .output}
+
 The only cahange we have made is to provide a deafault value for the `raisdto` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `num` is the first parameter we can just specifiy its value by position. We could however have explicitly named the parameters we were referring to. 
 
 ~~~
@@ -81,6 +91,12 @@ print(power2(num = 4))
 print(power(raisedto = 6, num = 4))
 ~~~
 {: .python}
+
+~~~
+16
+4096
+~~~
+{: .output}
 
 > ## Exercise
 > 

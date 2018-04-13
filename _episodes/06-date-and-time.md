@@ -38,6 +38,11 @@ print('ISO     :', today)
 ~~~
 {: .python}
 
+~~~
+ISO     : 2018-04-12 16:19:17.177441
+~~~
+{: .output}
+
 We can however use our own formatting, for example if we wanted words instead of number and the 4 digit year at the end we could use the following.
 
 ~~~
@@ -52,6 +57,14 @@ print('strptime:', d.strftime(format))
 print(type(d))
 ~~~
 {: .python}
+
+~~~
+strftime: Thu Apr 12 16:19:17 2018
+<class 'str'>
+strptime: Thu Apr 12 16:19:17 2018
+<class 'datetime.datetime'>
+~~~
+{: .output}
 
 `strftime` converts a datetime object to a string and `strptime` creates a datetime object from a string. 
 When you print them using the same format string, they look the same.
@@ -115,6 +128,21 @@ f.close()
 ~~~
 {: .python}
 
+~~~
+<class 'str'> 2017-03-23T09:49:57.000Z
+<class 'str'> 2017-04-02T17:29:08.000Z
+<class 'datetime.datetime'>
+formatted date and time 2017-03-23 09:49:57
+formatted date and time 2017-04-02 17:29:08
+<class 'datetime.date'>
+formatted start date 2017-03-23
+formatted end date 2017-04-02
+<class 'datetime.time'>
+formatted start time 09:49:57
+formatted end time 17:29:08
+~~~
+{: .output}
+
 ### Components of dates and times
 
 For a date or time we can also extract individual components of them. 
@@ -138,6 +166,20 @@ print(type(time_end.second))
 ~~~
 {: .python}
 
+~~~
+formatted end date 2017-04-02
+ end date year 2017
+ end date month 4
+ end date day 2
+<class 'int'>
+formatted end time 17:29:08
+ end time hour 17
+ end time minutes 29
+ end time seconds 8
+<class 'int'>
+~~~
+{: .output}
+
 ## Date arithmetic
 
 We can also do arithmetic with the dates.
@@ -155,6 +197,14 @@ print(date_diff)
 ~~~
 {: .python}
 
+~~~
+<class 'datetime.datetime'>
+<class 'datetime.timedelta'>
+10 days, 7:39:11
+<class 'datetime.timedelta'>
+-11 days, 16:20:49
+~~~
+{: .output}
 
 > ## Exercise
 > 
@@ -187,6 +237,20 @@ for line in f:
 f.close()
 ~~~
 {: .python}
+
+~~~
+2017-03-23 09:49:57 2017-04-02 17:29:08 10 days, 7:39:11
+2017-04-02 09:48:16 2017-04-02 17:26:19 7:38:03
+2017-04-02 14:35:26 2017-04-02 17:26:53 2:51:27
+2017-04-02 14:55:18 2017-04-02 17:27:16 2:31:58
+2017-04-02 15:10:35 2017-04-02 17:27:35 2:17:00
+2017-04-02 15:27:25 2017-04-02 17:28:02 2:00:37
+2017-04-02 15:38:01 2017-04-02 17:28:19 1:50:18
+2017-04-02 15:59:52 2017-04-02 17:28:39 1:28:47
+2017-04-02 16:23:36 2017-04-02 16:42:08 0:18:32
+...
+~~~
+{: .output}
 
 > ## Exercise
 > 
