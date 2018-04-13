@@ -12,10 +12,9 @@ objectives:
 - "Understand the concept and benefits of using notebooks for coding"
 keypoints:
 - "Python is an interpreted language"
-- "The REPL allows rapid development and testing of code segments"
+- "The REPL (Read-Eval-Print loop) allows rapid development and testing of code segments"
 - "Jupyter notebooks builds on the REPL concepts and allow code results and documentation to be maintained together and shared"
 - "Jupyter notebooks is a complete IDE (Integrated Development Environment) "
-
 ---
 
 ## Introducing the Python programming language
@@ -26,15 +25,15 @@ Python’s main advantages:
 
 * Open Source software, supported by [Python Software Foundation](https://www.python.org/psf/)
 * Available on all major platforms (Windows, macOS, Linux)
-* It is relatively straightforward for new programmers to pick up the basics 
-* It is well structured which aids readability
-* It is extensible and is supported by a large community who provide a comprehensive range of 3rd party packages 
+* It is a good language for new programmers to learn due to its straightforward, object-oriented style
+* It is well-structured, which aids readability
+* It is extensible (i.e. modifiable) and is supported by a large community who provide a comprehensive range of 3rd party packages 
 
-## Interpreted v compiled languages
+## Interpreted vs. compiled languages
 
 In any programming language, before code is run, the code must be translated into ‘machine code’. It is the machine code which is executed and produces results. In a language like C++ your code is translated into machine code and stored in a separate file. You then execute the machine code from the file as a separate step. If you intend to run the same code many times this is efficient as you only have to do the translation once.
 
-On the other hand, if you are just trying stuff out, experimenting, then your code will have changed almost every time you run it so the benefits of compiled code is lost.
+On the other hand, if you are just trying stuff out or experimenting, then your code will have changed almost every time you run it so the benefits of compiled code is lost.
 
 This is where interpreted languages have the advantage. You don’t need a complete program to ‘run’ what has been written so far and see the results.  This rapid proto-typing is helped further by use of a system called REPL.
 
@@ -78,9 +77,9 @@ Initially the notebook has no name other than ‘Untitled’. If you click on �
 
 The notebook is divided up into `cells`. Initially there will be a single input cell.
 
-You can type Python code directly into the cell. You can split the code across several lines as needed. Unlike the REPL we looked at before, the code is not interpreted line by line. To interpret the code in a cell you need to click the run button in the toolbar or from the `Cell` menu option. At which point all of the code in that cell will be executed. 
+You can type Python code directly into the cell. You can split the code across several lines as needed. Unlike the REPL we looked at before, the code is not interpreted line by line. To interpret the code in a cell you need to click the run button in the toolbar or from the `Cell` menu option, at which point all of the code in that cell will be executed. 
 
-The results are shown in a separate `Out` cell immediately below. A new input cell is created for you automatically
+The results are shown in a separate `Out` cell immediately below. A new input cell is created for you automatically.
 
 ![Jupyter_notebook_cell](../fig/Python_jupyter_8.png)
 
@@ -88,8 +87,8 @@ When a cell is `Run` it is given a number along with the corresponding output ce
 
 Although there is an option to do so on the toolbar, you do not have to manually save the notebook. This is done automatically by the Jupyter system.
 
-Not only is the contents of the `In` cells saved, but also the `Out` cells.  This allows you to create complete documents with both your code and the output of the code in a single place.  You can also change the cell type of a cell from Python code to  `Markdown` using the `Cell | Cell Type` option. `Markdown` is a simple formatting system which allows you to create documentation for your code, again all within the same notebook structure.
+Not only are the contents of the `In` cells saved, but also the `Out` cells.  This allows you to create complete documents with both your code and the output of the code in a single place.  You can also change the cell type of a cell from Python code to  `Markdown` using the `Cell | Cell Type` option. `Markdown` is a simple formatting system which allows you to create documentation for your code, again all within the same notebook structure.
 
-The Notebook itself is stored as a JSON file with an ‘.ipynb’ extension. These JSON files are text based and can be exported  and imported into another Jupyter system. This allows you to share you code, results and documentation with others.
+The Notebook itself is stored as a JSON file with an `.ipynb` extension. These JSON files are text based and can be exported  and imported into another Jupyter system. This allows you to share your code, results, and documentation with others.
 
 
