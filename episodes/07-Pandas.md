@@ -103,6 +103,11 @@ print(type(df_SN7577))
 ~~~
 {: .python}
 
+~~~
+<class 'pandas.core.frame.DataFrame'>
+~~~
+{: .output}
+	
 You can see the contents by simply entering the variable name. You can see from the output that it is a tablular format. The column names have been taken from the first record of the file. On the left hand side is a column with no name. The entries here have been provided by pandas and act as an index to reference the individual rows of the dataframe. 
 
 The read.csv method has an 'index_col' parameter which you can use to indicate which of the columns in the file you wish to use as the index instead. As the SN7577 dataset doesn't have a column which would uniquely identify each row we cannot do that. 
@@ -142,6 +147,24 @@ print(df_SN7577.columns)
 print(df_SN7577.dtypes)
 ~~~
 {: .python}
+
+~~~
+1286
+(1286, 202)
+259772
+Index(['Q1', 'Q2', 'Q3', 'Q4', 'Q5ai', 'Q5aii', 'Q5aiii', 'Q5aiv', 'Q5av',
+       'Q5avi',
+       ...
+       'numhhd', 'numkid', 'numkid2', 'numkid31', 'numkid32', 'numkid33',
+       'numkid34', 'numkid35', 'numkid36', 'wts'],
+      dtype='object', length=202)
+Q1             int64
+Q2             int64
+Q3             int64
+...
+Length: 202, dtype: object
+~~~
+{: .output}
 
 > ## Exercise
 > 
