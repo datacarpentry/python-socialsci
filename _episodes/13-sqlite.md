@@ -1,7 +1,7 @@
 ---
 title: "Accessing SQLite Databases "
-teaching: 0
-exercises: 0
+teaching: 35
+exercises: 25
 questions:
 - "How can I access database  tables using Pandas and Python?"
 - "What are the advantages of storing data in a database"
