@@ -41,7 +41,7 @@ personDict['Location'] = 'Manchester'
 
 print(personDict)
 ~~~
-{: .language.language-python}
+{: .language-python}
 
 ~~~
 {'Name': 'Peter', 'Location': 'Manchester'}

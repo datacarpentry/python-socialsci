@@ -79,7 +79,7 @@ print(type(s))
 ~~~
 {: .output}
 
-There are many more data types available, a full list is available in the [Python documentation](https://docs.language-python.org/3/).
+There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
 We will be looking a few of them later on.
 
 ## Simple arithmetic operations
@@ -143,14 +143,14 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 > > 1. Only the last result is printed.
 > > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as separate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in parentheses, a tuple is another datatype in Python that allows you to group things together and treat as a unit. We can tell that it is a tuple because of the `()`
 > >
-> > A complete set of Python operators can be found in the [official documentation](https://docs.language-python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
+> > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
 > >
 > {: .solution}
 {: .challenge}
 
 ## Using built-in functions
 
-Python has a reasonable number of built-in functions. You can find a complete list in the [offical documentation](https://docs.language-python.org/3/library/functions.html)
+Python has a reasonable number of built-in functions. You can find a complete list in the [offical documentation](https://docs.python.org/3/library/functions.html)
 
 Additional functions are provided by 3rd party packages which we will look at later on.
 
@@ -206,7 +206,7 @@ A couple of things you may need to wary of: There are currently 2 versions of Py
 ### Changing datatypes
 The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the data type.
 
-You can also explicitly change the type of a variable by `casting` it using an appropriate.language-python builtin function. In this example we have changed a `string` to a `float`.
+You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `string` to a `float`.
 
 ~~~
 a = "3.142"
@@ -265,7 +265,7 @@ print(type(b))
 <class 'str'>
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
-<.language-python-input-8-9f5f81a470f9> in <module>()
+<ipython-input-8-9f5f81a470f9> in <module>()
       2 print(type(b))
       3 
 ----> 4 b = int(b)
@@ -402,7 +402,7 @@ The quick
 
 ## Basic Python datatypes
 
-So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember,.language-python is case sensitive, so be careful of your spelling.)
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
 We can define variables to be of type boolean by setting their value accordingly.
 
 ~~~
