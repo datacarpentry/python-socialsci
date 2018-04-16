@@ -63,7 +63,7 @@ for line in f:             # We use a for loop to iterate through the file one l
 
 f.close                    # Always close the file at the end.
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 Column1,A01_interview_date,A03_quest_no,A04_start,A05_end,A06_province,A07_district,A08_ward,A09_village,A11_years_farm,A12_agr_assoc,B11_remittance_money,B16_years_liv,B17_parents_liv,B18_sp_parents_liv,B19_grand_liv,B20_sp_grand_liv,B_no_membrs,C01_respondent_roof_type,C02_respondent_wall_type,C02_respondent_wall_type_other,C03_respondent_floor_type,C04_window_type,C05_buildings_in_compound,C06_rooms,C07_other_buildings,D_plots_count,E01_water_use,E17_no_enough_water,E19_period_use,E20_exper_other,E21_other_meth,E23_memb_assoc,E24_resp_assoc,E25_fees_water,E26_affect_conflicts,E_no_group_count,E_yes_group_count,F04_need_money,F05_money_source_other,F06_crops_contr,F08_emply_lab,F09_du_labour,F10_liv_owned_other,F12_poultry,F13_du_look_aftr_cows,F_liv_count,G01_no_meals,_members_count,_note,gps:Accuracy,gps:Altitude,gps:Latitude,gps:Longitude,instanceID
@@ -97,7 +97,7 @@ for line in f:
 
 f.close()
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 grass
@@ -151,7 +151,7 @@ print("There are ", mabatisloping_roof, " mabatisloping roofs")
 print("There are ", mabatipitched_roof, " mabatipitchedg roofs")
 print("There are ", roof_type_other, " other roof types")
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 There are 73 grass roofs
@@ -190,7 +190,7 @@ for line in fr:
 fr.close()
 fw.close()
 ~~~
-{: .python}
+{: .language-python}
 
 What are we  doing here?
 
@@ -203,7 +203,7 @@ In this example we didn't bother skipping the header line as it would fail the t
 ~~~
 fw.write(fr.readline())
 ~~~
-{: .python}
+{: .language-python}
 
 before the for loop
 
@@ -237,7 +237,7 @@ before the for loop
 > > fw1.close()
 > > fw2.close()
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > >
 > {: .solution}
 {: .challenge}
@@ -305,7 +305,7 @@ if key in personDict :
 else :
     personDict[key] = "New value"
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 dict_items([('Location', 'Manchester'), ('Name', 'Peter')])
@@ -356,7 +356,7 @@ already exists
 > >     print(item, "=", dict_roof_types[item])
 > >     
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > {: .solution}
 {: .challenge}
@@ -390,7 +390,7 @@ f.close()
 for item in dict_roof_types:
     print(item, "=", dict_roof_types[item])
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 grass = 73

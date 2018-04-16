@@ -41,7 +41,7 @@ personDict['Location'] = 'Manchester'
 
 print(personDict)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 {'Name': 'Peter', 'Location': 'Manchester'}
@@ -55,7 +55,7 @@ personDict['Children'] = ['John', 'Jane', 'Jack']
 personDict['Children_count'] = 3
 print(personDict)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 {'Name': 'Peter', 'Children': ['John', 'Jane', 'Jack'], 'Children_count': 3, 'Location': 'Manchester'}
@@ -72,7 +72,7 @@ print(personDict.values())
 personDict['phones']['business'] =  '0161234234546'
 print(personDict)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 dict_values(['Peter', ['John', 'Jane', 'Jack'], {'home': '0102345678', 'mobile': '07770123456'}, 3, 'Manchester'])
@@ -143,7 +143,7 @@ with open('SAFI.json') as json_data:
     print(type(d[0]))
     print(json.dumps(d[0], indent=2))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'list'>
@@ -174,7 +174,7 @@ By default the order in which the keys of the dictionary are printed is not guar
 ~~~
 print(json.dumps(d[0], indent=2, sort_keys=True))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 {
@@ -195,7 +195,7 @@ If we want to extract fields from a JSON document, the first step isto convert t
 ~~~
 d = json.load(json_data)
 ~~~
-{: .python}
+{: .language-python}
 
 line. 'd' a list object and each entry in the list is a Dictionary object.
 
@@ -210,7 +210,7 @@ We can print the contents of the first dictionary in the list with
 ~~~
 print(json.dumps(d[0], indent=2, sort_keys=True))
 ~~~
-{: .python}
+{: .language-python}
 
 > ## Exercise
 > 
@@ -233,7 +233,7 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 > > ~~~
 > > print(d[0]['D_plots'][0]['D_crops'][0]['D_curr_crop']) 
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -255,7 +255,7 @@ for farms in d:
         for curr_crops in crop:
             print(curr_crops['D_curr_crop']) 
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 maize
@@ -285,7 +285,7 @@ for farms in d:
                     if 'D_curr_crop' in curr_crops:
                         print(curr_crops['D_curr_crop'])
 ~~~
-{: .python}
+{: .language-python}
 
 We can now produce a list of all of the crops in all of the plots in all of the farms. 
 
@@ -305,7 +305,7 @@ for farms in d:
                         unique_crops.add(curr_crops['D_curr_crop'])
 print(unique_crops)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 {'peanut', 'potatoes', 'tomatoes', 'other', 'vegetable', 'amendoim', 'sunflower', 'bananas', 'sesame', None, 'cucumber', 'onion', 'sorghum', 'piri_piri', 'baby_corn', 'cabbage', 'ngogwe', 'maize', 'pigeonpeas', 'beans'}
@@ -332,7 +332,7 @@ for farms in d:
                     if 'D_curr_crop' in curr_crops:
                         print("Farm no ", id," grows ", curr_crops['D_curr_crop']," in plot", plot_no , " and it is crop number ", crop_no)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 Farm no 01 grows maize in plot 1 and it is crop number 1
@@ -379,4 +379,4 @@ for farms in d:
                         
 fw.close()
 ~~~
-{: .python}
+{: .language-python}
