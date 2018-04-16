@@ -9,14 +9,14 @@ questions:
 - "How do I see results?"
 - "What data types are supported in Python?"
 objectives:
+- "Create different cell types and show/hide output in Jupyter"
 - "Create variables and assign values to them"
+- "Check the type of a variable"
 - "Perform simple arithmetic operations"
-- "Recognise built-in functions"
-- "Understand how to specify parameters when using built-in functions"
-- "Know how to get help for built-in functions and any other aspect of the Python language"
-- "Use the Jupyter environment to show or hide output"
-- "Define datatype and understand how Python uses them"
-- "List the native data types in Python"
+- "Specify parameters when using built-in functions"
+- "Get help for built-in functions and other aspects of Python"
+- "Define native data types in Python"
+- "Convert from one data type to another"
 keypoints:
 - "The Jupyter environnment can be used to write code segments and display results"
 - "Datatypes in Pyhthon are implicit based on variable values"
@@ -28,16 +28,6 @@ keypoints:
 - "Many functions are in fact methods associated with specific object types "
 ---
 
-
-## Python Basics
-
-##### In this episode we will look at the following
-
-* List the native data types in Python
-* Use the Jupyter environment to insert cells
-* Use the Jupyter environment to change the cell type
-* Check the type of a variable
-* Convert from one datatype to another
 
 ## Using the Jupyter environment
 
