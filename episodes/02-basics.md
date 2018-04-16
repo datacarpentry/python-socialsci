@@ -58,7 +58,7 @@ In Python variables are created when you first assign values to them.
 a = 2
 b = 3.142
 ~~~
-{: .python}
+{: .language-python}
 
 All variables have a data type associated with them.
 The datatype is an indication of the type of data contained in a variable.
@@ -70,7 +70,7 @@ print(type(b))
 s = "Hello World"
 print(type(s))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'int'>
@@ -79,7 +79,7 @@ print(type(s))
 ~~~
 {: .output}
 
-There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
+There are many more data types available, a full list is available in the [Python documentation](https://docs.language-python.org/3/).
 We will be looking a few of them later on.
 
 ## Simple arithmetic operations
@@ -102,7 +102,7 @@ print(a / b)      # division
 print(b ** a)     # exponentiation
 print(2 * a % b)  # modulus - returns the remainder
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 a = 2 and b = 3.142
@@ -143,14 +143,14 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 > > 1. Only the last result is printed.
 > > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as separate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in parentheses, a tuple is another datatype in Python that allows you to group things together and treat as a unit. We can tell that it is a tuple because of the `()`
 > >
-> > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
+> > A complete set of Python operators can be found in the [official documentation](https://docs.language-python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
 > >
 > {: .solution}
 {: .challenge}
 
 ## Using built-in functions
 
-Python has a reasonable number of built-in functions. You can find a complete list in the [offical documentation](https://docs.python.org/3/library/functions.html)
+Python has a reasonable number of built-in functions. You can find a complete list in the [offical documentation](https://docs.language-python.org/3/library/functions.html)
 
 Additional functions are provided by 3rd party packages which we will look at later on.
 
@@ -178,7 +178,7 @@ You can get help on any Python function by using the help function. It takes a s
 ~~~
 help(print)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 Help on built-in function print in module builtins:
@@ -206,7 +206,7 @@ A couple of things you may need to wary of: There are currently 2 versions of Py
 ### Changing datatypes
 The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the data type.
 
-You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `string` to a `float`.
+You can also explicitly change the type of a variable by `casting` it using an appropriate.language-python builtin function. In this example we have changed a `string` to a `float`.
 
 ~~~
 a = "3.142"
@@ -214,7 +214,7 @@ print(type(a))
 a = float(a)
 print(type(a))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'str'>
@@ -238,7 +238,7 @@ a = int(a)
 print(type(a))
 print(a)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'float'>
@@ -259,13 +259,13 @@ print(type(b))
 b = int(b)
 print(type(b))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'str'>
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
-<ipython-input-8-9f5f81a470f9> in <module>()
+<.language-python-input-8-9f5f81a470f9> in <module>()
       2 print(type(b))
       3 
 ----> 4 b = int(b)
@@ -295,7 +295,7 @@ name = "Peter"
 mystring = 'Hello this is ' + name + "'s code"
 print(mystring)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 Hello World
@@ -316,7 +316,7 @@ One typical bit of information you might want to know about a string is its leng
 mystring = "Hello World"
 print(len(mystring))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 11
@@ -328,7 +328,7 @@ If you want to see a list of all of the available methods for a string (or any o
 ~~~
 print(dir(mystring))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
@@ -359,7 +359,7 @@ print(myString.isalpha())
 
 print(myString.replace(" ","").isalpha())
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 True
@@ -387,7 +387,7 @@ print(myString[0:])        # from index 0 to the end
 print(myString[:9])        # from the beginning to one before index 9
 print(myString[:9])
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 T
@@ -402,7 +402,7 @@ The quick
 
 ## Basic Python datatypes
 
-So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember,.language-python is case sensitive, so be careful of your spelling.)
 We can define variables to be of type boolean by setting their value accordingly.
 
 ~~~
@@ -425,7 +425,7 @@ bool_val = False
 if bool_val :
     print("bool_val is",bool_val)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 bool_val is True
@@ -449,7 +449,7 @@ bool_val is True
 > if bool_val3:
 >     print("bool_val3 is",bool_val3)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 
 > ## Exercise
@@ -478,7 +478,7 @@ bool_val is True
 > bool_val6 = -1
 > print(bool(bool_val6))
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > > ## Solution
 > >
@@ -515,7 +515,7 @@ list4 = [6, 5.4, "numbers", True ]
 print(list4)
 print(type(list4))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 [6, 54, 89]
@@ -538,7 +538,7 @@ In addition to explicitly creating lists as we have above it is very common to c
 list5 = list(range(5))
 print(list5)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 [0, 1, 2, 3, 4]
@@ -557,7 +557,7 @@ print(list6)
 list7 = list(range(2, 11, 2))
 print(list7)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 [1, 2, 3, 4, 5, 6, 7, 8]
@@ -583,7 +583,7 @@ When you specify 3 parameters as we have for list(7); the first is start value, 
 > > list8 = list(range(10, 1, -2))
 > > print(list8)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
