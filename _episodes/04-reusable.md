@@ -40,7 +40,7 @@ def power(num, raisedto):
 
 print(power(2,3))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 8
@@ -77,7 +77,7 @@ def power2(num, raisedto = 2):
 
 power2(3)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 9
@@ -90,7 +90,7 @@ The only cahange we have made is to provide a deafault value for the `raisdto` p
 print(power2(num = 4))
 print(power(raisedto = 6, num = 4))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 16
@@ -116,7 +116,7 @@ print(power(raisedto = 6, num = 4))
 > > volume, surface_area, length_of_edges = cuboid(2,3,4)
 > > print("Volume = ", volume, " Surface_area = ", surface_area, " Sum of edges = ", length_of_edges)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > The cuboid function above returns all three values from a single call. This means that you need three variables in which to place the 3 returned values. If you do not provide three variables, you will get an error.
 > > Unless you are always going to use the 3 values, it would probably be better in this case to use distinct functions for these three cases.
@@ -160,7 +160,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 ~~~
-{: .python}
+{: .language-python}
 
 The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the 'pyplot' sub-library we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
 

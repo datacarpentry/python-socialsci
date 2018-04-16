@@ -48,7 +48,7 @@ Importing the pandas library is done in exactly the same way as for any other li
 ~~~
 import pandas as pd
 ~~~
-{: .python}
+{: .language-python}
 
 ## Pandas data structures
 
@@ -72,7 +72,7 @@ We are going to read in our SN7577.tab file. Although this is a tab delimited fi
 ~~~
 df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 ~~~
-{: .python}
+{: .language-python}
 
 > ## Exercise
 > 
@@ -85,7 +85,7 @@ df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 > > print(df_SN7577_oops.shape)
 > > print(df_SN7577_oops)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > If you allow pandas to assume that your columns are seperated by commas (the default) and there aren't any, then each record will be treated as a single column. So the shape is given as 1286 rows (correct) but only one column. 
 > > When the contents is display the only column name is the complete first record. Notice the '\t' used to represent the tab characters in the output. This is the same format we used to specify the tab seperator when we correctly read in the file.
@@ -101,7 +101,7 @@ You can find out the type of the variable df_SN7577 by using the `type` function
 ~~~
 print(type(df_SN7577))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'pandas.core.frame.DataFrame'>
@@ -117,14 +117,14 @@ Another thing to notice about the display is that it is truncated. By default yo
 ~~~
 df_SN7577
 ~~~
-{: .python}
+{: .language-python}
 
 Similar information can be obtained with `df_SN7577.head()` But here you are only returned the first 5 rows by default.
 
 ~~~
 df_SN7577.head()
 ~~~
-{: .python}
+{: .language-python}
 
 > ## Exercise
 > 
@@ -146,7 +146,7 @@ print(df_SN7577.columns)
 # what are the datatypes of the columns?
 print(df_SN7577.dtypes)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 1286
@@ -176,7 +176,7 @@ Length: 202, dtype: object
 > > for name in df_SN7577.columns:
 > >     print(name)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution} 
 {: .challenge}
 
