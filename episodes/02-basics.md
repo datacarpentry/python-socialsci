@@ -134,7 +134,7 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 > 2. Now remove all but the first line (with the 4 items in it) and run the cell again. How does this output differ from when we used the print function?
 >
 > 3. Practice assigning values to variables using as many different operators as you can think of.
-
+>
 > 4. Create some expressions to be evaluated using parentheses to enforce the order of mathematical operations that you require
 >
 >
