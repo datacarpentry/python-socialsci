@@ -451,7 +451,7 @@ bool_val is True
 >     print("bool_val3 is",bool_val3)
 > ~~~
 > {: .language-python}
->
+{: .challenge}
 
 > ## Exercise
 >
