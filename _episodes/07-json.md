@@ -340,6 +340,7 @@ Farm no 01 grows maize in plot 2 and it is crop number 1
 Farm no 01 grows maize in plot 1 and it is crop number 1
 Farm no 01 grows tomatoes in plot 2 and it is crop number 1
 Farm no 01 grows vegetable in plot 3 and it is crop number 1
+...
 ~~~
 {: .output}
 
