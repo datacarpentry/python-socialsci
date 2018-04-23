@@ -119,7 +119,7 @@ In the last example, notice that in Python the operator used to check equality i
 > > if a <= b :
 > >     print(b, "is bigger than or equal to ", a)
 > > ~~~
-> >
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
