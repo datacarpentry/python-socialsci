@@ -93,13 +93,13 @@ dict_values(['Peter', ['John', 'Jane', 'Jack'], {'home': '0102345678', 'mobile':
 > >                           'Work' : {'Addressline1' : '19 Orford Road.', 'Addressline2' : 'London', 'PostCode' : 'EC4J 3XY'}
 > >                           }
 > > 
-> print(personDict['Addresses']['Work']['PostCode'])
+> > print(personDict['Addresses']['Work']['PostCode'])
 > > 
 > > for child in personDict['Children']:
 > >     print(child)
 > >     
 > > ~~~
-> > 
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
