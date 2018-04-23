@@ -407,12 +407,13 @@ We can define variables to be of type boolean by setting their value accordingly
 
 ~~~
 bool_val_t = True
-print(type(bool_val1))
-print(bool_val1)
+print(type(bool_val_t))
+print(bool_val_t)
 bool_val_f = False
-print(type(bool_val1))
-print(bool_val2)
+print(type(bool_val_f))
+print(bool_val_f)
 ~~~
+{: .language-python}
 
 We can also get variables of this type using comparison operators, which you might have found in the exploratory exercise earlier
 
