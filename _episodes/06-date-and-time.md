@@ -23,7 +23,7 @@ All you have to do is tell Python how the various parts of the date and/or time 
 
 You can do this by creating a format. In a format different case sensitive letters preceded by the '%' character act as placeholders for parts of the date/time. 
 
-A full list of the letters used and what they represennt can be found towards the end of [this](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
+A full list of the letters used and what they represent can be found towards the end of [this](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
 To use the date and time functions you need to import the datetime module.
 
@@ -36,7 +36,7 @@ from datetime import datetime
 today = datetime.today()
 print('ISO     :', today)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 ISO     : 2018-04-12 16:19:17.177441
@@ -56,7 +56,7 @@ d = datetime.strptime(s, format)
 print('strptime:', d.strftime(format))
 print(type(d))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 strftime: Thu Apr 12 16:19:17 2018
@@ -126,7 +126,7 @@ print('formatted end time', time_end)
 
 f.close()
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'str'> 2017-03-23T09:49:57.000Z
@@ -164,7 +164,7 @@ print(' end time minutes', time_end.minute)
 print(' end time seconds', time_end.second)
 print(type(time_end.second))
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 formatted end date 2017-04-02
@@ -195,7 +195,7 @@ date_diff = datetime_start - datetime_end
 print(type(date_diff))
 print(date_diff)
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 <class 'datetime.datetime'>
@@ -236,7 +236,7 @@ for line in f:
     
 f.close()
 ~~~
-{: .python}
+{: .language-python}
 
 ~~~
 2017-03-23 09:49:57 2017-04-02 17:29:08 10 days, 7:39:11
@@ -281,7 +281,7 @@ f.close()
 > >      
 > > f.close()
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > {: .solution}
 {: .challenge}
