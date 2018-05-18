@@ -166,24 +166,6 @@ Length: 202, dtype: object
 ~~~
 {: .output}
 
-~~~
-1286
-(1286, 202)
-259772
-Index(['Q1', 'Q2', 'Q3', 'Q4', 'Q5ai', 'Q5aii', 'Q5aiii', 'Q5aiv', 'Q5av',
-       'Q5avi',
-       ...
-       'numhhd', 'numkid', 'numkid2', 'numkid31', 'numkid32', 'numkid33',
-       'numkid34', 'numkid35', 'numkid36', 'wts'],
-      dtype='object', length=202)
-Q1             int64
-Q2             int64
-Q3             int64
-...
-Length: 202, dtype: object
-~~~
-{: .output}
-
 > ## Exercise
 > 
 > When we asked for the column names and their datatypes, the output was abridged, i.e. we didn't get the values for all of the columns. Can you write a small piece of code which will return all of the values
