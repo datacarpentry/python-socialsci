@@ -57,6 +57,16 @@ print(df_SAFI['B_no_membrs'].sum())
 ~~~
 {: .language-python}
 
+~~~
+2
+19
+7.190839694656488
+3.1722704895263734
+131
+942
+~~~
+{: .output}
+
 Unlike the `describe` method which converts the variable to a float (when it was originally an integer), the individual summary methods only does so for the returned result if needed. 
 
 We can do the same thing for the 'E19_period_use' variable
@@ -70,6 +80,16 @@ print(df_SAFI['E19_period_use'].count())
 print(df_SAFI['E19_period_use'].sum())
 ~~~
 {: .language-python}
+
+~~~
+1.0
+45.0
+12.043478260869565
+8.583030848015385
+92
+1108.0
+~~~
+{: output}
 
 > ## Exercise
 > 
@@ -101,12 +121,26 @@ df_SAFI.isnull().sum()
 ~~~
 {: .language-python}
 
+~~~
+Column1                             0
+A01_interview_date                  0
+A03_quest_no                        0
+A04_start                           0
+...
+~~~
+{: output}
+
 or for a specific variable 
 
 ~~~
 df_SAFI['E19_period_use'].isnull().sum()
 ~~~
 {: .language-python}
+
+~~~
+39
+~~~
+{: output}
 
 Data from most sources has the potential to include missing data. Whether or not this presents a problem at all depends on what you are planning to do. 
 
@@ -138,6 +172,12 @@ print(df_SAFI.shape)
 ~~~
 {: .language-python}
 
+~~~
+(131, 55)
+(0, 55)
+~~~
+{: output}
+
 Because there are variables in the SAFI dataset which are all NaN using the `dropna` method effectively deletes all of the rows from the dataframe, probably not what you wanted. Instead we can use the `notnull()` method as a row selection criteria and delete the rows where a specific variable has NaN values.
 
 ~~~
@@ -147,6 +187,12 @@ df_SAFI = df_SAFI[(df_SAFI['E_no_group_count'].notnull())]
 print(df_SAFI.shape)
 ~~~
 {: .language-python}
+
+~~~
+(131, 55)
+(39, 55)
+~~~
+{: output}
 
 ### Replace NaN with a value of our choice
 
@@ -194,6 +240,11 @@ pd.unique(df_SAFI['C01_respondent_roof_type'])
 ~~~
 {: .language-python}
 
+~~~
+array(['grass', 'mabatisloping', 'mabatipitched'], dtype=object)
+~~~
+{: output}
+
 Knowing all of the unique values is useful but what is more useful is knowing how many occurences of each there are. In order to do this we can use the `groupby` method. 
 
 Having performed the `groupby` we can them `describe()` the results. The format is similar to that which we have seen before except that the 'grouped by' variable appears to the left and there is a set of statistics for each unique value of the variable.
@@ -219,6 +270,17 @@ A11_years_farm = df_SAFI.groupby(['C01_respondent_roof_type', 'C02_respondent_wa
 A11_years_farm
 ~~~
 {: .language-python}
+
+~~~
+C01_respondent_roof_type  C02_respondent_wall_type
+grass                     burntbricks                 22
+                          muddaub                     42
+                          sunbricks                    9
+mabatipitched             burntbricks                  6
+                          muddaub                      3
+...
+~~~
+{: output}
 
 > ## Exercise
 > 

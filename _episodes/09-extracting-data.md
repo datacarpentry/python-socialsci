@@ -40,6 +40,12 @@ print(df_SN7577_some_cols.columns)
 ~~~
 {: .language-python}
 
+~~~
+(1286, 6)
+Index(['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'], dtype='object')
+Index(['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'], dtype='object')
+~~~
+{: .output}
 
 Let us assume for now that we read in the complete file which is now in the dataframe 'df_SN7577', how can we now refer to specific columns?
 
@@ -53,6 +59,15 @@ print(df_SN7577.Q1)
 ~~~
 {: .language-python}
 
+~~~
+0        1
+1        3
+2       10
+3        9
+...
+~~~
+{: .output}
+
 If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are enclosed in '[]'
 
 ~~~
@@ -60,6 +75,15 @@ print(df_SN7577[['Q1', 'Q2', 'Q3']])
 ~~~
 {: .language-python}
 
+~~~
+Q1  Q2  Q3
+0      1  -1   1
+1      3  -1   1
+2     10   3   2
+3      9  -1  10
+...
+~~~
+{: .language-python}
 > ## Exercise  
 > 
 > What happens if you:

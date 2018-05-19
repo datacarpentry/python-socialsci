@@ -58,7 +58,6 @@ The first thing we need to do is to make a connection to the database. An SQLite
 The connection is assigned to a variable. You could use any variable name, but 'con' is quite commonly used for this purpose
 
 ~~~
-import sqlite3
 con = sqlite3.connect('SN7577.sqlite')
 ~~~
 {: .language-python}
@@ -78,6 +77,11 @@ cur = con.cursor()
 cur.execute("SELECT * FROM SN7577")
 ~~~
 {: .language-python}
+
+~~~
+<sqlite3.Cursor at 0x115e10d50>
+~~~
+{: output}
 
 The `execute` method doesn't actually return any data, it just indicates that we want the data provided by running the 'Select' statement.
 
@@ -113,6 +117,12 @@ for row in rows:
 ~~~
 {: .language-python}
 
+~~~
+(1, -1, 1, 8, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 2, 3, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 0, 0, 3, 2, 3, 3, 1, 4, 2, 3
+...
+~~~
+{: output}
+
 The output is the data only, you do not get the column names.
 
 The column names are available from the 'description' of the cursor.
@@ -125,6 +135,12 @@ for description in cur.description :
 print(colnames)
 ~~~
 {: .language-python}
+
+~~~
+['Q1', 'Q2', 'Q3', 'Q4', 'Q5ai', 'Q5aii', 'Q5aiii', 'Q5aiv', 'Q5av', 'Q5avi', 'Q5avii', 'Q5aviii', 'Q5aix', 'Q5ax', 'Q5axi', 'Q5axii', 'Q5axiii', 'Q5axiv', 'Q5axv', 'Q5bi', 'Q5bii', 'Q5biii', 'Q5biv', 'Q5bv', 'Q5bvi', 'Q5bvii', 'Q5bviii', 'Q5bix', 'Q5bx', 'Q5bxi', 'Q5bxii', 'Q5bxiii', 'Q5bxiv', 'Q5bxv', 'Q6', 'Q7a', 'Q7b', 'Q8', 'Q9', 'Q10a', 'Q10b', 'Q10c', 'Q10d', 'Q11a',
+...
+~~~
+{: output}
 
 One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
 
@@ -139,6 +155,11 @@ row = cur.fetchone()
 print(row)
 ~~~
 {: .language-python}
+
+~~~
+(1, -1, 1, 8, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 2, 3, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 0, 0, 3, 2, 3, 3, 1, 4, 2, 3, 2, 4, 4, 2, 2, 2, 4, 2, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
+~~~
+{: output}
 
 > ## Exercise 
 > 
@@ -216,6 +237,11 @@ df_undecided.to_sql("Q1_undecided", con)
 con.close()
 ~~~
 {: .language-python}
+
+~~~
+(335, 202)
+~~~
+{: output}
 
 ## Deleting an SQLite table
 
