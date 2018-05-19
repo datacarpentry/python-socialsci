@@ -53,6 +53,11 @@ len(df_SN7577.index) +1
 ~~~
 {: .language-python}
 
+~~~
+1287
+~~~
+{: output}
+
 We will create a 2nd dataframe, based on SN7577 but containing only the columns starting with the word 'daily'. 
 
 There are several ways odf doing this.
@@ -93,6 +98,17 @@ print(df_papers.columns)
 ~~~
 {: .language-python}
 
+~~~
+RangeIndex(start=0, stop=1286, step=1)
+Index(['Id', 'daily1', 'daily2', 'daily3', 'daily4', 'daily5', 'daily6',
+       'daily7', 'daily8', 'daily9', 'daily10', 'daily11', 'daily12',
+       'daily13', 'daily14', 'daily15', 'daily16', 'daily17', 'daily18',
+       'daily19', 'daily20', 'daily21', 'daily22', 'daily23', 'daily24',
+       'daily25'],
+      dtype='object')
+~~~
+{: output}
+
 We use 'axis = 1' because we are joining by columns not rows which is the default.
 
 
@@ -123,6 +139,14 @@ a = df_daily_papers_long.groupby('Daily_paper')['Value'].sum()
 a
 ~~~
 {: .language-python}
+
+~~~
+Daily_paper
+daily1     0
+daily2    26
+daily3    52
+~~~
+{: output}
 
 ## From Long to Wide 
 

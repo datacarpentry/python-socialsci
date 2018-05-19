@@ -47,6 +47,24 @@ print(df_SN7577i_b)
 ~~~
 {: .language-python}
 
+
+~~~
+  Id  Q1  Q2  Q3  Q4
+0   1   1  -1   1   8
+1   2   3  -1   1   4
+2   3  10   3   2   6
+3   4   9  -1  10  10
+...
+
+  Id  Q1  Q2  Q3  Q4
+0  1277  10  10   4   6
+1  1278   2  -1   5   4
+2  1279   2  -1   4   5
+3  1280   1  -1   2   3
+...
+~~~
+{: output}
+
 The `concat` method appends the rows from the two dataframes to create the df_all_rows dataframe. When you list this out you can see that all of the data rows are there, however there is a problem with the `index`.
 
 ~~~
