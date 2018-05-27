@@ -36,7 +36,7 @@ In the version of SN7577 that we are going to use to demonstrate long and wide f
 import pandas as pd
 df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 ~~~
-{: .python}
+{: .language-python}
 
 We will create a new dataframe with a single column of 'Id'. 
 
@@ -44,14 +44,19 @@ We will create a new dataframe with a single column of 'Id'.
 # create an 'Id' column
 df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
 ~~~
-{: .python}
+{: .language-python}
 
 Using the range function I can create values of Id starting with 1 and going upto 1286 (remember the second parameter to range is one past the last value used.) I have explicitly coded this value because I knew how many rows were in the dataset. If I didn't, I could have used 
 
 ~~~
 len(df_SN7577.index) +1
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+1287
+~~~
+{: output}
 
 We will create a 2nd dataframe, based on SN7577 but containing only the columns starting with the word 'daily'. 
 
@@ -62,7 +67,7 @@ we could use the `iloc` method and provide the index values of the range of colu
 ~~~
 df_papers2 = df_SN7577.iloc[:,118:143]
 ~~~
-{: .python}
+{: .language-python}
 
 This isn't really very practical. I would need to know the position of all of the columns of interest. They may not be contiguous. This method would be very prone to human error.
 
@@ -71,7 +76,7 @@ We could use a regular expression. Regular expressions is a very complex topic w
 ~~~
 df_papers2 = df_SN7577.filter(regex= '^daily')
 ~~~
-{: .python}
+{: .language-python}
 
 will do want we want. '^daily' is a simple regular exprerssion which says 'startswith' the characters 'daily'
 
@@ -80,7 +85,7 @@ A simpler way is to use the 'like' parameter of the `filter` method.
 ~~~
 df_papers2 = df_SN7577.filter(like= 'daily')
 ~~~
-{: .python}
+{: .language-python}
 
 The value supplied to 'like' can occur anywhere in the column name to be matched (and therefore selected)
 
@@ -91,7 +96,18 @@ df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
 print(df_papers.index)
 print(df_papers.columns)
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+RangeIndex(start=0, stop=1286, step=1)
+Index(['Id', 'daily1', 'daily2', 'daily3', 'daily4', 'daily5', 'daily6',
+       'daily7', 'daily8', 'daily9', 'daily10', 'daily11', 'daily12',
+       'daily13', 'daily14', 'daily15', 'daily16', 'daily17', 'daily18',
+       'daily19', 'daily20', 'daily21', 'daily22', 'daily23', 'daily24',
+       'daily25'],
+      dtype='object')
+~~~
+{: output}
 
 We use 'axis = 1' because we are joining by columns not rows which is the default.
 
@@ -112,7 +128,7 @@ df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_l
 df_daily_papers_long.columns = ['Id','Daily_paper','Value']
 df_daily_papers_long
 ~~~
-{: .python}
+{: .language-python}
 
 We now have a dataframe that we can `groupby`. 
 
@@ -122,7 +138,15 @@ We want to `groupby` the 'Daily_paper' and them sum the 'Value'.
 a = df_daily_papers_long.groupby('Daily_paper')['Value'].sum()
 a
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+Daily_paper
+daily1     0
+daily2    26
+daily3    52
+~~~
+{: output}
 
 ## From Long to Wide 
 
@@ -134,14 +158,14 @@ In our case we want to use the 'Id' column as the fixed column, the 'Daily_paper
 ~~~
 df_daily_papers_wide = df_daily_papers_long.pivot(index = 'Id', columns = 'Daily_paper', values = 'Value')
 ~~~
-{: .python}
+{: .language-python}
 
 We can change our 'Id' index back to an ordinary column with 
 
 ~~~
 df_daily_papers_wide.reset_index(level=0, inplace=True)
 ~~~
-{: .python}
+{: .language-python}
 
 > ## Exercise
 > 
@@ -156,7 +180,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > ~~~
 > df_newspapers = df_newspapers[(df_newspapers.Column_name.str.startswith('daily'))]
 > ~~~
-> {: .python}
+> {: .language-python}
 > 
 > > ## Solution
 > > 
@@ -167,7 +191,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > df_newspapers = df_newspapers[(df_newspapers.Column_name.str.startswith('daily'))]
 > > df_newspapers
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > 2. Create the df_papers dataframe as we did before.
 > > 
@@ -180,7 +204,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
 > > df_papers
 > > ~~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > 3. Create a list of all of the dailies, one way would be
 > > 
@@ -189,7 +213,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > for i in range(1,26):
 > >     daily_list.append('daily'+str(i))  
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > 4. Pass the list as the 'value_vars' parameter to the `melt` method
 > > 
@@ -200,20 +224,20 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > #Change the column names
 > > df_daily_papers_long.columns = ['Id','Daily_paper','Value']
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > 5. `merge` the two dataframes with a left join, because we want all of the Newspaper Titles to be included.
 > > 
 > > ~~~
 > > df_papers_taken = pd.merge(df_newspapers, df_daily_papers_long, how='left', left_on = 'Column_name',right_on = 'Daily_paper')
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > 6. Then `groupby` the 'Title' and sum the 'Value'
 > > 
 > > ~~~
 > > df_papers_taken.groupby('Title')['Value'].sum()
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}

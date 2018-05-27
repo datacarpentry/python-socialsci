@@ -25,7 +25,7 @@ We will continue this episode from where we left off in the last episode. If you
 import pandas as pd
 df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 ~~~
-{: .python}
+{: .language-python}
 
 ### Selecting rows and columns from a pandas dataframe
 
@@ -38,8 +38,14 @@ print(df_SN7577_some_cols.columns)
 df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= ['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'])
 print(df_SN7577_some_cols.columns)
 ~~~
-{: .python}
+{: .language-python}
 
+~~~
+(1286, 6)
+Index(['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'], dtype='object')
+Index(['Q1', 'Q2', 'Q3', 'sex', 'age', 'agegroups'], dtype='object')
+~~~
+{: .output}
 
 Let us assume for now that we read in the complete file which is now in the dataframe 'df_SN7577', how can we now refer to specific columns?
 
@@ -51,15 +57,33 @@ print(df_SN7577['Q1'])
 # and
 print(df_SN7577.Q1)
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+0        1
+1        3
+2       10
+3        9
+...
+~~~
+{: .output}
 
 If we are interested in more than one column, the 2nd method above cannot be used. However in the first, although we used a string with the value of 'Q1' we could also have provided a list (of strings). Remember that lists are enclosed in '[]'
 
 ~~~
 print(df_SN7577[['Q1', 'Q2', 'Q3']])
 ~~~
-{: .python}
+{: .language-python}
 
+~~~
+Q1  Q2  Q3
+0      1  -1   1
+1      3  -1   1
+2     10   3   2
+3      9  -1  10
+...
+~~~
+{: .language-python}
 > ## Exercise  
 > 
 > What happens if you:
@@ -75,7 +99,7 @@ print(df_SN7577[['Q1', 'Q2', 'Q3']])
 > > print(df_SN7577[['Q3', 'Q2', 'Q3']])
 > > print(df_SN7577[['Q33', 'Q2']])
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -88,7 +112,7 @@ You can filter by rows in the dataframe by specifying a range in the form of 'a:
 df_SN7577_some_rows = df_SN7577[1:4]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 > ## Exercise 
 > 
@@ -99,7 +123,7 @@ df_SN7577_some_rows
 > > ~~~
 > > df_SN7577[1]
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > You get an error if you just specify '1'. You need to use ':1' or '0:1' to get the first row returned. The ':' is always required. You can use ':' by itself to return all of the rows
 > > 
@@ -116,7 +140,7 @@ It is more likely that you will want to select rows from the dataframe based on 
 df_SN7577_some_rows = df_SN7577[(df_SN7577.Q2 == -1)]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 The criteria can be more complex and isn't limited to a single column's values
 
@@ -124,7 +148,7 @@ The criteria can be more complex and isn't limited to a single column's values
 df_SN7577_some_rows = df_SN7577[ (df_SN7577.Q2 == -1) & (df_SN7577.numage > 60)]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 We can combine the row selection with column selection
 
@@ -132,7 +156,7 @@ We can combine the row selection with column selection
 df_SN7577_some_rows = df_SN7577[ (df_SN7577.Q2 == -1) & (df_SN7577.numage > 60)][['Q1', 'Q2','numage']]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 Selecting rows on the row index is of limited use unless you need to select a contiguous range of rows.
 
@@ -142,7 +166,7 @@ There is however another way of selecting rows using the row index; shown here;
 df_SN7577_some_rows = df_SN7577.iloc[1:4]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 Using the 'iloc' method gives the same results as our previous example.
 
@@ -156,7 +180,7 @@ df_SN7577_some_rows
 df_SN7577_some_rows = df_SN7577.iloc[range(0, len(df_SN7577), 100)]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 You can also specify column ranges using the 'iloc' method again using the column index numbers
 
@@ -168,7 +192,7 @@ df_SN7577_some_rows
 df_SN7577_some_rows = df_SN7577.iloc[range(0, len(df_SN7577), 100),[0,1,2,78,95]]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 There is also a 'loc' method which allows you to use the column names.
 
@@ -177,7 +201,7 @@ There is also a 'loc' method which allows you to use the column names.
 df_SN7577_some_rows = df_SN7577.loc[range(0, len(df_SN7577), 100),['Q1', 'Q2', 'Q3', 'Q18bii', 'access6' ]]
 df_SN7577_some_rows
 ~~~
-{: .python}
+{: .language-python}
 
 ## Sampling
 
@@ -187,7 +211,7 @@ Pandas does have a `sample` method which allows you to extract a sample of the r
 df_SN7577.sample(10, replace=False)             # ten records, do not select same record twice (this is the default)
 df_SN7577.sample(frac=0.05, random_state=1)     # 5% of records , same records if run again
 ~~~
-{: .python}
+{: .language-python}
 
 
 
