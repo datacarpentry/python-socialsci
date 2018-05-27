@@ -47,7 +47,7 @@ The first thing we need to do is import the `sqlite3` library, We will import pa
 import sqlite3
 import pandas as pd
 ~~~
-{: .python}
+{: .language-python}
 
 We will start looking at the sqlite3 library by connecting to an existing database and returning the results of running a query.
 
@@ -58,10 +58,9 @@ The first thing we need to do is to make a connection to the database. An SQLite
 The connection is assigned to a variable. You could use any variable name, but 'con' is quite commonly used for this purpose
 
 ~~~
-import sqlite3
 con = sqlite3.connect('SN7577.sqlite')
 ~~~
-{: .python}
+{: .language-python}
 
 The next thing we need to do is to create a `cursor` for the connection and assign it to a variable. We do this using the `cursor` method of the connection object.
 
@@ -77,7 +76,12 @@ In our example we are passing a literal string. It could have been contained in 
 cur = con.cursor()
 cur.execute("SELECT * FROM SN7577")
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+<sqlite3.Cursor at 0x115e10d50>
+~~~
+{: output}
 
 The `execute` method doesn't actually return any data, it just indicates that we want the data provided by running the 'Select' statement.
 
@@ -92,7 +96,7 @@ The `execute` method doesn't actually return any data, it just indicates that we
 > > # notice the mistyping of 'SELECT'
 > > cur.execute("SELET * FROM SN7577")
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > 
 > > In all cases an error message is returned. The error message is not from Python but from SQLite. It is the same error message that you would have got had you made the same errors in the SQLite plugin.
 > >
@@ -111,7 +115,13 @@ rows = cur.fetchall()
 for row in rows:
     print(row)
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+(1, -1, 1, 8, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 2, 3, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 0, 0, 3, 2, 3, 3, 1, 4, 2, 3
+...
+~~~
+{: output}
 
 The output is the data only, you do not get the column names.
 
@@ -124,7 +134,13 @@ for description in cur.description :
 
 print(colnames)
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+['Q1', 'Q2', 'Q3', 'Q4', 'Q5ai', 'Q5aii', 'Q5aiii', 'Q5aiv', 'Q5av', 'Q5avi', 'Q5avii', 'Q5aviii', 'Q5aix', 'Q5ax', 'Q5axi', 'Q5axii', 'Q5axiii', 'Q5axiv', 'Q5axv', 'Q5bi', 'Q5bii', 'Q5biii', 'Q5biv', 'Q5bv', 'Q5bvi', 'Q5bvii', 'Q5bviii', 'Q5bix', 'Q5bx', 'Q5bxi', 'Q5bxii', 'Q5bxiii', 'Q5bxiv', 'Q5bxv', 'Q6', 'Q7a', 'Q7b', 'Q8', 'Q9', 'Q10a', 'Q10b', 'Q10c', 'Q10d', 'Q11a',
+...
+~~~
+{: output}
 
 One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
 
@@ -138,7 +154,12 @@ print(row)
 row = cur.fetchone()
 print(row)
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+(1, -1, 1, 8, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 2, 3, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 0, 0, 3, 2, 3, 3, 1, 4, 2, 3, 2, 4, 4, 2, 2, 2, 4, 2, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
+~~~
+{: output}
 
 > ## Exercise 
 > 
@@ -171,7 +192,7 @@ print(row)
 > > for row in rows:
 > >     print(row)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -194,7 +215,7 @@ print(df.head())
 
 con.close()
 ~~~
-{: .python}
+{: .language-python}
 
 ## Saving a dataframe as an SQLite table
 
@@ -215,7 +236,12 @@ df_undecided.to_sql("Q1_undecided", con)
 #df_undecided.to_sql("Q1_undecided", con, if_exists="replace")
 con.close()
 ~~~
-{: .python}
+{: .language-python}
+
+~~~
+(335, 202)
+~~~
+{: output}
 
 ## Deleting an SQLite table
 
@@ -230,7 +256,7 @@ cur.execute('drop table if exists Q1_undecided')
 
 con.close()
 ~~~
-{: .python}
+{: .language-python}
 
 
 > ## Exercise
@@ -249,7 +275,7 @@ con.close()
 > ~~~
 > pd.read_sql_query("drop table Q1_undecided_v2", con)
 > ~~~
-> {: .python}
+> {: .language-python}
 > 
 > 1. What happens?
 > 2. Run this line of code again, What is different?
