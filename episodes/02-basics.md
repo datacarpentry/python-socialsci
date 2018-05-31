@@ -18,8 +18,8 @@ objectives:
 - "Define native data types in Python"
 - "Convert from one data type to another"
 keypoints:
-- "The Jupyter environnment can be used to write code segments and display results"
-- "Datatypes in Pyhthon are implicit based on variable values"
+- "The Jupyter environment can be used to write code segments and display results"
+- "Datatypes in Python are implicit based on variable values"
 - "Basic datatypes are Integer, Float, String and Boolean"
 - "Lists and Dictionaries are structured datatypes"
 - "Arithmetic uses standard arithmetic operators, precedence can be changed using brackets "
@@ -117,7 +117,7 @@ a = 2 and b = 3.142
 
 We need to use the print function because by default only the last output from a cell is displayed in the output cell.
 
-The first call to the print function is passed four different parameters, each seperated by a comma. A string "a = " followed by a followed by the string "b = " and then the variable b.
+The first call to the print function is passed four different parameters, each separated by a comma. A string "a = " followed by a followed by the string "b = " and then the variable b.
 
 The output is what you would probably have guessed at.
 
@@ -125,7 +125,7 @@ All of the other calls to print are only passed a single parameter. Although it 
 
 In the last expression 'a' is multiplied by 2 and then the modulus of the result is taken. Had I wanted to calculate a % b and then multiply the result by two I could have done so by using brackets to make the order of calculation clear.
 
-Arithmetic expressions can be arbitarily complex, but remember people have to read and understand them as well.
+Arithmetic expressions can be arbitrarily complex, but remember people have to read and understand them as well.
 
 > ## Exercise
 >
@@ -143,18 +143,18 @@ Arithmetic expressions can be arbitarily complex, but remember people have to re
 > > 1. Only the last result is printed.
 > > 2. The 4 'items' are printed by the REPL, but not in the same way as the print statement. The items in quotes are treated as separate strings, for the variables a and b the values are printed. All four items are treated as a 'tuple' which are shown in parentheses, a tuple is another datatype in Python that allows you to group things together and treat as a unit. We can tell that it is a tuple because of the `()`
 > >
-> > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentataion may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'inplace ' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
+> > A complete set of Python operators can be found in the [official documentation](https://docs.python.org/3.5/library/operator.html) . The documentation may appear a bit confusing as it initially talks about operators as functions whereas we generally use them as 'in place' operators. Section 10.3.1 provides a table which list all of the available operators, not all of which are relevant to basic arithmetic.
 > >
 > {: .solution}
 {: .challenge}
 
 ## Using built-in functions
 
-Python has a reasonable number of built-in functions. You can find a complete list in the [offical documentation](https://docs.python.org/3/library/functions.html)
+Python has a reasonable number of built-in functions. You can find a complete list in the [official documentation](https://docs.python.org/3/library/functions.html)
 
 Additional functions are provided by 3rd party packages which we will look at later on.
 
-For any function, a common question to ask is; Wwhat parameters does this function take?
+For any function, a common question to ask is; What parameters does this function take?
 
 In order to answer this from Jupyter, you can type the function name and then type `shift`+`tab` and a pop-up window will provide you with various details about the function including the parameters.
 
@@ -195,7 +195,7 @@ print(...)
 ~~~
 {: .output}
 
-There is a great deal of Python help and information as well as code examples avaialble from the Internet.  One popular site is [stackoverflow](https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
+There is a great deal of Python help and information as well as code examples available from the Internet.  One popular site is [stackoverflow](https://stackoverflow.com/tags) which specialises in providing programming help. They have dedicated forums not only for Python but also for many of the popular 3rd party Python packages. They also always provide code examples to illustrate answers to questions.
 
 You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
 
@@ -250,7 +250,7 @@ print(a)
 ~~~
 {: .output}
 
-In some circumstances explicitly converting a datatype makes no sense; you cannot change a string with alphabetic characters into a number. 
+In some circumstances explicitly converting a datatype makes no sense; you cannot change a string with alphabetic characters into a number.
 
 ~~~
 b = "Hello World"
@@ -267,7 +267,7 @@ print(type(b))
 ValueError                                Traceback (most recent call last)
 <ipython-input-8-9f5f81a470f9> in <module>()
       2 print(type(b))
-      3 
+      3
 ----> 4 b = int(b)
       5 print(type(b))
 
@@ -281,7 +281,7 @@ A string is a simple datatype which holds a sequence of characters.
 
 Strings are placed in quotes when they are being assigned, but the quotes don't count as part of the string value.
 
-If you need to use quotes as part of your string you can arbitarily use either single of double qoutes to indicate the start and end of the string.
+If you need to use quotes as part of your string you can arbitrarily use either single of double quotes to indicate the start and end of the string.
 
 ~~~
 mystring = "Hello World"
@@ -351,7 +351,7 @@ print(myString)                    # you woulf have to assign it to a new variab
 
 print(myString.isalpha())  
 
-# the example above returns False because the space charater is not considered to be an Alphanumeric value.
+# the example above returns False because the space character is not considered to be an Alphanumeric value.
 
 # In the example below, we can use the replace() method to remove the spaces and then check to see if the result 'isalpha'
 # chaining method in this way is quite common. The actions take place in a left to right manner. You can always avoid using chaining by
@@ -373,7 +373,7 @@ True
 
 If you need to refer to a specific element (character ) in a string,
 you can do so by specifying the index of the character in '[]'
-you can aslo use indexing to select a substring of the string
+you can also use indexing to select a substring of the string.
 
 ~~~
 myString = "The quick brown fox"
@@ -421,7 +421,7 @@ We can also get variables of this type using comparison operators, which you mig
 bool_val = True
 if bool_val :
     print("bool_val is",bool_val)
-    
+
 bool_val = False
 if bool_val :
     print("bool_val is",bool_val)
@@ -445,7 +445,7 @@ bool_val is True
 > bool_val2 = 'FALSE'
 > if bool_val2 :
 >     print("bool_val2 is",bool_val2)
-> 
+>
 > bool_val3 = 1
 > if bool_val3:
 >     print("bool_val3 is",bool_val3)
@@ -529,7 +529,7 @@ print(type(list4))
 [6, 5.4, 'numbers', True]
 <class 'list'>
 ~~~
-{: .output}	
+{: .output}
 
 ### The range function
 
