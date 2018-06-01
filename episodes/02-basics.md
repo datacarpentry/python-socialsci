@@ -199,12 +199,12 @@ There is a great deal of Python help and information as well as code examples av
 
 You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
 
-A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will both in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solutions so you can always just move on to the next.
+A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will both in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solutions so you can always move on to the next.
 
-## Datatype and how Python uses them
+## Datatypes and how Python uses them
 
 ### Changing datatypes
-The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the data type.
+The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the datatype.
 
 You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `string` to a `float`.
 
@@ -306,7 +306,7 @@ Hello this is Peter's code
 
 ## String functions
 
-There are a variety of Python functions available for use with strings. In Python a string is an object. An object put simply is something which has `data`, in the case of our string it is the contents of the string and `methods`. `methods` is just another way of saying `functions`.
+There are a variety of Python functions available for use with strings. In Python a string is an object. An object put simply is something which has `data`, in the case of our string it is the contents of the string and `methods`. `methods` is another way of saying `functions`.
 
 Although `methods` and `functions` are very similar in practice, there is a difference in the way you call them.
 

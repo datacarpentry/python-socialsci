@@ -29,7 +29,7 @@ df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 
 ### Selecting rows and columns from a pandas dataframe
 
-If we know which columns we want before we read the data from the file we can tell the `read_csv` method to only import those columns by specfying columns either by their index number (starting at 0 of course) as a list to the 'usecols' parameter. Alternatively we can also provide a list of column names.  
+If we know which columns we want before we read the data from the file we can tell the `read_csv` method to only import those columns by specifying columns either by their index number (starting at 0) as a list to the 'usecols' parameter. Alternatively we can also provide a list of column names.  
 
 ~~~
 df_SN7577_some_cols = pd.read_csv("SN7577.tab", sep='\t', usecols= [0,1,2,173,174,175])
@@ -85,15 +85,15 @@ Q1  Q2  Q3
 ~~~
 {: .language-python}
 > ## Exercise  
-> 
+>
 > What happens if you:
-> 
+>
 > 1. List the columns you want out of order from the way they appear in the file?
-> 2. Put the same column namre in twice?
+> 2. Put the same column name in twice?
 > 3. Put in a non-existing column name? (a.k.a Typo)
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > print(df_SN7577[['Q3', 'Q2']])
 > > print(df_SN7577[['Q3', 'Q2', 'Q3']])
@@ -104,8 +104,8 @@ Q1  Q2  Q3
 {: .challenge}
 
 ## Filtering by Rows
- 
-You can filter by rows in the dataframe by specifying a range in the form of 'a:b'. 'a'; is the first row and 'b' is one beyond the last row required. 
+
+You can filter by rows in the dataframe by specifying a range in the form of 'a:b'. 'a'; is the first row and 'b' is one beyond the last row required.
 
 ~~~
 # select row with index of 1, 2 and 3 (rows 2, 3 and 4 in the dataframe)
@@ -114,19 +114,19 @@ df_SN7577_some_rows
 ~~~
 {: .language-python}
 
-> ## Exercise 
-> 
+> ## Exercise
+>
 > What happens if we ask for a single row instead of a range?
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > df_SN7577[1]
 > > ~~~
 > > {: .language-python}
-> > 
-> > You get an error if you just specify '1'. You need to use ':1' or '0:1' to get the first row returned. The ':' is always required. You can use ':' by itself to return all of the rows
-> > 
+> >
+> > You get an error if you only specify '1'. You need to use ':1' or '0:1' to get the first row returned. The ':' is always required. You can use ':' by itself to return all of the rows
+> >
 > {: .solution}
 {: .challenge}
 
@@ -212,6 +212,3 @@ df_SN7577.sample(10, replace=False)             # ten records, do not select sam
 df_SN7577.sample(frac=0.05, random_state=1)     # 5% of records , same records if run again
 ~~~
 {: .language-python}
-
-
-

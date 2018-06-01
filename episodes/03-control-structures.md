@@ -214,7 +214,7 @@ Points to note;
 3.	The statements after the while clause are only executed if the condition evaluates as True.
 4.	Within the statements after the while clause there should be something which potentially will make the condition evaluate as `False` next time around. If not the loop will never end.
 5.  In this case the last statement in the loop changes the value of i which is part of the condition clause, so hopefully the loop will end.
-6. We called our variable `cur_sum` and not just `sum` because `sum` is a builtin function (try typing it in, notice the editor
+6. We called our variable `cur_sum` and not `sum` because `sum` is a builtin function (try typing it in, notice the editor
 changes it to green).  If we define `sum = 0` now we can't use the function `sum` in this python session.
 
 > ## Exercise - Things that can go wrong with while loops
@@ -286,7 +286,7 @@ changes it to green).  If we define `sum = 0` now we can't use the function `sum
 > > 1. Because i is incremented before the sum, you are summing 1 to 11.
 > > 2. The Boolean value is set to False the loop will never be executed.
 > > 3. When i does equal 10 the expression is False and the loop does not execute so we have only summed 1 to 9
-> > 4. Because you cannot guarantee the internal representation of Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it using `Ctrl+c` in a terminal or going to the kernel menu of a notebook and choosing interrupt.
+> > 4. Because you cannot guarantee the internal representation of Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it using <kbd>Ctrl</kbd>+<kbd>c</kbd> in a terminal or going to the kernel menu of a notebook and choosing interrupt.
 > {: .solution}
 {: .challenge}
 
@@ -309,7 +309,7 @@ for variable_name in some_sequence :
 
 The key part of this is the 'some_sequence'. The phrase used in the documentation is that it must be 'iterable'. That means; you can count through the sequence, starting at the beginning and stopping at the end.
 
-There are many examples of things which are iterable some of which we havew already come across.
+There are many examples of things which are iterable some of which we have already come across.
 
 * Lists are iterable - they don't have to contain numbers, you iterate over the elements in the list.
 * The range() function
@@ -415,16 +415,16 @@ dog
 
 > ## Exercise
 >
-> In example8 the split method is used to break the longString variable down into a list of individual words which are then iterated through.
+> In example8 the split method is used to break the `longString` variable down into a list of individual words which are then iterated through.
 >
-> Suppose that we have a string containing a set of 4 different values seperated by ','  like this;
+> Suppose that we have a string containing a set of 4 different values separated by ','  like this;
 >
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
 > {: .language-python}
 >
-> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of variablelist
+> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `variablelist`
 >
 > > ## Solution
 > >
@@ -435,7 +435,7 @@ dog
 > > ~~~
 > > {: .language-python}
 > >
-> > The format of variablelist is very much like that of a record in a csv file. In later episodes we will see how we can extract these values and assign them to variables for further processing rather tha just printing them out.
+> > The format of `variablelist` is very much like that of a record in a csv file. In later episodes we will see how we can extract these values and assign them to variables for further processing rather than printing them out.
 > >
 > {: .solution}
 {: .challenge}
