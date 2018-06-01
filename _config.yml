@@ -3,7 +3,7 @@
 #------------------------------------------------------------
 
 # Which carpentry is this ("swc", "dc", or "lc")?
-carpentry: "swc"
+carpentry: "dc"
 
 # Overall title for pages.
 title: "Python for Social Science Data"
