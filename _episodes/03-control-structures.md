@@ -15,7 +15,10 @@ objectives:
 
 - "Demonstrate how to execute a section of code on a list of items"
 keypoints:
-- "First key point."
+- ""Most programs will require 'Loops' and 'Branching' constructs."
+- "The `if`, `elif`, `else` statements allow for branching in code."
+- "The `for` and `while` statements allow for looping through sections of code"
+- "The programmer must provide a condition to end a `while` loop."
 ---
 
 ## Programs are rarely linear
@@ -37,20 +40,22 @@ The Simple `if` statement allows the program to branch based on the evaluation o
 
 The basic format of the `if` statement is:
 
-`if` expression :
+~~~
+if expression :
     statement 1
     statement 2
     ...
     statement n
-next statement
 
-If the expression evaluates to `True` then the statements 1 to n will be executed followed by 'next statement' . If the expression is `False` the 'next statement only is executed. Python know which lines of code are related to the `if` statement by the indentation, no extra syntax is necessary.
+statement always executed
+~~~
+{: .language-python}
+
+If the expression evaluates to `True` then the statements 1 to n will be executed followed by `statement always executed` . If the expression is `False`, only `statement always executed` is executed. Python knows which lines of code are related to the `if` statement by the indentation, no extra syntax is necessary.
 
 Below are some examples:
 
 ~~~
-# if
-
 print("\nExample 1\n")
 
 a= 5
