@@ -36,7 +36,7 @@ There are in fact many different approaches to reading data files and which one 
 
 In this episode we will;
 
-* We will read a file which is in .csv (Comma separated Values) format.
+* We will read a file which is in .csv (Comma Separated Values) format.
 * We will use standard core Python functions to do this
 * We will read the file one line at a time ( line = record = row of a table)
 * We will perform simple processing of the file data and print the output
