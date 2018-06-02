@@ -26,8 +26,8 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of python will a
 
 1. From file explorer navigate to where you can select the folder which contains your Jupyter Notebook notebooks (it can be empty initially).
 2. Hold down the `shift` key and right-click the mouse
-3.	The pop-up menu items will include an option to start a ‘cmd’ window or in the latest Windows release start a ‘PowerShell’ window. Select whichever appears.
-4.	When the window opens, type the command ‘jupyter notebook’.
+3.	The pop-up menu items will include an option to start a cmd window or in the latest Windows release start a ‘PowerShell’ window. Select whichever appears.
+4.	When the window opens, type the command `jupyter notebook`.
 5.	Several messages will appear in the command window. In addition your default web browser will open and display the Jupyter notebook home page. The main part of this is a file browser window starting at the folder you selected in step 1.
 6.	There may be existing notebooks which you can select and open in a new tab in your browser or there is a menu option to create a new notebook.
 ![Python Install](/fig/Python_install_2.png)
