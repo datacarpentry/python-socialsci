@@ -24,7 +24,7 @@ keypoints:
 - "Lists and Dictionaries are structured datatypes"
 - "Arithmetic uses standard arithmetic operators, precedence can be changed using brackets "
 - "Help is available for builtin functions using the `help()` function further help and code examples are available online "
-- "In Jupyter you can get help on function parameters using  `shift`+`tab` "
+- "In Jupyter you can get help on function parameters using  <kbd>shift</kbd>+<kbd>tab</kbd> "
 - "Many functions are in fact methods associated with specific object types "
 ---
 
