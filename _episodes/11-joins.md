@@ -27,7 +27,7 @@ The data can be related to each other in different ways. How they are related an
 
 In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset to make the displays more manageable.
 
-### Scenario 1 - Two data sets continuing the same columns but different rows of data
+### Scenario 1 - Two data sets containing the same columns but different rows of data
 
 Here we want to add the rows from one dataframe to the rows of the other dataframe. In order to do this we can use the `concat` method.
 
