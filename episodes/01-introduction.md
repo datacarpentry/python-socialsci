@@ -29,7 +29,7 @@ Python’s main advantages:
   object-oriented style
 * It is well-structured, which aids readability
 * It is extensible (i.e. modifiable) and is supported by a large community who
-  provide a comprehensive range of 3rd party packages 
+  provide a comprehensive range of 3rd party packages
 
 ## Interpreted vs. compiled languages
 
@@ -41,7 +41,7 @@ You then execute the machine code from the file as a separate step. This is
 efficient if you intend to run the same machine code many times as you only have
 to compile it once and it is very fast to run the compiled machine code.
 
-On the other hand, if you are just trying stuff out or experimenting, then your
+On the other hand, if you are experimenting, then your
 code will change often and you would have to compile it again every time before
 the machine can execute it. This is where interpreted languages have the
 advantage. You don’t need a complete compiled program to ‘run’ what has been
@@ -50,7 +50,7 @@ use of a system called REPL.
 
 ## REPL
 
-REPL is an acronym which stands for Read, Evaluate, Print and Loop. 
+REPL is an acronym which stands for Read, Evaluate, Print and Loop.
 
 REPL allows you to write single statements of code, have them executed and if
 there are any results to show, they are displayed and then the interpreter loops
@@ -61,7 +61,7 @@ back to the beginning and waits for the next program statement.
 In the example above, two variables (a and b) have been created, assigned values
 (2 and 3) and then multiplied together.  
 
-Every time you hit ‘enter’ the line is interpreted. The assignment statements don’t produce any output so you just get the standard ‘>>>’ prompt. 
+Every time you hit ‘enter’ the line is interpreted. The assignment statements don’t produce any output so you get only the standard ‘>>>’ prompt.
 
 For the ‘a*b’ statement (it is more of an expression than a statement), because
 the result is not being assigned to a variable, the REPL displays the result of
@@ -102,7 +102,7 @@ several lines as needed. Unlike the REPL we looked at before, the code is not
 interpreted line by line. To interpret the code in a cell you can click the
 run button in the toolbar or from the `Cell` menu option, or use keyboard
 shortcuts (e.g. `shift` + `return`). All of the code in that cell will then be
-executed. 
+executed.
 
 The results are shown in a separate `Out` cell immediately below. A new input
 cell is created for you automatically.

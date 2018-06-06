@@ -1,15 +1,19 @@
-
+---
+layout: page
+title: "Instructor Notes"
+permalink: /guide/
+---
 
 ## Setup
 
 The setup instruction for installing the Anaconda distribution of Python is in the [setup](../setup.md) file.
-The Anaconda distribution contains all of the 3rd party libraries used. 
+The Anaconda distribution contains all of the 3rd party libraries used.
 
 PIP is referred to in the text but it shouldn't need to be used.
 
 It is assumed that Jupyter notebooks will be used for all of the coding. (The shell is used in explaining REPL)
 
-How to start Jupyter is included in the setup instructiions.
+How to start Jupyter is included in the setup instructions.
 
 
 ## The datasets used
@@ -34,10 +38,10 @@ Each section of code within an episode will not necessarily re import modules th
 
 An introduction to the benefits of the Python language.
 
-Comparison between interpretted and compiled languages.
+Comparison between interpreted and compiled languages.
 
 An explanation and example of using REPL.
- 
+
 An Introduction to using Jupyter notebooks.
 
 
@@ -58,7 +62,7 @@ Lists and range function (Dictionaries kept for later, when needed).
 
 [Python control structures](link)
 
-Eplanation of typical program structure and the need for control structures.
+Explanation of typical program structure and the need for control structures.
 
 Explanation and examples of the `if`, `while` and `for` constructs.
 
@@ -74,10 +78,10 @@ Python libraries and how to install and use them.
 
 [Processing data from a file](link)
 
-This episode starts to use some of the control structures and files to create complete small programs with 
-proper 'Input - Pprocessing - Output' structure.
+This episode starts to use some of the control structures and files to create complete small programs with
+proper 'Input - Processing - Output' structure.
 
-Different approaches to reading files. ie. one record at a time  v reading the whole file.
+Different approaches to reading files ie. one record at a time  v reading the whole file.
 
 Opening and closing files and file handles.
 
@@ -85,7 +89,7 @@ Description of a csv file being a list of strings.
 
 Iterating over complete files.
 
-Use of the `split` function to parse a line from a csv file and extracting specific elelments.
+Use of the `split` function to parse a line from a csv file and extracting specific elements.
 
 Writing extracted information to a file.
 
@@ -99,7 +103,7 @@ Need to import the datetime module.
 
 Explanation of format strings to provide a representation of the dates and times.
 
-Need to converty date/time strings to a datetime structure before using them
+Need to convert date/time strings to a datetime structure before using them
 
 The ability to extract individual components from  and do arithmetic with datetime structures
 
@@ -119,7 +123,7 @@ How to make the printed JSON more presentable using `json.dumops` parameters is 
 Systematically  extracting single items from a dictionary is covered followed by extracting all such entries
 from a file of JSON.
 
-The overall aim is to demonstrate extracting a set of specific fields from a JSON formatted file and writeing them to a flat structured csv file making subsequent processing more straight forward.
+The overall aim is to demonstrate extracting a set of specific fields from a JSON formatted file and writing them to a flat structured csv file making subsequent processing more straight forward.
 
 
 [Pandas](link)
@@ -135,7 +139,7 @@ Various methods for extract information about the dataframe are covered.
 
 [Extracting rows and columns](link)
 
-Basic pandas methods for extracting row and columns from a dataframe are covered. 
+Basic pandas methods for extracting row and columns from a dataframe are covered.
 
 For row selection the emphasis is on specifying criteria, although random selection is also covered.
 
@@ -143,7 +147,7 @@ For row selection the emphasis is on specifying criteria, although random select
 
 Explain why we want to summarise data.
 
-Introduce the basic aggregatation methods for a dataframe and individual columns.
+Introduce the basic aggregation methods for a dataframe and individual columns.
 
 The examples of the aggregations will show up 'NaN' values. Missing data and its representations are discussed.
 
@@ -165,7 +169,7 @@ The use of `merge` and its similarity with the SQL JOIN clause.
 
 The different types of joins available with `merge`
 
-Discussion andexamples of what different join types tell you about the data.
+Discussion and examples of what different join types tell you about the data.
 
 [Long_and_wide_data_formats](link)
 
@@ -211,4 +215,3 @@ Various ways of retrieving the results of the query are covered.
 Pandas is used to run a similar query, its greater simplicity is explained.
 
 The problem with running DML statements with pandas is illustrated in the final exercise.
-
