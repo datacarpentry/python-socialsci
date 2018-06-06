@@ -11,8 +11,8 @@ objectives:
 - "Understand what the joined results tell us about our data"
 keypoints:
 - "You can join pandas dataframes in much the same way as you join tables in SQL"
-- "The `concat method can be used to concatenate two dataframes by adding the rows of one to the other."
-- "`concat can also combine dataframes by columns but the `merge` method is the preferred way"
+- "The `concat` method can be used to concatenate two dataframes by adding the rows of one to the other."
+- "`concat` can also combine dataframes by columns but the `merge` method is the preferred way"
 - "The `merge` method is equivalent to the SQL JOIN clause. 'left', 'right' and 'inner' joins are all possible."
 ---
 
@@ -23,11 +23,11 @@ keypoints:
 
 There are many occasions when we have related data spread across multiple files.
 
-The data can be related to each other in different ways. How they are related and how completely we can join the data from the datasets will vary. 
+The data can be related to each other in different ways. How they are related and how completely we can join the data from the datasets will vary.
 
-In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset just to make the displays more manageable.
+In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset to make the displays more manageable.
 
-### Scenario 1 - Two data sets contining the same columns but different rows of data
+### Scenario 1 - Two data sets containing the same columns but different rows of data
 
 Here we want to add the rows from one dataframe to the rows of the other dataframe. In order to do this we can use the `concat` method.
 
@@ -39,7 +39,7 @@ df_SN7577i_b = pd.read_csv("SN7577i_b.csv")
 ~~~
 {: .language-python}
 
-Have a quick look at what these dataframes look like with 
+Have a quick look at what these dataframes look like with
 
 ~~~
 print(df_SN7577i_a)
@@ -73,7 +73,7 @@ df_all_rows
 ~~~
 {: .language-python}
 
-We didn't explicitly set an index for any of the dataframes we have used. For 'df_SN7577i_a' and 'df_SN7577i_b' default indexes would have been created by pandas. When we concatenated the dataframes the indexes were also concatenated resulting in duplicate entries.
+We didn't explicitly set an index for any of the dataframes we have used. For `df_SN7577i_a` and `df_SN7577i_b` default indexes would have been created by pandas. When we concatenated the dataframes the indexes were also concatenated resulting in duplicate entries.
 
 This is really only a problem if you need to access a row by its index. We can fix the problem with the following code.
 
@@ -93,7 +93,7 @@ df_all_rows
 ~~~
 {: .language-python}
 
-In this case 'df_SN7577i_aa' has no Q4 column and 'df_SN7577i_bb' has no Q3 column. When they are concatenated, the resulting dataframe has a column for for Q3 and Q4. For the rows corresponding to 'df_SN7577i_aa' the values in the Q4 column are missing and denoted by 'NaN'. The same applies to Q3 for the 'df_SN7577i_bb' rows. 
+In this case `df_SN7577i_aa` has no Q4 column and `df_SN7577i_bb` has no Q3 column. When they are concatenated, the resulting dataframe has a column for for Q3 and Q4. For the rows corresponding to `df_SN7577i_aa` the values in the Q4 column are missing and denoted by `NaN`. The same applies to Q3 for the `df_SN7577i_bb` rows.
 
 
 ### Scenario 2 - Adding the columns from one dataframe to those of another dataframe
@@ -144,20 +144,20 @@ The possible values of the `how` parameter are shown in the picture below (taken
 
 ![pandas_join_types](../fig/pandas_join_types.png)
 
-The different join types behave in the same way as they do in SQL. In Python/pandas, any missing values are shown as 'NaN'
+The different join types behave in the same way as they do in SQL. In Python/pandas, any missing values are shown as `NaN`
 
 
 > ## Exercises
-> 
-> 1. Examine the contents of the 'SN7577i_aa' and 'SN7577i_bb' csv files using Excel or equivalent.
-> 2. Using the 'SN7577i_aa' and 'SN7577i_bb' csv files, create a dataframe which is the result of an outer join using the 'Id' column to join on.
+>
+> 1. Examine the contents of the `SN7577i_aa` and `SN7577i_bb` csv files using Excel or equivalent.
+> 2. Using the `SN7577i_aa` and `SN7577i_bb` csv files, create a dataframe which is the result of an outer join using the 'Id' column to join on.
 > 3. What do you notice about the column names in the new dataframe?
 > 4. Using shift+ tab in Jupyter examine the possible parameters for the `merge` method.
 > 5. re-write the code so that the columns names which are common to both files have suffixes indicating the filename from which they come
 > 6. If you add the parameter 'indicator=True', what additional information is provided in the resulting dataframe?
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > df_SN7577i_aa = pd.read_csv("SN7577i_aa.csv")
 > > df_SN7577i_bb = pd.read_csv("SN7577i_bb.csv")
@@ -165,7 +165,7 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 > > df_aabb
 > > ~~~
 > > {: .language-python}
-> > 
+> >
 > > ~~~
 > > df_SN7577i_aa = pd.read_csv("SN7577i_aa.csv")
 > > df_SN7577i_bb = pd.read_csv("SN7577i_bb.csv")
@@ -175,4 +175,3 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
-

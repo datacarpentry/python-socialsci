@@ -4,30 +4,28 @@ teaching: 15
 exercises: 10
 questions:
 - "How are dates and time represented in Python?"
-- "How can I manipulate dates and times?" 
+- "How can I manipulate dates and times?"
 objectives:
 - "Describe some of the datetime functions available in Python"
-- "Describe the use of format strings to describe the layout of a date and/or time string" 
+- "Describe the use of format strings to describe the layout of a date and/or time string"
 - "Make use of date arithmetic"
 keypoints:
 - "Date and Time functions in Python come from the datetime library, which needs to be imported"
-- "You can use foramt strings to have dates/times displayed in any representation you like"
+- "You can use format strings to have dates/times displayed in any representation you like"
 - "Internally date and times are stored in special data structures which allow you to access the component parts of dates and times"
 ---
 
 ## Date and Times in Python
 
-Python can be very flexible in how it interprets 'strings' which you want to be considered as a date, time or date and time.
+Python can be very flexible in how it interprets 'strings' which you want to be considered as a date, time, or date and time, but you have to tell Python how the various parts of the date and/or time are represented in your 'string'.
 
-All you have to do is tell Python how the various parts of the date and/or time are represented in your 'string'.
+To use the date and time functions you need to import the `datetime` module.
+You can do this by creating a `format`. In a `format` different case sensitive characters preceded by the `%` character act as placeholders for parts of the date/time, for example `%Y`.
 
-You can do this by creating a format. In a format different case sensitive letters preceded by the '%' character act as placeholders for parts of the date/time. 
+A full list of the characters used and what they represent can be found towards the end of [the datetime](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
-A full list of the letters used and what they represent can be found towards the end of [this](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
-To use the date and time functions you need to import the datetime module.
-
-There is a `today()` method which allows you to get the current date and time. 
+There is a `today()` method which allows you to get the current date and time.
 By default it is displayed in a format similar to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard format.
 
 ~~~
@@ -43,7 +41,7 @@ ISO     : 2018-04-12 16:19:17.177441
 ~~~
 {: .output}
 
-We can however use our own formatting, for example if we wanted words instead of number and the 4 digit year at the end we could use the following.
+We can use our own formatting instead. For example, if we wanted words instead of number and the 4 digit year at the end we could use the following.
 
 ~~~
 format = "%a %b %d %H:%M:%S %Y"
@@ -66,14 +64,14 @@ strptime: Thu Apr 12 16:19:17 2018
 ~~~
 {: .output}
 
-`strftime` converts a datetime object to a string and `strptime` creates a datetime object from a string. 
+`strftime` converts a datetime object to a string and `strptime` creates a datetime object from a string.
 When you print them using the same format string, they look the same.
 
 The format of the date fields in the SAFI_results.csv file have been generated automatically to comform to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard.
 
 When we read the file and extract the date fields, they are of type string. Before we can use them as dates, we need to convert them into Python date objects.
 
-In the format string we use below, the '-' , ':' , 'T'and 'Z' characters are just that, caharacters in the string representing the date/time. 
+In the format string we use below, the '-' , ':' , 'T'and 'Z' characters are just that, characters in the string representing the date/time.
 Only the character preceded with '%' have special meanings.
 
 Having converted the strings to datetime objects, there are a variety of methods that we can use to extract different components of the date/time.
@@ -143,9 +141,9 @@ formatted end time 17:29:08
 ~~~
 {: .output}
 
-### Components of dates and times
+## Components of dates and times
 
-For a date or time we can also extract individual components of them. 
+For a date or time we can also extract individual components of them.
 They are held internally in the datetime datastructure.
 
 ~~~
@@ -207,7 +205,7 @@ print(date_diff)
 {: .output}
 
 > ## Exercise
-> 
+>
 > How do you interpret the last result?
 {: .challenge}
 
@@ -232,8 +230,8 @@ for line in f:
     datetime_end = datetime.strptime(strdate_end, format)
     date_diff = datetime_end - datetime_start
     print(datetime_start, datetime_end, date_diff )
-    
-    
+
+
 f.close()
 ~~~
 {: .language-python}
@@ -253,23 +251,23 @@ f.close()
 {: .output}
 
 > ## Exercise
-> 
+>
 > 1. In the SAFI_results.csv file the A01_interview_date field (index 1) contains a date in the form of 'dd/mm/yyyy'. Read the file and calculate the differences in days (because the interview date is only given to the day) between the A01_interview_date values and the A04_start values. You will need to create a format string for the A01_interview_date field.
-> 
+>
 > 2. Looking at the results here and from the previous section of code. Do you think the use of the smartphone data entry system for the survey was being used in real time?
-> 
+>
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > from datetime import datetime
-> > 
+> >
 > > format1 = "%Y-%m-%dT%H:%M:%S.%fZ"
 > > format2 = "%d/%m/%Y"
-> > 
+> >
 > > f = open('SAFI_results.csv', 'r')
-> > 
+> >
 > > line = f.readline()
-> > 
+> >
 > > for line in f:
 > >     A01 = line.split(',')[1]
 > >     A04 = line.split(',')[3]
@@ -282,6 +280,6 @@ f.close()
 > > f.close()
 > > ~~~
 > > {: .language-python}
-> > 
+> >
 > {: .solution}
 {: .challenge}
