@@ -345,7 +345,7 @@ myString = "The quick brown fox"
 print(myString.startswith("The"))
 print(myString.find("The"))        # notice that string positions start with 0 like all indexing in Python
 print(myString.upper())            # The contents of myString is not changed, if you wanted an uppercase version
-print(myString)                    # you woulf have to assign it to a new variable
+print(myString)                    # you would have to assign it to a new variable
 
 # The methods starting with 'is...' return a boolean value of either True or False
 
