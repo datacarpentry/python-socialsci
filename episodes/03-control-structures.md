@@ -8,14 +8,11 @@ questions:
 - "How can I perform the same task(s) on a set of items?"
 objectives:
 - "Change program flow using available language constructs"
-
 - "Demonstrate how to execute a section of code a fixed number of times"
-
 - "Demonstrate how to conditionally execute a section of code"
-
 - "Demonstrate how to execute a section of code on a list of items"
 keypoints:
-- ""Most programs will require 'Loops' and 'Branching' constructs."
+- "Most programs will require 'Loops' and 'Branching' constructs."
 - "The `if`, `elif`, `else` statements allow for branching in code."
 - "The `for` and `while` statements allow for looping through sections of code"
 - "The programmer must provide a condition to end a `while` loop."
