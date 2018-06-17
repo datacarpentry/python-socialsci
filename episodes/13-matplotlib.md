@@ -28,7 +28,7 @@ The matplotlib library can be imported using any of the import techniques we hav
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a graph we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the '%matplotlib inline' directive.  
 
-If you forget to this, you will have to add `plt.show()` to see the graphs.
+If you forget to do this, you will have to add `plt.show()` to see the graphs.
 
 ~~~
 import matplotlib.pyplot as plt
