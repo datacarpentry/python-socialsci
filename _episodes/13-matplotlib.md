@@ -28,7 +28,7 @@ The matplotlib library can be imported using any of the import techniques we hav
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a graph we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the '%matplotlib inline' directive.  
 
-If you forget to to this, you will have to add `plt.show()` to see the graphs.
+If you forget to this, you will have to add `plt.show()` to see the graphs.
 
 ~~~
 import matplotlib.pyplot as plt
@@ -54,7 +54,7 @@ will generate 20 random numbers between 0 and 1.
 We are using these to create a pandas Series of values.
 
 A bar chart only needs a single set of values. Each 'bar' represents the value from the Series of values.
-A pandas Series (and a DataFrame) have a method called 'plot'. We only need to to tell plot what kind of graph we want.
+A pandas Series (and a DataFrame) have a method called 'plot'. We only need to tell plot what kind of graph we want.
 
 The 'x' axis represents the index values of the Series
 
