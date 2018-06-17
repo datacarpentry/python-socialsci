@@ -199,7 +199,9 @@ There is a great deal of Python help and information as well as code examples av
 
 You can also get answers to your queries by simply inputting your question (or selected keywords) into any search engine.
 
-A couple of things you may need to wary of: There are currently 2 versions of Python in use, in most cases code examples will run in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solutions so you can always move on to the next.
+
+A couple of things you may need to be wary of: There are currently 2 versions of Python in use, in most cases code examples will run in either but there are some exceptions. Secondly, some replies may assume a knowledge of Python beyond your own, making the answers difficult to follow. But for any given question there will be a whole range of suggested solutions so you can always move on to the next.
+
 
 ## Datatypes and how Python uses them
 
