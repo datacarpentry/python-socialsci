@@ -206,7 +206,7 @@ A couple of things you may need to wary of: There are currently 2 versions of Py
 ### Changing datatypes
 The  datatype of a variable is assigned when you give a variable a value as we did above. If you re-assign the value of a variable, you can change the datatype.
 
-You can also explicitly change the type of a variable by `casting` it using an appropriate python builtin function. In this example we have changed a `string` to a `float`.
+You can also explicitly change the type of a variable by `casting` it using an appropriate Python builtin function. In this example we have changed a `string` to a `float`.
 
 ~~~
 a = "3.142"
@@ -402,7 +402,7 @@ The quick
 
 ## Basic Python datatypes
 
-So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, python is case sensitive, so be careful of your spelling.)
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic datatype; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case sensitive, so be careful of your spelling.)
 We can define variables to be of type boolean by setting their value accordingly.
 
 ~~~
