@@ -142,7 +142,7 @@ print(colnames)
 ~~~
 {: output}
 
-One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the the complete result of your query.
+One reason for using a database is the size of the data involved. Consequently it may not be practial to use `fetchall` as this will return the complete result of your query.
 
 An alternative is to use the `fetchone` method, which as the name suggestrs returns only a single row. The cursor keeps track of where you are in the results of the query, so the next call to `fetchone` will return the next record. When there are no more records it will return 'None'.
 
