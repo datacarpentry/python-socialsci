@@ -27,7 +27,7 @@ Most programs do not work by executing a simple sequential set of statements. Th
 
 To make this possible all programming language have a set of control structures which allow this to happen.
 
-In this episode we are going to look at how we can create loops and branches in our Python code
+In this episode we are going to look at how we can create loops and branches in our Python code.
 Specifically we will look at three control structures, namely;
 
 * If..Else..
