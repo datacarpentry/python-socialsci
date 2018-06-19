@@ -48,7 +48,7 @@ print(personDict)
 ~~~
 {: .output}
 
-So far the keys in the dictionary each relate to a single piece of information about the person. What if we wanted to to add a list of items?
+So far the keys in the dictionary each relate to a single piece of information about the person. What if we wanted to add a list of items?
 
 ~~~
 personDict['Children'] = ['John', 'Jane', 'Jack']

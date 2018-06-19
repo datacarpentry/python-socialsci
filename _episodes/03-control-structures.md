@@ -217,13 +217,13 @@ Points to note;
 4.	Within the statements after the while clause there should be something which potentially will make the condition evaluate as `False` next time around. If not the loop will never end.
 5.  In this case the last statement in the loop changes the value of i which is part of the condition clause, so hopefully the loop will end.
 6. We called our variable `cur_sum` and not `sum` because `sum` is a builtin function (try typing it in, notice the editor
-changes it to green).  If we define `sum = 0` now we can't use the function `sum` in this python session.
+changes it to green).  If we define `sum = 0` now we can't use the function `sum` in this Python session.
 
 > ## Exercise - Things that can go wrong with while loops
 >
 > In the examples below, without running them try to decide why we will not get the required answer.
 > Run each, one at a time, and then correct them. Remember that when the input next to a notebook cell
-> is [*] your python interpreter is still working.
+> is [*] your Python interpreter is still working.
 >
 > ~~~
 > # while loop - summing the numbers 1 to 10
