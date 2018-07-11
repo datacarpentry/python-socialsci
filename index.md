@@ -21,7 +21,7 @@ This is an introduction to Python designed for participants with no programming 
 >
 > To get started, follow the directions in the "[Setup](setup/)" tab to
 > download data to your computer and follow any installation instructions.
-
+{: .prereq}
 
 > ## Prerequisites
 >
