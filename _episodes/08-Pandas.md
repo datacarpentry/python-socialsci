@@ -16,7 +16,7 @@ objectives:
 keypoints:
 - "pandas is a Python library containing functions and data structures to assist in data analysis"
 - "pandas data structures are the Series (like a vector) and the Dataframe (like a table)"
-- "the pandas `read_csv` function allows you to read an entire `csv` file into a dataframe"
+- "the pandas `read_csv` function allows you to read an entire `csv` file into a Dataframe"
 ---
 
 ## What is Pandas?
@@ -29,12 +29,12 @@ Particular features of pandas that we will be looking at over this and the next 
 
 
 * Reading data stored in CSV files (other file formats can be read as well)
-* Slicing and subsetting data in dataframes (tables!)
+* Slicing and subsetting data in Dataframes (tables!)
 * Dealing with missing data
 * Reshaping data (long -> wide,  wide -> long)
 * Inserting and deleting columns from data structures
 * Aggregating data using data grouping facilities using the split-apply-combine paradigm
-* Joining of datasets (after they have been loaded into dataframes)
+* Joining of datasets (after they have been loaded into Dataframes)
 
 
 If you are wondering why I write pandas with a lower case 'p' it is because it is the name of the package and Python is case sensitive.
@@ -42,7 +42,7 @@ If you are wondering why I write pandas with a lower case 'p' it is because it i
 
 ## Importing the pandas library
 
-Importing the pandas library is done in exactly the same way as for any other library. In almost all examples of Python code using the pandas library, it will have been imported and given an alias of 'pd'. We will follow the same convention.
+Importing the pandas library is done in exactly the same way as for any other library. In almost all examples of Python code using the pandas library, it will have been imported and given an alias of `pd`. We will follow the same convention.
 
 
 ~~~
@@ -52,11 +52,11 @@ import pandas as pd
 
 ## Pandas data structures
 
-There are 2 main data structure used by pandas, they are the Series and the Dataframe. The Series equates in general to a vector or a list. The data frame is equivalent to a table. Each column in a pandas dataframe is a pandas Series data structure.
+There are two main data structure used by pandas, they are the Series and the Dataframe. The Series equates in general to a vector or a list. The Dataframe is equivalent to a table. Each column in a pandas Dataframe is a pandas Series data structure.
 
 We will mainly be looking at the Dataframe.
 
-We can easily create a Pandas dataframe by reading a .csv file
+We can easily create a Pandas Dataframe by reading a .csv file
 
 ## Reading a csv file
 
@@ -64,7 +64,7 @@ When we read a csv dataset in base Python we did so by opening the dataset, read
 
 The main advantage of this approach, however, is that you only have to store one dataset record in memory at a time. This means that if you have the time, you can process datasets of any size.
 
-In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a dataframe. If your dataset has column headers in the first record then these can be used as the dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
+In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a Dataframe. If your dataset has column headers in the first record then these can be used as the Dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
 
 
 We are going to read in our SN7577.tab file. Although this is a tab delimited file we will still use the pandas `read_csv` method, but we will explicitly tell the method that the separator is the tab character and not a comma which is the default.
@@ -88,15 +88,15 @@ df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 > > {: .language-python}
 > >
 > > If you allow pandas to assume that your columns are separated by commas (the default) and there aren't any, then each record will be treated as a single column. So the shape is given as 1286 rows (correct) but only one column.
-> > When the contents is display the only column name is the complete first record. Notice the '\t' used to represent the tab characters in the output. This is the same format we used to specify the tab separator when we correctly read in the file.
+> > When the contents is display the only column name is the complete first record. Notice the `\t` used to represent the tab characters in the output. This is the same format we used to specify the tab separator when we correctly read in the file.
 > >
 > >
 > {: .solution}
 {: .challenge}
 
-##  Getting information about a dataframe
+##  Getting information about a Dataframe
 
-You can find out the type of the variable df_SN7577 by using the `type` function.
+You can find out the type of the variable `df_SN7577` by using the `type` function.
 
 ~~~
 print(type(df_SN7577))
@@ -108,9 +108,9 @@ print(type(df_SN7577))
 ~~~
 {: .output}
 
-You can see the contents by simply entering the variable name. You can see from the output that it is a tabular format. The column names have been taken from the first record of the file. On the left hand side is a column with no name. The entries here have been provided by pandas and act as an index to reference the individual rows of the dataframe.
+You can see the contents by simply entering the variable name. You can see from the output that it is a tabular format. The column names have been taken from the first record of the file. On the left hand side is a column with no name. The entries here have been provided by pandas and act as an index to reference the individual rows of the Dataframe.
 
-The read.csv method has an 'index_col' parameter which you can use to indicate which of the columns in the file you wish to use as the index instead. As the SN7577 dataset doesn't have a column which would uniquely identify each row we cannot do that.
+The `read_csv()` function has an `index_col` parameter which you can use to indicate which of the columns in the file you wish to use as the index instead. As the SN7577 dataset doesn't have a column which would uniquely identify each row we cannot do that.
 
 Another thing to notice about the display is that it is truncated. By default you will see the first and last 30 rows. For the columns you will always get the first few columns and typically the last few depending on display space.
 
@@ -130,9 +130,10 @@ df_SN7577.head()
 >
 > 1. As well as the `head()` method there is a `tail()` method. What do you think it does? Try it.
 > 2. Both methods accept a single numeric parameter. What do you think it does? Try it.
+> 
 {: .challenge}
 
-You can obtain other basic information about your dataframe of data  with:
+You can obtain other basic information about your Dataframe of data with:
 
 ~~~
 # How many rows?
@@ -143,7 +144,7 @@ print(df_SN7577.shape)
 print(df_SN7577.size)
 # What are the column names
 print(df_SN7577.columns)
-# what are the datatypes of the columns?
+# what are the data types of the columns?
 print(df_SN7577.dtypes)
 ~~~
 {: .language-python}
@@ -168,7 +169,7 @@ Length: 202, dtype: object
 
 > ## Exercise
 >
-> When we asked for the column names and their datatypes, the output was abridged, i.e. we didn't get the values for all of the columns. Can you write a small piece of code which will return all of the values
+> When we asked for the column names and their data types, the output was abridged, i.e. we didn't get the values for all of the columns. Can you write a small piece of code which will return all of the values
 >
 > > ## Solution
 > >
