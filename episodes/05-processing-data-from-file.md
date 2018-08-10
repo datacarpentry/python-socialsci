@@ -61,7 +61,7 @@ f = open(filename, "r")    # open the file whose name is in filename, the 'r' me
 for line in f:             # We use a for loop to iterate through the file one line at a time.
     print(line)            # we simply print the line
 
-f.close                    # Always close the file at the end.
+f.close()                    # Always close the file at the end.
 ~~~
 {: .language-python}
 
