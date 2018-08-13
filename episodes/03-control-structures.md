@@ -25,7 +25,7 @@ Most programs do not work by executing a simple sequential set of statements. Th
 To make this possible all programming language have a set of control structures which allow this to happen.
 
 In this episode we are going to look at how we can create loops and branches in our Python code.
-Specifically we will look at three control structures, namely;
+Specifically we will look at three control structures, namely:
 
 * If..Else..
 * While...
@@ -33,7 +33,7 @@ Specifically we will look at three control structures, namely;
 
 ## The `if` statement and variants
 
-The Simple `if` statement allows the program to branch based on the evaluation of an expression
+The simple `if` statement allows the program to branch based on the evaluation of an expression
 
 The basic format of the `if` statement is:
 
@@ -96,17 +96,17 @@ a is 4 b is 4
 ~~~
 {: .output}
 
-In the examples above there are three things to notice;
+In the examples above there are three things to notice:
 
-1.	The colon ‘:’ at the end of the ‘if’ line. Missing this out is a common error.
-2.	The indentation of the print statement. If you remembered the ‘:’ on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statements indented at this level are considered to be part of the ‘if’ statement. This is a feature fairly unique to Python, that it cares about the indentation. If there is too much, or too little indentation, you will get an error.
+1.	The colon `:` at the end of the `if` line. Missing this out is a common error.
+2.	The indentation of the print statement. If you remembered the `:` on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statements indented at this level are considered to be part of the `if` statement. This is a feature fairly unique to Python, that it cares about the indentation. If there is too much, or too little indentation, you will get an error.
 3.	The `if` statement is ended by removing the indent. There is no explicit end to the `if` statement as there is in many other programming languages
 
-In the last example, notice that in Python the operator used to check equality is ‘==’.
+In the last example, notice that in Python the operator used to check equality is `==`.
 
 > ## Exercise
 >
-> Add another if statement to example two that will check if b is greater than or equal to a
+> Add another if statement to example 2 that will check if b is greater than or equal to a
 >
 > > ## Solution
 > >
@@ -178,7 +178,7 @@ a = 5 and b = 4
 ~~~
 {: .output}
 
-The overall structure is similar to the `if ... else` statement. There are three additional things to notice;
+The overall structure is similar to the `if ... else` statement. There are three additional things to notice:
 
 1.	Each `elif` clause has its own test expression.
 2.	You can have as many `elif` clauses as you need
@@ -209,7 +209,7 @@ The sum of the numbers from 1 to 10 is 55
 ~~~
 {: .output}
 
-Points to note;
+Points to note:
 
 1.	The condition clause (i <= n) in the while statement can be anything which when evaluated would return a Boolean value of either True of False. Initially i has been set to 1 (before the start of the loop) and therefore the condition is `True`.
 2.	The clause can be made more complex by use of parentheses and `and` and `or`  operators amongst others
@@ -309,12 +309,12 @@ for variable_name in some_sequence :
 ~~~
 {: .language-python}
 
-The key part of this is the 'some_sequence'. The phrase used in the documentation is that it must be 'iterable'. That means; you can count through the sequence, starting at the beginning and stopping at the end.
+The key part of this is the `some_sequence`. The phrase used in the documentation is that it must be 'iterable'. That means, you can count through the sequence, starting at the beginning and stopping at the end.
 
 There are many examples of things which are iterable some of which we have already come across.
 
 * Lists are iterable - they don't have to contain numbers, you iterate over the elements in the list.
-* The range() function
+* The `range()` function
 * The characters in a string
 
 ~~~
@@ -419,7 +419,7 @@ dog
 >
 > In example8 the split method is used to break the `longString` variable down into a list of individual words which are then iterated through.
 >
-> Suppose that we have a string containing a set of 4 different values separated by ','  like this;
+> Suppose that we have a string containing a set of 4 different values separated by `,`  like this:
 >
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
