@@ -20,9 +20,9 @@ keypoints:
 Python can be very flexible in how it interprets 'strings' which you want to be considered as a date, time, or date and time, but you have to tell Python how the various parts of the date and/or time are represented in your 'string'.
 
 To use the date and time functions you need to import the `datetime` module.
-You can do this by creating a `format`. In a `format` different case sensitive characters preceded by the `%` character act as placeholders for parts of the date/time, for example `%Y`.
+You can do this by creating a `format`. In a `format`, different case sensitive characters preceded by the `%` character act as placeholders for parts of the date/time, for example `%Y` represents year formatted as 4 digit number such as 2014.
 
-A full list of the characters used and what they represent can be found towards the end of [the datetime](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
+A full list of the characters used and what they represent can be found towards the end of the [datetime](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
 
 There is a `today()` method which allows you to get the current date and time.
@@ -71,8 +71,8 @@ The format of the date fields in the SAFI_results.csv file have been generated a
 
 When we read the file and extract the date fields, they are of type string. Before we can use them as dates, we need to convert them into Python date objects.
 
-In the format string we use below, the '-' , ':' , 'T'and 'Z' characters are just that, characters in the string representing the date/time.
-Only the character preceded with '%' have special meanings.
+In the format string we use below, the `-` , `:` , `T` and `Z` characters are just that, characters in the string representing the date/time.
+Only the character preceded with `%` have special meanings.
 
 Having converted the strings to datetime objects, there are a variety of methods that we can use to extract different components of the date/time.
 
@@ -252,7 +252,7 @@ f.close()
 
 > ## Exercise
 >
-> 1. In the SAFI_results.csv file the A01_interview_date field (index 1) contains a date in the form of 'dd/mm/yyyy'. Read the file and calculate the differences in days (because the interview date is only given to the day) between the A01_interview_date values and the A04_start values. You will need to create a format string for the A01_interview_date field.
+> 1. In the SAFI\_results.csv file the `A01_interview_date field` (index 1) contains a date in the form of 'dd/mm/yyyy'. Read the file and calculate the differences in days (because the interview date is only given to the day) between the `A01_interview_date` values and the `A04_start` values. You will need to create a format string for the `A01_interview_date` field.
 >
 > 2. Looking at the results here and from the previous section of code. Do you think the use of the smartphone data entry system for the survey was being used in real time?
 >
