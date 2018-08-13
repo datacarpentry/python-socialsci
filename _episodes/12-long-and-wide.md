@@ -42,7 +42,7 @@ We will create a new Dataframe with a single column of 'Id'.
 
 ~~~
 # create an 'Id' column
-df_papers1 = pd.Dataframe(pd.Series(range(1,1287)),index=None,columns=['Id'])
+df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
 ~~~
 {: .language-python}
 
@@ -187,7 +187,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > import pandas as pd
 > > df_SN7577 = pd.read_csv("SN7577.tab", sep='\t')
 > > #create an 'Id' column
-> > df_papers1 = pd.Dataframe(pd.Series(range(1,1287)),index=None,columns=['Id'])
+> > df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
 > > df_papers2 = df_SN7577.filter(like= 'daily')
 > > df_papers = pd.concat([df_papers1, df_papers2], axis = 1)
 > > df_papers

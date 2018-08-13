@@ -241,7 +241,7 @@ A common use of the boxplot is to compare the statistical variations across a se
 The variables can be an independent series or columns of a Dataframe.
 
 ~~~
-df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creating a Dataframe directly with pandas
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creating a Dataframe directly with pandas
 plt.boxplot(df.A, labels = 'A')
 plt.show()
 ~~~
@@ -254,7 +254,7 @@ plt.show()
 > > ## Solution
 > >
 > > ~~~
-> > df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+> > df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 > > plt.boxplot([df.A, df.C, df.D], labels = ['A', 'C', 'D'])
 > > plt.show()
 > > ~~~
@@ -265,7 +265,7 @@ plt.show()
 The boxplot function cannot accept a whole Dataframe. The code
 
 ~~~
-df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 plt.boxplot(df)
 plt.show()
 ~~~
@@ -276,7 +276,7 @@ will fail.
 However we can use the pandas plot method
 
 ~~~
-df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 df.plot(kind = 'box', return_type='axes') # the return_type='axes' is only needed for forward compatibility
 ~~~
 {: .language-python}
@@ -285,7 +285,7 @@ We can add a title to the above by adding the `title` parameter. However there a
 To add labels we can use matplotlib directly.
 
 ~~~
-df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 df.plot(kind = 'box', return_type='axes')
 
 plt.title('Box Plot')
@@ -300,7 +300,7 @@ plt.show()
 If you wish to save your graph as an image you can do so using the `savefig()` function. The image can be saved as a pdf, jpg or png file by changing the file extension.
 
 ~~~
-df = pd.Dataframe(np.random.normal(size=(100,5)), columns=list('ABCDE'))
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
 df.plot(kind = 'box', return_type='axes')
 
 plt.title('Box Plot')

@@ -106,7 +106,7 @@ In the last example, notice that in Python the operator used to check equality i
 
 > ## Exercise
 >
-> Add another if statement to example 2. that will check if b is greater than or equal to a
+> Add another if statement to example 2 that will check if b is greater than or equal to a
 >
 > > ## Solution
 > >

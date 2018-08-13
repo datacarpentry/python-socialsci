@@ -19,7 +19,7 @@ objectives:
 - "Convert from one data type to another"
 keypoints:
 - "The Jupyter environment can be used to write code segments and display results"
-- "data types in Python are implicit based on variable values"
+- "Data types in Python are implicit based on variable values"
 - "Basic data types are Integer, Float, String and Boolean"
 - "Lists and Dictionaries are structured data types"
 - "Arithmetic uses standard arithmetic operators, precedence can be changed using brackets "
