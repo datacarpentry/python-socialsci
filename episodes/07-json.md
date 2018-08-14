@@ -19,7 +19,7 @@ objectives:
 keypoints:
 - "JSON is a popular data format for transferring data used by a great many Web based APIs"
 - " The JSON data format is very similar to the Python Dictionary structure."
-- " The complex structure of a JSON document means that it cannot easily be 'flattened' into tabular data"
+- "The complex structure of a JSON document means that it cannot easily be 'flattened' into tabular data"
 - "We can use Python code to extract values of interest and place them in a csv file"
 ---
 
@@ -159,17 +159,17 @@ with open('SAFI.json') as json_data:
 ~~~
 {: .output}
 
-Points to note;
+Points to note:
 
 1. We import the json package with an import statement.
-2. We have chosen to use the `with` statement to open the SAFI.json file. Notice the ':' at the end of the line and the subsequent indentation. The `with` statement is in effect until we un-indent. At which time the file will automatically be closed. So we don't need to do so explicitly.
+2. We have chosen to use the `with` statement to open the SAFI.json file. Notice the `:` at the end of the line and the subsequent indentation. The `with` statement is in effect until we un-indent. At which time the file will automatically be closed. So we don't need to do so explicitly.
 3. 'json_data' is the file handle.
 4. The `json.load` method is passed the file handle and reads the complete file.
-5. The variable 'd' is a list of dictionaries. (When we read the csv file we considered it to be a list of strings).
+5. The variable `d` is a list of dictionaries. (When we read the csv file we considered it to be a list of strings).
 6. The `json.dumps` method can be used to print either the entire file or a specific dictionary from the list in a formatted manner by using the indent parameter)
 
 
-By default the order in which the keys of the dictionary are printed is not guaranteed. If we want them in sorted order we can have them sorted by using the 'sort_keys' parameter
+By default the order in which the keys of the dictionary are printed is not guaranteed. If we want them in sorted order we can have them sorted by using the `sort_keys` parameter
 
 ~~~
 print(json.dumps(d[0], indent=2, sort_keys=True))
@@ -197,13 +197,13 @@ d = json.load(json_data)
 ~~~
 {: .language-python}
 
-line. 'd' a list object and each entry in the list is a Dictionary object.
+line. `d` a list object and each entry in the list is a Dictionary object.
 
 ## Extract the fields we want into a flat format
 
 Despite the arbitrary complexity of a JSON document or a Python dictionary object, we can adopt a very systematic approach to extracting individual fields form the structure.
 
-The story so far: Our JSON file has been read into a variable 'd'. We know that 'd' is a list of dictionaries. Each dictionary represents a JSON document ( a record).
+The story so far: Our JSON file has been read into a variable `d`. We know that `d` is a list of dictionaries. Each dictionary represents a JSON document ( a record).
 
 We can print the contents of the first dictionary in the list with
 
@@ -214,19 +214,19 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 
 > ## Exercise
 >
-> 1. In the output from the code above there is a key with the name of 'D_curr_crop'. Find it and by looking at the indentation and the '[' (lists) and '{' (dictionaries) describe in English how you could find the first occurrence of  'D_curr_crop' starting with 'd'.
+> 1. In the output from the code above there is a key with the name of `D_curr_crop`. Find it and by looking at the indentation and the `[` (lists) and `{` (dictionaries) describe in English how you could find the first occurrence of  `D_curr_crop` starting with `d`.
 >
 > 2. Use a print statement to find out what it is.
 >
 > > ## Solution
 > >
-> > d is a list of dictionaries
-> > d[0] is the fist dictionary
-> > within d[0] there is a key 'D_plots' whose value is a list and contains dictionaries
-> > d[0]['D_plots'][0] is the first dictionary in the list.
-> > within d[0]['D_plots'][0] there is a key 'D_crops' which is also a list of dictionaries
-> > d[0]['D_plots'][0]['D_crops'][0] is the first dictionary in the list.
-> > within this dictionary there is a key 'D_curr_crop'.
+> > - `d` is a list of dictionaries
+> > - `d[0]` is the first dictionary
+> > - within `d[0]` there is a key `D_plots` whose value is a list and contains dictionaries
+> > - `d[0]['D_plots'][0]` is the first dictionary in the list
+> > - within `d[0]['D_plots'][0]` there is a key `D_crops` which is also a list of dictionaries
+> > - `d[0]['D_plots'][0]['D_crops'][0]` is the first dictionary in the list
+> > - within this dictionary there is a key `D_curr_crop`
 > >
 > > Being able to start at the outermost level and work your way in is very important when you need to extract specific items.
 > >
@@ -238,12 +238,12 @@ print(json.dumps(d[0], indent=2, sort_keys=True))
 {: .challenge}
 
 
-Being able to drill down in this way is very useful in helping you get a feel for the JSON data structure. In practice it is more likely that instead of returning the first occurrence of 'D_curr_crop' you will want to return all of them. This requires a little more programming to do this and to be aware of two potential problems.
+Being able to drill down in this way is very useful in helping you get a feel for the JSON data structure. In practice it is more likely that instead of returning the first occurrence of `D_curr_crop` you will want to return all of them. This requires a little more programming and to be aware of two potential problems.
 
-1. 'D_curr_crop' may not exist in any particular dictionary within 'D_crops'
-2. any of the lists 'D_plots' or 'D_crops' could be missing or just empty lists ( '[]' )
+1. `D_curr_crop` may not exist in any particular dictionary within `D_crops`
+2. any of the lists `D_plots` or `D_crops` could be missing or just empty lists (`[]`)
 
-In our first attempt we will ignore these problems  
+In our first attempt we will ignore these problems. 
 
 ~~~
 for farms in d:
@@ -269,7 +269,7 @@ sorghum
 ~~~
 {: .output}
 
-In this version we test if all of the keys exists.
+In this version we test if all of the keys exist.
 This could be extended to check that the lists are not empty.
 
 ~~~
@@ -287,7 +287,7 @@ for farms in d:
 
 We can now produce a list of all of the crops in all of the plots in all of the farms.
 
-We can also create a unique set of all of the crops grown using the Python `set` data structure as shown in the code below. A set is like a list but does not allow duplicate values. ( but doesn't raise an error if you try to add a duplicate)
+We can also create a unique set of all of the crops grown using the Python `set` data structure as shown in the code below. A set is like a list but does not allow duplicate values (but doesn't raise an error if you try to add a duplicate).
 
 ~~~
 unique_crops = set()
@@ -312,7 +312,7 @@ print(unique_crops)
 
 Simply having a list of all of the crops is unlikely to be enough. What you are really interested in is which farm grows which crops in which plot.
 
-We can accumulate this information as we move through the list of dictionary objects. At the top level, 'farm', there is a unique identifier 'A03_quest_no' which we can use. for the plot and the crop within the plot we will create our own simple indexing system (plot_no and crop_no). At the end instead of just printing the crop name, we also print the details of where this crop is being grown.
+We can accumulate this information as we move through the list of dictionary objects. At the top level, `farm`, there is a unique identifier `A03_quest_no` which we can use. for the plot and the crop within the plot we will create our own simple indexing system (`plot_no` and `crop_no`). At the end instead of just printing the crop name, we also print the details of where this crop is being grown.
 
 ~~~
 for farms in d:
@@ -344,7 +344,7 @@ Farm no 01 grows vegetable in plot 3 and it is crop number 1
 
 The final stage of this data extraction process is to save the extracted data to a file for subsequent use.
 
-Rather than manually appending all of the information items into a string with ',' seperating each, we can use the `csv` module.
+Rather than manually appending all of the information items into a string with `,` seperating each, we can use the `csv` module.
 
 To do this we need to create a `csv.writer` object and use it to write complete rows of data at a time. `csv.writer` expects the data to be provided as a list of items.
 
