@@ -26,7 +26,7 @@ Although we are using Matplotlib in this episode, pandas can make use of several
 
 The matplotlib library can be imported using any of the import techniques we have seen. As `pandas` is generally imported with `import panas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
-In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a graph we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the '%matplotlib inline' directive.  
+In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a graph we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.  
 
 If you forget to do this, you will have to add `plt.show()` to see the graphs.
 
@@ -40,7 +40,7 @@ import matplotlib.pyplot as plt
 
 Numpy is another Python library. It is used for multi-dimensional array processing. In our case we just want to use it for its useful random number generation functions which we will use to create some fake data to demonstrate some of the graphing functions of matplotlib.
 
-We will use the alias 'np', following convention.
+We will use the alias `np`, following convention.
 
 ## Bar charts
 
@@ -54,7 +54,7 @@ will generate 20 random numbers between 0 and 1.
 We are using these to create a pandas Series of values.
 
 A bar chart only needs a single set of values. Each 'bar' represents the value from the Series of values.
-A pandas Series (and a DataFrame) have a method called 'plot'. We only need to tell plot what kind of graph we want.
+A pandas Series (and a Dataframe) have a method called 'plot'. We only need to tell plot what kind of graph we want.
 
 The 'x' axis represents the index values of the Series
 
@@ -75,11 +75,11 @@ Internally the pandas 'plot' method has called the 'bar' method of matplotlib an
 
 We can use matplotlib directly to produce a similar graph. In this case we need to pass two parameters, the number of bars we need and the pandas Series holding the values.
 
-We also have to explicitly call the 'show' function to produce the graph.
+We also have to explicitly call the `show()` function to produce the graph.
 
 ~~~
-plt.bar(range ( len ( s )), s)
-plt.show ()
+plt.bar(range(len(s)), s)
+plt.show()
 ~~~
 {: .language-python}
 
@@ -180,16 +180,15 @@ plt.show()
 ~~~
 {: .language-python}
 
-In the call to the `scatter` method, the `label` parameter values are used by the 'legend'.
-The 'c' or 'color' parameter can be set to any color matplotlib recognises. Full details of the available colours are available in the [matplotlib](http://matplotlib.org/api/colors_api.html) website.  The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also an s (size) parameter which allows you to change the size of the marker.
+In the call to the `scatter` method, the `label` parameter values are used by the _legend_.
+The `c` or `color` parameter can be set to any color matplotlib recognises. Full details of the available colours are available in the [matplotlib](http://matplotlib.org/api/colors_api.html) website. The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also an `s` (size) parameter which allows you to change the size of the marker.
 
 > ## Exercise
 >
 > In the scatterplot the s parameter determines the size of the dots. s can be a simple numeric value, say s=100, which will produce dots all of the same size. However you can pass a list of values (or a pandas Series) to provide sizes for the individual dots. This approach is very common as it allows us to provide an extra variable worth of information on the graph.
 >
 > 1. Modify the code we used for the scatter plot to include a size value for each of the points in the series being plotted.
->
-> The downside is that some of the smaller dots may be completely covered by the larger dots. To try and highlight when this has happened we can change the opacity of the dots.
+> (The downside is that some of the smaller dots may be completely covered by the larger dots. To try and highlight when this has happened we can change the opacity of the dots.)
 >
 > 2. Find out which parameter controls the opacity of the dots ( clue - it is not called opacity), add it to you code and set it > to a reasonable value .
 >
@@ -239,10 +238,10 @@ plt.show()
 
 A common use of the boxplot is to compare the statistical variations across a set of variables.
 
-The variables can be an independent series or columns of a dataframe.
+The variables can be an independent series or columns of a Dataframe.
 
 ~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creating a dataframe directly with pandas
+df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creating a Dataframe directly with pandas
 plt.boxplot(df.A, labels = 'A')
 plt.show()
 ~~~
@@ -250,7 +249,7 @@ plt.show()
 
 > ## Exercise
 >
-> Can you change the code above so that columns 'A' , 'C' and 'D' are all displayed on the same graph?
+> Can you change the code above so that columns `A` , `C` and `D` are all displayed on the same graph?
 >
 > > ## Solution
 > >
@@ -263,7 +262,7 @@ plt.show()
 > {: .solution}
 {: .challenge}
 
-The boxplot function cannot accept a whole dataframe. The code
+The boxplot function cannot accept a whole Dataframe. The code
 
 ~~~
 df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
@@ -298,7 +297,7 @@ plt.show()
 
 ## Saving a graph
 
-If you wish to save a your graph as an image you can do so using the `savefig` function. The image can be saved as a pdf, jpg or png file by changing the file extension.
+If you wish to save your graph as an image you can do so using the `savefig()` function. The image can be saved as a pdf, jpg or png file by changing the file extension.
 
 ~~~
 df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
