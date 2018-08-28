@@ -8,13 +8,13 @@ questions:
 
 objectives:
 - "Describe a file handle"
-- "Use open to open files for reading"
+- "Use `open()` to open files for reading"
 - "Create and open files for writing or appending"
-- "Use close to close files"
+- "Use `close` to close files"
 - "Explain what is meant by a record"
 
 keypoints:
-- "Reading data from files is far more common program 'input' requests or hard coding values"
+- "Reading data from files is far more common than program 'input' requests or hard coding values"
 - "Python provides simple means of reading from a text file and writing to a text file"
 - "Tabular data is commonly recorded in a 'csv' file"
 - "Text files like csv files can be thought of as being a list of strings. Each string is a complete record"
@@ -61,7 +61,7 @@ f = open(filename, "r")    # open the file whose name is in filename, the 'r' me
 for line in f:             # We use a for loop to iterate through the file one line at a time.
     print(line)            # we simply print the line
 
-f.close                    # Always close the file at the end.
+f.close()                    # Always close the file at the end.
 ~~~
 {: .language-python}
 
@@ -83,7 +83,7 @@ We know that the first record in the file is a header record and we want to igno
 
 As we read the file the line variable is a string containing a complete record. The fields or columns of the record are separated by each other by "," as it is a csv file.
 
-As line is a string we can use the split() method to convert it to a list of column values. We are specicically going to select the column which is the 19th entry in the list (remember the list index starts at 0). This refers to the C01_respondent_roof_type column. We are going to examine the different roof types.
+As line is a string we can use the `split()` method to convert it to a list of column values. We are specicically going to select the column which is the 19th entry in the list (remember the list index starts at 0). This refers to the C01_respondent_roof_type column. We are going to examine the different roof types.
 
 ~~~
 filename = "SAFI_results.csv"
@@ -194,8 +194,8 @@ fw.close()
 
 What are we  doing here?
 
-1. Open the files. Because there are now two files, each has its own file handle: `fr` for the file we read and `fw` for the file we are going to write. (They are just variable names so you can use anything you like). For the file we are going to write to we use 'w' for the second parameter. If the file does not exist it will be created. If it does exist, then the contents will be overwritten. If we want to append to an existing file we can use 'a' as the second parameter.
-2. Because we are just testing a specific field from the record to have a certain value, we don't need to put it into a variable first. If the expression is True, then we use write() method to write the complete line just as we read it to the output file.
+1. Open the files. Because there are now two files, each has its own file handle: `fr` for the file we read and `fw` for the file we are going to write. (They are just variable names so you can use anything you like). For the file we are going to write to we use `w` for the second parameter. If the file does not exist it will be created. If it does exist, then the contents will be overwritten. If we want to append to an existing file we can use `a` as the second parameter.
+2. Because we are just testing a specific field from the record to have a certain value, we don't need to put it into a variable first. If the expression is True, then we use `write()` method to write the complete line just as we read it to the output file.
 3. Close the files
 
 In this example we didn't bother skipping the header line as it would fail the test in the if statement. If we did want to include it  we could have added the line
@@ -209,7 +209,7 @@ before the for loop
 
 > ## Exercise
 >
-> From the SAFI_results.csv file extract all of the records where the C01_respondent_roof_type (index 18) has a value of 'grass' and the C02_respondent_wall_type (index 19) has a value of 'muddaub' and write them to a file. Within the same program write all of the records where C01_respondent_roof_type (index 18) has a value of 'grass' and the C02_respondent_wall_type (index 19) has a value of 'burntbricks' and write them to a separate file. In both files include the header record.
+> From the SAFI_results.csv file extract all of the records where the `C01_respondent_roof_type` (index 18) has a value of `'grass'` and the `C02_respondent_wall_type` (index 19) has a value of `'muddaub'` and write them to a file. Within the same program write all of the records where `C01_respondent_roof_type` (index 18) has a value of `'grass'` and the `C02_respondent_wall_type` (index 19) has a value of `'burntbricks'` and write them to a separate file. In both files include the header record.
 >
 > > ## Solution
 > >
@@ -243,10 +243,10 @@ before the for loop
 {: .challenge}
 
 
-In our example of printing the counts for the roof types, we assumed that we knew what the likely roof types were. Although we did have an 'other' option to catch anything we missed. Had there been any we would still be non the wiser as to what they  represented. We were able to decide on the specific roof types by manually scanning the list of C01_respondent_roof_type values. This was only practical because of the small file size. For a multi-million record file we could not have done this.
+In our example of printing the counts for the roof types, we assumed that we knew what the likely roof types were. Although we did have an `'other'` option to catch anything we missed. Had there been any we would still be non the wiser as to what they  represented. We were able to decide on the specific roof types by manually scanning the list of `C01_respondent_roof_type` values. This was only practical because of the small file size. For a multi-million record file we could not have done this.
 
 
-We would like a way of creating a list of the different roof types and at the same time counting them. We can do this by using not a Python list structure, but a Python Dictionary.
+We would like a way of creating a list of the different roof types and at the same time counting them. We can do this by using not a Python list structure, but a Python dictionary.
 
 
 
@@ -322,7 +322,7 @@ already exists
 > ## Exercise
 >
 > 1. Create a dictionary called `dict_roof_types` with initial keys of `type1` and `type2` and give them values of 1 and 3.
-> 2. Add a third key `type3` with a value of '6'.
+> 2. Add a third key `type3` with a value of 6.
 > 3. Add code to check if a key of `type4` exists. If it does not add it to the dictionary with a value of 1 if it does, increment its value by 1
 > 4. Add code to check if a key of `type2` exists. If it does not add it to the dictionary with a value of 1 if it does, increment its value by 1
 > 5. Print out all of the keys and values from the dictionary

@@ -6,7 +6,7 @@ permalink: /guide/
 
 ## Setup
 
-The setup instruction for installing the Anaconda distribution of Python is in the [setup](../setup.md) file.
+The setup instruction for installing the Anaconda distribution of Python is in the [setup](../setup.html) file.
 The Anaconda distribution contains all of the 3rd party libraries used.
 
 PIP is referred to in the text but it shouldn't need to be used.
