@@ -47,16 +47,16 @@ print(power(2,3))
 ~~~
 {: .output}
 
-Points to note;
+Points to note:
 
 1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets.
-2.	The definition clause is terminated with a ‘:’ which causes indentation on the next and subsequent lines. All of these lines form the statements which make up the function. The function ends after the indentation is removed.
+2.	The definition clause is terminated with a `:` which causes indentation on the next and subsequent lines. All of these lines form the statements which make up the function. The function ends after the indentation is removed.
 3.	Within the function, the parameters behave as variables whose initial values will be those that they were given when the function was called.
 4.	functions have a return statement which specifies the value to be returned. This is the value assigned to the variable on the left-hand side of the call to the function. (power in the example above)
 5.	You call (run the code) of a function simply by providing its name and values for its parameters the same way you would for any builtin function.
-6.  Once the definition of the function has been executed, it becomes part of python for the current session and can be used anywhere.
+6.  Once the definition of the function has been executed, it becomes part of Python for the current session and can be used anywhere.
 7. Like any other builtin function you can use `shift` + `tab` in Jupyter to see the parameters.
-8. At the beginning of the function code we have a multiline  `comment` denoted by the "'''" at the beginning and end. This kind of comment is known as a `docstring` and can be used anywhere in python code as a documentation aid. It is particularly common, and indeed best practice, to use them to give a brief description of the function at the beginning of a function definition in this way. This is because this description will be displayed along with the parameters when you use the help() function or `shift` + `tab` in Jupyter.
+8. At the beginning of the function code we have a multiline  `comment` denoted by the `'''` at the beginning and end. This kind of comment is known as a `docstring` and can be used anywhere in Python code as a documentation aid. It is particularly common, and indeed best practice, to use them to give a brief description of the function at the beginning of a function definition in this way. This is because this description will be displayed along with the parameters when you use the help() function or `shift` + `tab` in Jupyter.
 9. The variable `x` defined within the function only exists within the function, it cannot be used outside in the main program.
 
 
@@ -100,7 +100,7 @@ print(power(raisedto = 6, num = 4))
 
 > ## Exercise
 >
-> 1. Write a function definition to calculate the volume of a cuboid. The function will use three parameters 'H', 'W' and 'L' and return the volume.
+> 1. Write a function definition to calculate the volume of a cuboid. The function will use three parameters `H`, `W` and `L` and return the volume.
 >
 > 2. Supposing that in addition to the volume I also wanted to calculate the surface area and the sum of all of the edges. Would I (or should I) have three separate functions or could I write a single function to provide all three values together?
 >
@@ -145,7 +145,7 @@ Step 1.  use the `pip` command from the commandline. `pip` is installed as part 
 
 pip stands for Python install package and is a commandline function. Because we are using the Anaconda distribution of Python, all of the packages that we will be using in this lesson are already installed for us, so we can move straight on to step 2.
 
-Step 2. In your python code include an `import package-name` statement. Once this is done, you can use all of the functions contained within the package.
+Step 2. In your Python code include an `import package-name` statement. Once this is done, you can use all of the functions contained within the package.
 
 As all of these packages are produced by 3rd parties independently of each other, there is the strong possibility that there may be clashes in function names. To allow for this, when you are calling a function from a package that you have imported, you do so by prefixing the function name with the package name. This can make for long-winded function names so the `import` statement allows you to specify an `alias` for the package name which you must then use instead of the package name.
 
@@ -162,6 +162,6 @@ import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
 
-The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the 'pyplot' sub-library we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
+The first two we don't alias as they have short names. The last three we do. Matplotlib is a very large library broken up into what can be thought of as sub-libraries. As we will only be using the functions contained in the `pyplot` sub-library we can specify that explicitly when we import. This saves time and space. It does not effect how we call the functions in our code.
 
 The `alias` we use (specified after the `as` keyword) is entirely up to us. However those shown here for `pandas`, `numpy` and `matplotlib` are nearly universally adopted conventions used for these popular libraries. If you are searching for code examples for these libraries on the Internet, using these aliases will appear most of the time.

@@ -1,24 +1,23 @@
 ---
 layout: page
 title: Setup
-permalink: /setup/
 ---
 
 ## Setup instructions for Python
 
 In order to complete the materials for the Python lesson, you will need Python to be installed on your machine. As many of the examples and exercises use Jupyter notebooks, you will need it to be installed as well.
 
-The [Anaconda](https://www.anaconda.com/download/) distribution of python will allow you to install both Python and Jupyter notebooks as a single install. Anaconda will also install many other commonly used Python packages.
+The [Anaconda](https://www.anaconda.com/download/) distribution of Python will allow you to install both Python and Jupyter notebooks as a single install. Anaconda will also install many other commonly used Python packages.
 
 ## How to install the Anaconda distribution of python
 
 1.	Follow the Anaconda link above to the Anaconda website. There are versions of Anaconda available for Windows, macOS, and Linux. The website will detect your operating system and provide a link to the appropriate download.
-2.	There will be two options, one for Python 2.x and another for Python 3.x. We will take the Python 3.x option. Python 2.x will eventually be phased out but is still provided for backward compatibility with some older optional python modules. The majority of popular modules have been converted to work with python 3.x. The actual value of x will vary depending on when you download. At the time of writing I am being offered Python 3.6 or Python 2.7.
+2.	There will be two options, one for Python 2.x and another for Python 3.x. We will take the Python 3.x option. Python 2.x will eventually be phased out but is still provided for backward compatibility with some older optional Python modules. The majority of popular modules have been converted to work with Python 3.x. The actual value of x will vary depending on when you download. At the time of writing I am being offered Python 3.6 or Python 2.7.
 3.	For Windows and Linux there is the option of either a 64 bit (default) download or a 32 bit download. Unless you know that you have an old 32 bit pc you should choose the 64 bit installer.
 4.	Run the downloaded installer program. Accept the default settings until you are given the option to add Anaconda to your environmental Path variable. Despite the recommendation not to and the subsequent warning, you should select this option. This will make it easier later on to start Jupyter notebooks from any location.
 5.	The installation can take a few minutes. When finished you should be able to open a cmd prompt (Type cmd from Windows start and into the cmd window type python. You should get a display similar to that below.  
 ![Python Install](/fig/Python_install_1.png)
-6.	The `>>>` prompt tells you that you are in the python environment. You can exit python with the `exit()` command.  
+6.	The `>>>` prompt tells you that you are in the Python environment. You can exit Python with the `exit()` command.  
 
 
 
