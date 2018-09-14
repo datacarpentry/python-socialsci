@@ -46,13 +46,13 @@ We can use our own formatting instead. For example, if we wanted words instead o
 ~~~
 format = "%a %b %d %H:%M:%S %Y"
 
-s = today.strftime(format)
+today_str = today.strftime(format)
 print('strftime:', s)
-print(type(s))
+print(type(today_str))
 
-d = datetime.strptime(s, format)
-print('strptime:', d.strftime(format))
-print(type(d))
+today_date = datetime.strptime(today_str, format)
+print('strptime:', today_date.strftime(format))
+print(type(today_date))
 ~~~
 {: .language-python}
 
@@ -252,7 +252,7 @@ f.close()
 
 > ## Exercise
 >
-> 1. In the SAFI\_results.csv file the `A01_interview_date field` (index 1) contains a date in the form of 'dd/mm/yyyy'. Read the file and calculate the differences in days (because the interview date is only given to the day) between the `A01_interview_date` values and the `A04_start` values. You will need to create a format string for the `A01_interview_date` field.
+> 1. In the `SAFI_results.csv` file the `A01_interview_date field` (index 1) contains a date in the form of 'dd/mm/yyyy'. Read the file and calculate the differences in days (because the interview date is only given to the day) between the `A01_interview_date` values and the `A04_start` values. You will need to create a format string for the `A01_interview_date` field.
 >
 > 2. Looking at the results here and from the previous section of code. Do you think the use of the smartphone data entry system for the survey was being used in real time?
 >
