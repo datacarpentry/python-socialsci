@@ -28,22 +28,21 @@ In our use of the `print` function we have provided as a parameter, whatever it 
 The ability to specify parameters make functions very flexible.
 
 ~~~
-def power(num, raisedto):
+def get_item_count(item_str):
     '''
-    This function takes the value specified in the 'num' parameter and raises it to
-    the power of the number specified in the 'raisedto' parameter and returns the result
+    This function takes a string with a list of item separate by semicolons (;) and retruns the number of items
     '''
-    x = 1
-    for i in range(raisedto):
-        x = x * num
-    return x
+    items_list = items_str.split(";")
+    num_items = len(items_list)
+    return num_items
 
-print(power(2,3))
+items_owned = "bicycle;television;solar_panel;table"
+print(get_item_count(items_owned)
 ~~~
 {: .language-python}
 
 ~~~
-8
+4
 ~~~
 {: .output}
 

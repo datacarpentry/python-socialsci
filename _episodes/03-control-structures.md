@@ -418,14 +418,14 @@ dog
 > ## Exercise
 >
 >
-> Suppose that we have a string containing a set of 4 different values separated by `,`  like this:
+> Suppose that we have a string containing a set of 4 different values separated by `;`  like this:
 >
 > ~~~
-> variablelist = "01/01/2010,34.5,Yellow,True"
+> items_owned = "bicycle;television;solar_panel;table"
 > ~~~
 > {: .language-python}
 >
-> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `variablelist`
+> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `items_owned`
 >
 > > ## Solution
 > >
