@@ -82,16 +82,16 @@ print(type(s))
 There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
 We will be looking a few of them later on.
 
-## Simple arithmetic operations
+## Arithmetic operations
 
 For now we will stick with the numeric types and do some arithmetic.
 
 All of the usual arithmetic operators are available.
 
 In the examples below we also introduce the Python comment symbol `#`.
-Anything to the right of the `#` symbol is treated as a comment. To a large extent using Markdown cells in a notebook reduces the need for comments in the code, but occasionally they can be useful. - Don't overdo them.
+Anything to the right of the `#` symbol is treated as a comment. To a large extent using Markdown cells in a notebook reduces the need for comments in the code in a notebook, but occasionally they can be useful.
 
-We also make use of the built-in `print()` function.
+We also make use of the built-in `print()` function, which displays formatted text.
 
 ~~~
 print("a =", a, "and b =" , b)
@@ -421,12 +421,10 @@ We can also get variables of this type using comparison operators, which you mig
 
 ~~~
 bool_val = True
-if bool_val :
-    print("bool_val is",bool_val)
+print("bool_val is",bool_val)
 
 bool_val = False
-if bool_val :
-    print("bool_val is",bool_val)
+print("bool_val is",bool_val)
 ~~~
 {: .language-python}
 
@@ -437,49 +435,32 @@ bool_val is True
 
 > ## Exercise
 >
-> Can you predict what will be returned from the following code segments
+> Imagine you are considering different ways of representing a boolean value in your data set and you need to see how python will behave based on the different choices. Fill in the blanks using the built in functions we've seen so far in following code excerpt to test how Python interprets text. Write some notes for your research team on how to code `True` and `False` as they record the variable.
 >
 > ~~~
 > bool_val1 = 'TRUE'
-> if bool_val1 :
->     print("bool_val1 is",bool_val1)
+> print('read as type',___(bool_val1))
+> print('value when cast to bool',___(bool_val1))
 >     
 > bool_val2 = 'FALSE'
-> if bool_val2 :
->     print("bool_val2 is",bool_val2)
+> print('read as type',___(bool_val2))
+> print('value when cast to bool',___(bool_val2))
 >
 > bool_val3 = 1
-> if bool_val3:
->     print("bool_val3 is",bool_val3)
-> ~~~
-> {: .language-python}
-{: .challenge}
-
-> ## Exercise
->
-> Try to predict what will print for each of the following. Then run the code and summarize
-> your findings about what how to represent boolean values and how other values cast to
-> boolean type in either a markdown cell or a comment
->
-> ~~~
-> bool_val1 = 'TRUE'
-> print(type(bool_val1))
-> print(bool(bool_val1))
->     
-> bool_val2 = 'FALSE'
-> print(bool(bool_val2))
->
-> bool_val3 = 1
-> print(bool(bool_val3))
+> print('read as type',___(bool_val3))
+> print('value when cast to bool',___(bool_val3))
 >
 > bool_val4 = 0
-> print(bool(bool_val4))
+> print('read as type',___(bool_val4))
+> print('value when cast to bool',___(bool_val4))
 >
 > bool_val5 = -1
-> print(bool(bool_val5))
+> print('read as type',___(bool_val5))
+> print('value when cast to bool',___(bool_val5))
 >
 > bool_val6 = -1
-> print(bool(bool_val6))
+> print('read as type',___(bool_val6))
+> print('value when cast to bool',___(bool_val6))
 > ~~~
 > {: .language-python}
 >
