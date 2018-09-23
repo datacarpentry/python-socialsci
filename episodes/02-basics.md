@@ -373,7 +373,7 @@ True
 ~~~
 {: .output}
 
-If you need to refer to a specific element (character ) in a string,
+If you need to refer to a specific element (character) in a string,
 you can do so by specifying the index of the character in '[]'
 you can also use indexing to select a substring of the string.
 
@@ -417,21 +417,23 @@ print(bool_val_f)
 ~~~
 {: .language-python}
 
-We can also get variables of this type using comparison operators, which you might have found in the exploratory exercise earlier
+We can also get variables of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
 
 ~~~
-bool_val = True
-if bool_val :
-    print("bool_val is",bool_val)
-
-bool_val = False
-if bool_val :
-    print("bool_val is",bool_val)
+print('hello' == 'HELLO')
+print('hello' is 'hello')
+print(3 != 77)
+print(1 < 2)
+print('four' > 'three')
 ~~~
 {: .language-python}
 
 ~~~
-bool_val is True
+False
+True
+True
+True
+False
 ~~~
 {: .output}
 
@@ -440,17 +442,20 @@ bool_val is True
 > Can you predict what will be returned from the following code segments
 >
 > ~~~
-> bool_val1 = 'TRUE'
-> if bool_val1 :
->     print("bool_val1 is",bool_val1)
->     
-> bool_val2 = 'FALSE'
-> if bool_val2 :
->     print("bool_val2 is",bool_val2)
->
-> bool_val3 = 1
-> if bool_val3:
->     print("bool_val3 is",bool_val3)
+> var1 = 2
+> var2 = var1 ** 2
+> var3 = var1 < var2
+> print(var3)
+> 
+> var1 = 'name'
+> var2 = 'first' + var1
+> var3 = var1 in var2
+> print(var3)
+> 
+> var1 = True
+> var2 = 'True'
+> var3 = var1 is var2
+> print(var3)
 > ~~~
 > {: .language-python}
 {: .challenge}
@@ -478,7 +483,7 @@ bool_val is True
 > bool_val5 = -1
 > print(bool(bool_val5))
 >
-> bool_val6 = -1
+> bool_val6 = 10
 > print(bool(bool_val6))
 > ~~~
 > {: .language-python}
