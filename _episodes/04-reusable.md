@@ -138,8 +138,8 @@ Step 1.  use the `pip` command from the commandline. `pip` is installed as part 
 
 ~~~
 > pip install <package name>
-~~~
 {: .bash}
+~~~
 
 pip stands for Python install package and is a commandline function. Because we are using the Anaconda distribution of Python, all of the packages that we will be using in this lesson are already installed for us, so we can move straight on to step 2.
 
