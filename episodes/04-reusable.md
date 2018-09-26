@@ -85,8 +85,8 @@ print(get_item_count(items_owned)
 The only change we have made is to provide a default value for the `sep` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `items_str` is the first parameter we can specify its value by position. We could however have explicitly named the parameters we were referring to.
 
 ~~~
-print(power2(sep = ','))
-print(power(items_str = items_owned, sep=';'))
+print(get_item_count(sep = ','))
+print(get_item_count(items_str = items_owned, sep=';'))
 ~~~
 {: .language-python}
 
