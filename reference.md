@@ -26,7 +26,7 @@ CSV (file)
 database
 :   is an organized collection of data.
 
-dataframe
+DataFrame
 :   is a two-dimensional labeled data structure with columns of (potentially)
     different type.
 
@@ -94,7 +94,7 @@ scripting mode
     or interpreted to run the program. Notes that Python interprets script on
     run-time and compiles a binary version of the program to speed up the execution time.
 
-Sequential (data structure)
+sequential (data structure)
 :   is an ordered group of objects stored in memory which can be accessed specifying
     their index, i.e. their position, in the structure.
 
