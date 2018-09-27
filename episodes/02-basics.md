@@ -82,16 +82,16 @@ print(type(s))
 There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
 We will be looking a few of them later on.
 
-## Simple arithmetic operations
+## Arithmetic operations
 
 For now we will stick with the numeric types and do some arithmetic.
 
 All of the usual arithmetic operators are available.
 
 In the examples below we also introduce the Python comment symbol `#`.
-Anything to the right of the `#` symbol is treated as a comment. To a large extent using Markdown cells in a notebook reduces the need for comments in the code, but occasionally they can be useful. - Don't overdo them.
+Anything to the right of the `#` symbol is treated as a comment. To a large extent using Markdown cells in a notebook reduces the need for comments in the code in a notebook, but occasionally they can be useful.
 
-We also make use of the built-in `print()` function.
+We also make use of the built-in `print()` function, which displays formatted text.
 
 ~~~
 print("a =", a, "and b =" , b)
@@ -337,7 +337,7 @@ print(dir(mystring))
 ~~~
 {: .output}
 
-The methods that you can use are those that do NOT start with '__'.
+The methods that you can use are those that do NOT start with `__`.
 
 Some examples of the methods are given below. We will use others when we start reading files.
 
@@ -348,20 +348,32 @@ print(myString.startswith("The"))
 print(myString.find("The"))        # notice that string positions start with 0 like all indexing in Python
 print(myString.upper())            # The contents of myString is not changed, if you wanted an uppercase version
 print(myString)                    # you would have to assign it to a new variable
+~~~
+{: .language-python}
 
-# The methods starting with 'is...' return a boolean value of either True or False
+The methods starting with 'is...' return a boolean value of either True or False
 
+~~~
 print(myString.isalpha())  
+~~~
+{: .language-python}
 
-# the example above returns False because the space character is not considered to be an Alphanumeric value.
+the example above returns False because the space character is not considered to be an Alphanumeric value.
 
-# In the example below, we can use the replace() method to remove the spaces and then check to see if the result 'isalpha'
-# chaining method in this way is quite common. The actions take place in a left to right manner. You can always avoid using chaining by
-# using intermediary variables.
-
+In the example below, we can use the `replace()` method to remove the spaces and then check to see if the result `isalpha`
+chaining method in this way is quite common. The actions take place in a left to right manner. You can always avoid using chaining by using intermediary variables.
+~~~
 print(myString.replace(" ","").isalpha())
 ~~~
 {: .language-python}
+
+For example, the following is equivalent to the above
+~~~
+mystring_clean = myString.replace(" ","")
+print(mystring_clean.isalpha())
+~~~
+{: .language-python}
+
 
 ~~~
 True
@@ -405,7 +417,7 @@ The quick
 ## Basic Python data types
 
 So far we have seen three basic Python data types; Integer, Float and String. There is another basic data type; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case sensitive, so be careful of your spelling.)
-We can define variables to be of type boolean by setting their value accordingly.
+We can define variables to be of type boolean by setting their value accordingly. Boolean variables are a good way of coding anything that has a binary range (eg: yes/no), because it's a type that computers know how to work with as we will see soon.
 
 ~~~
 bool_val_t = True
@@ -420,11 +432,13 @@ print(bool_val_f)
 We can also get variables of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
 
 ~~~
+
 print('hello' == 'HELLO')
 print('hello' is 'hello')
 print(3 != 77)
 print(1 < 2)
 print('four' > 'three')
+
 ~~~
 {: .language-python}
 
@@ -439,52 +453,29 @@ False
 
 > ## Exercise
 >
-> Can you predict what will be returned from the following code segments
->
-> ~~~
-> var1 = 2
-> var2 = var1 ** 2
-> var3 = var1 < var2
-> print(var3)
-> 
-> var1 = 'name'
-> var2 = 'first' + var1
-> var3 = var1 in var2
-> print(var3)
-> 
-> var1 = True
-> var2 = 'True'
-> var3 = var1 is var2
-> print(var3)
-> ~~~
-> {: .language-python}
-{: .challenge}
-
-> ## Exercise
->
-> Try to predict what will print for each of the following. Then run the code and summarize
-> your findings about what how to represent boolean values and how other values cast to
-> boolean type in either a markdown cell or a comment
+> Imagine you are considering different ways of representing a boolean value in your data set and you need to see how python will behave based on the different choices. Fill in the blanks using the built in functions we've seen so far in following code excerpt to test how Python interprets text. Write some notes for your research team on how to code `True` and `False` as they record the variable.
 >
 > ~~~
 > bool_val1 = 'TRUE'
-> print(type(bool_val1))
-> print(bool(bool_val1))
+> print('read as type ',___(bool_val1))
+> print('value when cast to bool',___(bool_val1))
 >     
 > bool_val2 = 'FALSE'
-> print(bool(bool_val2))
+> print('read as type ',___(bool_val2))
+> print('value when cast to bool',___(bool_val2))
 >
 > bool_val3 = 1
-> print(bool(bool_val3))
+> print('read as type ',___(bool_val3))
+> print('value when cast to bool',___(bool_val3))
 >
 > bool_val4 = 0
-> print(bool(bool_val4))
+> print('read as type ',___(bool_val4))
+> print('value when cast to bool',___(bool_val4))
 >
 > bool_val5 = -1
+> print('read as type ',___(bool_val5))
+> print('value when cast to bool',___(bool_val5))
 > print(bool(bool_val5))
->
-> bool_val6 = 10
-> print(bool(bool_val6))
 > ~~~
 > {: .language-python}
 >
@@ -537,6 +528,38 @@ print(type(list4))
 <class 'list'>
 ~~~
 {: .output}
+
+
+
+> ## Exercise
+> We can index lists the same way we indexed strings before or using a boolean list of the same length.
+>
+> ~~~
+> num_list = [4,5,6,11]
+> ~~~
+> {: .language-python}
+>
+> Using the number list defined above, complete the code below and display the values of `odd_from_list` and `last_num_in_list` to check your work.
+>
+> ~~~
+> is_odd = [False, ___]
+> odd_from_list =
+> last_num_in_list =
+>
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > ~~~
+> > is_odd = [False, True, False, True]
+> > odd_from_list = num_list[is_odd]
+> > last_num_in_list = num_list[-1]
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
+
+
 
 ### The range function
 
@@ -592,6 +615,8 @@ When you specify 3 parameters as we have for list(7); the first is start value, 
 > > print(list8)
 > > ~~~
 > > {: .language-python}
+> >
+> > list7 will print nothing because starting at 2 and incrementing by -2 is the wrong direction to 11.
 > {: .solution}
 {: .challenge}
 

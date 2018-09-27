@@ -55,44 +55,44 @@ Below are some examples:
 ~~~
 print("\nExample 1\n")
 
-a= 5
-b= 4
-print("a is", a, "b is",b)
-if a > b :
-    print(a, "is bigger than ", b)
+value = 5
+threshold= 4
+print("value is", value, "threshold is ",threshold)
+if value > threshold :
+    print(value, "is above ", threshold, " threshold")
 
 print("\nExample 2\n")
 
-a= 3
-b= 4
-print("a is", a, "b is",b)
-if a > b :
-    print(a , "is bigger than ", b)
+
+high_threshold = 6
+print("value is", value, "new threshold is ",high_threshold)
+if value > high_threshold :
+    print(value , "is above ", high_threshold, "threshold")
 
 print("\nExample 3\n")
 
-a= 4
-b= 4
-print("a is", a, "b is",b)
-if a == b :
-    print(a, "is equal to", b)
+
+mid_threshold = 5
+print("value is", value, "final threshold is ",mid_threshold)
+if value == mid_threshold :
+    print("value, ", value, " and threshold,", mid_threshold, ", are equal")
 ~~~
 {: .language-python}
 
 ~~~
 Example 1
 
-a is 5 b is 4
+value is 5 threshold is 4
 5 is bigger than  4
 
 Example 2
 
-a is 3 b is 4
+value is 5 new threshold is 6
 
 Example 3
 
-a is 4 b is 4
-4 is equal to 4
+value is 5 final threshold is 5
+value, 5, and threshold, 5, are equal
 ~~~
 {: .output}
 
@@ -130,20 +130,20 @@ Instead of using two separate `if` statements to decide which is larger we can u
 ~~~
 # If ... Else ...
 
-a = 4
-b = 5
-print("a = ", a, "and b = ", b)
+value = 4
+threshold = 5
+print("value = ", value, "and threshold = ", threshold)
 
-if a > b :
-    print(a, " is greater than ", b)
+if value > threshold :
+    print("above threshold")
 else :
-    print(a, " is NOT greater than ", b)
+    print("below threshold")
 ~~~
 {: .language-python}
 
 ~~~
-a = 4 and b = 5
-4 is NOT greater than 5
+value = 4 and threshold = 5
+below threshold
 ~~~
 {: .output}
 
@@ -417,16 +417,15 @@ dog
 
 > ## Exercise
 >
-> In example8 the split method is used to break the `longString` variable down into a list of individual words which are then iterated through.
 >
-> Suppose that we have a string containing a set of 4 different values separated by `,`  like this:
+> Suppose that we have a string containing a set of 4 different values separated by `;`  like this:
 >
 > ~~~
-> variablelist = "01/01/2010,34.5,Yellow,True"
+> items_owned = "bicycle;television;solar_panel;table"
 > ~~~
 > {: .language-python}
 >
-> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `variablelist`
+> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `items_owned`
 >
 > > ## Solution
 > >
