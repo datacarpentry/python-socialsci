@@ -530,23 +530,29 @@ print(type(list4))
 {: .output}
 
 
-~~~
-{: .language-python}
 
 > ## Exercise
 > We can index lists the same way we indexed strings before or using a boolean list of the same length.
 >
+> ~~~
 > num_list = [4,5,6,11]
+> ~~~
+> {: .language-python}
 >
 > Using the number list defined above, complete the code below and display the values of `odd_from_list` and `last_num_in_list` to check your work.
-> is_odd = []
+>
+> ~~~
+> is_odd = [False, ___]
 > odd_from_list =
 > last_num_in_list =
 >
 > ~~~
 > {: .language-python}
 > > ## Solution
-> >
+> > ~~~
+> > is_odd = [False, True, False, True]
+> > odd_from_list = num_list[is_odd]
+> > last_num_in_list = num_list[-1]
 > > ~~~
 > > {: .language-python}
 > {: .solution}
