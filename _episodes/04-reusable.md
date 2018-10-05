@@ -28,22 +28,21 @@ In our use of the `print` function we have provided as a parameter, whatever it 
 The ability to specify parameters make functions very flexible.
 
 ~~~
-def power(num, raisedto):
+def get_item_count(item_str,sep):
     '''
-    This function takes the value specified in the 'num' parameter and raises it to
-    the power of the number specified in the 'raisedto' parameter and returns the result
+    This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
-    x = 1
-    for i in range(raisedto):
-        x = x * num
-    return x
+    items_list = items_str.split(sep)
+    num_items = len(items_list)
+    return num_items
 
-print(power(2,3))
+items_owned = "bicycle;television;solar_panel;table"
+print(get_item_count(items_owned,';')
 ~~~
 {: .language-python}
 
 ~~~
-8
+4
 ~~~
 {: .output}
 
@@ -60,22 +59,21 @@ Points to note:
 9. The variable `x` defined within the function only exists within the function, it cannot be used outside in the main program.
 
 
-In our `power` function we have two parameters which must be provided every time the function is used. You need to  provide the parameters in the right order or to explicitly name the parameter you are referring to and use the `=` sign to give it a value.
+In our `get_item_count` function we have two parameters which must be provided every time the function is used. You need to  provide the parameters in the right order or to explicitly name the parameter you are referring to and use the `=` sign to give it a value.
 
 In many cases of functions we want to provide default values for parameters so the user doesn't have to. We can do this in the following way
 
 ~~~
-def power2(num, raisedto = 2):
+def get_item_count(item_str,sep=';'):
     '''
-    This function takes the value specified in the 'num' parameter and raises it to
-    the power of the number specified in the 'raisedto' parameter and returns the result
+    This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
-    x = 1
-    for i in range(raisedto):
-        x = x * num
-    return x
+    items_list = items_str.split(sep)
+    num_items = len(items_list)
+    return num_items
 
-power2(3)
+
+print(get_item_count(items_owned)
 ~~~
 {: .language-python}
 
@@ -84,17 +82,17 @@ power2(3)
 ~~~
 {: .output}
 
-The only change we have made is to provide a default value for the `raisdto` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `num` is the first parameter we can specify its value by position. We could however have explicitly named the parameters we were referring to.
+The only change we have made is to provide a default value for the `sep` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `items_str` is the first parameter we can specify its value by position. We could however have explicitly named the parameters we were referring to.
 
 ~~~
-print(power2(num = 4))
-print(power(raisedto = 6, num = 4))
+print(get_item_count(sep = ','))
+print(get_item_count(items_str = items_owned, sep=';'))
 ~~~
 {: .language-python}
 
 ~~~
-16
-4096
+1
+4
 ~~~
 {: .output}
 
@@ -140,8 +138,8 @@ Step 1.  use the `pip` command from the commandline. `pip` is installed as part 
 
 ~~~
 > pip install <package name>
-~~~
 {: .bash}
+~~~
 
 pip stands for Python install package and is a commandline function. Because we are using the Anaconda distribution of Python, all of the packages that we will be using in this lesson are already installed for us, so we can move straight on to step 2.
 
