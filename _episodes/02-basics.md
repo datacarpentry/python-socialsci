@@ -79,7 +79,7 @@ print(type(s))
 ~~~
 {: .output}
 
-There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/).
+There are many more data types available, a full list is available in the [Python documentation](https://docs.python.org/3/library/datatypes.html).
 We will be looking a few of them later on.
 
 ## Arithmetic operations
