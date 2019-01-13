@@ -387,7 +387,8 @@ True
 
 If you need to refer to a specific element (character) in a string,
 you can do so by specifying the index of the character in '[]'
-you can also use indexing to select a substring of the string.
+you can also use indexing to select a substring of the string. In Python, 
+indexes begin with '0' (see [Index Operator: Working with the Characters of a String](http://interactivepython.org/runestone/static/CS152f17/Strings/IndexOperatorWorkingwiththeCharactersofaString.html) for a visual).
 
 ~~~
 myString = "The quick brown fox"
