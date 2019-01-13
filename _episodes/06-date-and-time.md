@@ -47,7 +47,7 @@ We can use our own formatting instead. For example, if we wanted words instead o
 format = "%a %b %d %H:%M:%S %Y"
 
 today_str = today.strftime(format)
-print('strftime:', s)
+print('strftime:', today_str)
 print(type(today_str))
 
 today_date = datetime.strptime(today_str, format)
