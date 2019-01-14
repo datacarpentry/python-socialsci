@@ -296,7 +296,7 @@ changes it to green).  If we define `sum = 0` now we can't use the function `sum
 
 ## The `for` loop
 
-The for loop, like the while loop repeatedly executes a set of statements. The difference is that in the for loop we know in at the outset how often the statements in the lop will be executed. We don't have to rely on a variable being changed within the looping statements.
+The for loop, like the while loop repeatedly executes a set of statements. The difference is that in the for loop we know in at the outset how often the statements in the loop will be executed. We don't have to rely on a variable being changed within the looping statements.
 
 The basic format of the `for` statement is
 
