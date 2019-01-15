@@ -337,7 +337,7 @@ print(dir(mystring))
 ~~~
 {: .output}
 
-The methods starting with `__` are special or magic methods which are normally not used.
+The methods starting with `__` are special or magic methods which are not normally used.
 
 Some examples of the methods are given below. We will use others when we start reading files.
 
