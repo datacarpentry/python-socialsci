@@ -1,6 +1,8 @@
 ---
 layout: lesson
-maintainers: "Stephen Childs, Geoffrey Boushey"
+maintainers: 
+ - Stephen Childs
+ - Geoffrey Boushey
 root: .
 ---
 
