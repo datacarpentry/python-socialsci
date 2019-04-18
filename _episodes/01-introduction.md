@@ -6,7 +6,8 @@ questions:
 - "Why learn Python?"
 - "What are Jupyter notebooks?"
 objectives:
-- "Appreciate the benefits of the Python programming language"
+- "Understand the uses of the Python programming language"
+- "Recognize the primary features of Python as a programming language"
 - "Understand the concept and benefits of using notebooks for coding"
 keypoints:
 - "Python is an interpreted language"
