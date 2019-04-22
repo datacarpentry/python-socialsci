@@ -61,7 +61,7 @@ safi_df['years_liv'].hist(bins=20)
 {: .language-python}
 
 
-We can also specify the column as a parameter and a groupby column with the `by` keyword. there are a lot of keywords available to make it look better, we can see some of the most likely ones (as decided by pandas developers) by using <kbd>shift</kbd> + <kbd>tab<kbd>. Lets try `layout`, `figsize`, and `sharex`.
+We can also specify the column as a parameter and a groupby column with the `by` keyword. there are a lot of keywords available to make it look better, we can see some of the most likely ones (as decided by pandas developers) by using <kbd>shift</kbd> + <kbd>tab</kbd>. Lets try `layout`, `figsize`, and `sharex`.
 
 ~~~
 safi_df.hist(column='years_liv',by='village',layout=(1,3),figsize=(12,3),sharex=True)
