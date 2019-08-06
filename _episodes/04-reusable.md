@@ -46,6 +46,8 @@ print(get_item_count(items_owned,';')
 ~~~
 {: .output}
 
+![Python_Repl](../fig/functionAnatomy.png)
+
 Points to note:
 
 1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets.
