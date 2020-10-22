@@ -66,6 +66,7 @@ The main advantage of this approach, however, is that you only have to store one
 
 In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a Dataframe. If your dataset has column headers in the first record then these can be used as the Dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
 
+For our examples in this episode we are going to use the SN7577.tab file. This is available for download [here](../data/SN7577.tab) and the description of the file is available [here](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7577&type=data%20catalogue#!/details)
 
 We are going to read in our SN7577.tab file. Although this is a tab delimited file we will still use the pandas `read_csv` method, but we will explicitly tell the method that the separator is the tab character and not a comma which is the default.
 
