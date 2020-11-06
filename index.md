@@ -1,9 +1,10 @@
 ---
 layout: lesson
-maintainers: 
+maintainers:
  - Stephen Childs
  - Geoffrey Boushey
 root: .
+permalink: index.html
 ---
 
 
