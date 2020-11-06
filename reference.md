@@ -1,6 +1,5 @@
 ---
 layout: reference
-permalink: /reference/
 ---
 
 ## Glossary
@@ -108,7 +107,7 @@ tuple
     but cannot be modified.
 
 variable
-:   a named quantity that can store a value, a variable can store any type, but always one type for a given value.  
+:   a named quantity that can store a value, a variable can store any type, but always one type for a given value.
 
 
 
