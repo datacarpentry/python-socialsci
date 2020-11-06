@@ -12,6 +12,7 @@ title: Setup
 > - [SAFI_results.csv](/data/SAFI_results.csv)
 > - [SAFI\_full\_shortname.csv](/data/SAFI_full_shortname.csv)
 > - [SAFI.json](/data/SAFI.json)
+> - [SN7577.tab](/data/SN7577.tab)
 {: .prereq}
 
 > ## Software
