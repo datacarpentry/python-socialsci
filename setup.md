@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Setup
 ---
 
@@ -15,9 +14,9 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of Python will a
 2.	There will be two options, one for Python 2.x and another for Python 3.x. We will take the Python 3.x option. Python 2.x will eventually be phased out but is still provided for backward compatibility with some older optional Python modules. The majority of popular modules have been converted to work with Python 3.x. The actual value of x will vary depending on when you download. At the time of writing I am being offered Python 3.6 or Python 2.7.
 3.	For Windows and Linux there is the option of either a 64 bit (default) download or a 32 bit download. Unless you know that you have an old 32 bit pc you should choose the 64 bit installer.
 4.	Run the downloaded installer program. Accept the default settings until you are given the option to add Anaconda to your environmental Path variable. Despite the recommendation not to and the subsequent warning, you should select this option. This will make it easier later on to start Jupyter notebooks from any location.
-5.	The installation can take a few minutes. When finished you should be able to open a cmd prompt (Type cmd from Windows start and into the cmd window type python. You should get a display similar to that below.  
+5.	The installation can take a few minutes. When finished you should be able to open a cmd prompt (Type cmd from Windows start and into the cmd window type python. You should get a display similar to that below.
 ![Python Install](/fig/Python_install_1.png)
-6.	The `>>>` prompt tells you that you are in the Python environment. You can exit Python with the `exit()` command.  
+6.	The `>>>` prompt tells you that you are in the Python environment. You can exit Python with the `exit()` command.
 
 
 
