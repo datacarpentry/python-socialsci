@@ -2,13 +2,43 @@
 title: Setup
 ---
 
+> ## Data
+> Data for this lesson is from the [The SAFI Teaching Database](http://datacarpentry.org/socialsci-workshop/data/).
+>
+> We will use the files listed below for the data in this lesson. You can download the files by clicking on the links.
+>
+> - [SAFI_clean.csv](/data/SAFI_clean.csv)
+> - [SAFI_results.csv](/data/SAFI_results.csv)
+> - [SAFI\_full\_shortname.csv](/data/SAFI_full_shortname.csv)
+> - [SAFI.json](/data/SAFI.json)
+> - [SN7577.tab](/data/SN7577.tab)
+{: .prereq}
+
+> ## Software
+> [Python](http://python.org) is a popular language for
+> scientific computing, and great for general-purpose programming as
+> well.  Installing all of its scientific packages individually can be
+> a bit difficult, so we recommend an all-in-one installer.
+>
+> For this workshop we use Python version 3.x.
+> 
+> ### Required Python Packages for this workshop
+> 
+> * [Pandas](http://pandas.pydata.org/)
+> * [Jupyter notebook](http://jupyter.org/)
+> * [Numpy](http://www.numpy.org/)
+> * [Matplotlib](http://matplotlib.org/)
+> * [Seaborn](https://seaborn.pydata.org)
+{: .prereq}
+
+
 ## Setup instructions for Python
 
 In order to complete the materials for the Python lesson, you will need Python to be installed on your machine. As many of the examples and exercises use Jupyter notebooks, you will need it to be installed as well.
 
 The [Anaconda](https://www.anaconda.com/download/) distribution of Python will allow you to install both Python and Jupyter notebooks as a single install. Anaconda will also install many other commonly used Python packages.
 
-## How to install the Anaconda distribution of python
+### How to install the Anaconda distribution of python
 
 1.	Follow the Anaconda link above to the Anaconda website. There are versions of Anaconda available for Windows, macOS, and Linux. The website will detect your operating system and provide a link to the appropriate download.
 2.	There will be two options, one for Python 2.x and another for Python 3.x. We will take the Python 3.x option. Python 2.x will eventually be phased out but is still provided for backward compatibility with some older optional Python modules. The majority of popular modules have been converted to work with Python 3.x. The actual value of x will vary depending on when you download. At the time of writing I am being offered Python 3.6 or Python 2.7.
@@ -20,7 +50,7 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of Python will a
 
 
 
-## Running Jupyter Notebooks in Windows
+### Running Jupyter Notebooks in Windows
 
 1. From file explorer navigate to where you can select the folder which contains your Jupyter Notebook notebooks (it can be empty initially).
 2. Hold down the `shift` key and right-click the mouse
