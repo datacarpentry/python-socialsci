@@ -29,6 +29,10 @@ In this episode we will consider different scenarios and show we might join the 
 
 ### Scenario 1 - Two data sets containing the same columns but different rows of data
 
+First, let's download the datafiles. You can download the ![pandas_join_types](../fig/pandas_join_types.png)
+![github repo](https://github.com/datacarpentry/python-socialsci/archive/gh-pages.zip); the data files are in the *data* directory. You'll need to place these files in the same directory you launch Python or Jupyter from.
+
+
 Here we want to add the rows from one Dataframe to the rows of the other Dataframe. In order to do this we can use the `concat()` function.
 
 ~~~
