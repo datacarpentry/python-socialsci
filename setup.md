@@ -12,6 +12,12 @@ title: Setup
 > - [SAFI\_full\_shortname.csv](/data/SAFI_full_shortname.csv)
 > - [SAFI.json](/data/SAFI.json)
 > - [SN7577.tab](/data/SN7577.tab)
+> - [SN7577i_a.csv](/data/SN7577i_a.csv)
+> - [SN7577i_aa.csv](/data/SN7577i_aa.csv)
+> - [SN7577i_b.csv](/data/SN7577i_b.csv)
+> - [SN7577i_bb.csv](/data/SN7577i_bb.csv)
+> - [SN7577i_c.csv](/data/SN7577i_c.csv)
+> - [SN7577i_d.csv](/data/SN7577i_d.csv)
 {: .prereq}
 
 > ## Software
