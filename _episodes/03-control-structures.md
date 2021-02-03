@@ -128,7 +128,7 @@ In the last example, notice that in Python the operator used to check equality i
 Instead of using two separate `if` statements to decide which is larger we can use the `if ... else ...` construct
 
 ~~~
-# If ... Else ...
+# if ... else ...
 
 value = 4
 threshold = 5
@@ -157,7 +157,7 @@ A further extension of the `if` statement is the `if ... elif ...else` version.
 The example below allows you to be more specific about the comparison of a and b.
 
 ~~~
-# If ... Elif ... Else ... EndIf
+# if ... elif ... else ... endIf
 
 a = 5
 b = 4
