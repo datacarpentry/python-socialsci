@@ -46,11 +46,11 @@ The file we will be using is only a small file (131 data records), but the appro
 
 Other approaches to reading files will typically expect to read the whole file in one go. This can be efficient when you subsequently process the data but it require large amounts of memory to hold the entire file. We will look at this approach later when the look at the Pandas package.
 
-For our examples in this episode we are going to use the SAFI_results.csv file. This is available for download [here](../data/SAFI_results.csv) and the description of the file is available [here](https://datacarpentry.org/socialsci-workshop/data/index.html)
+For our examples in this episode we are going to use the SAFI_results.csv file. This is available for download [here](../data/SAFI_results.csv) and the description of the file is available [here](https://datacarpentry.org/socialsci-workshop/data/index.html).
 
-The code assumes that the file is in the same directory as your notebook
+The code assumes that the file is in the same directory as your notebook.
 
-We will build up our programs in simple steps
+We will build up our programs in simple steps.
 
 ### Step 1 - Open the file , read through it and close the file
 
