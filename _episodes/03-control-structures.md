@@ -430,7 +430,7 @@ dog
 > > ## Solution
 > >
 > > ~~~ 
-> > # From the for  loop section above
+> > # From the for loop section above
 > > variablelist = "01/01/2010,34.5,Yellow,True"
 > > for word in variablelist.split(",") :
 > >     print(word)
