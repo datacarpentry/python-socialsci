@@ -3,6 +3,8 @@ layout: lesson
 maintainers:
  - Stephen Childs
  - Geoffrey Boushey
+ - Annajiat Alim Rasel
+ 
 root: .
 permalink: index.html
 ---
