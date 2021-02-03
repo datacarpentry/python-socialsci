@@ -9,3 +9,4 @@ Data Carpentry Lesson on Python for social scientists and others. Please see our
 
 - Stephen Childs ([@sechilds](https://github.com/sechilds))
 - Geoffrey Boushey ([@gboushey](https://github.com/gboushey))
+- Annajiat Alim Rasel ([@annajiat](https://github.com/annajiat))
