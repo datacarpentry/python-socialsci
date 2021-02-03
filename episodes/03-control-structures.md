@@ -27,9 +27,9 @@ To make this possible all programming language have a set of control structures 
 In this episode we are going to look at how we can create loops and branches in our Python code.
 Specifically we will look at three control structures, namely:
 
-* If..Else..
-* While...
-* For ...
+* if..else..
+* while...
+* for ...
 
 ## The `if` statement and variants
 
@@ -418,7 +418,7 @@ dog
 > ## Exercise
 >
 >
-> Suppose that we have a string containing a set of 4 different types of values separated by `;`  like this:
+> Suppose that we have a string containing a set of 4 different types of values separated by `,`  like this:
 >
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
@@ -429,8 +429,9 @@ dog
 >
 > > ## Solution
 > >
-> > ~~~ from the 
-for  loop section abovevariablelist = "01/01/2010,34.5,Yellow,True"
+> > ~~~ 
+> > # From the for  loop section above
+> > variablelist = "01/01/2010,34.5,Yellow,True"
 > > for word in variablelist.split(",") :
 > >     print(word)
 > > ~~~
