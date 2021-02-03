@@ -8,8 +8,8 @@ questions:
 
 objectives:
 - "Describe a file handle"
-- "Use `with open() as` to open and close files for reading"
-- "Create, open and close files for writing or appending"
+- "Use `with open() as` to open files for reading and auto-close files"
+- "Create and open for writing or appending and auto-close files"
 - "Explain what is meant by a record"
 
 keypoints:
@@ -60,8 +60,7 @@ with open("SAFI_results.csv") as f:       # Open the file and assign it to a new
     for line in f:                        # We use a for loop to iterate through the file one line at a time.
         print(line)                       # We simply print the line.
         
-print("I'm on to something else now.")    # When we are finished with this file, we stop indenting the 
-                                            code and the file is closed automatically.
+print("I'm on to something else now.")    # When we are finished with this file, we stop indenting the code and the file is closed automatically.
 ~~~
 {: .language-python}
 
@@ -168,16 +167,16 @@ Instead of printing out the counts of the roof types, you may want to extract al
 
 ~~~
 # 1
-with open ("SAFI_results.csv") as fr:             #Note how we have used a new variable name, 'fr'.
-                                                  #The file is read-only by default.
+with open ("SAFI_results.csv") as fr:              # Note how we have used a new variable name, 'fr'.
+                                                   # The file is read-only by default.
 
-    with open ("SAFI_grass_roof.csv", "w") as fw: #We are keeping 'fr' open so we indent.
-                                                  #We specify a second parameter, "w" to make this file writeable.
-                                                  #We use a different variable, 'fw'.
-    for line in fr:
+    with open ("SAFI_grass_roof.csv", "w") as fw:  # We are keeping 'fr' open so we indent.
+                                                   # We specify a second parameter, "w" to make this file writeable.
+                                                   # We use a different variable, 'fw'.
+        for line in fr:
 # 2    
-        if line.split(",")[18] == 'grass' :
-            fw.write(line)
+            if line.split(",")[18] == 'grass' :
+                fw.write(line)
 
 ~~~
 {: .language-python}
@@ -374,8 +373,8 @@ for item in dict_roof_types:
 
 ~~~
 grass = 73
-mabatipitched = 10
 mabatisloping = 48
+mabatipitched = 10
 ~~~
 {: .output}
 
