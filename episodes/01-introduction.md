@@ -6,15 +6,15 @@ questions:
 - "Why learn Python?"
 - "What are Jupyter notebooks?"
 objectives:
-- "Understand the uses of the Python programming language"
-- "Recognize the primary features of Python as a programming language"
+- "Examine the Python interpreter"
+- "Recognize the advantage of using the Python programming language"
 - "Understand the concept and benefits of using notebooks for coding"
 keypoints:
 - "Python is an interpreted language"
 - "The REPL (Read-Eval-Print loop) allows rapid development and testing of code segments"
 - "Jupyter notebooks builds on the REPL concepts and allow code results and documentation to be 
 maintained together and shared"
-- "Jupyter notebooks is a complete IDE (Integrated Development Environment) "
+- "Jupyter notebooks is a complete IDE (Integrated Development Environment)"
 ---
 
 ## Introducing the Python programming language
