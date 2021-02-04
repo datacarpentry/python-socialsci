@@ -3,7 +3,7 @@
 
 # Data Carpentry Python Lesson with Social Science Data
 
-Data Carpentry Lesson on Python for social scientists and others. Please see our [contribution guidelines](CONTRIBUTING.md) for information on how to contribute updates, bug fixes, or other corrections.
+Data Carpentry Lesson on Python for social scientists and others based on the [SAFI Teaching Database](https://datacarpentry.org/socialsci-workshop/data/). Please see our [contribution guidelines](CONTRIBUTING.md) for information on how to contribute updates, bug fixes, or other corrections.
 
 ### Maintainers
 
