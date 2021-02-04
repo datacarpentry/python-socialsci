@@ -36,7 +36,7 @@ From the insert menu item you can insert a new cell anywhere in the notebook eit
 
 ### Change cell type
 
-By default new cells are created as code cells. From the cell menu item you can change the type of a cell from code to markdown. Markdown is a markup language for formatting text, it has much of the power of HTML, but is specifically designed to be human-readable as well. You can use Markdown cells to insert formatted textual explanation and analysis into your notebook. For more information about Markdown, check out these resources:
+By default new cells are created as code cells. From the cell menu item you can change the type of a cell from code to Markdown. Markdown is a markup language for formatting text, it has much of the power of HTML, but is specifically designed to be human-readable as well. You can use Markdown cells to insert formatted textual explanation and analysis into your notebook. For more information about Markdown, check out these resources:
  -  [Jupyter Notebook Markdown Docs](http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html)
  - [Markdown - a Visual Guide](https://beegit.com/markdown-cheat-sheet)
  - [Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
@@ -173,7 +173,7 @@ In order to answer this from Jupyter, you can type the function name and then ty
 
 ## Getting Help for Python
 
-You can get help on any Python function by using the help function. It takes a single parameter of the function name for which you want the help
+You can get help on any Python function by using the help function. It takes a single parameter of the function name for which you want the help.
 
 ~~~
 help(print)
@@ -417,7 +417,7 @@ The quick
 
 ## Basic Python data types
 
-So far we have seen three basic Python data types; Integer, Float and String. There is another basic data type; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case sensitive, so be careful of your spelling.)
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic data type; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case-sensitive, so be careful of your spelling.)
 We can define variables to be of type boolean by setting their value accordingly. Boolean variables are a good way of coding anything that has a binary range (eg: yes/no), because it's a type that computers know how to work with as we will see soon.
 
 ~~~
