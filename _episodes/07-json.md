@@ -132,6 +132,14 @@ Because detailed surveys are by nature nested structures making it possible to r
 * It is more verbose than the equivalent data in csv format
 * Can be more difficult to process and display than csv formatted data
 
+### Viewing JSON data
+
+* JSON can often be viewed directly in the web browsers: [example](https://api.crossref.org/works/10.1037/0003-066X.59.1.29/agency).
+* Browser extensions are often available for ease of viewing JSON data e.g., [Chrome](https://chrome.google.com/webstore/search/json?hl=en-US), [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=json), [Safari](https://www.apple.com/us/search/json?src=serp), etc. 
+* JSON files can be opened using text editors e.g., notepad, nano, textedit, etc.
+* There are many websites which allow viewing or beautifying JSON data with ease. For example, [http://jsonviewer.stack.hu/](http://jsonviewer.stack.hu/). Try pasting or loading JSON data in the second tab called "text" on that website and then clicking on the "format" button. Clicking on the first tab, "viewer" also gives another view of the data.
+
+
 ## Use the JSON package to read a JSON file
 
 ~~~
