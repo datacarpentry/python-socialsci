@@ -1,7 +1,10 @@
-FIXME: list authors' names and email addresses.
-FIXME: https://github.com/datacarpentry/python-socialsci/blob/gh-pages/.github/workflows/generate_author_md_yml
-LOCALSOURCE: git log | grep Author: | sort | uniq
-DATED: 2021020402
+# FIXME: 
+* list authors' names and email addresses.
+* https://github.com/datacarpentry/python-socialsci/blob/gh-pages/.github/workflows/generate_author_md_yml
+
+# LOCALSOURCE: git log | grep Author: | sort | uniq
+# DATED: 2021020402
+# STATIC LIST:
 * Abigail Cabunoc <abigail.cabunoc@gmail.com>
 * Abigail Cabunoc <abigail.cabunoc@oicr.on.ca>
 * Allen Lee <allen.lee@asu.edu>
