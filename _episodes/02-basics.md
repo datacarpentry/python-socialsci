@@ -325,6 +325,10 @@ print(len(mystring))
 ~~~
 {: .output}
 
+
+[The official documentation](https://docs.python.org/3/tutorial/classes.html) says, 'A method is a function that "belongs to" an object. In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on.'.
+
+
 If you want to see a list of all of the available methods for a string (or any other object) you can use the `dir()` function.
 
 ~~~
