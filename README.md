@@ -5,7 +5,7 @@
 
 Data Carpentry Lesson on Python for social scientists and others based on the data sources mentioned below. Please see our [contribution guidelines](CONTRIBUTING.md) for information on how to contribute updates, bug fixes, or other corrections.
 
-# Data
+### Data
 - [The SAFI Teaching Database](https://datacarpentry.org/socialsci-workshop/data/)
 - Hansard Society, Parliament and Government Programme. (2014). Audit of Political Engagement 11, 2013. [data collection]. UK Data Service. SN: 7577, [http://doi.org/10.5255/UKDA-SN-7577-1](http://doi.org/10.5255/UKDA-SN-7577-1). Contains public sector information licensed under the [Open Government Licence v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2.0)
 
