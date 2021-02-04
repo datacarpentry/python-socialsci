@@ -3,7 +3,7 @@ title: Setup
 ---
 
 > ## Data
-> Data for this lesson is from the [The SAFI Teaching Database](http://datacarpentry.org/socialsci-workshop/data/).
+> Data for this lesson is from the [The SAFI Teaching Database](http://datacarpentry.org/socialsci-workshop/data/) and [Audit of Political Engagement 11, 2013](http://doi.org/10.5255/UKDA-SN-7577-1).
 >
 > We will use the files listed below for the data in this lesson. You can download the files by clicking on the links.
 >
