@@ -404,7 +404,7 @@ print(myString[18])
 print(myString[0:3])
 print(myString[0:])        # from index 0 to the end
 print(myString[:9])        # from the beginning to one before index 9
-print(myString[:9])
+print(myString[4:9])
 ~~~
 {: .language-python}
 
@@ -415,7 +415,7 @@ x
 The
 The quick brown fox
 The quick
-The quick
+quick
 ~~~
 {: .output}
 
