@@ -375,6 +375,16 @@ print(myString)                    # you would have to assign it to a new variab
 ~~~
 {: .language-python}
 
+~~~
+True
+0
+THE QUICK BROWN FOX
+The quick brown fox
+False
+True
+~~~
+{: .output}
+
 The methods starting with 'is...' return a boolean value of either True or False
 
 ~~~
@@ -397,17 +407,6 @@ mystring_clean = myString.replace(" ","")
 print(mystring_clean.isalpha())
 ~~~
 {: .language-python}
-
-
-~~~
-True
-0
-THE QUICK BROWN FOX
-The quick brown fox
-False
-True
-~~~
-{: .output}
 
 If you need to refer to a specific element (character) in a string,
 you can do so by specifying the index of the character in `[]`
