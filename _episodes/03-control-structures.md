@@ -83,7 +83,7 @@ if value == mid_threshold :
 Example 1
 
 value is 5 threshold is 4
-5 is bigger than  4
+5 is bigger than 4
 
 Example 2
 
