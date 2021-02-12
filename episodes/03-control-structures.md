@@ -59,7 +59,7 @@ value = 5
 threshold= 4
 print("value is", value, "threshold is ",threshold)
 if value > threshold :
-    print(value, "is above ", threshold, " threshold")
+    print(value, "is bigger than ", threshold)
 
 print("\nExample 2\n")
 
