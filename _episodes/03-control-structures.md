@@ -98,7 +98,7 @@ value, 5, and threshold, 5, are equal
 
 In the examples above there are three things to notice:
 
-1.	The colon `:` at the end of the `if` line. Missing this out is a common error.
+1.	The colon `:` at the end of the `if` line. Leaving this out is a common error.
 2.	The indentation of the print statement. If you remembered the `:` on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statements indented at this level are considered to be part of the `if` statement. This is a feature fairly unique to Python, that it cares about the indentation. If there is too much, or too little indentation, you will get an error.
 3.	The `if` statement is ended by removing the indent. There is no explicit end to the `if` statement as there is in many other programming languages
 
