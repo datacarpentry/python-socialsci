@@ -28,7 +28,7 @@ In our use of the `print` function we have provided as a parameter, whatever it 
 The ability to specify parameters make functions very flexible.
 
 ~~~
-def get_item_count(item_str,sep):
+def get_item_count(items_str,sep):
     '''
     This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
