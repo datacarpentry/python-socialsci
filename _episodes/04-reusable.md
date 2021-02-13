@@ -37,7 +37,7 @@ def get_item_count(item_str,sep):
     return num_items
 
 items_owned = "bicycle;television;solar_panel;table"
-print(get_item_count(items_owned,';')
+print(get_item_count(items_owned,';'))
 ~~~
 {: .language-python}
 
