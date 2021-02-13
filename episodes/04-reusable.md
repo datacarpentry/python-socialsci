@@ -66,7 +66,7 @@ In our `get_item_count` function we have two parameters which must be provided e
 In many cases of functions we want to provide default values for parameters so the user doesn't have to. We can do this in the following way
 
 ~~~
-def get_item_count(item_str,sep=';'):
+def get_item_count(items_str,sep=';'):
     '''
     This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
@@ -75,12 +75,12 @@ def get_item_count(item_str,sep=';'):
     return num_items
 
 
-print(get_item_count(items_owned)
+print(get_item_count(items_owned))
 ~~~
 {: .language-python}
 
 ~~~
-9
+4
 ~~~
 {: .output}
 
