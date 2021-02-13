@@ -50,7 +50,7 @@ print(get_item_count(items_owned,';')
 
 Points to note:
 
-1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets.
+1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in parentheses.
 2.	The definition clause is terminated with a `:` which causes indentation on the next and subsequent lines. All of these lines form the statements which make up the function. The function ends after the indentation is removed.
 3.	Within the function, the parameters behave as variables whose initial values will be those that they were given when the function was called.
 4.	functions have a return statement which specifies the value to be returned. This is the value assigned to the variable on the left-hand side of the call to the function. (power in the example above)
