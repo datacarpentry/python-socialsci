@@ -123,6 +123,25 @@ The output is what you would probably have guessed at.
 
 All of the other calls to `print()` are only passed a single parameter. Although it may look like 2 or 3, the expressions are evaluated first and it is only the single result which is seen as the parameter value and printed.
 
+When you have more complex arithmetic expressions, you can use parentheses to be explicit about the order of evaluation:
+
+~~~
+print("a =", a, "and b =" , b)
+print(a + 2*b)    # add a to two times b
+print(a + (2*b))  # same thing but explicit about order of evaluation
+print((a + b)*2)  # add a and b and then multiply by two
+~~~
+{: .language-python}
+
+~~~
+a = 2 and b = 3.142
+8.283999999999999
+8.283999999999999
+10.283999999999999
+~~~
+{: .output}
+
+Arithmetic expressions can be arbitrarily complex, but remember people have to read and understand them as well.
 
 > ## Exercise
 >
