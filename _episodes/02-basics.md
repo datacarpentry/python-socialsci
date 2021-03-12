@@ -100,6 +100,7 @@ print(a * b)      # multiplication
 print(a - b)      # subtraction
 print(a / b)      # division
 print(b ** a)     # exponentiation
+print(a % b)      # modulus - returns the remainder
 print(2 * a % b)  # modulus - returns the remainder
 ~~~
 {: .language-python}
@@ -111,6 +112,7 @@ a = 2 and b = 3.142
 -1.142
 0.6365372374283896
 9.872164
+2.0
 0.8580000000000001
 ~~~
 {: .output}
@@ -123,7 +125,25 @@ The output is what you would probably have guessed at.
 
 All of the other calls to `print()` are only passed a single parameter. Although it may look like 2 or 3, the expressions are evaluated first and it is only the single result which is seen as the parameter value and printed.
 
-In the last expression `a` is multiplied by 2 and then the modulus of the result is taken. Had I wanted to calculate a % b and then multiply the result by two I could have done so by using brackets to make the order of calculation clear.
+In the last expression `a` is multiplied by 2 and then the modulus of the result is taken. Had we wanted to calculate a % b and then multiply the result by two we could have done so by using brackets to make the order of calculation clear.
+
+When we have more complex arithmetic expressions, we can use parentheses to be explicit about the order of evaluation:
+
+~~~
+print("a =", a, "and b =" , b)
+print(a + 2*b)    # add a to two times b
+print(a + (2*b))  # same thing but explicit about order of evaluation
+print((a + b)*2)  # add a and b and then multiply by two
+~~~
+{: .language-python}
+
+~~~
+a = 2 and b = 3.142
+8.283999999999999
+8.283999999999999
+10.283999999999999
+~~~
+{: .output}
 
 Arithmetic expressions can be arbitrarily complex, but remember people have to read and understand them as well.
 
