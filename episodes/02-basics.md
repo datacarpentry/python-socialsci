@@ -125,7 +125,9 @@ The output is what you would probably have guessed at.
 
 All of the other calls to `print()` are only passed a single parameter. Although it may look like 2 or 3, the expressions are evaluated first and it is only the single result which is seen as the parameter value and printed.
 
-When you have more complex arithmetic expressions, you can use parentheses to be explicit about the order of evaluation:
+In the last expression `a` is multiplied by 2 and then the modulus of the result is taken. Had we wanted to calculate a % b and then multiply the result by two we could have done so by using brackets to make the order of calculation clear.
+
+When we have more complex arithmetic expressions, we can use parentheses to be explicit about the order of evaluation:
 
 ~~~
 print("a =", a, "and b =" , b)
