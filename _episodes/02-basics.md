@@ -101,6 +101,7 @@ print(a - b)      # subtraction
 print(a / b)      # division
 print(b ** a)     # exponentiation
 print(a % b)      # modulus - returns the remainder
+print(2 * a % b)  # modulus - returns the remainder
 ~~~
 {: .language-python}
 
@@ -112,6 +113,7 @@ a = 2 and b = 3.142
 0.6365372374283896
 9.872164
 2.0
+0.8580000000000001
 ~~~
 {: .output}
 
