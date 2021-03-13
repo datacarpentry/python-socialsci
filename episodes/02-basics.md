@@ -303,7 +303,7 @@ A string is a simple data type which holds a sequence of characters.
 
 Strings are placed in quotes when they are being assigned, but the quotes don't count as part of the string value.
 
-If you need to use quotes as part of your string you can arbitrarily use either single of double quotes to indicate the start and end of the string.
+If you need to use quotes as part of your string you can arbitrarily use either single or double quotes to indicate the start and end of the string.
 
 ~~~
 mystring = "Hello World"
@@ -445,6 +445,8 @@ So far we have seen three basic Python data types; Integer, Float and String. Th
 We can define variables to be of type boolean by setting their value accordingly. Boolean variables are a good way of coding anything that has a binary range (eg: yes/no), because it's a type that computers know how to work with as we will see soon.
 
 ~~~
+print(True)
+print(False)
 bool_val_t = True
 print(type(bool_val_t))
 print(bool_val_t)
@@ -454,16 +456,43 @@ print(bool_val_f)
 ~~~
 {: .language-python}
 
-We can also get variables of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
+~~~
+True
+False
+<class 'bool'>
+True
+<class 'bool'>
+False
+~~~
+{: .output}
+
+Following two lines of code will generate error because Python is case-sensitive. We need to use 'True' instead of 'true' and 'False' instead of 'false'.
 
 ~~~
+print(true)
+print(false)
+~~~
+{: .language-python}
 
+~~~
+NameError   Traceback (most recent call last)
+<ipython-input-115-b5911eeae48b> in <module>
+----> 1 print(true)
+      2 print(false)
+
+NameError: name 'true' is not defined
+~~~
+{: .output}
+
+
+We can also get values of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
+
+~~~
 print('hello' == 'HELLO')
 print('hello' is 'hello')
 print(3 != 77)
 print(1 < 2)
 print('four' > 'three')
-
 ~~~
 {: .language-python}
 
@@ -557,27 +586,44 @@ print(type(list4))
 
 
 > ## Exercise
-> We can index lists the same way we indexed strings before or using a boolean list of the same length.
->
+> We can index lists the same way we indexed strings before. Complete the code below and display the value of `last_num_in_list` which is 11 and values of `odd_from_list` which are 5 and 11 to check your work.
 > ~~~
 > num_list = [4,5,6,11]
-> ~~~
-> {: .language-python}
->
-> Using the number list defined above, complete the code below and display the values of `odd_from_list` and `last_num_in_list` to check your work.
->
-> ~~~
-> is_odd = [False, ___]
-> odd_from_list =
-> last_num_in_list =
->
+> 
+> last_num_in_list = num_list[____]
+> print(last_num_in_list)
+> 
+> odd_from_list = [num_list[_____], ______]
+> print(odd_from_list)
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > is_odd = [False, True, False, True]
-> > odd_from_list = num_list[is_odd]
+> > num_list = [4,5,6,11]
+> > 
 > > last_num_in_list = num_list[-1]
+> > print(last_num_in_list)
+> > 
+> > odd_from_list = [num_list[1], num_list[3]]
+> > print(odd_from_list)
+> >
+> >
+> > # These are the basic ways of working using the core Python language. Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers: 
+> > import numpy as np
+> > num_list = [4,5,6,11]
+> > 
+> > # Converting `num_list` list to an advanced data structure: `numpy array`
+> > num_list_np_array = np.array(num_list)
+> > 
+> > # Filtering the elements which produces a remainder of `1`, after dividing by `2`
+> > odd_from_list = num_list_np_array[num_list_np_array%2 == 1]
+> > print(odd_from_list)
+> > 
+> > # or, Using a concept called `masking`
+> > # Create a boolean list `is_odd` of the same length of `num_list` with `True` at the position of the odd values.
+> > is_odd = [False, True, False, True]  # Mask array
+> > odd_from_list = num_list_np_array[is_odd] # only the values at the position of `True` remain
+> > print(odd_from_list)
 > > ~~~
 > > {: .language-python}
 > {: .solution}
