@@ -485,7 +485,7 @@ NameError: name 'true' is not defined
 {: .output}
 
 
-We can also get values of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
+We can also get values of Boolean type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
 
 ~~~
 print('hello' == 'HELLO')
