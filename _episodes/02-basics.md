@@ -599,6 +599,7 @@ print(type(list4))
 > {: .language-python}
 > > ## Solution
 > > ~~~
+> > # Solution 1: Basic ways of solving this exercise using the core Python language 
 > > num_list = [4,5,6,11]
 > > 
 > > last_num_in_list = num_list[-1]
@@ -608,7 +609,7 @@ print(type(list4))
 > > print(odd_from_list)
 > >
 > >
-> > # These are the basic ways of working using the core Python language. Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers: 
+> > # Solutions 2 and 3: Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers: 
 > > import numpy as np
 > > num_list = [4,5,6,11]
 > > 
