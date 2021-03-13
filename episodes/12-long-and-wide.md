@@ -110,7 +110,7 @@ To make the displays more manageable we will use only the first eight 'daily' co
 
 ~~~
 ## using df_papers
-daily_list = df_papers.columns[:8]
+daily_list = df_papers.columns[1:8]
 
 df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_list)
 
