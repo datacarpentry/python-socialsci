@@ -89,7 +89,7 @@ plt.show()
 >
 > > ## Solution
 > >
-> > Most importantly the data in the graphs is the same. There are cosmetic differentces in the scale points in the x and y axis and in the width of the bars.
+> > Most importantly the data in the graphs is the same. There are cosmetic differences in the scale points in the x and y axis and in the width of the bars.
 > >
 > > The width of the bars can be changed with a parameter in the 'bar' function
 > >
