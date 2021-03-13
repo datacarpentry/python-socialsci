@@ -65,7 +65,7 @@ print(df_SN7577i_b)
 ~~~
 {: output}
 
-The `concat()` function appends the rows from the two Dataframes to create the df_all_rows Dataframe. When you list this out you can see that all of the data rows are there, however there is a problem with the `index`.
+The `concat()` function appends the rows from the two Dataframes to create the df_all_rows Dataframe. When you list this out you can see that all of the data rows are there, however, there is a problem with the `index`.
 
 ~~~
 df_all_rows = pd.concat([df_SN7577i_a, df_SN7577i_b])
@@ -106,7 +106,7 @@ df_all_cols
 ~~~
 {: .language-python}
 
-We use the `axis=1` parameter to indicate that it is the columns that need to be joined together. Notice that the `Id` column appears twice, because it was a column in each dataset. This is not particularly desirable, but also not necessarily a problem. However there are better ways of combining columns from two Dataframes which avoid this problem.
+We use the `axis=1` parameter to indicate that it is the columns that need to be joined together. Notice that the `Id` column appears twice, because it was a column in each dataset. This is not particularly desirable, but also not necessarily a problem. However, there are better ways of combining columns from two Dataframes which avoid this problem.
 
 ### Scenario 3 - Using merge to join columns
 
@@ -122,7 +122,7 @@ df_cd
 ~~~
 {: .language-python}
 
-In fact if there is only one column with the same name in each Dataframe, it will be assumed to be the one you want to join on. In this example the `Id` column
+In fact, if there is only one column with the same name in each Dataframe, it will be assumed to be the one you want to join on. In this example the `Id` column
 
 Leaving the join column to default in this way is not best practice. It is better to explicitly name the column using the `on` parameter.
 
