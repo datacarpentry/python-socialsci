@@ -25,7 +25,7 @@ keypoints:
 
 ## More on Dictionaries
 
-In the last episode we introduced the dictionary object.
+In the [Processing data from file](./05-processing-data-from-file.md) episode we introduced the dictionary object.
 
 We created dictionaries and we added `key : value` pairs to the dictionary.
 
