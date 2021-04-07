@@ -375,12 +375,25 @@ print(myString)                    # you would have to assign it to a new variab
 ~~~
 {: .language-python}
 
+~~~
+True
+0
+THE QUICK BROWN FOX
+The quick brown fox
+~~~
+{: .output}
+
 The methods starting with 'is...' return a boolean value of either True or False
 
 ~~~
-print(myString.isalpha())  
+print(myString.isalpha())
 ~~~
 {: .language-python}
+
+~~~
+False
+~~~
+{: .output}
 
 the example above returns False because the space character is not considered to be an Alphanumeric value.
 
@@ -391,6 +404,11 @@ print(myString.replace(" ","").isalpha())
 ~~~
 {: .language-python}
 
+~~~
+True
+~~~
+{: .output}
+
 For example, the following is equivalent to the above
 ~~~
 mystring_clean = myString.replace(" ","")
@@ -398,20 +416,14 @@ print(mystring_clean.isalpha())
 ~~~
 {: .language-python}
 
-
 ~~~
-True
-0
-THE QUICK BROWN FOX
-The quick brown fox
-False
 True
 ~~~
 {: .output}
 
 If you need to refer to a specific element (character) in a string,
 you can do so by specifying the index of the character in `[]`
-you can also use indexing to select a substring of the string. In Python, 
+you can also use indexing to select a substring of the string. In Python,
 indexes begin with `0` (see [Index Operator: Working with the Characters of a String](http://www.interactivepython.org/courselib/static/thinkcspy/Strings/IndexOperatorWorkingwiththeCharactersofaString.html) for a visual).
 
 ~~~
@@ -513,7 +525,7 @@ False
 > bool_val1 = 'TRUE'
 > print('read as type ',___(bool_val1))
 > print('value when cast to bool',___(bool_val1))
->     
+>
 > bool_val2 = 'FALSE'
 > print('read as type ',___(bool_val2))
 > print('value when cast to bool',___(bool_val2))
@@ -589,37 +601,37 @@ print(type(list4))
 > We can index lists the same way we indexed strings before. Complete the code below and display the value of `last_num_in_list` which is 11 and values of `odd_from_list` which are 5 and 11 to check your work.
 > ~~~
 > num_list = [4,5,6,11]
-> 
+>
 > last_num_in_list = num_list[____]
 > print(last_num_in_list)
-> 
+>
 > odd_from_list = [num_list[_____], ______]
 > print(odd_from_list)
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > # Solution 1: Basic ways of solving this exercise using the core Python language 
+> > # Solution 1: Basic ways of solving this exercise using the core Python language
 > > num_list = [4,5,6,11]
-> > 
+> >
 > > last_num_in_list = num_list[-1]
 > > print(last_num_in_list)
-> > 
+> >
 > > odd_from_list = [num_list[1], num_list[3]]
 > > print(odd_from_list)
 > >
 > >
-> > # Solutions 2 and 3: Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers: 
+> > # Solutions 2 and 3: Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers:
 > > import numpy as np
 > > num_list = [4,5,6,11]
-> > 
+> >
 > > # Converting `num_list` list to an advanced data structure: `numpy array`
 > > num_list_np_array = np.array(num_list)
-> > 
+> >
 > > # Filtering the elements which produces a remainder of `1`, after dividing by `2`
 > > odd_from_list = num_list_np_array[num_list_np_array%2 == 1]
 > > print(odd_from_list)
-> > 
+> >
 > > # or, Using a concept called `masking`
 > > # Create a boolean list `is_odd` of the same length of `num_list` with `True` at the position of the odd values.
 > > is_odd = [False, True, False, True]  # Mask array
