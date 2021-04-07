@@ -23,7 +23,7 @@ In addition to the functions provided by Python, you can write your own function
 
 Functions are used when a section of code needs to be repeated at various different points in a program. It saves you re-writing it all. In reality you rarely need to repeat the exact same code. Usually there will be some variation in variable values needed. Because of this, when you create a function you are allowed to specify a set of `parameters` which represent variables in the function.
 
-In our use of the `print` function we have provided as a parameter, whatever it is we wanted to `print`. Typically whenever we use the print function we pass a different parameter value.
+In our use of the print function, we have provided whatever we want to print as a parameter. Typically whenever we use the print function we pass a different parameter value.
 
 The ability to specify parameters make functions very flexible.
 
