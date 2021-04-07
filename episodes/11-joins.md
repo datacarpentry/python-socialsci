@@ -23,13 +23,27 @@ keypoints:
 
 There are many occasions when we have related data spread across multiple files.
 
-The data can be related to each other in different ways. How they are related and how completely we can join the data from the datasets will vary.
+The data can be related to each other in different ways. How they are related and how completely we can join the data
+from the datasets will vary.
 
-In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all cases the first step will be to read the datasets into a pandas Dataframe from where we will do the joining. The csv files we are using are cut down versions of the SN7577 dataset to make the displays more manageable.
+In this episode we will consider different scenarios and show we might join the data. We will use csv files and in all
+cases the first step will be to read the datasets into a pandas Dataframe from where we will do the joining. The csv
+files we are using are cut down versions of the SN7577 dataset to make the displays more manageable.
+
+There are a few ways to merge files. In database lingo, a merge operation is called a `JOIN`. Some of these are
+shown in the table below.
+
+![pandas_join_types](../fig/pandas_join_types.png)
+
+First, let's download the datafiles. They are listed in the [setup page][setup-page] for the lesson. Alternatively,
+you can download the [GitHub repository for this lesson][gh-repo]. The data files are in the
+*data* directory. If you're using Jupyter, make sure to place these files in the same directory where your notebook
+file is.
 
 ### Scenario 1 - Two data sets containing the same columns but different rows of data
 
-Here we want to add the rows from one Dataframe to the rows of the other Dataframe. In order to do this we can use the `concat()` function.
+Here we want to add the rows from one Dataframe to the rows of the other Dataframe.
+In order to do this we can use the `pd.concat()` function.
 
 ~~~
 import pandas as pd
@@ -175,3 +189,6 @@ The different join types behave in the same way as they do in SQL. In Python/pan
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
+
+[gh-repo]: https://github.com/datacarpentry/python-socialsci/archive/gh-pages.zip
+[setup-page]: https://datacarpentry.org/python-socialsci/setup.html
