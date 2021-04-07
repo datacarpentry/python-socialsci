@@ -30,11 +30,6 @@ In this episode we will consider different scenarios and show we might join the 
 cases the first step will be to read the datasets into a pandas Dataframe from where we will do the joining. The csv
 files we are using are cut down versions of the SN7577 dataset to make the displays more manageable.
 
-There are a few ways to merge files. In database lingo, a merge operation is called a `JOIN`. Some of these are
-shown in the table below.
-
-![pandas_join_types](../fig/pandas_join_types.png)
-
 First, let's download the datafiles. They are listed in the [setup page][setup-page] for the lesson. Alternatively,
 you can download the [GitHub repository for this lesson][gh-repo]. The data files are in the
 *data* directory. If you're using Jupyter, make sure to place these files in the same directory where your notebook
@@ -128,6 +123,15 @@ We can join columns from two Dataframes using the `merge()` function. This is si
 
 A detailed discussion of different join types is given in the [SQL lesson](./episodes/sql...).
 
+You specify the type of join you want using the `how` parameter. The default is the `inner` join which returns the columns from both tables where the `key` or common column values match in both Dataframes.
+
+The possible values of the `how` parameter are shown in the picture below (taken from the Pandas documentation)
+
+![pandas_join_types](../fig/pandas_join_types.png)
+
+The different join types behave in the same way as they do in SQL. In Python/pandas, any missing values are shown as `NaN`
+
+
 In order to `merge` the Dataframes we need to identify a column common to both of them.
 
 ~~~
@@ -151,14 +155,6 @@ In many circumstances, the column names that you wish to join on are not the sam
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_on = 'Id')
 ~~~
 {: .language-python}
-
-You specify the type of join you want using the `how` parameter. The default is the `inner` join which returns the columns from both tables where the `key` or common column values match in both Dataframes.
-
-The possible values of the `how` parameter are shown in the picture below (taken from the Pandas documentation)
-
-![pandas_join_types](../fig/pandas_join_types.png)
-
-The different join types behave in the same way as they do in SQL. In Python/pandas, any missing values are shown as `NaN`
 
 
 > ## Exercises
