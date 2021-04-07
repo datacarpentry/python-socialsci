@@ -42,11 +42,11 @@ We will create a new Dataframe with a single column of 'Id'.
 
 ~~~
 # create an 'Id' column
-df_papers1 = pd.DataFrame(pd.Series(range(1,1287)),index=None,columns=['Id'])
+df_papers1 = pd.DataFrame(pd.Series(range(1,1287)), index=None, columns=['Id'])
 ~~~
 {: .language-python}
 
-Using the range function I can create values of Id starting with 1 and going up to 1286 (remember the second parameter to range is one past the last value used.) I have explicitly coded this value because I knew how many rows were in the dataset. If I didn't, I could have used
+Using the range function, we can create values of `Id` starting with 1 and going up to 1286 (remember the second parameter to range is one past the last value used.) We have explicitly coded this value because we knew how many rows were in the dataset. If we didn't, we could have used
 
 ~~~
 len(df_SN7577.index) +1
@@ -60,7 +60,7 @@ len(df_SN7577.index) +1
 
 We will create a 2nd Dataframe, based on SN7577 but containing only the columns starting with the word 'daily'.
 
-There are several ways of doing this, we'll cover the way that we have covered all of the prerequistes for.  We will use the `filter` method of `pandas` with its `like` parameter.
+There are several ways of doing this, we'll cover the way that we have covered all of the prerequisites for.  We will use the `filter` method of `pandas` with its `like` parameter.
 
 ~~~
 df_papers2 = df_SN7577.filter(like= 'daily')
@@ -110,12 +110,12 @@ To make the displays more manageable we will use only the first eight 'daily' co
 
 ~~~
 ## using df_papers
-daily_list = df_papers.columns[:8]
+daily_list = df_papers.columns[1:8]
 
 df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_list)
 
-# by default the new columns created will be called 'variable' which is the name of the 'daily'
-# and 'value' which is the value of that 'daily' for that 'Id'. So we will rename the columns
+# by default, the new columns created will be called 'variable' which is the name of the 'daily'
+# and 'value' which is the value of that 'daily' for that 'Id'. So, we will rename the columns
 
 df_daily_papers_long.columns = ['Id','Daily_paper','Value']
 df_daily_papers_long
@@ -166,7 +166,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 >
 > There is a file called Newspapers.csv which lists all of the newspapers Titles along with the corresponding 'daily' value
 >
-> Hint : Newspapers.csv cotains both daily and Sunday newspapers you can filter out the Sunday papers with the following code:
+> Hint: Newspapers.csv contains both daily and Sunday newspapers you can filter out the Sunday papers with the following code:
 >
 >
 > ~~~
@@ -205,7 +205,7 @@ df_daily_papers_wide.reset_index(level=0, inplace=True)
 > > #use melt to create df_daily_papers_long  
 > > df_daily_papers_long = pd.melt(df_papers, id_vars = ['Id'], value_vars = daily_list )
 > > #Change the column names
-> > df_daily_papers_long.columns = ['Id','Daily_paper','Value']
+> > df_daily_papers_long.columns = ['Id', 'Daily_paper', 'Value']
 > > ```
 > >
 > > 5. `merge` the two Dataframes with a left join, because we want all of the Newspaper Titles to be included.

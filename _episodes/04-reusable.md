@@ -23,12 +23,12 @@ In addition to the functions provided by Python, you can write your own function
 
 Functions are used when a section of code needs to be repeated at various different points in a program. It saves you re-writing it all. In reality you rarely need to repeat the exact same code. Usually there will be some variation in variable values needed. Because of this, when you create a function you are allowed to specify a set of `parameters` which represent variables in the function.
 
-In our use of the `print` function we have provided as a parameter, whatever it is we wanted to `print`. Typically whenever we use the print function we pass a different parameter value.
+In our use of the `print` function, we have provided whatever we want to `print`, as a `parameter`. Typically whenever we use the `print` function, we pass a different `parameter` value.
 
 The ability to specify parameters make functions very flexible.
 
 ~~~
-def get_item_count(item_str,sep):
+def get_item_count(items_str,sep):
     '''
     This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
@@ -37,7 +37,7 @@ def get_item_count(item_str,sep):
     return num_items
 
 items_owned = "bicycle;television;solar_panel;table"
-print(get_item_count(items_owned,';')
+print(get_item_count(items_owned,';'))
 ~~~
 {: .language-python}
 
@@ -46,9 +46,11 @@ print(get_item_count(items_owned,';')
 ~~~
 {: .output}
 
+![Python_Repl](../fig/functionAnatomy.png)
+
 Points to note:
 
-1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in brackets.
+1.	The definition of a function (or procedure) starts with the def keyword and is followed by the name of the function with any parameters used by the function in parentheses.
 2.	The definition clause is terminated with a `:` which causes indentation on the next and subsequent lines. All of these lines form the statements which make up the function. The function ends after the indentation is removed.
 3.	Within the function, the parameters behave as variables whose initial values will be those that they were given when the function was called.
 4.	functions have a return statement which specifies the value to be returned. This is the value assigned to the variable on the left-hand side of the call to the function. (power in the example above)
@@ -64,7 +66,7 @@ In our `get_item_count` function we have two parameters which must be provided e
 In many cases of functions we want to provide default values for parameters so the user doesn't have to. We can do this in the following way
 
 ~~~
-def get_item_count(item_str,sep=';'):
+def get_item_count(items_str,sep=';'):
     '''
     This function takes a string with a list of items and the character that they're separated by and returns the number of items
     '''
@@ -73,19 +75,19 @@ def get_item_count(item_str,sep=';'):
     return num_items
 
 
-print(get_item_count(items_owned)
+print(get_item_count(items_owned))
 ~~~
 {: .language-python}
 
 ~~~
-9
+4
 ~~~
 {: .output}
 
 The only change we have made is to provide a default value for the `sep` parameter. Now if the user does not provide a value, then the value of 2 will be used. Because `items_str` is the first parameter we can specify its value by position. We could however have explicitly named the parameters we were referring to.
 
 ~~~
-print(get_item_count(sep = ','))
+print(get_item_count(items_owned, sep = ','))
 print(get_item_count(items_str = items_owned, sep=';'))
 ~~~
 {: .language-python}

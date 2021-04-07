@@ -17,16 +17,14 @@ keypoints:
 
 ## Date and Times in Python
 
-Python can be very flexible in how it interprets 'strings' which you want to be considered as a date, time, or date and time, but you have to tell Python how the various parts of the date and/or time are represented in your 'string'.
-
-To use the date and time functions you need to import the `datetime` module.
-You can do this by creating a `format`. In a `format`, different case sensitive characters preceded by the `%` character act as placeholders for parts of the date/time, for example `%Y` represents year formatted as 4 digit number such as 2014.
+Python can be very flexible in how it interprets 'strings' which you want to be considered as a date, time, or date and time, but you have to tell Python how the various parts of the date and/or time are represented in your 'string'. You can do this by creating a `format`. In a `format`, different case sensitive characters preceded by the `%` character act as placeholders for parts of the date/time, for example `%Y` represents year formatted as 4 digit number such as 2014.
 
 A full list of the characters used and what they represent can be found towards the end of the [datetime](https://docs.python.org/3/library/datetime.html) section of the official Python documentation.
 
-
 There is a `today()` method which allows you to get the current date and time.
 By default it is displayed in a format similar to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard format.
+
+To use the date and time functions you need to import the `datetime` module.
 
 ~~~
 from datetime import datetime

@@ -3,6 +3,8 @@ layout: lesson
 maintainers:
  - Stephen Childs
  - Geoffrey Boushey
+ - Annajiat Alim Rasel
+ 
 root: .
 permalink: index.html
 ---
@@ -31,7 +33,7 @@ This is an introduction to Python designed for participants with no programming 
 > This lesson requires a working copy of **Python**.
 >
 > To most effectively use these materials, please make sure to install
-> everything *before* working through this lesson.
+> everything *before* working through this lesson and download data files mentioned in the [Setup](setup.html) tab.
 {: .prereq}
 
 > ## For Instructors

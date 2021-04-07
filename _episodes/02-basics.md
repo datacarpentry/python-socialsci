@@ -36,7 +36,7 @@ From the insert menu item you can insert a new cell anywhere in the notebook eit
 
 ### Change cell type
 
-By default new cells are created as code cells. From the cell menu item you can change the type of a cell from code to markdown. Markdown is a markup language for formatting text, it has much of the power of HTML, but is specifically designed to be human-readable as well. You can use Markdown cells to insert formatted textual explanation and analysis into your notebook. For more information about Markdown, check out these resources:
+By default new cells are created as code cells. From the cell menu item you can change the type of a cell from code to Markdown. Markdown is a markup language for formatting text, it has much of the power of HTML, but is specifically designed to be human-readable as well. You can use Markdown cells to insert formatted textual explanation and analysis into your notebook. For more information about Markdown, check out these resources:
  -  [Jupyter Notebook Markdown Docs](http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html)
  - [Markdown - a Visual Guide](https://beegit.com/markdown-cheat-sheet)
  - [Mastering Markdown from Github](https://guides.github.com/features/mastering-markdown/)
@@ -100,6 +100,7 @@ print(a * b)      # multiplication
 print(a - b)      # subtraction
 print(a / b)      # division
 print(b ** a)     # exponentiation
+print(a % b)      # modulus - returns the remainder
 print(2 * a % b)  # modulus - returns the remainder
 ~~~
 {: .language-python}
@@ -111,6 +112,7 @@ a = 2 and b = 3.142
 -1.142
 0.6365372374283896
 9.872164
+2.0
 0.8580000000000001
 ~~~
 {: .output}
@@ -123,7 +125,25 @@ The output is what you would probably have guessed at.
 
 All of the other calls to `print()` are only passed a single parameter. Although it may look like 2 or 3, the expressions are evaluated first and it is only the single result which is seen as the parameter value and printed.
 
-In the last expression `a` is multiplied by 2 and then the modulus of the result is taken. Had I wanted to calculate a % b and then multiply the result by two I could have done so by using brackets to make the order of calculation clear.
+In the last expression `a` is multiplied by 2 and then the modulus of the result is taken. Had we wanted to calculate a % b and then multiply the result by two we could have done so by using brackets to make the order of calculation clear.
+
+When we have more complex arithmetic expressions, we can use parentheses to be explicit about the order of evaluation:
+
+~~~
+print("a =", a, "and b =" , b)
+print(a + 2*b)    # add a to two times b
+print(a + (2*b))  # same thing but explicit about order of evaluation
+print((a + b)*2)  # add a and b and then multiply by two
+~~~
+{: .language-python}
+
+~~~
+a = 2 and b = 3.142
+8.283999999999999
+8.283999999999999
+10.283999999999999
+~~~
+{: .output}
 
 Arithmetic expressions can be arbitrarily complex, but remember people have to read and understand them as well.
 
@@ -173,7 +193,7 @@ In order to answer this from Jupyter, you can type the function name and then ty
 
 ## Getting Help for Python
 
-You can get help on any Python function by using the help function. It takes a single parameter of the function name for which you want the help
+You can get help on any Python function by using the help function. It takes a single parameter of the function name for which you want the help.
 
 ~~~
 help(print)
@@ -283,7 +303,7 @@ A string is a simple data type which holds a sequence of characters.
 
 Strings are placed in quotes when they are being assigned, but the quotes don't count as part of the string value.
 
-If you need to use quotes as part of your string you can arbitrarily use either single of double quotes to indicate the start and end of the string.
+If you need to use quotes as part of your string you can arbitrarily use either single or double quotes to indicate the start and end of the string.
 
 ~~~
 mystring = "Hello World"
@@ -324,6 +344,10 @@ print(len(mystring))
 11
 ~~~
 {: .output}
+
+
+[The official documentation](https://docs.python.org/3/tutorial/classes.html) says, 'A method is a function that "belongs to" an object. In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on.'.
+
 
 If you want to see a list of all of the available methods for a string (or any other object) you can use the `dir()` function.
 
@@ -388,7 +412,7 @@ True
 If you need to refer to a specific element (character) in a string,
 you can do so by specifying the index of the character in `[]`
 you can also use indexing to select a substring of the string. In Python, 
-indexes begin with `0` (see [Index Operator: Working with the Characters of a String](http://interactivepython.org/runestone/static/CS152f17/Strings/IndexOperatorWorkingwiththeCharactersofaString.html) for a visual).
+indexes begin with `0` (see [Index Operator: Working with the Characters of a String](http://www.interactivepython.org/courselib/static/thinkcspy/Strings/IndexOperatorWorkingwiththeCharactersofaString.html) for a visual).
 
 ~~~
 myString = "The quick brown fox"
@@ -400,7 +424,7 @@ print(myString[18])
 print(myString[0:3])
 print(myString[0:])        # from index 0 to the end
 print(myString[:9])        # from the beginning to one before index 9
-print(myString[:9])
+print(myString[4:9])
 ~~~
 {: .language-python}
 
@@ -411,16 +435,18 @@ x
 The
 The quick brown fox
 The quick
-The quick
+quick
 ~~~
 {: .output}
 
 ## Basic Python data types
 
-So far we have seen three basic Python data types; Integer, Float and String. There is another basic data type; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case sensitive, so be careful of your spelling.)
+So far we have seen three basic Python data types; Integer, Float and String. There is another basic data type; Boolean. Boolean variables can only have the values of either `True` or `False`. (Remember, Python is case-sensitive, so be careful of your spelling.)
 We can define variables to be of type boolean by setting their value accordingly. Boolean variables are a good way of coding anything that has a binary range (eg: yes/no), because it's a type that computers know how to work with as we will see soon.
 
 ~~~
+print(True)
+print(False)
 bool_val_t = True
 print(type(bool_val_t))
 print(bool_val_t)
@@ -430,16 +456,43 @@ print(bool_val_f)
 ~~~
 {: .language-python}
 
-We can also get variables of this type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
+~~~
+True
+False
+<class 'bool'>
+True
+<class 'bool'>
+False
+~~~
+{: .output}
+
+Following two lines of code will generate error because Python is case-sensitive. We need to use 'True' instead of 'true' and 'False' instead of 'false'.
 
 ~~~
+print(true)
+print(false)
+~~~
+{: .language-python}
 
+~~~
+NameError   Traceback (most recent call last)
+<ipython-input-115-b5911eeae48b> in <module>
+----> 1 print(true)
+      2 print(false)
+
+NameError: name 'true' is not defined
+~~~
+{: .output}
+
+
+We can also get values of Boolean type using comparison operators, basic ones in Python are `==` for "equal to", `!=` for "not equal to", and `>`, `<`, or `>=`, `<=`.
+
+~~~
 print('hello' == 'HELLO')
 print('hello' is 'hello')
 print(3 != 77)
 print(1 < 2)
 print('four' > 'three')
-
 ~~~
 {: .language-python}
 
@@ -533,27 +586,45 @@ print(type(list4))
 
 
 > ## Exercise
-> We can index lists the same way we indexed strings before or using a boolean list of the same length.
->
+> We can index lists the same way we indexed strings before. Complete the code below and display the value of `last_num_in_list` which is 11 and values of `odd_from_list` which are 5 and 11 to check your work.
 > ~~~
 > num_list = [4,5,6,11]
-> ~~~
-> {: .language-python}
->
-> Using the number list defined above, complete the code below and display the values of `odd_from_list` and `last_num_in_list` to check your work.
->
-> ~~~
-> is_odd = [False, ___]
-> odd_from_list =
-> last_num_in_list =
->
+> 
+> last_num_in_list = num_list[____]
+> print(last_num_in_list)
+> 
+> odd_from_list = [num_list[_____], ______]
+> print(odd_from_list)
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > is_odd = [False, True, False, True]
-> > odd_from_list = num_list[is_odd]
+> > # Solution 1: Basic ways of solving this exercise using the core Python language 
+> > num_list = [4,5,6,11]
+> > 
 > > last_num_in_list = num_list[-1]
+> > print(last_num_in_list)
+> > 
+> > odd_from_list = [num_list[1], num_list[3]]
+> > print(odd_from_list)
+> >
+> >
+> > # Solutions 2 and 3: Usually there are multiple ways of doing the same work. Once we learn about more advanced Python, we would be able to write more varieties codes like the followings to print the odd numbers: 
+> > import numpy as np
+> > num_list = [4,5,6,11]
+> > 
+> > # Converting `num_list` list to an advanced data structure: `numpy array`
+> > num_list_np_array = np.array(num_list)
+> > 
+> > # Filtering the elements which produces a remainder of `1`, after dividing by `2`
+> > odd_from_list = num_list_np_array[num_list_np_array%2 == 1]
+> > print(odd_from_list)
+> > 
+> > # or, Using a concept called `masking`
+> > # Create a boolean list `is_odd` of the same length of `num_list` with `True` at the position of the odd values.
+> > is_odd = [False, True, False, True]  # Mask array
+> > odd_from_list = num_list_np_array[is_odd] # only the values at the position of `True` remain
+> > print(odd_from_list)
 > > ~~~
 > > {: .language-python}
 > {: .solution}

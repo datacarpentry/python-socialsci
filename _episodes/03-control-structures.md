@@ -27,9 +27,9 @@ To make this possible all programming language have a set of control structures 
 In this episode we are going to look at how we can create loops and branches in our Python code.
 Specifically we will look at three control structures, namely:
 
-* If..Else..
-* While...
-* For ...
+* if..else..
+* while...
+* for ...
 
 ## The `if` statement and variants
 
@@ -59,7 +59,7 @@ value = 5
 threshold= 4
 print("value is", value, "threshold is ",threshold)
 if value > threshold :
-    print(value, "is above ", threshold, " threshold")
+    print(value, "is bigger than ", threshold)
 
 print("\nExample 2\n")
 
@@ -83,7 +83,7 @@ if value == mid_threshold :
 Example 1
 
 value is 5 threshold is 4
-5 is bigger than  4
+5 is bigger than 4
 
 Example 2
 
@@ -98,7 +98,7 @@ value, 5, and threshold, 5, are equal
 
 In the examples above there are three things to notice:
 
-1.	The colon `:` at the end of the `if` line. Missing this out is a common error.
+1.	The colon `:` at the end of the `if` line. Leaving this out is a common error.
 2.	The indentation of the print statement. If you remembered the `:` on the line before, Jupyter (or any other Python IDE) will automatically do the indentation for you. All of the statements indented at this level are considered to be part of the `if` statement. This is a feature fairly unique to Python, that it cares about the indentation. If there is too much, or too little indentation, you will get an error.
 3.	The `if` statement is ended by removing the indent. There is no explicit end to the `if` statement as there is in many other programming languages
 
@@ -128,7 +128,7 @@ In the last example, notice that in Python the operator used to check equality i
 Instead of using two separate `if` statements to decide which is larger we can use the `if ... else ...` construct
 
 ~~~
-# If ... Else ...
+# if ... else ...
 
 value = 4
 threshold = 5
@@ -157,7 +157,7 @@ A further extension of the `if` statement is the `if ... elif ...else` version.
 The example below allows you to be more specific about the comparison of a and b.
 
 ~~~
-# If ... Elif ... Else ... EndIf
+# if ... elif ... else ... endIf
 
 a = 5
 b = 4
@@ -418,18 +418,19 @@ dog
 > ## Exercise
 >
 >
-> Suppose that we have a string containing a set of 4 different values separated by `;`  like this:
+> Suppose that we have a string containing a set of 4 different types of values separated by `,`  like this:
 >
 > ~~~
-> items_owned = "bicycle;television;solar_panel;table"
+> variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
 > {: .language-python}
 >
-> Research the `split()` method and then rewrite example 8 so that it prints the 4 components of `items_owned`
+> Research the `split()` method and then rewrite example 8 from the `for` loop section above so that it prints the 4 components of `variablelist`
 >
 > > ## Solution
 > >
-> > ~~~
+> > ~~~ 
+> > # From the for loop section above
 > > variablelist = "01/01/2010,34.5,Yellow,True"
 > > for word in variablelist.split(",") :
 > >     print(word)
