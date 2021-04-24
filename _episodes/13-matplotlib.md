@@ -3,87 +3,111 @@ title: "Data visualisation using Matplotlib"
 teaching: 25
 exercises: 25
 questions:
-- "How can I create simple visualisations of my data?"
+- "How can I create visualisations of my data?"
 objectives:
+- "Create simple plots using pandas"
 - "Import pyplot from the matplotlib library"
-- "Create simple plots using pyplot"
+- "Customise plots using pyplot"
 keypoints:
-- "Graphs can be drawn directly from pandas, but it still uses matplotlib"
+- "Graphs can be drawn directly from Pandas, but it still uses Matplotlib"
 - "Different graph types have different data requirements"
 - "Graphs are created from a variety of discrete components placed on a 'canvas', you don't have to use them all"
-- "Plotting multiple graphs on a single 'canvas' is possible"
 ---
 
-## Matplotlib
+## Plotting in Python
 
-Matplotlib is a Python graphical library that can be used to produce a variety of different graph types.
+There is a wide variety of ways to plot in Python, like many programming languages.
+Some do more of the design work for you and others let you customize the look of the plots and all of the little details yourself.
+[Pandas][pandas-web] has basic plots built into it that reduce the amount of syntax, if your data is already in a DataFrame.
+[Matplotlib][matplotlib-web]. is a Python graphical library that can be used to produce a variety of different graph types,
+it is fully controllable down to basic elements and includes a module `pylab` that is somewhere in between
+(designed to feel like MATLAB plotting, if you happen to have done that before).
 
-The pandas library contains very tight integration with matplotlib. There are functions in pandas that automatically call matplotlib functions to produce graphs.
+The Matplotlib library can be imported using any of the import techniques we have seen. As Pandas is generally imported
+with `import Pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
-Although we are using Matplotlib in this episode, pandas can make use of several other graphical libraries available from within Python such as ggplot2 and seaborn.
+In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a
+graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.
 
-## Importing matplotlib
+Although we are using Matplotlib in this episode, Pandas can make use of several other graphical libraries available
+from within Python such as [ggplot2][ggplot2-web] and [Seaborn][seaborn-web]. Seaborn has some very powerful features
+and advanced plot types.  One of its most useful features is formatting.
 
-The matplotlib library can be imported using any of the import techniques we have seen. As `pandas` is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
+## Plotting with Pandas
 
-In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.  
+The `pandas` library contains very tight integration with `matplotlib`. There are functions in `pandas` that
+automatically call `matplotlib` functions to produce graphs.
 
-If you forget to do this, you will have to add `plt.show()` to see the graphs.
+Other graphical libraries available from within Python are for example `plotnine` (a ggplot2 realisation for python)
+and `seaborn`. [Seaborn](https://seaborn.pydata.org) has some very powerful features and advanced plot types.
+One of its most useful features is formatting.
+
+## Plotting with Pandas
+
+To plot with `pandas` we have to import it as we have done in past episodes.
+To tell Jupyter that when we produce a graph we want it to be displayed in a cell in the notebook just like any other results,
+we use the `%matplotlib inline` directive. Without that we need to do a `show()` command.
 
 ~~~
-import matplotlib.pyplot as plt
+import pandas as pd
 %matplotlib inline
 ~~~
 {: .language-python}
 
-## Numpy
-
-Numpy is another Python library. It is used for multi-dimensional array processing. In our case we just want to use it for its useful random number generation functions which we will use to create some fake data to demonstrate some of the graphing functions of matplotlib.
-
-We will use the alias `np`, following convention.
-
-## Bar charts
+We also need data to work with loaded into a DataFrame and it's helpful to look at a few rows to remember what's there.
 
 ~~~
-np.random.rand(20)
+df = pd.read_csv("data/SAFI_full_shortname.csv")
+df.head()
 ~~~
 {: .language-python}
 
-will generate 20 random numbers between 0 and 1.
-
-We are using these to create a pandas Series of values.
-
-A bar chart only needs a single set of values. Each 'bar' represents the value from the Series of values.
-A pandas Series (and a Dataframe) have a method called 'plot'. We only need to tell plot what kind of graph we want.
-
-The 'x' axis represents the index values of the Series
-
+Next, we can plot the a histogram of a variable.
 
 ~~~
-import numpy as np
-import pandas as pd
-
-np.random.seed(12345)            # set a seed value to ensure reproducibility of the plots
-s = pd.Series(np.random.rand(20))
-#s
-# plot the bar chart
-s.plot(kind='bar')
+df['years_liv'].hist()
 ~~~
 {: .language-python}
 
-Internally the pandas 'plot' method has called the 'bar' method of matplotlib and provided a set of parameters, including the pandas.Series s to generate the graph.
+![png](../fig/histogram1.png)
 
-We can use matplotlib directly to produce a similar graph. In this case we need to pass two parameters, the number of bars we need and the pandas Series holding the values.
 
-We also have to explicitly call the `show()` function to produce the graph.
+We can change the number of bins to make it look how we would like, for example
 
 ~~~
-plt.bar(range(len(s)), s)
-plt.show()
+df['years_liv'].hist(bins=20)
 ~~~
 {: .language-python}
+
+We can also specify the column as a parameter and a groupby column with the `by` keyword.
+there are a lot of keywords available to make it look better, we can see some of the most likely ones
+(as decided by Pandas developers) by using <kbd>shift</kbd> + <kbd>tab<kbd> .
+
+Lets try `layout`, `figsize`, and `sharex`.
+
+~~~
+df.hist(column='years_liv',by='village',layout=(1,3),figsize=(12,3),sharex=True)
+~~~
+{: .language-python}
+
+![png](../fig/histogram3.png)
+
+
+## Scatter plot
+
+The scatter plot requires the x and y coordinates of each of the points being plotted. We can add a third dimension as different colors with the `c` argument.
+
+~~~
+df.plot.scatter(x='gps_Latitude', y='gps_Longitude', c='gps_Altitude', colormap="viridis", figsize=[4,4])
+~~~
+{: .language-python}
+
+![png](../fig/scatter1.png)
+
 
 > ## Exercise
+> 1. Make a scatter plot of `years_farm` vs `years_liv` and color the points by `buildings_in_compound`
+> 2. Make a bar plot of the mean number of rooms per wall type
 >
 > Compare the two graphs we have just drawn. How do they differ? Are the differences significant?
 >
@@ -98,63 +122,91 @@ plt.show()
 > > ~~~
 > > {: .language-python}
 > {: .solution}
+> Extension: try plotting by wall and roof type?
+>
+> > ## Solution
+> > For the scatter plot:
+> >
+> > ~~~
+> > df.plot.scatter(x = 'years_liv', y = 'years_farm', c = 'buildings_in_compound', colormap = 'viridis')
+> > ~~~
+> > {: .language-python}
+> > ![png](../fig/scatter2.png)
+> >
+> > For the barplot: we first need to calculate the mean value of rooms per wall type, then we can make the plot.
+> >
+> > ~~~
+> > rooms_mean = df.groupby('respondent_wall_type').mean()['rooms']
+> > rooms_mean.plot.bar()
+> > ~~~
+> > {: .language-python}
+> > ![png](../fig/barplot1.png)
+> {: .solution}
 {: .challenge}
 
-## Histograms
 
-We can plot histograms in a similar way, directly from pandas and also from Matplotlib
+## Boxplot
 
-The pandas way
+A boxplot provides a simple representation of a variety of statistical qualities of a single set of data values.
+A common use of the boxplot is to compare the statistical variations across a set of variables.
 
-~~~
-s = pd.Series(np.random.rand(20))
-# plot the bar chart
-s.plot(kind='hist')
-~~~
-{: .language-python}
-
-and the matplotlib way
+The variables can be an independent series or columns of a Dataframe using the Pandas plot method
 
 ~~~
-plt.hist(s)
-plt.show()
+df.boxplot(by ='village',column=['buildings_in_compound'])
 ~~~
-{: .language-python}
+{:.language-python}
 
-For the Histogram, each data point is allocated to 1 of 10 (by default) equal 'bins' of equal size (range of numbers) which are indicated along the x axis and the number of points (frequency) is shown on the y axis.
+We can make it look prettier with seaborn, much more easily than fixing components manually with Matplotlib.
+~~~
+import seaborn as sns
+sns.boxplot(data=df,x ='village',y='buildings_in_compound')
+~~~
+{:.language-python}
 
-In this case the graphs are almost identical. The only difference being in the first graph the y axis has a label 'Frequency' associated with it.
+![png](../fig/boxplot1.png)
 
-We can fix this with a call to the `ylabel` function
+We can make it look prettier with `seaborn`, much more easily than fixing components manually with `matplotlib`. [`Seaborn`](https://seaborn.pydata.org) is a Python data visualization library based on `matplotlib`. It provides a high-level interface for drawing attractive and informative statistical graphics. `Seaborn` comes with Anaconda; to make it available in our python session we need to import it.
 
 ~~~
-plt.ylabel('Frequency')
-plt.hist(s)
-plt.show()
+import seaborn as sns
+sns.boxplot(data = df, x = 'village', y = 'buildings_in_compound')
 ~~~
 {: .language-python}
 
-In general, most graphs can be broken down into a series of elements which, although typically related in some way, can all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
+![png](../fig/boxplot2.png)
 
-The labels (if any) on the x and y axis are independent of the data values being represented. The title and the legend are also independent objects within the overall graph.
+We can also draw linear models in a plot using `lmplot()` from `seaborn`, e.g. for `years_farm` vs `years_liv` per `village`.
 
-In matplotlib you create the graph by providing values for all of the individual components you choose to include. When you are ready, you call the `show` function.
+~~~
+sns.lmplot(x='years_farm', y='years_liv',data=df,hue='village')
+~~~
+{: .language-python}
+![png](../fig/lm1.png)
+
+In general, most graphs can be broken down into a series of elements which, although typically related in some way,
+can all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
+
+The labels (if any) on the x and y axis are independent of the data values being represented. The title and the legend
+are also independent objects within the overall graph.
+
+In Matplotlib you create the graph by providing values for all of the individual components you choose to include.
+When you are ready, you call the `show` function.
 
 Using this same approach, we can plot two sets of data on the same graph.
 
 We will use a scatter plot to demonstrate some of the available features.
 
-For a scatter plot we need two sets of data points one for the x values
-and the other for the y values.
+## Fine-tuning figures with Matplotlib
 
-## Scatter plot
+If we want to do more advanced or lower level things with our plots, we need to use Matplotlib directly,
+not through Pandas. First we need to import it.
 
-The scatter plot requires the x and y coordinates of each of the points being plotted.
-To provide this we will generate two series of random data one for the x coordinates and the other for the y coordinates
 
-We will generate two sets of points and plot them on the same graph.
+## Customising our plots with Matplotlib
 
-We will also add other common features like a title, a legend and labels on the x and y axis.
+We can further customise our plots with `matplotlib` directly. First we need to import it.
+The `matplotlib` library can be imported using any of the import techniques we have seen. As `pandas` is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib.pylab as plt` where `plt` is the alias.
 
 ~~~
 # Generate some date for 2 sets of points.
@@ -181,11 +233,11 @@ plt.show()
 {: .language-python}
 
 In the call to the `scatter` method, the `label` parameter values are used by the _legend_.
-The `c` or `color` parameter can be set to any color matplotlib recognises. Full details of the available colours are available in the [matplotlib](http://matplotlib.org/api/colors_api.html) website. The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also an `s` (size) parameter which allows you to change the size of the marker.
+The `c` or `color` parameter can be set to any color Matplotlib recognises. Full details of the available colours are available in the [Matplotlib](http://matplotlib.org/api/colors_api.html) website. The [markers](http://matplotlib.org/api/markers_api.html) section will tell you what markers you can use instead of the default 'dots'. There is also an `s` (size) parameter which allows you to change the size of the marker.
 
 > ## Exercise
 >
-> In the scatterplot the s parameter determines the size of the dots. s can be a simple numeric value, say s=100, which will produce dots all of the same size. However, you can pass a list of values (or a pandas Series) to provide sizes for the individual dots. This approach is very common as it allows us to provide an extra variable worth of information on the graph.
+> In the scatterplot the s parameter determines the size of the dots. s can be a simple numeric value, say s=100, which will produce dots all of the same size. However, you can pass a list of values (or a Pandas Series) to provide sizes for the individual dots. This approach is very common as it allows us to provide an extra variable worth of information on the graph.
 >
 > 1. Modify the code we used for the scatter plot to include a size value for each of the points in the series being plotted.
 > (The downside is that some of the smaller dots may be completely covered by the larger dots. To try and highlight when this has happened, we can change the opacity of the dots.)
@@ -221,77 +273,78 @@ The `c` or `color` parameter can be set to any color matplotlib recognises. Full
 > {: .solution}
 {: .challenge}
 
-## Boxplot
 
-A boxplot provides a simple representation of a variety of statistical qualities of a single set of data values.
+Internally the Pandas 'plot' method has called the 'bar' method of Matplotlib and provided a set of parameters, including the pandas.Series s to generate the graph.
 
-![box_plot](../fig/vis_boxplot_01.png)
+We can use Matplotlib directly to produce a similar graph. In this case we need to pass two parameters, the number of bars we need and the Pandas Series holding the values.
+
+Let's redo the boxplot we did above:
 
 ~~~
-x = pd.Series(np.random.standard_normal(256))
-
-# Show a boxplot of the data
-plt.boxplot(x)
-plt.show()
+df.boxplot(column = 'buildings_in_compound', by = 'village')
 ~~~
 {: .language-python}
 
-A common use of the boxplot is to compare the statistical variations across a set of variables.
+![png](../fig/boxplot1.png)
 
-The variables can be an independent series or columns of a Dataframe.
+The automatic title of the plot does not look good, we are missing a title for the y-axis and we do not need the extra x-axis title. We can also remove the gridlines. Let's fix these things using functions from `plt`. Note: all the adjustments for the plot have to go into the same notebook cell together with the plot statement itself.
 
 ~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE')) # creating a Dataframe directly with pandas
-plt.boxplot(df.A, labels = 'A')
-plt.show()
+df.boxplot(column = 'buildings_in_compound', by = 'village')
+plt.suptitle('') # remove the automatic title
+plt.title('Buildings in compounds per village')   # add a title
+plt.ylabel('Number of buildings')   # add a y-axis title
+plt.xlabel('')   # remove the x-axis title
+plt.grid(None)   # remove the grid lines
 ~~~
 {: .language-python}
+
+![png](../fig/boxplot3.png)
+
+In general most graphs can be broken down into a series of elements which, although typically related in some way, can all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
+The labels (if any) on the x and y axis are independent of the data values being represented. The title and the legend are also independent objects within the overall graph.
+In `matplotlib` you create the graph by providing values for all of the individual components you choose to include.
+
+## Saving a graph
+
+If you wish to save your graph as an image you can do so using the `plt.savefig()` function. The image can be saved as a pdf, jpg or png file by changing the file extension. `plt.savefig()` needs to be called at the end of all your plot statements in the same notebook cell.
+
+~~~
+df.boxplot(column = 'buildings_in_compound', by = 'village')
+plt.suptitle('') # remove the automatic title
+plt.title('Buildings in compounds per village')   # add a title
+plt.ylabel('Number of buildings')   # add a y-axis title
+plt.xlabel('')   # remove the x-axis title
+plt.grid(None)   # remove the grid lines
+plt.savefig('safi_boxplot_buildings.pdf')   # save as pdf file
+plt.savefig('safi_boxplot_buildings.png', dpi = 150)  # save as png file, some extra arguments are provided
+~~~
+{: .language-python}
+
+In general most graphs can be broken down into a series of elements which, although typically related in some way, can
+all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
+
+The labels (if any) on the x and y axis are independent of the data values being represented.
+The title and the legend are also independent objects within the overall graph.
+
+In Matplotlib you create the graph by providing values for all of the individual components you choose to
+include. When you are ready, you call the `show` function.
+
+Using this same approach we can plot two sets of data on the same graph. We will use a scatter plot to
+demonstrate some of the available features.
 
 > ## Exercise
 >
-> Can you change the code above so that columns `A` , `C` and `D` are all displayed on the same graph?
+> Revisit your favorite plot we've made so far, or make one with your own data then:
 >
-> > ## Solution
-> >
-> > ~~~
-> > df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-> > plt.boxplot([df.A, df.C, df.D], labels = ['A', 'C', 'D'])
-> > plt.show()
-> > ~~~
-> > {: .language-python}
-> {: .solution}
+> 1. add axes labels
+> 2. add a title
+> 3. add a legend
+> 4. save it in two different formats
+>
+> extension: try plotting by wall and roof type!
+>
 {: .challenge}
-
-The boxplot function cannot accept a whole Dataframe. The code
-
-~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-plt.boxplot(df)
-plt.show()
-~~~
-{: .language-python}
-
-will fail. However, we can use the pandas plot method.
-
-~~~,
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-df.plot(kind = 'box', return_type='axes') # the return_type='axes' is only needed for forward compatibility
-~~~
-{: .language-python}
-
-We can add a title to the above by adding the `title` parameter. However there are no parameters for adding the axis labels.
-To add labels, we can use matplotlib directly.
-
-~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-df.plot(kind = 'box', return_type='axes')
-
-plt.title('Box Plot')
-plt.xlabel('xlabel')
-plt.ylabel('ylabel')
-plt.show()
-~~~
-{: .language-python}
 
 ## Saving a graph
 
@@ -304,7 +357,12 @@ df.plot(kind = 'box', return_type='axes')
 plt.title('Box Plot')
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
-#plt.show()
+
 plt.savefig('boxplot_from_df.pdf')
 ~~~
 {: .language-python}
+
+[matplotlib-web]: http://matplotlib.org/
+[pandas-web]: http://pandas.pydata.org/
+[ggplot2-web]: http://ggplot2.tidyverse.org/
+[seaborn-web]: https://seaborn.pydata.org/
