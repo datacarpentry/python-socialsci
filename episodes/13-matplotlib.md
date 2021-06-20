@@ -24,7 +24,7 @@ it is fully controllable down to basic elements and includes a module `pylab` th
 (designed to feel like MATLAB plotting, if you happen to have done that before).
 
 The Matplotlib library can be imported using any of the import techniques we have seen. As Pandas is generally imported
-with `import Pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
+with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a
 graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.
@@ -37,12 +37,6 @@ and advanced plot types.  One of its most useful features is formatting.
 
 The `pandas` library contains very tight integration with `matplotlib`. There are functions in `pandas` that
 automatically call `matplotlib` functions to produce graphs.
-
-Other graphical libraries available from within Python are for example `plotnine` (a ggplot2 realisation for python)
-and `seaborn`. [Seaborn](https://seaborn.pydata.org) has some very powerful features and advanced plot types.
-One of its most useful features is formatting.
-
-## Plotting with Pandas
 
 To plot with `pandas` we have to import it as we have done in past episodes.
 To tell Jupyter that when we produce a graph we want it to be displayed in a cell in the notebook just like any other results,
