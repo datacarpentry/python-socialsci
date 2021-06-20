@@ -340,22 +340,6 @@ demonstrate some of the available features.
 >
 {: .challenge}
 
-## Saving a graph
-
-If you wish to save your graph as an image you can do so using the `savefig()` function. The image can be saved as a pdf, jpg or png file by changing the file extension.
-
-~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-df.plot(kind = 'box', return_type='axes')
-
-plt.title('Box Plot')
-plt.xlabel('xlabel')
-plt.ylabel('ylabel')
-
-plt.savefig('boxplot_from_df.pdf')
-~~~
-{: .language-python}
-
 [matplotlib-web]: http://matplotlib.org/
 [pandas-web]: http://pandas.pydata.org/
 [ggplot2-web]: http://ggplot2.tidyverse.org/
