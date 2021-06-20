@@ -50,8 +50,12 @@ import pandas as pd
 
 We also need data to work with loaded into a DataFrame and it's helpful to look at a few rows to remember what's there.
 
+We are going to use the dataset from the setup page, `SAFI_full_shortname.csv`. For the data to load, __make sure to
+have that file in the same folder where your Jupyter notebook is running.__ If the file is not in that folder, you
+are going to have to type the full path.
+
 ~~~
-df = pd.read_csv("data/SAFI_full_shortname.csv")
+df = pd.read_csv("SAFI_full_shortname.csv")
 df.head()
 ~~~
 {: .language-python}
