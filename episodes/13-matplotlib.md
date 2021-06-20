@@ -206,8 +206,13 @@ We can further customise our plots with Matplotlib directly. First we need to im
 The Matplotlib library can be imported using any of the import techniques we have seen.
 As Pandas is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported
 with `import matplotlib.pyplot as plt` where `plt` is the alias.
+For demonstration purposes, we are going to use randomly generated data, using the NumPy library (aliased here as `np`).
 
 ~~~
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 # Generate some date for 2 sets of points.
 x1 = pd.Series(np.random.rand(20) - 0.5)
 y1 = pd.Series(np.random.rand(20) - 0.5)
