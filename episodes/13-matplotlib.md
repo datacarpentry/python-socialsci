@@ -24,7 +24,7 @@ it is fully controllable down to basic elements and includes a module `pylab` th
 (designed to feel like MATLAB plotting, if you happen to have done that before).
 
 The Matplotlib library can be imported using any of the import techniques we have seen. As Pandas is generally imported
-with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
+with `import pandas as pd`, you will find that Matplotlib is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a
 graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.
@@ -35,10 +35,10 @@ and advanced plot types.  One of its most useful features is formatting.
 
 ## Plotting with Pandas
 
-The `pandas` library contains very tight integration with `matplotlib`. There are functions in `pandas` that
-automatically call `matplotlib` functions to produce graphs.
+The Pandas library contains very tight integration with Matplotlib. There are functions in Pandas that
+automatically call Matplotlib functions to produce graphs.
 
-To plot with `pandas` we have to import it as we have done in past episodes.
+To plot with Pandas we have to import it as we have done in past episodes.
 To tell Jupyter that when we produce a graph we want it to be displayed in a cell in the notebook just like any other results,
 we use the `%matplotlib inline` directive. Without that we need to do a `show()` command.
 
@@ -160,7 +160,10 @@ sns.boxplot(data=df,x ='village',y='buildings_in_compound')
 
 ![png](../fig/boxplot1.png)
 
-We can make it look prettier with `seaborn`, much more easily than fixing components manually with `matplotlib`. [`Seaborn`](https://seaborn.pydata.org) is a Python data visualization library based on `matplotlib`. It provides a high-level interface for drawing attractive and informative statistical graphics. `Seaborn` comes with Anaconda; to make it available in our python session we need to import it.
+We can make it look prettier with Seaborn, much more easily than fixing components manually with Matplotlib.
+[Seaborn](https://seaborn.pydata.org) is a Python data visualization library based on Matplotlib.
+It provides a high-level interface for drawing attractive and informative statistical graphics.
+Seaborn comes with Anaconda; to make it available in our Python session we need to import it.
 
 ~~~
 import seaborn as sns
@@ -199,8 +202,10 @@ not through Pandas. First we need to import it.
 
 ## Customising our plots with Matplotlib
 
-We can further customise our plots with `matplotlib` directly. First we need to import it.
-The `matplotlib` library can be imported using any of the import techniques we have seen. As `pandas` is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib.pylab as plt` where `plt` is the alias.
+We can further customise our plots with Matplotlib directly. First we need to import it.
+The Matplotlib library can be imported using any of the import techniques we have seen.
+As Pandas is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported
+with `import matplotlib.pyplot as plt` where `plt` is the alias.
 
 ~~~
 # Generate some date for 2 sets of points.
