@@ -18,6 +18,8 @@ title: Setup
 > - [SN7577i_bb.csv](/data/SN7577i_bb.csv)
 > - [SN7577i_c.csv](/data/SN7577i_c.csv)
 > - [SN7577i_d.csv](/data/SN7577i_d.csv)
+> - [SN7577.sqlite](/data/SN7577.sqlite)
+> - [Newspapers.csv](/data/Newspapers.csv)
 {: .prereq}
 
 > ## Software
