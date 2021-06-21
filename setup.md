@@ -7,6 +7,7 @@ title: Setup
 >
 > We will use the files listed below for the data in this lesson. You can download the files by clicking on the links.
 >
+> __Note: make sure to place the data files on the same folder that your notebook is running on.__
 > - [SAFI_clean.csv](/data/SAFI_clean.csv)
 > - [SAFI_results.csv](/data/SAFI_results.csv)
 > - [SAFI\_full\_shortname.csv](/data/SAFI_full_shortname.csv)
