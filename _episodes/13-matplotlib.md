@@ -24,7 +24,7 @@ it is fully controllable down to basic elements and includes a module `pylab` th
 (designed to feel like MATLAB plotting, if you happen to have done that before).
 
 The Matplotlib library can be imported using any of the import techniques we have seen. As Pandas is generally imported
-with `import Pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
+with `import pandas as pd`, you will find that Matplotlib is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a
 graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.
@@ -35,16 +35,10 @@ and advanced plot types.  One of its most useful features is formatting.
 
 ## Plotting with Pandas
 
-The `pandas` library contains very tight integration with `matplotlib`. There are functions in `pandas` that
-automatically call `matplotlib` functions to produce graphs.
+The Pandas library contains very tight integration with Matplotlib. There are functions in Pandas that
+automatically call Matplotlib functions to produce graphs.
 
-Other graphical libraries available from within Python are for example `plotnine` (a ggplot2 realisation for python)
-and `seaborn`. [Seaborn](https://seaborn.pydata.org) has some very powerful features and advanced plot types.
-One of its most useful features is formatting.
-
-## Plotting with Pandas
-
-To plot with `pandas` we have to import it as we have done in past episodes.
+To plot with Pandas we have to import it as we have done in past episodes.
 To tell Jupyter that when we produce a graph we want it to be displayed in a cell in the notebook just like any other results,
 we use the `%matplotlib inline` directive. Without that we need to do a `show()` command.
 
@@ -56,8 +50,12 @@ import pandas as pd
 
 We also need data to work with loaded into a DataFrame and it's helpful to look at a few rows to remember what's there.
 
+We are going to use the dataset from the setup page, `SAFI_full_shortname.csv`. For the data to load, __make sure to
+have that file in the same folder where your Jupyter notebook is running.__ If the file is not in that folder, you
+are going to have to type the full path.
+
 ~~~
-df = pd.read_csv("data/SAFI_full_shortname.csv")
+df = pd.read_csv("SAFI_full_shortname.csv")
 df.head()
 ~~~
 {: .language-python}
@@ -166,7 +164,10 @@ sns.boxplot(data=df,x ='village',y='buildings_in_compound')
 
 ![png](../fig/boxplot1.png)
 
-We can make it look prettier with `seaborn`, much more easily than fixing components manually with `matplotlib`. [`Seaborn`](https://seaborn.pydata.org) is a Python data visualization library based on `matplotlib`. It provides a high-level interface for drawing attractive and informative statistical graphics. `Seaborn` comes with Anaconda; to make it available in our python session we need to import it.
+We can make it look prettier with Seaborn, much more easily than fixing components manually with Matplotlib.
+[Seaborn](https://seaborn.pydata.org) is a Python data visualization library based on Matplotlib.
+It provides a high-level interface for drawing attractive and informative statistical graphics.
+Seaborn comes with Anaconda; to make it available in our Python session we need to import it.
 
 ~~~
 import seaborn as sns
@@ -205,10 +206,17 @@ not through Pandas. First we need to import it.
 
 ## Customising our plots with Matplotlib
 
-We can further customise our plots with `matplotlib` directly. First we need to import it.
-The `matplotlib` library can be imported using any of the import techniques we have seen. As `pandas` is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported with `import matplotlib.pylab as plt` where `plt` is the alias.
+We can further customise our plots with Matplotlib directly. First we need to import it.
+The Matplotlib library can be imported using any of the import techniques we have seen.
+As Pandas is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported
+with `import matplotlib.pyplot as plt` where `plt` is the alias.
+For demonstration purposes, we are going to use randomly generated data, using the NumPy library (aliased here as `np`).
 
 ~~~
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 # Generate some date for 2 sets of points.
 x1 = pd.Series(np.random.rand(20) - 0.5)
 y1 = pd.Series(np.random.rand(20) - 0.5)
@@ -345,22 +353,6 @@ demonstrate some of the available features.
 > extension: try plotting by wall and roof type!
 >
 {: .challenge}
-
-## Saving a graph
-
-If you wish to save your graph as an image you can do so using the `savefig()` function. The image can be saved as a pdf, jpg or png file by changing the file extension.
-
-~~~
-df = pd.DataFrame(np.random.normal(size=(100,5)), columns=list('ABCDE'))
-df.plot(kind = 'box', return_type='axes')
-
-plt.title('Box Plot')
-plt.xlabel('xlabel')
-plt.ylabel('ylabel')
-
-plt.savefig('boxplot_from_df.pdf')
-~~~
-{: .language-python}
 
 [matplotlib-web]: http://matplotlib.org/
 [pandas-web]: http://pandas.pydata.org/
