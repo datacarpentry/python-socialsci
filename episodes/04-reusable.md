@@ -98,28 +98,90 @@ print(get_item_count(items_str = items_owned, sep=';'))
 ~~~
 {: .output}
 
-> ## Exercise
+> ## Volume of a cube
 >
-> 1. Write a function definition to calculate the volume of a cuboid. The function will use three parameters `H`, `W` and `L` and return the volume.
+> 1. Write a function definition to calculate the volume of a cuboid. The function will use three parameters `h`, `w`
+> and `l` and return the volume.
 >
 > 2. Supposing that in addition to the volume I also wanted to calculate the surface area and the sum of all of the edges. Would I (or should I) have three separate functions or could I write a single function to provide all three values together?
 >
 > > ## Solution
+> > - A function to calculate the volume of a cuboid could be:
+> > 
+> > ~~~
+> > def calculate_vol_cuboid(h, w, l):
+> >     """
+> >     Calculates the volume of a cuboid.
+> >     Takes in h, w, l, that represent height, width, and length of the cube.
+> >     Returns the volume.
+> >     """
+> >     volume = h * w * l
+> >     return volume
+> > ~~~
+> > {: .language-python}
+> > - It depends. As a rule-of-thumb, we want our function to __do one thing and one thing only, and to do it well.__
+> > If we always have to calculate these three pieces of information, the 'one thing' could be
+> > 'calculate the volume, surface area, and sum of all edges of a cube'. Our function would look like this:
 > >
 > > ~~~
-> > def cuboid(H,W,L):
-> >     vol = H*W*L
-> >     sa = 2*(H*W + H*L + L*W)
-> >     edges = 4*(H + W + L)
-> >     return vol, sa, edges
-> >
-> > volume, surface_area, length_of_edges = cuboid(2,3,4)
-> > print("Volume = ", volume, " Surface_area = ", surface_area, " Sum of edges = ", length_of_edges)
+> > # Method 1 - single function
+> > def calculate_cuboid(h, w, l):
+> >     """
+> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> > 
+> >     Returns the volume, surface area, and sum of edges of the cuboid.
+> >     """
+> >     volume = h * w * l
+> >     surface_area = 2 * (h * w + h * l + l * w)
+> >     edges = 4 * (h + w + l)
+> >     return volume, surface_area, edges
 > > ~~~
 > > {: .language-python}
 > >
-> > The cuboid function above returns all three values from a single call. This means that you need three variables in which to place the 3 returned values. If you do not provide three variables, you will get an error.
-> > Unless you are always going to use the 3 values, it would probably be better in this case to use distinct functions for these three cases.
+> > It may be better, however, to break down our function into separate ones - one for each piece of information we are
+> > calculating. Our functions would look like this:
+> > ~~~
+> > # Method 2 - separate functions
+> > def calc_volume_of_cuboid(h, w, l):
+> >     """
+> >     Calculates the volume of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     """
+> >     volume = h * w * l
+> >     return volume
+> > 
+> > 
+> > def calc_surface_area_of_cuboid(h, w, l):
+> >     """
+> >     Calculates the surface area of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     """   
+> >     surface_area = 2 * (h * w + h * l + l * w)
+> >     return surface_area
+> > 
+> > 
+> > def calc_sum_of_edges_of_cuboid(h, w, l):
+> >     """
+> >     Calculates the sum of edges of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     """   
+> >     sum_of_edges = 4 * (h + w + l)
+> >     return sum_of_edges
+> > ~~~
+> > {: .language-python}
+> > 
+> > We could then rewrite our first solution:
+> > ~~~
+> > def calculate_cuboid(h, w, l):
+> >     """
+> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> > 
+> >     Returns the volume, surface area, and sum of edges of the cuboid.
+> >     """
+> >     volume = calc_volume_of_cuboid(h, w, l)
+> >     surface_area = calc_surface_area_of_cuboid(h, w, l)
+> >     edges = calc_sum_of_edges_of_cuboid(h, w, l)
+> > 
+> >     return volume, surface_area, edges
+> > ~~~
+> > {: .language-python}
 > >
 > {: .solution}
 {: .challenge}
