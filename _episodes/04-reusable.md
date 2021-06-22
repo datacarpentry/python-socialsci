@@ -139,9 +139,9 @@ We need to go through a 2-step process before we can use them in our own program
 Step 1.  use the `pip` command from the commandline. `pip` is installed as part of the Python install and is used to fetch the package from the Internet and install it in your Python configuration.
 
 ~~~
-> pip install <package name>
-{: .bash}
+$ pip install <package name>
 ~~~
+{: .language-bash}
 
 pip stands for Python install package and is a commandline function. Because we are using the Anaconda distribution of Python, all of the packages that we will be using in this lesson are already installed for us, so we can move straight on to step 2.
 
