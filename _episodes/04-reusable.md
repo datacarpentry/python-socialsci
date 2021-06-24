@@ -109,13 +109,13 @@ print(get_item_count(items_str = items_owned, sep=';'))
 > > - A function to calculate the volume of a cuboid could be:
 > > 
 > > ~~~
-> > def calculate_vol_cuboid(h, w, l):
+> > def calculate_vol_cuboid(h, w, len):
 > >     """
 > >     Calculates the volume of a cuboid.
-> >     Takes in h, w, l, that represent height, width, and length of the cube.
+> >     Takes in h, w, len, that represent height, width, and length of the cube.
 > >     Returns the volume.
 > >     """
-> >     volume = h * w * l
+> >     volume = h * w * len
 > >     return volume
 > > ~~~
 > > {: .language-python}
@@ -125,15 +125,15 @@ print(get_item_count(items_str = items_owned, sep=';'))
 > >
 > > ~~~
 > > # Method 1 - single function
-> > def calculate_cuboid(h, w, l):
+> > def calculate_cuboid(h, w, len):
 > >     """
-> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).
 > > 
 > >     Returns the volume, surface area, and sum of edges of the cuboid.
 > >     """
-> >     volume = h * w * l
-> >     surface_area = 2 * (h * w + h * l + l * w)
-> >     edges = 4 * (h + w + l)
+> >     volume = h * w * len
+> >     surface_area = 2 * (h * w + h * len + len * w)
+> >     edges = 4 * (h + w + len)
 > >     return volume, surface_area, edges
 > > ~~~
 > > {: .language-python}
@@ -142,42 +142,42 @@ print(get_item_count(items_str = items_owned, sep=';'))
 > > calculating. Our functions would look like this:
 > > ~~~
 > > # Method 2 - separate functions
-> > def calc_volume_of_cuboid(h, w, l):
+> > def calc_volume_of_cuboid(h, w, len):
 > >     """
-> >     Calculates the volume of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     Calculates the volume of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).
 > >     """
-> >     volume = h * w * l
+> >     volume = h * w * len
 > >     return volume
 > > 
 > > 
-> > def calc_surface_area_of_cuboid(h, w, l):
+> > def calc_surface_area_of_cuboid(h, w, len):
 > >     """
-> >     Calculates the surface area of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     Calculates the surface area of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).
 > >     """   
-> >     surface_area = 2 * (h * w + h * l + l * w)
+> >     surface_area = 2 * (h * w + h * len + len * w)
 > >     return surface_area
 > > 
 > > 
-> > def calc_sum_of_edges_of_cuboid(h, w, l):
+> > def calc_sum_of_edges_of_cuboid(h, w, len):
 > >     """
-> >     Calculates the sum of edges of a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     Calculates the sum of edges of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).
 > >     """   
-> >     sum_of_edges = 4 * (h + w + l)
+> >     sum_of_edges = 4 * (h + w + len)
 > >     return sum_of_edges
 > > ~~~
 > > {: .language-python}
 > > 
 > > We could then rewrite our first solution:
 > > ~~~
-> > def calculate_cuboid(h, w, l):
+> > def calculate_cuboid(h, w, len):
 > >     """
-> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and l(ength).
+> >     Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).
 > > 
 > >     Returns the volume, surface area, and sum of edges of the cuboid.
 > >     """
-> >     volume = calc_volume_of_cuboid(h, w, l)
-> >     surface_area = calc_surface_area_of_cuboid(h, w, l)
-> >     edges = calc_sum_of_edges_of_cuboid(h, w, l)
+> >     volume = calc_volume_of_cuboid(h, w, len)
+> >     surface_area = calc_surface_area_of_cuboid(h, w, len)
+> >     edges = calc_sum_of_edges_of_cuboid(h, w, len)
 > > 
 > >     return volume, surface_area, edges
 > > ~~~
