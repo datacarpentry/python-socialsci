@@ -82,12 +82,17 @@ df_all_rows
 ~~~
 {: .language-python}
 
-We didn't explicitly set an index for any of the Dataframes we have used. For `df_SN7577i_a` and `df_SN7577i_b` default indexes would have been created by pandas. When we concatenated the Dataframes the indexes were also concatenated resulting in duplicate entries.
+We didn't explicitly set an index for any of the Dataframes we have used. For `df_SN7577i_a` and `df_SN7577i_b` default
+indexes would have been created by pandas. When we concatenated the Dataframes the indexes were also concatenated resulting in duplicate entries.
 
 This is really only a problem if you need to access a row by its index. We can fix the problem with the following code.
 
 ~~~
 df_all_rows=df_all_rows.reset_index(drop=True)
+
+# or, alternatively, there's the `ignore_index` option in the `pd.concat()` function:
+df_all_rows = pd.concat([df_SN7577i_a, df_SN7577i_b], ignore_index=True)
+
 df_all_rows
 ~~~
 {: .language-python}
@@ -102,7 +107,9 @@ df_all_rows
 ~~~
 {: .language-python}
 
-In this case `df_SN7577i_aa` has no Q4 column and `df_SN7577i_bb` has no `Q3` column. When they are concatenated, the resulting Dataframe has a column for `Q3` and `Q4`. For the rows corresponding to `df_SN7577i_aa` the values in the `Q4` column are missing and denoted by `NaN`. The same applies to `Q3` for the `df_SN7577i_bb` rows.
+In this case `df_SN7577i_aa` has no Q4 column and `df_SN7577i_bb` has no `Q3` column. When they are concatenated, the
+resulting Dataframe has a column for `Q3` and `Q4`. For the rows corresponding to `df_SN7577i_aa` the values in the `Q4`
+column are missing and denoted by `NaN`. The same applies to `Q3` for the `df_SN7577i_bb` rows.
 
 
 ### Scenario 2 - Adding the columns from one Dataframe to those of another Dataframe
@@ -115,7 +122,9 @@ df_all_cols
 ~~~
 {: .language-python}
 
-We use the `axis=1` parameter to indicate that it is the columns that need to be joined together. Notice that the `Id` column appears twice, because it was a column in each dataset. This is not particularly desirable, but also not necessarily a problem. However, there are better ways of combining columns from two Dataframes which avoid this problem.
+We use the `axis=1` parameter to indicate that it is the columns that need to be joined together. Notice that the `Id`
+column appears twice, because it was a column in each dataset. This is not particularly desirable, but also not
+necessarily a problem. However, there are better ways of combining columns from two Dataframes which avoid this problem.
 
 ### Scenario 3 - Using merge to join columns
 
@@ -123,7 +132,8 @@ We can join columns from two Dataframes using the `merge()` function. This is si
 
 A detailed discussion of different join types is given in the [SQL lesson](./episodes/sql...).
 
-You specify the type of join you want using the `how` parameter. The default is the `inner` join which returns the columns from both tables where the `key` or common column values match in both Dataframes.
+You specify the type of join you want using the `how` parameter. The default is the `inner` join which returns the
+columns from both tables where the `key` or common column values match in both Dataframes.
 
 The possible values of the `how` parameter are shown in the picture below (taken from the Pandas documentation)
 
@@ -140,16 +150,19 @@ df_cd
 ~~~
 {: .language-python}
 
-In fact, if there is only one column with the same name in each Dataframe, it will be assumed to be the one you want to join on. In this example the `Id` column
+In fact, if there is only one column with the same name in each Dataframe, it will be assumed to be the one you want to
+join on. In this example the `Id` column
 
-Leaving the join column to default in this way is not best practice. It is better to explicitly name the column using the `on` parameter.
+Leaving the join column to default in this way is not best practice. It is better to explicitly name the column using
+the `on` parameter.
 
 ~~~
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', on = 'Id')
 ~~~
 {: .language-python}
 
-In many circumstances, the column names that you wish to join on are not the same in both Dataframes, in which case you can use the `left_on` and `right_on` parameters to specify them separately.
+In many circumstances, the column names that you wish to join on are not the same in both Dataframes, in which case you
+can use the `left_on` and `right_on` parameters to specify them separately.
 
 ~~~
 df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_on = 'Id')
