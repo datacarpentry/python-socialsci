@@ -170,7 +170,7 @@ df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_
 {: .language-python}
 
 
-> ## Exercises
+> ## Practice with data
 >
 > 1. Examine the contents of the `SN7577i_aa` and `SN7577i_bb` csv files using Excel or equivalent.
 > 2. Using the `SN7577i_aa` and `SN7577i_bb` csv files, create a Dataframe which is the result of an outer join using the `Id` column to join on.
