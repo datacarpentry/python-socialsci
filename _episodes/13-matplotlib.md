@@ -155,13 +155,6 @@ df.boxplot(by ='village',column=['buildings_in_compound'])
 ~~~
 {:.language-python}
 
-We can make it look prettier with seaborn, much more easily than fixing components manually with Matplotlib.
-~~~
-import seaborn as sns
-sns.boxplot(data=df,x ='village',y='buildings_in_compound')
-~~~
-{:.language-python}
-
 ![png](../fig/boxplot1.png)
 
 We can make it look prettier with Seaborn, much more easily than fixing components manually with Matplotlib.
