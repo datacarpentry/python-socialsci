@@ -6,6 +6,7 @@ questions:
 - 'How can I extract specific rows and columns from a Dataframe?'
 - 'How can I add or delete columns from a Dataframe?'
 - 'How can I find and change missing values in a Dataframe?'
+ 
 objectives:
 - 'Define indexing as it relates to data structures'
 - 'Select specific columns from a data frame'
@@ -14,9 +15,12 @@ objectives:
 - 'Copy a data frame'
 - 'Add columns to a data frame'
 - 'Analyse datasets having missing/null values'
-keypoints:
-- 'First key point.'
 
+keypoints:
+- 'Import specific columns when reading in a .csv with the `usecols` parameter'
+- 'We easily can chain boolean conditions when filtering rows of a pandas dataframe'
+- 'The `loc` and `iloc` methods allow us to get rows with particular labels and at particular integer locations respectively'
+- 'pandas has a handy `sample` method which allows us to extract a sample of rows from a dataframe'
 ---
 
 We will continue this episode from where we left off in the last episode. If you have restarted Jupyter or you want to use a new notebook make sure that you import pandas and have read the SN7577.tab dataset into a Dataframe.
