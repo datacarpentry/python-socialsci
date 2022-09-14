@@ -67,7 +67,7 @@ df['years_liv'].hist()
 ~~~
 {: .language-python}
 
-![png](../fig/histogram1.png)
+![Histogram of years lived spotlighting how to plot a variable with Pandas](../fig/histogram1.png)
 
 
 We can change the number of bins to make it look how we would like, for example
@@ -88,7 +88,7 @@ df.hist(column='years_liv',by='village',layout=(1,3),figsize=(12,3),sharex=True)
 ~~~
 {: .language-python}
 
-![png](../fig/histogram3.png)
+![Three separate histograms depicting the number of years lived by village; Chirodzo, God, Ruaca](../fig/histogram3.png)
 
 
 ## Scatter plot
@@ -176,7 +176,7 @@ We can also draw linear models in a plot using `lmplot()` from `seaborn`, e.g. f
 sns.lmplot(x='years_farm', y='years_liv',data=df,hue='village')
 ~~~
 {: .language-python}
-![png](../fig/lm1.png)
+![Plot showing years lived and years farmed by village to spotlight the use of linear models](../fig/lm1.png)
 
 In general, most graphs can be broken down into a series of elements which, although typically related in some way,
 can all exist independently of each other. This allows us to create the graph in a rather piecemeal fashion.
