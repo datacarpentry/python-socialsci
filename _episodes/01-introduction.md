@@ -19,13 +19,13 @@ maintained together and shared"
 
 ## Introducing the Python programming language
 
-Python is a general purpose programming language. It is an interpreted language,
+Python is a general-purpose programming language. It is an interpreted language,
 which makes it suitable for rapid development and prototyping of programming segments or complete 
 small programs.
 
 Python's main advantages:
 
-* Open source software, supported by [Python Software
+* Open-source software, supported by [Python Software
   Foundation](https://www.python.org/psf/)
 * Available on all major platforms (Windows, macOS, Linux)
 * It is a good language for new programmers to learn due to its straightforward,
@@ -41,11 +41,11 @@ before running it. It is the machine code which is executed and produces
 results. In a language like C++ your code is translated into machine code and
 stored in a separate file, in a process referred to as **compiling** the code.
 You then execute the machine code from the file as a separate step. This is
-efficient if you intend to run the same machine code many times as you only have
-to compile it once and it is very fast to run the compiled machine code.
+efficient if you intend to run the same machine code many times as you only 
+compile it once and it is very fast to run the compiled machine code.
 
 On the other hand, if you are experimenting, then your
-code will change often and you would have to compile it again every time before
+code will change often, and you would have to compile it again every time before
 the machine can execute it. This is where **interpreted** languages have the
 advantage. You don't need a complete compiled program to "run" what has been
 written so far and see the results. This rapid prototyping is helped further by
@@ -88,7 +88,7 @@ be using **Jupyter notebooks**, which allows us to easily take notes about
 our analysis and view plots within the same document where we code. This
 facilitates sharing and reproducibility of analyses, and the notebook interface
 is easily accessible through any web browser. Jupyter notebooks are started
-from the terminal using
+from the terminal using the following command:
 
 ~~~
 $ jupyter notebook
@@ -124,8 +124,8 @@ cell (`In [ ]:`) is created for you automatically.
 ![Jupyter_notebook_cell](../fig/Python_jupyter_8.png)
 
 When a cell is run, it is given a number along with the corresponding output
-cell. If you have a notebook with many cells in it you can run the cells in any
-order and also run the same cell many times. The number on the left hand side of
+cell. If you have a notebook with many cells in it, you can run the cells in any
+order and also run the same cell many times. The number on the left-hand side of
 the input cells increments, so you can always tell the order in which they were
 run. For example, a cell marked `In [5]:` was the fifth cell run in the sequence.
 
