@@ -288,7 +288,7 @@ changes it to green).  If we define `sum = 0` now we can't use the function `sum
 > > 1. Because i is incremented before the sum, you are summing from 1 to 11.
 > > 2. The Boolean value is set to False, therefore the loop will never be executed.
 > > 3. When i equals to 10 the expression is set to False and the loop stops being executed. At this point, we have only summed from 1 to 9.
-> > 4. Because you cannot guarantee the internal representation of a Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it by using <kbd>Ctrl</kbd>+<kbd>c</kbd> in a terminal windown or going to the kernel menu of a notebook and choosing interrupt.
+> > 4. Because you cannot guarantee the internal representation of a Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it by using <kbd>Ctrl</kbd>+<kbd>c</kbd> in a terminal window or going to the kernel menu of a notebook and choosing interrupt.
 > {: .solution}
 {: .challenge}
 
