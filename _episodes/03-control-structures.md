@@ -22,18 +22,18 @@ keypoints:
 
 Most programs do not work by executing a simple sequential set of statements. The code is constructed so that decisions and different paths through the program can be taken based on changes in variable values.
 
-To make this possible all programming language have a set of control structures which allow this to happen.
+To make this possible all programming languages have a set of control structures which allow this to happen.
 
-In this episode we are going to look at how we can create loops and branches in our Python code.
-Specifically we will look at three control structures, namely:
+In this episode we are going to look at how we can create loops and branches in our Python code to control how our program is executed.
+Specifically, we will look at three control structures, namely:
 
 * if..else..
 * while...
 * for ...
 
-## The `if` statement and variants
+## The `if` statement and its variants
 
-The simple `if` statement allows the program to branch based on the evaluation of an expression
+The `if` statement allows the program to branch based on the evaluation of a comparison (`>, >=, <, <=, !=, ==`) or logical (`and, or, not`) expression.
 
 The basic format of the `if` statement is:
 
@@ -48,7 +48,7 @@ statement always executed
 ~~~
 {: .language-python}
 
-If the expression evaluates to `True` then the statements 1 to n will be executed followed by `statement always executed` . If the expression is `False`, only `statement always executed` is executed. Python knows which lines of code are related to the `if` statement by the indentation, no extra syntax is necessary.
+If the expression evaluates to `True`, the statements 1 to n will be executed followed by `statement always executed`. If the expression evaluates to `False`, only `statement always executed` is executed. Python knows which lines of code are related to the `if` statement by the indentation, no extra syntax is necessary.
 
 Below are some examples:
 
@@ -189,7 +189,7 @@ The overall structure is similar to the `if ... else` statement. There are three
 
 The while loop is used to repeatedly execute lines of code until some condition becomes False.
 
-For the loop to terminate, there has to be something in the code which will potentially change the condition.
+For the loop to terminate, there has to be something in the code which will potentially changes the condition.
 
 ~~~
 # while loop
@@ -211,18 +211,18 @@ The sum of the numbers from 1 to 10 is 55
 
 Points to note:
 
-1.	The condition clause (i <= n) in the while statement can be anything which when evaluated would return a Boolean value of either True of False. Initially i has been set to 1 (before the start of the loop) and therefore the condition is `True`.
-2.	The clause can be made more complex by use of parentheses and `and` and `or`  operators amongst others
+1.	The condition clause (i <= n) in the while statement can be anything which when evaluated returns a Boolean value (either True of False). Initially, i has been set to 1 (before the start of the loop) and therefore its condition is `True`.
+2.	The clause can be made more complex by adding more conditions thorugh the use of `and` or `or` logic operators, amongst others.
 3.	The statements after the while clause are only executed if the condition evaluates as True.
-4.	Within the statements after the while clause there should be something which potentially will make the condition evaluate as `False` next time around. If not the loop will never end.
-5.  In this case the last statement in the loop changes the value of i which is part of the condition clause, so hopefully the loop will end.
+4.	Within the statements following while clause there should be something which potentially will make the condition evaluate as `False` next time around. If not, the loop will never end.
+5.  In this example, the last statement in the loop changes the value of the variable `i` which is part of the condition clause. This statement prevents the while statement running indefinitely.
 6. We called our variable `cur_sum` and not `sum` because `sum` is a builtin function (try typing it in, notice the editor
 changes it to green).  If we define `sum = 0` now we can't use the function `sum` in this Python session.
 
 > ## Exercise - Things that can go wrong with while loops
 >
-> In the examples below, without running them try to decide why we will not get the required answer.
-> Run each, one at a time, and then correct them. Remember that when the input next to a notebook cell
+> In the examples below, try to decide if we will get, or not, the required answer without running them.
+> Then, run each one at a time, and correct them. Remember that when the input next to a notebook cell
 > is [*] your Python interpreter is still working.
 >
 > ~~~
@@ -285,10 +285,10 @@ changes it to green).  If we define `sum = 0` now we can't use the function `sum
 >
 > > ## Solution
 > >
-> > 1. Because i is incremented before the sum, you are summing 1 to 11.
-> > 2. The Boolean value is set to False the loop will never be executed.
-> > 3. When i does equal 10 the expression is False and the loop does not execute so we have only summed 1 to 9
-> > 4. Because you cannot guarantee the internal representation of Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it using <kbd>Ctrl</kbd>+<kbd>c</kbd> in a terminal or going to the kernel menu of a notebook and choosing interrupt.
+> > 1. Because i is incremented before the sum, you are summing from 1 to 11.
+> > 2. The Boolean value is set to False, therefore the loop will never be executed.
+> > 3. When i equals to 10 the expression is set to False and the loop stops being executed. At this point, we have only summed from 1 to 9.
+> > 4. Because you cannot guarantee the internal representation of a Float, you should never try to compare them for equality. In this particular case the i never 'equals' n and so the loop never ends. - If you did try running this, you can stop it by using <kbd>Ctrl</kbd>+<kbd>c</kbd> in a terminal windown or going to the kernel menu of a notebook and choosing interrupt.
 > {: .solution}
 {: .challenge}
 
@@ -296,9 +296,9 @@ changes it to green).  If we define `sum = 0` now we can't use the function `sum
 
 ## The `for` loop
 
-The for loop, like the while loop repeatedly executes a set of statements. The difference is that in the for loop we know in at the outset how often the statements in the loop will be executed. We don't have to rely on a variable being changed within the looping statements.
+The for loop repeatedly executes a set of statements just like the while loop. The difference between them is that in the for loop we know beforehand how many times the statements inside the loop will be executed. In the for loop we don't have to rely on a variable being changed within the looping statements to end it.
 
-The basic format of the `for` statement is
+The basic format of a `for` loop is
 
 ~~~
 for variable_name in some_sequence :
@@ -309,13 +309,13 @@ for variable_name in some_sequence :
 ~~~
 {: .language-python}
 
-The key part of this is the `some_sequence`. The phrase used in the documentation is that it must be 'iterable'. That means, you can count through the sequence, starting at the beginning and stopping at the end.
+The key part of this is the `some_sequence`. The phrase used in the documentation is that it must be 'iterable'. This means that you can count through the elements of the sequence.
 
-There are many examples of things which are iterable some of which we have already come across.
+There are many examples of things which are iterable in Python. We have already come across some of them.
 
-* Lists are iterable - they don't have to contain numbers, you iterate over the elements in the list.
-* The `range()` function
-* The characters in a string
+* Lists are iterable - you can count over its various elements.
+* The `range()` function creates an iterable sequence of integer numbers defined by the user.
+* The characters in a string.
 
 ~~~
 print("\nExample 1\n")
@@ -418,14 +418,14 @@ dog
 > ## Exercise
 >
 >
-> Suppose that we have a string containing a set of 4 different types of values separated by `,`  like this:
+> Suppose that we have a string containing a set of 4 different types of values separated by a comma (`,`)  like this:
 >
 > ~~~
 > variablelist = "01/01/2010,34.5,Yellow,True"
 > ~~~
 > {: .language-python}
 >
-> Research the `split()` method and then rewrite example 8 from the `for` loop section above so that it prints the 4 components of `variablelist`
+> Research the `split()` method and then rewrite `for` loop section in example 8 so that it prints the 4 values of `variablelist`
 >
 > > ## Solution
 > >
