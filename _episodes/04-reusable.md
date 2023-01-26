@@ -17,15 +17,15 @@ keypoints:
 
 ## Defining a function
 
-We have already made use of several Python builtin functions like `print`, `list` and `range`.
+We have already used several Python built-in functions like `print`, `list` and `range`.
 
 In addition to the functions provided by Python, you can write your own functions.
 
-Functions are used when a section of code needs to be repeated at various different points in a program. It saves you re-writing it all. In reality you rarely need to repeat the exact same code. Usually there will be some variation in variable values needed. Because of this, when you create a function you are allowed to specify a set of `parameters` which represent variables in the function.
+A function is a block of code that can be reused throughout a program. Functions can take in input in the form of parameters and can return output. The input to a function is called a `parameter`, and the output is called the return value. Functions can also take multiple `parameters`, allowing for more complex behavior. By creating functions, you can break down a larger program into smaller, more manageable pieces, making it easier to understand and modify. Functions also promote code reusability by allowing you to call the same block of code multiple times with different inputs.
 
-In our use of the `print` function, we have provided whatever we want to `print`, as a `parameter`. Typically whenever we use the `print` function, we pass a different `parameter` value.
+The `print` function is used to display something on the screen. The thing you want to display is called a `parameter`. You can use the print function multiple times, passing in different things each time you call it.
 
-The ability to specify parameters make functions very flexible.
+The ability to specify parameters make functions versatile.
 
 ~~~
 def get_item_count(items_str,sep):
