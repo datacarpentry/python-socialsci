@@ -1,0 +1,103 @@
+{
+  "contributors": [
+    {
+      "type": "Editor",
+      "name": "Annajiat Alim Rasel",
+      "orcid": "0000-0003-0198-3734"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Annajiat Alim Rasel",
+      "orcid": "0000-0003-0198-3734"
+    },
+    {
+      "name": "Peter Smyth"
+    },
+    {
+      "name": "Sarah M Brown",
+      "orcid": "0000-0001-5728-0822"
+    },
+    {
+      "name": "Stephen Edward Childs",
+      "orcid": "0000-0002-4450-4281"
+    },
+    {
+      "name": "Vini Salazar",
+      "orcid": "0000-0002-8362-3195"
+    },
+    {
+      "name": "Scott Carl Peterson",
+      "orcid": "0000-0002-1920-616X"
+    },
+    {
+      "name": "Geoffrey Boushey"
+    },
+    {
+      "name": "Christopher Erdmann",
+      "orcid": "0000-0003-2554-180X"
+    },
+    {
+      "name": "Katrin Tirok",
+      "orcid": "0000-0002-5040-9838"
+    },
+    {
+      "name": "Katrin Leinweber",
+      "orcid": "0000-0001-5135-5758"
+    },
+    {
+      "name": "joelostblom"
+    },
+    {
+      "name": "tg340"
+    },
+    {
+      "name": "Tejaswinee Kelkar",
+      "orcid": "0000-0002-2324-6850"
+    },
+    {
+      "name": "Yee Mey Seah",
+      "orcid": "0000-0002-5616-021X"
+    },
+    {
+      "name": "Benjamin Tovar",
+      "orcid": "0000-0002-5294-2281"
+    },
+    {
+      "name": "Tadiwanashe Gutsa",
+      "orcid": "0000-0002-6871-0899"
+    },
+    {
+      "name": "crahal"
+    },
+    {
+      "name": "Jacob Deppen"
+    },
+    {
+      "name": "Karen Word",
+      "orcid": "0000-0002-7294-7231"
+    },
+    {
+      "name": "Katrin Tirok"
+    },
+    {
+      "name": "Kevan Swanberg"
+    },
+    {
+      "name": "Tim Young"
+    },
+    {
+      "name": "Steve Haddock"
+    },
+    {
+      "name": "sadkate"
+    },
+    {
+      "name": "Sanjay Fuloria",
+      "orcid": "0000-0002-4185-0541"
+    }
+  ],
+  "license": {
+    "id": "CC-BY-4.0"
+  }
+}
