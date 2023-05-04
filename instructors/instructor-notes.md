@@ -4,7 +4,7 @@ title: Instructor Notes
 
 ## Setup
 
-The setup instruction for installing the Anaconda distribution of Python is in the [setup](../setup.html) file.
+The setup instruction for installing the Anaconda distribution of Python is in the [setup](../learners/setup.md) file.
 The Anaconda distribution contains all of the 3rd party libraries used.
 
 PIP is referred to in the text but it shouldn't need to be used.
@@ -13,7 +13,6 @@ It is assumed that Jupyter notebooks will be used for all of the coding. (The sh
 
 How to start Jupyter is included in the setup instructions.
 
-
 ## The datasets used
 
 All of the datasets used have been placed in the data folder.
@@ -21,8 +20,6 @@ All of the datasets used have been placed in the data folder.
 They should be downloaded to the local machine before use.
 
 The code examples are written on the assumption that the data files are in the same folder as the notebook.
-
-
 
 ## The Lessons
 
@@ -41,8 +38,6 @@ Comparison between interpreted and compiled languages.
 An explanation and example of using REPL.
 
 An Introduction to using Jupyter notebooks.
-
-
 
 [Python basics ](link)
 
@@ -123,7 +118,6 @@ from a file of JSON.
 
 The overall aim is to demonstrate extracting a set of specific fields from a JSON formatted file and writing them to a flat structured csv file making subsequent processing more straight forward.
 
-
 [Pandas](link)
 
 This episode introduces the pandas module and explains the advantages of using it for data analysis.
@@ -134,14 +128,13 @@ Examples of reading a csv file into a dataframe, optionally selecting only speci
 
 Various methods for extract information about the dataframe are covered.
 
-
 [Extracting rows and columns](link)
 
 Basic pandas methods for extracting row and columns from a dataframe are covered.
 
 For row selection the emphasis is on specifying criteria, although random selection is also covered.
 
-[Aggregations_and_missing_data](link)
+[Aggregations\_and\_missing\_data](link)
 
 Explain why we want to summarise data.
 
@@ -169,7 +162,7 @@ The different types of joins available with `merge`
 
 Discussion and examples of what different join types tell you about the data.
 
-[Long_and_wide_data_formats](link)
+[Long\_and\_wide\_data\_formats](link)
 
 The difference between wide and long formats
 
@@ -193,7 +186,6 @@ How graphs can be built up from individual components is covered.
 
 Saving the produced graph to a file is explained and demonstrated.
 
-
 [Accessing SQLite Databases](link)
 
 A comparison between an relational database table and a pandas dataframe is made.
@@ -213,3 +205,5 @@ Various ways of retrieving the results of the query are covered.
 Pandas is used to run a similar query, its greater simplicity is explained.
 
 The problem with running DML statements with pandas is illustrated in the final exercise.
+
+
