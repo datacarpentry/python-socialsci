@@ -14,7 +14,7 @@ carpentry: 'dc'
 title: 'Data Analysis and Visualization with Python for Social Scientists *alpha*'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: '2017-05-25'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -27,7 +27,7 @@ life_cycle: 'alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/fishtree-attempt/python-socialsci/'
+source: 'https://github.com/datacarpentry/python-socialsci'
 
 # Default branch of your lesson
 branch: 'main'
@@ -89,7 +89,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: https://preview.carpentries.org/python-socialsci
+url: 'https://datacarpentry.github.io/python-socialsci'
 analytics: carpentries
 lang: en
-workbench-beta: 'true'
