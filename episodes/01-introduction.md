@@ -85,7 +85,7 @@ development more interactive. Since its inception, the scope of the project
 has expanded to include **Ju**lia, **Pyt**hon, and **R**, so the name was changed to "Jupyter"
 as a reference to these core languages. Today, Jupyter supports even more
 languages, but we will be using it only for Python code. Specifically, we will
-be using **Jupyter notebooks**, which allows us to easily take notes about
+be using **Jupyter notebooks**, which allow us to easily take notes about
 our analysis and view plots within the same document where we code. This
 facilitates sharing and reproducibility of analyses, and the notebook interface
 is easily accessible through any web browser. Jupyter notebooks are started
