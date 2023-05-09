@@ -55,7 +55,13 @@
     <loc>https://datacarpentry.github.io/python-socialsci/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/aio.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/python-socialsci/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/images.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.github.io/python-socialsci/index.html</loc>
@@ -115,16 +121,34 @@
     <loc>https://datacarpentry.github.io/python-socialsci/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/python-socialsci/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://datacarpentry.github.io/python-socialsci/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.github.io/python-socialsci/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.github.io/python-socialsci/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://datacarpentry.github.io/python-socialsci/key-points.html</loc>
   </url>
   <url>
     <loc>https://datacarpentry.github.io/python-socialsci/profiles.html</loc>
