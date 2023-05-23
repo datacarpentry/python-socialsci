@@ -341,12 +341,12 @@ using the pandas package to work with data frames, how to calculate
 summary information from a data frame, and a brief introduction to
 plotting. The last lesson demonstrates how to work with databases
 directly from Python.</p>
-<div id="prereq1" class="callout prereq">
+<div id="getting-started" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="getting-started" class="callout-inner">
-<h3 class="callout-title">Getting Started<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+<h3 class="callout-title">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h3>
 <div class="callout-content">
 <p>Data Carpentry’s teaching is hands-on, so participants are encouraged
@@ -359,12 +359,12 @@ follow any installation instructions.</p>
 </div>
 </div>
 </div>
-<div id="prereq2" class="callout prereq">
+<div id="prerequisites" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="prerequisites" class="callout-inner">
-<h3 class="callout-title">Prerequisites<a class="anchor" aria-label="anchor" href="#prereq2"></a>
+<h3 class="callout-title">Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"></a>
 </h3>
 <div class="callout-content">
 <p>This lesson requires a working copy of <strong>Python</strong>.</p>
@@ -374,12 +374,12 @@ files mentioned in the <a href="index.html#setup">Setup</a> tab.</p>
 </div>
 </div>
 </div>
-<div id="prereq3" class="callout prereq">
+<div id="for-instructors" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="for-instructors" class="callout-inner">
-<h3 class="callout-title">For Instructors<a class="anchor" aria-label="anchor" href="#prereq3"></a>
+<h3 class="callout-title">For Instructors<a class="anchor" aria-label="anchor" href="#for-instructors"></a>
 </h3>
 <div class="callout-content">
 <p>If you are teaching this lesson in a workshop, please see the <a href="instructor-notes.html">Instructor notes</a>.</p>
@@ -388,12 +388,12 @@ files mentioned in the <a href="index.html#setup">Setup</a> tab.</p>
 </div>
 
 
-      <section id="setup"><div id="prereq1" class="callout prereq">
+      <section id="setup"><div id="data" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="data" class="callout-inner">
-<h3 class="callout-title">Data<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+<h3 class="callout-title">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h3>
 <div class="callout-content">
 <p>Data for this lesson is from the <a href="https://datacarpentry.org/socialsci-workshop/data/" class="external-link">The SAFI
@@ -419,12 +419,12 @@ that your notebook is running on.</strong></p>
 </ul></div>
 </div>
 </div>
-<div id="prereq2" class="callout prereq">
+<div id="software" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="software" class="callout-inner">
-<h3 class="callout-title">Software<a class="anchor" aria-label="anchor" href="#prereq2"></a>
+<h3 class="callout-title">Software<a class="anchor" aria-label="anchor" href="#software"></a>
 </h3>
 <div class="callout-content">
 <p><a href="https://python.org" class="external-link">Python</a> is a popular language for
@@ -474,9 +474,10 @@ until you are given the option to add Anaconda to your environmental
 Path variable. Despite the recommendation not to and the subsequent
 warning, you should select this option. This will make it easier later
 on to start Jupyter notebooks from any location.</li>
-<figure>The installation can take a few minutes. When finished you should be
+<li>The installation can take a few minutes. When finished you should be
 able to open a cmd prompt (Type cmd from Windows start and into the cmd
-window type python. You should get a display similar to that below. <img src="/fig/Python_install_1.png" alt="Python Install" class="figure mx-auto d-block"></figure><li>The <code>&gt;&gt;&gt;</code> prompt tells you that you are in the
+window type python. You should get a display similar to that below. <img src="/fig/Python_install_1.png" alt="Python Install" class="figure"></li>
+<li>The <code>&gt;&gt;&gt;</code> prompt tells you that you are in the
 Python environment. You can exit Python with the <code>exit()</code>
 command.</li>
 </ol></div>
@@ -495,9 +496,10 @@ whichever appears.</li>
 default web browser will open and display the Jupyter notebook home
 page. The main part of this is a file browser window starting at the
 folder you selected in step 1.</li>
-<figure>There may be existing notebooks which you can select and open in a
+<li>There may be existing notebooks which you can select and open in a
 new tab in your browser or there is a menu option to create a new
-notebook. <img src="/fig/Python_install_2.png" alt="Python Install" class="figure mx-auto d-block"></figure><li>The Jupyter package creates a small web services and opens your
+notebook. <img src="/fig/Python_install_2.png" alt="Python Install" class="figure"></li>
+<li>The Jupyter package creates a small web services and opens your
 browser pointing at it. If your browser does not open, you can open it
 manually and specify ‘localhost:8888’ as the URL.</li>
 <li>Port 8888 is the default port used by the Jupyter web service, but
@@ -537,7 +539,7 @@ with it directly. The window can be minimized and ignored.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.16" class="external-link">sandpaper (0.11.16)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -560,8 +562,8 @@ with it directly. The window can be minimized and ignored.</li>
   "url": "https://datacarpentry.github.io/python-socialsci/index.html",
   "identifier": "https://datacarpentry.github.io/python-socialsci/index.html",
   "dateCreated": "2017-05-25",
-  "dateModified": "2023-05-16",
-  "datePublished": "2023-05-16"
+  "dateModified": "2023-05-23",
+  "datePublished": "2023-05-23"
 }
 
   </script><script>
