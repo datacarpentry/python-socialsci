@@ -1,0 +1,6 @@
+1,Very interested
+2,Fairly interested
+3,Not very interested
+4,Not at all interested
+5,Don't know
+
