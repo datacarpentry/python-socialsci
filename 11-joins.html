@@ -404,17 +404,17 @@ other Dataframe. In order to do this we can use the
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df_SN7577i_a <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_a.csv"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df_SN7577i_b <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_b.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>df_SN7577i_a <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_a.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>df_SN7577i_b <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_b.csv"</span>)</span></code></pre>
 </div>
 <p>Have a quick look at what these Dataframes look like with</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577i_a)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577i_b)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">print</span>(df_SN7577i_a)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(df_SN7577i_b)</span></code></pre>
 </div>
 <pre><code>  Id  Q1  Q2  Q3  Q4
 0   1   1  -1   1   8
@@ -437,8 +437,8 @@ problem with the <code>index</code>.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_a, df_SN7577i_b])</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_all_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_a, df_SN7577i_b])</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>df_all_rows</span></code></pre>
 </div>
 <p>We didn’t explicitly set an index for any of the Dataframes we have
 used. For <code>df_SN7577i_a</code> and <code>df_SN7577i_b</code>
@@ -450,21 +450,21 @@ index. We can fix the problem with the following code.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_all_rows<span class="op">=</span>df_all_rows.reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or, alternatively, there's the `ignore_index` option in the `pd.concat()` function:</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_a, df_SN7577i_b], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df_all_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>df_all_rows<span class="op">=</span>df_all_rows.reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co"># or, alternatively, there's the `ignore_index` option in the `pd.concat()` function:</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_a, df_SN7577i_b], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>df_all_rows</span></code></pre>
 </div>
 <p>What if the columns in the Dataframes are not the same?</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_aa, df_SN7577i_bb])</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>df_all_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>df_all_rows <span class="op">=</span> pd.concat([df_SN7577i_aa, df_SN7577i_bb])</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>df_all_rows</span></code></pre>
 </div>
 <p>In this case <code>df_SN7577i_aa</code> has no Q4 column and
 <code>df_SN7577i_bb</code> has no <code>Q3</code> column. When they are
@@ -480,10 +480,10 @@ another Dataframe<a class="anchor" aria-label="anchor" href="#scenario-2---addin
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_SN7577i_c <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_c.csv"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df_SN7577i_d <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_d.csv"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df_all_cols <span class="op">=</span> pd.concat([df_SN7577i_c, df_SN7577i_d], axis <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>df_all_cols</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>df_SN7577i_c <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_c.csv"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>df_SN7577i_d <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_d.csv"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>df_all_cols <span class="op">=</span> pd.concat([df_SN7577i_c, df_SN7577i_d], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>df_all_cols</span></code></pre>
 </div>
 <p>We use the <code>axis=1</code> parameter to indicate that it is the
 columns that need to be joined together. Notice that the <code>Id</code>
@@ -511,8 +511,8 @@ column common to both of them.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_cd</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>df_cd</span></code></pre>
 </div>
 <p>In fact, if there is only one column with the same name in each
 Dataframe, it will be assumed to be the one you want to join on. In this
@@ -523,7 +523,7 @@ parameter.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>, on <span class="op">=</span> <span class="st">'Id'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>, on <span class="op">=</span> <span class="st">'Id'</span>)</span></code></pre>
 </div>
 <p>In many circumstances, the column names that you wish to join on are
 not the same in both Dataframes, in which case you can use the
@@ -532,7 +532,7 @@ them separately.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>, left_on <span class="op">=</span> <span class="st">'Id'</span>, right_on <span class="op">=</span> <span class="st">'Id'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>df_cd <span class="op">=</span> pd.merge(df_SN7577i_c, df_SN7577i_d, how<span class="op">=</span><span class="st">'inner'</span>, left_on <span class="op">=</span> <span class="st">'Id'</span>, right_on <span class="op">=</span> <span class="st">'Id'</span>)</span></code></pre>
 </div>
 <div id="practice-with-data" class="callout challenge">
 <div class="callout-square">
@@ -567,18 +567,18 @@ additional information is provided in the resulting Dataframe?</li>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df_aabb <span class="op">=</span> pd.merge(df_SN7577i_aa, df_SN7577i_bb, how<span class="op">=</span><span class="st">'outer'</span>, on <span class="op">=</span> <span class="st">'Id'</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>df_aabb</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>df_aabb <span class="op">=</span> pd.merge(df_SN7577i_aa, df_SN7577i_bb, how<span class="op">=</span><span class="st">'outer'</span>, on <span class="op">=</span> <span class="st">'Id'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>df_aabb</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>df_aabb <span class="op">=</span> pd.merge(df_SN7577i_aa, df_SN7577i_bb, how<span class="op">=</span><span class="st">'outer'</span>, on <span class="op">=</span> <span class="st">'Id'</span>,suffixes<span class="op">=</span>(<span class="st">'_aa'</span>, <span class="st">'_bb'</span>), indicator <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>df_aabb</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>df_SN7577i_aa <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_aa.csv"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>df_SN7577i_bb <span class="op">=</span> pd.read_csv(<span class="st">"SN7577i_bb.csv"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>df_aabb <span class="op">=</span> pd.merge(df_SN7577i_aa, df_SN7577i_bb, how<span class="op">=</span><span class="st">'outer'</span>, on <span class="op">=</span> <span class="st">'Id'</span>,suffixes<span class="op">=</span>(<span class="st">'_aa'</span>, <span class="st">'_bb'</span>), indicator <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>df_aabb</span></code></pre>
 </div>
 </div>
 </div>
@@ -664,7 +664,7 @@ clause. ‘left’, ‘right’ and ‘inner’ joins are all possible.</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/11-joins.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

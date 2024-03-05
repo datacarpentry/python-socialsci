@@ -398,16 +398,16 @@ different <code>parameter</code> value.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_item_count(items_str,sep):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes a string with a list of items and the character that they're separated by and returns the number of items</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    items_list <span class="op">=</span> items_str.split(sep)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    num_items <span class="op">=</span> <span class="bu">len</span>(items_list)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> num_items</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>items_owned <span class="op">=</span> <span class="st">"bicycle;television;solar_panel;table"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned,<span class="st">';'</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">def</span> get_item_count(items_str,sep):</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">    This function takes a string with a list of items and the character that they're separated by and returns the number of items</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    items_list <span class="op">=</span> items_str.split(sep)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>    num_items <span class="op">=</span> <span class="bu">len</span>(items_list)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>    <span class="cf">return</span> num_items</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>items_owned <span class="op">=</span> <span class="st">"bicycle;television;solar_panel;table"</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned,<span class="st">';'</span>))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -457,16 +457,16 @@ way</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_item_count(items_str,sep<span class="op">=</span><span class="st">';'</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">    This function takes a string with a list of items and the character that they're separated by and returns the number of items</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    items_list <span class="op">=</span> items_str.split(sep)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    num_items <span class="op">=</span> <span class="bu">len</span>(items_list)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> num_items</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">def</span> get_item_count(items_str,sep<span class="op">=</span><span class="st">';'</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">    This function takes a string with a list of items and the character that they're separated by and returns the number of items</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    items_list <span class="op">=</span> items_str.split(sep)</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>    num_items <span class="op">=</span> <span class="bu">len</span>(items_list)</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    <span class="cf">return</span> num_items</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -481,8 +481,8 @@ have explicitly named the parameters we were referring to.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned, sep <span class="op">=</span> <span class="st">','</span>))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_str <span class="op">=</span> items_owned, sep<span class="op">=</span><span class="st">';'</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_owned, sep <span class="op">=</span> <span class="st">','</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">print</span>(get_item_count(items_str <span class="op">=</span> items_owned, sep<span class="op">=</span><span class="st">';'</span>))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -513,20 +513,20 @@ function to provide all three values together?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul><li>A function to calculate the volume of a cuboid could be:</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_vol_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the volume of a cuboid.</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Takes in h, w, len, that represent height, width, and length of the cube.</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns the volume.</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> volume</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">def</span> calculate_vol_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">    Calculates the volume of a cuboid.</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co">    Takes in h, w, len, that represent height, width, and length of the cube.</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">    Returns the volume.</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    <span class="cf">return</span> volume</span></code></pre>
 </div>
 <ul><li>It depends. As a rule-of-thumb, we want our function to <strong>do
 one thing and one thing only, and to do it well.</strong> If we always
@@ -536,17 +536,17 @@ cube’. Our function would look like this:</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1 - single function</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns the volume, surface area, and sum of edges of the cuboid.</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    surface_area <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (h <span class="op">*</span> w <span class="op">+</span> h <span class="op">*</span> <span class="bu">len</span> <span class="op">+</span> <span class="bu">len</span> <span class="op">*</span> w)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    edges <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> (h <span class="op">+</span> w <span class="op">+</span> <span class="bu">len</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> volume, surface_area, edges</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Method 1 - single function</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="kw">def</span> calculate_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">    Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">    Returns the volume, surface area, and sum of edges of the cuboid.</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>    surface_area <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (h <span class="op">*</span> w <span class="op">+</span> h <span class="op">*</span> <span class="bu">len</span> <span class="op">+</span> <span class="bu">len</span> <span class="op">*</span> w)</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>    edges <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> (h <span class="op">+</span> w <span class="op">+</span> <span class="bu">len</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>    <span class="cf">return</span> volume, surface_area, edges</span></code></pre>
 </div>
 <p>It may be better, however, to break down our function into separate
 ones - one for each piece of information we are calculating. Our
@@ -554,45 +554,45 @@ functions would look like this:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2 - separate functions</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_volume_of_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the volume of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> volume</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_surface_area_of_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the surface area of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span>   </span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    surface_area <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (h <span class="op">*</span> w <span class="op">+</span> h <span class="op">*</span> <span class="bu">len</span> <span class="op">+</span> <span class="bu">len</span> <span class="op">*</span> w)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> surface_area</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_sum_of_edges_of_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates the sum of edges of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span>   </span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    sum_of_edges <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> (h <span class="op">+</span> w <span class="op">+</span> <span class="bu">len</span>)</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sum_of_edges</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Method 2 - separate functions</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="kw">def</span> calc_volume_of_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">    Calculates the volume of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    volume <span class="op">=</span> h <span class="op">*</span> w <span class="op">*</span> <span class="bu">len</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>    <span class="cf">return</span> volume</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="kw">def</span> calc_surface_area_of_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">    Calculates the surface area of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="co">    """</span>   </span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>    surface_area <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (h <span class="op">*</span> w <span class="op">+</span> h <span class="op">*</span> <span class="bu">len</span> <span class="op">+</span> <span class="bu">len</span> <span class="op">*</span> w)</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>    <span class="cf">return</span> surface_area</span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a><span class="kw">def</span> calc_sum_of_edges_of_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a><span class="co">    Calculates the sum of edges of a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a><span class="co">    """</span>   </span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>    sum_of_edges <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> (h <span class="op">+</span> w <span class="op">+</span> <span class="bu">len</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>    <span class="cf">return</span> sum_of_edges</span></code></pre>
 </div>
 <p>We could then rewrite our first solution:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_cuboid(h, w, <span class="bu">len</span>):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns the volume, surface area, and sum of edges of the cuboid.</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    volume <span class="op">=</span> calc_volume_of_cuboid(h, w, <span class="bu">len</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    surface_area <span class="op">=</span> calc_surface_area_of_cuboid(h, w, <span class="bu">len</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    edges <span class="op">=</span> calc_sum_of_edges_of_cuboid(h, w, <span class="bu">len</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> volume, surface_area, edges</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">def</span> calculate_cuboid(h, w, <span class="bu">len</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">    Calculates information about a cuboid defined by the dimensions h(eight), w(idth), and len(gth).</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">    Returns the volume, surface area, and sum of edges of the cuboid.</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    volume <span class="op">=</span> calc_volume_of_cuboid(h, w, <span class="bu">len</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    surface_area <span class="op">=</span> calc_surface_area_of_cuboid(h, w, <span class="bu">len</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    edges <span class="op">=</span> calc_sum_of_edges_of_cuboid(h, w, <span class="bu">len</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>    <span class="cf">return</span> volume, surface_area, edges</span></code></pre>
 </div>
 </div>
 </div>
@@ -620,7 +620,7 @@ configuration.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install <span class="op">&lt;</span>package name<span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> pip install <span class="op">&lt;</span>package name<span class="op">&gt;</span></span></code></pre>
 </div>
 <p>pip stands for Python install package and is a commandline function.
 Because we are using the Anaconda distribution of Python, all of the
@@ -645,11 +645,11 @@ them.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="im">import</span> csv</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <p>The first two we don’t alias as they have short names. The last three
 we do. Matplotlib is a very large library broken up into what can be
@@ -737,7 +737,7 @@ containing them into your code</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/instructor/04-reusable.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

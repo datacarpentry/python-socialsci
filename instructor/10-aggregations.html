@@ -391,16 +391,16 @@ obtain these pieces of information</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df_SAFI</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>df_SAFI</span></code></pre>
 </div>
 <p>For numeric variables we can obtain a variety of basic statistical
 information by using the <code>describe()</code> method.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_SAFI.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>df_SAFI.describe()</span></code></pre>
 </div>
 <p>This can be done for the Dataframe as a whole, in which case some of
 the results might have no sensible meaning. If there are any missing
@@ -410,19 +410,19 @@ warning message.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'B_no_membrs'</span>].describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>df_SAFI[<span class="st">'B_no_membrs'</span>].describe()</span></code></pre>
 </div>
 <p>There are also a set of methods which allow us to obtain individual
 values.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">min</span>())</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">max</span>())</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].mean())</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].std())</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].count())</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">sum</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">min</span>())</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">max</span>())</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].mean())</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].std())</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].count())</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'B_no_membrs'</span>].<span class="bu">sum</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -442,12 +442,12 @@ variable</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">min</span>())</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">max</span>())</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].mean())</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].std())</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].count())</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">sum</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">min</span>())</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">max</span>())</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].mean())</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].std())</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].count())</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="bu">print</span>(df_SAFI[<span class="st">'E19_period_use'</span>].<span class="bu">sum</span>())</span></code></pre>
 </div>
 <pre><code><span><span class="fl">1.0</span></span>
 <span><span class="fl">45.0</span></span>
@@ -476,7 +476,7 @@ and the <code>E19_period_use</code> variables.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>We know from when we originally displayed the contents of the
 <code>df_SAFI</code> Dataframe that there are 131 rows in it. This
@@ -486,7 +486,7 @@ values in the <code>E19_period_use</code> column using</li>
 </ol><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>]</span></code></pre>
 </div>
 <p>you will see that there are several <code>NaN</code> values. They
 also occurred when we used <code>describe()</code> on the full
@@ -505,7 +505,7 @@ the calculation of the mean and std values.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_SAFI.isnull().<span class="bu">sum</span>()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>df_SAFI.isnull().<span class="bu">sum</span>()</span></code></pre>
 </div>
 <pre><code>Column1                             0
 A01_interview_date                  0
@@ -517,7 +517,7 @@ A04_start                           0
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].isnull().<span class="bu">sum</span>()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].isnull().<span class="bu">sum</span>()</span></code></pre>
 </div>
 <pre><code><span><span class="fl">39</span></span></code></pre>
 <p>{: output}</p>
@@ -559,10 +559,10 @@ for your analysis to have meaning.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df_SAFI.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>df_SAFI.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span></code></pre>
 </div>
 <pre><code>(131, 55)
 (0, 55)</code></pre>
@@ -576,10 +576,10 @@ selection criteria and delete the rows where a specific variable has
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> df_SAFI[(df_SAFI[<span class="st">'E_no_group_count'</span>].notnull())]</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>df_SAFI <span class="op">=</span> df_SAFI[(df_SAFI[<span class="st">'E_no_group_count'</span>].notnull())]</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span></code></pre>
 </div>
 <pre><code>(131, 55)
 (39, 55)</code></pre>
@@ -602,7 +602,7 @@ irrigated for 0 years, technically correct.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre>
 </div>
 <p>If we now run the <code>describe()</code> again you can see that all
 of the statistic have been changed because the calculations are NOW
@@ -621,9 +621,9 @@ original values back.</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].replace(<span class="dv">0</span>, np.NaN, inplace <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].replace(<span class="dv">0</span>, np.NaN, inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>df_SAFI[<span class="st">'E19_period_use'</span>].describe()</span></code></pre>
 </div>
 </div>
 </section><section id="categorical-variables"><h2 class="section-heading">Categorical variables<a class="anchor" aria-label="anchor" href="#categorical-variables"></a>
@@ -634,8 +634,8 @@ the variable by using the <code>unique()</code> method.</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>])</span></code></pre>
 </div>
 <pre><code>array(['grass', 'mabatisloping', 'mabatipitched'], dtype=object)</code></pre>
 <p>{: output}</p>
@@ -650,23 +650,23 @@ variable.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
 </div>
 <p>You can group by more than one variable at a time by providing them
 as a list.</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby([<span class="st">'C01_respondent_roof_type'</span>, <span class="st">'C02_respondent_wall_type'</span>])</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby([<span class="st">'C01_respondent_roof_type'</span>, <span class="st">'C02_respondent_wall_type'</span>])</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
 </div>
 <p>You can also obtain individual statistics if you want.</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>A11_years_farm <span class="op">=</span> df_SAFI.groupby([<span class="st">'C01_respondent_roof_type'</span>, <span class="st">'C02_respondent_wall_type'</span>])[<span class="st">'A11_years_farm'</span>].count()</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>A11_years_farm</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>A11_years_farm <span class="op">=</span> df_SAFI.groupby([<span class="st">'C01_respondent_roof_type'</span>, <span class="st">'C02_respondent_wall_type'</span>])[<span class="st">'A11_years_farm'</span>].count()</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>A11_years_farm</span></code></pre>
 </div>
 <pre><code>C01_respondent_roof_type  C02_respondent_wall_type
 grass                     burntbricks                 22
@@ -699,33 +699,33 @@ results.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Steps 1 and 2</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>]))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># Steps 1 and 2</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>df_SAFI <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_results.csv"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a><span class="bu">print</span>(pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>]))</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># Step 3</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># steps 4 and 5</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>df_SAFI <span class="op">=</span> df_SAFI[(df_SAFI[<span class="st">'E_no_group_count'</span>].notnull())]</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>]))</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># steps 4 and 5</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>df_SAFI <span class="op">=</span> df_SAFI[(df_SAFI[<span class="st">'E_no_group_count'</span>].notnull())]</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>grouped_data <span class="op">=</span> df_SAFI.groupby(<span class="st">'C01_respondent_roof_type'</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="bu">print</span>(df_SAFI.shape)</span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="bu">print</span>(pd.unique(df_SAFI[<span class="st">'C01_respondent_roof_type'</span>]))</span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a>grouped_data.describe()</span></code></pre>
 </div>
 <p><code>E_no_group_count</code> is related to whether or not farm plots
 are irrigated or not. It has no obvious connection to farm buildings. By
@@ -813,7 +813,7 @@ variables at the same time</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/instructor/10-aggregations.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

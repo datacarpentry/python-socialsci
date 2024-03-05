@@ -422,8 +422,8 @@ do a <code>show()</code> command.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre>
 </div>
 <p>We also need data to work with loaded into a DataFrame and it’s
 helpful to look at a few rows to remember what’s there.</p>
@@ -435,21 +435,21 @@ have to type the full path.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_full_shortname.csv"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"SAFI_full_shortname.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>df.head()</span></code></pre>
 </div>
 <p>Next, we can plot the a histogram of a variable.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'years_liv'</span>].hist()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>df[<span class="st">'years_liv'</span>].hist()</span></code></pre>
 </div>
 <figure><img src="../fig/histogram1.png" alt="Histogram of years lived spotlighting how to plot a variable with Pandas" class="figure mx-auto d-block"></figure><p>We can change the number of bins to make it look how we would like,
 for example</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'years_liv'</span>].hist(bins<span class="op">=</span><span class="dv">20</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>df[<span class="st">'years_liv'</span>].hist(bins<span class="op">=</span><span class="dv">20</span>)</span></code></pre>
 </div>
 <p>We can also specify the column as a parameter and a groupby column
 with the <code>by</code> keyword. there are a lot of keywords available
@@ -461,7 +461,7 @@ decided by Pandas developers) by using <kbd>shift</kbd> + <kbd>tab<kbd>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.hist(column<span class="op">=</span><span class="st">'years_liv'</span>,by<span class="op">=</span><span class="st">'village'</span>,layout<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">3</span>),figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">3</span>),sharex<span class="op">=</span><span class="va">True</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>df.hist(column<span class="op">=</span><span class="st">'years_liv'</span>,by<span class="op">=</span><span class="st">'village'</span>,layout<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">3</span>),figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">3</span>),sharex<span class="op">=</span><span class="va">True</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/histogram3.png" alt="Three separate histograms depicting the number of years lived by village; Chirodzo, God, Ruaca" class="figure mx-auto d-block"></figure></section><section id="scatter-plot"><h2 class="section-heading">Scatter plot<a class="anchor" aria-label="anchor" href="#scatter-plot"></a>
 </h2>
@@ -471,7 +471,7 @@ with the <code>c</code> argument.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.plot.scatter(x<span class="op">=</span><span class="st">'gps_Latitude'</span>, y<span class="op">=</span><span class="st">'gps_Longitude'</span>, c<span class="op">=</span><span class="st">'gps_Altitude'</span>, colormap<span class="op">=</span><span class="st">"viridis"</span>, figsize<span class="op">=</span>[<span class="dv">4</span>,<span class="dv">4</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df.plot.scatter(x<span class="op">=</span><span class="st">'gps_Latitude'</span>, y<span class="op">=</span><span class="st">'gps_Longitude'</span>, c<span class="op">=</span><span class="st">'gps_Altitude'</span>, colormap<span class="op">=</span><span class="st">"viridis"</span>, figsize<span class="op">=</span>[<span class="dv">4</span>,<span class="dv">4</span>])</span></code></pre>
 </div>
 <figure><img src="../fig/scatter1.png" alt="png" class="figure mx-auto d-block"></figure><div id="exercise" class="callout challenge">
 <div class="callout-square">
@@ -506,7 +506,7 @@ function</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(<span class="bu">len</span>(s)), s, width <span class="op">=</span> <span class="fl">0.5</span>)   <span class="co"># the default width is 0.8</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(<span class="bu">len</span>(s)), s, width <span class="op">=</span> <span class="fl">0.5</span>)   <span class="co"># the default width is 0.8</span></span></code></pre>
 </div>
 <p>Extension: try plotting by wall and roof type?</p>
 </div>
@@ -524,15 +524,15 @@ function</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.plot.scatter(x <span class="op">=</span> <span class="st">'years_liv'</span>, y <span class="op">=</span> <span class="st">'years_farm'</span>, c <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, colormap <span class="op">=</span> <span class="st">'viridis'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df.plot.scatter(x <span class="op">=</span> <span class="st">'years_liv'</span>, y <span class="op">=</span> <span class="st">'years_farm'</span>, c <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, colormap <span class="op">=</span> <span class="st">'viridis'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/scatter2.png" alt="png" class="figure mx-auto d-block"></figure><p>For the barplot: we first need to calculate the mean value of rooms
 per wall type, then we can make the plot.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rooms_mean <span class="op">=</span> df.groupby(<span class="st">'respondent_wall_type'</span>).mean()[<span class="st">'rooms'</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rooms_mean.plot.bar()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>rooms_mean <span class="op">=</span> df.groupby(<span class="st">'respondent_wall_type'</span>).mean()[<span class="st">'rooms'</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>rooms_mean.plot.bar()</span></code></pre>
 </div>
 <figure><img src="../fig/barplot1.png" alt="png" class="figure mx-auto d-block"></figure></div>
 </div>
@@ -557,8 +557,8 @@ we need to import it.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data <span class="op">=</span> df, x <span class="op">=</span> <span class="st">'village'</span>, y <span class="op">=</span> <span class="st">'buildings_in_compound'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>sns.boxplot(data <span class="op">=</span> df, x <span class="op">=</span> <span class="st">'village'</span>, y <span class="op">=</span> <span class="st">'buildings_in_compound'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/boxplot2.png" alt="png" class="figure mx-auto d-block"></figure><p>We can also draw linear models in a plot using <code>lmplot()</code>
 from <code>seaborn</code>, e.g. for <code>years_farm</code> vs
@@ -566,7 +566,7 @@ from <code>seaborn</code>, e.g. for <code>years_farm</code> vs
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sns.lmplot(x<span class="op">=</span><span class="st">'years_farm'</span>, y<span class="op">=</span><span class="st">'years_liv'</span>,data<span class="op">=</span>df,hue<span class="op">=</span><span class="st">'village'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>sns.lmplot(x<span class="op">=</span><span class="st">'years_farm'</span>, y<span class="op">=</span><span class="st">'years_liv'</span>,data<span class="op">=</span>df,hue<span class="op">=</span><span class="st">'village'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/lm1.png" alt="Plot showing years lived and years farmed by village to spotlight the use of linear models" class="figure mx-auto d-block"></figure><p>In general, most graphs can be broken down into a series of elements
 which, although typically related in some way, can all exist
@@ -601,30 +601,30 @@ generated data, using the NumPy library (aliased here as
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some date for 2 sets of points.</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add some features</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot'</span>)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Range of y values'</span>)</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Range of x values'</span>)</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the points in a scatter plot</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>plt.scatter(x1, y1, c<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Red Range'</span>)  <span class="co"># 'c' parameter is the colour and 'label' is the text for the legend</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>plt.scatter(x2, y2, c<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Blue Range'</span>)</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">4</span>)  <span class="co"># the locations 1,2,3 and 4 are top-right, top-left, bottom-left and bottom-right</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the graph with the two sets of points</span></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co"># Generate some date for 2 sets of points.</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>x1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>y1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>x2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>y2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="co"># Add some features</span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot'</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>plt.ylabel(<span class="st">'Range of y values'</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a>plt.xlabel(<span class="st">'Range of x values'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a><span class="co"># plot the points in a scatter plot</span></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a>plt.scatter(x1, y1, c<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Red Range'</span>)  <span class="co"># 'c' parameter is the colour and 'label' is the text for the legend</span></span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a>plt.scatter(x2, y2, c<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Blue Range'</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">4</span>)  <span class="co"># the locations 1,2,3 and 4 are top-right, top-left, bottom-left and bottom-right</span></span>
+<span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a><span class="co"># Show the graph with the two sets of points</span></span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>In the call to the <code>scatter</code> method, the
 <code>label</code> parameter values are used by the <em>legend</em>. The
@@ -670,27 +670,27 @@ reasonable value.</p></li>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some data for 2 sets of points.</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and additional data for the sizes - suitably scaled</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>z1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">*</span> <span class="dv">200</span>)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>z2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">*</span> <span class="dv">200</span>)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add some features</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot'</span>)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Range of y values'</span>)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Range of x values'</span>)</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the points in a scatter plot</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>plt.scatter(x1, y1, c<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Red Range'</span>, s<span class="op">=</span>z1, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co"># 's' parameter is the dot size</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>plt.scatter(x2, y2, c<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Blue Range'</span>, s<span class="op">=</span>z2, alpha<span class="op">=</span><span class="fl">0.5</span>) <span class="co"># 'alpha' is the opacity</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Generate some data for 2 sets of points.</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co"># and additional data for the sizes - suitably scaled</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>x1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>y1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>z1 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">*</span> <span class="dv">200</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>x2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>y2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">+</span> <span class="fl">0.5</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a>z2 <span class="op">=</span> pd.Series(np.random.rand(<span class="dv">20</span>) <span class="op">*</span> <span class="dv">200</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="co"># Add some features</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot'</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a>plt.ylabel(<span class="st">'Range of y values'</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a>plt.xlabel(<span class="st">'Range of x values'</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a><span class="co"># plot the points in a scatter plot</span></span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a>plt.scatter(x1, y1, c<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Red Range'</span>, s<span class="op">=</span>z1, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co"># 's' parameter is the dot size</span></span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a>plt.scatter(x2, y2, c<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Blue Range'</span>, s<span class="op">=</span>z2, alpha<span class="op">=</span><span class="fl">0.5</span>) <span class="co"># 'alpha' is the opacity</span></span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 </div>
 </div>
@@ -706,7 +706,7 @@ Pandas Series holding the values.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/boxplot1.png" alt="png" class="figure mx-auto d-block"></figure><p>The automatic title of the plot does not look good, we are missing a
 title for the y-axis and we do not need the extra x-axis title. We can
@@ -716,12 +716,12 @@ the same notebook cell together with the plot statement itself.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">''</span>) <span class="co"># remove the automatic title</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Buildings in compounds per village'</span>)   <span class="co"># add a title</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of buildings'</span>)   <span class="co"># add a y-axis title</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">''</span>)   <span class="co"># remove the x-axis title</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">None</span>)   <span class="co"># remove the grid lines</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>plt.suptitle(<span class="st">''</span>) <span class="co"># remove the automatic title</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>plt.title(<span class="st">'Buildings in compounds per village'</span>)   <span class="co"># add a title</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of buildings'</span>)   <span class="co"># add a y-axis title</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>plt.xlabel(<span class="st">''</span>)   <span class="co"># remove the x-axis title</span></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>plt.grid(<span class="va">None</span>)   <span class="co"># remove the grid lines</span></span></code></pre>
 </div>
 <figure><img src="../fig/boxplot3.png" alt="png" class="figure mx-auto d-block"></figure><p>In general most graphs can be broken down into a series of elements
 which, although typically related in some way, can all exist
@@ -741,14 +741,14 @@ plot statements in the same notebook cell.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">''</span>) <span class="co"># remove the automatic title</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Buildings in compounds per village'</span>)   <span class="co"># add a title</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of buildings'</span>)   <span class="co"># add a y-axis title</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">''</span>)   <span class="co"># remove the x-axis title</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">None</span>)   <span class="co"># remove the grid lines</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'safi_boxplot_buildings.pdf'</span>)   <span class="co"># save as pdf file</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'safi_boxplot_buildings.png'</span>, dpi <span class="op">=</span> <span class="dv">150</span>)  <span class="co"># save as png file, some extra arguments are provided</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>df.boxplot(column <span class="op">=</span> <span class="st">'buildings_in_compound'</span>, by <span class="op">=</span> <span class="st">'village'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>plt.suptitle(<span class="st">''</span>) <span class="co"># remove the automatic title</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>plt.title(<span class="st">'Buildings in compounds per village'</span>)   <span class="co"># add a title</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of buildings'</span>)   <span class="co"># add a y-axis title</span></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>plt.xlabel(<span class="st">''</span>)   <span class="co"># remove the x-axis title</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>plt.grid(<span class="va">None</span>)   <span class="co"># remove the grid lines</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>plt.savefig(<span class="st">'safi_boxplot_buildings.pdf'</span>)   <span class="co"># save as pdf file</span></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>plt.savefig(<span class="st">'safi_boxplot_buildings.png'</span>, dpi <span class="op">=</span> <span class="dv">150</span>)  <span class="co"># save as png file, some extra arguments are provided</span></span></code></pre>
 </div>
 <p>In general most graphs can be broken down into a series of elements
 which, although typically related in some way, can all exist
@@ -856,7 +856,7 @@ Matplotlib</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/instructor/13-matplotlib.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

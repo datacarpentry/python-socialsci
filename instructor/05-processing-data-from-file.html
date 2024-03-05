@@ -426,13 +426,13 @@ notebook.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:       <span class="co"># Open the file and assign it to a new variable which we call 'f'.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># The file will be read-only by default.</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                                          <span class="co"># As long as the following code is indented, the file 'f' will be open.</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:                        <span class="co"># We use a for loop to iterate through the file one line at a time.</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(line)                       <span class="co"># We simply print the line.</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I'm on to something else now."</span>)    <span class="co"># When we are finished with this file, we stop indenting the code and the file is closed automatically.</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:       <span class="co"># Open the file and assign it to a new variable which we call 'f'.</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>                                          <span class="co"># The file will be read-only by default.</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>                                          <span class="co"># As long as the following code is indented, the file 'f' will be open.</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:                        <span class="co"># We use a for loop to iterate through the file one line at a time.</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>        <span class="bu">print</span>(line)                       <span class="co"># We simply print the line.</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>        </span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I'm on to something else now."</span>)    <span class="co"># When we are finished with this file, we stop indenting the code and the file is closed automatically.</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -467,12 +467,12 @@ We are going to examine the different roof types.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:  <span class="co"># Open the file and assign it to a variable called 'f'.</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="co"># Indent the code to keep the file open. Stop indenting to close.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    f.readline()                      <span class="co"># First line is a header so ignore it.</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(line.split(<span class="st">","</span>)[<span class="dv">18</span>])    <span class="co"># Index 18, the 19th column is C01_respondent_roof_type.</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:  <span class="co"># Open the file and assign it to a variable called 'f'.</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>                                      <span class="co"># Indent the code to keep the file open. Stop indenting to close.</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>    f.readline()                      <span class="co"># First line is a header so ignore it.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>        <span class="bu">print</span>(line.split(<span class="st">","</span>)[<span class="dv">18</span>])    <span class="co"># Index 18, the 19th column is C01_respondent_roof_type.</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -497,36 +497,36 @@ types, but we will play safe and assume there may be more.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    f.readline()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    grass_roof <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    mabatisloping_roof <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    mabatipitched_roof <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    roof_type_other <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        roof_type <span class="op">=</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>]</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 5    </span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> roof_type <span class="op">==</span> <span class="st">'grass'</span> :</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            grass_roof <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> roof_type <span class="op">==</span> <span class="st">'mabatisloping'</span> :</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            mabatisloping_roof <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> roof_type <span class="op">==</span> <span class="st">'mabatipitched'</span> :</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            mabatipitched_roof <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> :</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            roof_type_other <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co">#6</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, grass_roof, <span class="st">" grass roofs"</span>)</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, mabatisloping_roof, <span class="st">" mabatisloping roofs"</span>)</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, mabatipitched_roof, <span class="st">" mabatipitchedg roofs"</span>)</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, roof_type_other, <span class="st">" other roof types"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    f.readline()</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    grass_roof <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    mabatisloping_roof <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>    mabatipitched_roof <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>    roof_type_other <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>        roof_type <span class="op">=</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>]</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co"># 5    </span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>        <span class="cf">if</span> roof_type <span class="op">==</span> <span class="st">'grass'</span> :</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>            grass_roof <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>        <span class="cf">elif</span> roof_type <span class="op">==</span> <span class="st">'mabatisloping'</span> :</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>            mabatisloping_roof <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>        <span class="cf">elif</span> roof_type <span class="op">==</span> <span class="st">'mabatipitched'</span> :</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>            mabatipitched_roof <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>        <span class="cf">else</span> :</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>            roof_type_other <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="co">#6</span></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, grass_roof, <span class="st">" grass roofs"</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, mabatisloping_roof, <span class="st">" mabatisloping roofs"</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, mabatipitched_roof, <span class="st">" mabatipitchedg roofs"</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"There are "</span>, roof_type_other, <span class="st">" other roof types"</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -552,17 +552,17 @@ file.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> fr:              <span class="co"># Note how we have used a new variable name, 'fr'.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                                                   <span class="co"># The file is read-only by default.</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw:  <span class="co"># We are keeping 'fr' open so we indent.</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                                                   <span class="co"># We specify a second parameter, "w" to make this file writeable.</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                                                   <span class="co"># We use a different variable, 'fw'.</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> line <span class="kw">in</span> fr:</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2    </span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>] <span class="op">==</span> <span class="st">'grass'</span> :</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                fw.write(line)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> fr:              <span class="co"># Note how we have used a new variable name, 'fr'.</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>                                                   <span class="co"># The file is read-only by default.</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw:  <span class="co"># We are keeping 'fr' open so we indent.</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>                                                   <span class="co"># We specify a second parameter, "w" to make this file writeable.</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>                                                   <span class="co"># We use a different variable, 'fw'.</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>        <span class="cf">for</span> line <span class="kw">in</span> fr:</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="co"># 2    </span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>            <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>] <span class="op">==</span> <span class="st">'grass'</span> :</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>                fw.write(line)</span></code></pre>
 </div>
 <p>What are we doing here?</p>
 <ol style="list-style-type: decimal"><li>Open the files. Because there are now two files, each has its own
@@ -583,7 +583,7 @@ have added the line</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fw.write(fr.readline())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>fw.write(fr.readline())</span></code></pre>
 </div>
 <p>before the for loop</p>
 <div id="exercise" class="callout challenge">
@@ -616,21 +616,21 @@ separate file. In both files include the header record.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> fr:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>   <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof_muddaub.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw1:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof_burntbricks.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw2:</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>          headerline <span class="op">=</span> fr.readline()</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>          fw1.write(headerline)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>          fw2.write(headerline)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="cf">for</span> line <span class="kw">in</span> fr:</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>] <span class="op">==</span> <span class="st">'grass'</span> :</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">19</span>] <span class="op">==</span> <span class="st">'muddaub'</span> :</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                      fw1.write(line)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">19</span>] <span class="op">==</span> <span class="st">'burntbricks'</span> :</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                      fw2.write(line)    </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> fr:</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>   <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof_muddaub.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw1:</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>      <span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_grass_roof_burntbricks.csv"</span>, <span class="st">"w"</span>) <span class="im">as</span> fw2:</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>          headerline <span class="op">=</span> fr.readline()</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>          fw1.write(headerline)</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>          fw2.write(headerline)</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>          <span class="cf">for</span> line <span class="kw">in</span> fr:</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>              <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>] <span class="op">==</span> <span class="st">'grass'</span> :</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>                  <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">19</span>] <span class="op">==</span> <span class="st">'muddaub'</span> :</span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>                      fw1.write(line)</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>                  <span class="cf">if</span> line.split(<span class="st">","</span>)[<span class="dv">19</span>] <span class="op">==</span> <span class="st">'burntbricks'</span> :</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>                      fw2.write(line)    </span></code></pre>
 </div>
 </div>
 </div>
@@ -657,53 +657,53 @@ manipulating keys and values.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># an empty dictionary</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>myDict <span class="op">=</span> {}</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># A dictionary with a single Key-value pair</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>personDict <span class="op">=</span> {<span class="st">'Name'</span> : <span class="st">'Peter'</span>}</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># I can add more about 'Peter' to the dictionary</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>personDict[<span class="st">'Location'</span>] <span class="op">=</span> <span class="st">'Manchester'</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># I can print all of the keys and values from the dictionary</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(personDict.items())</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co"># I can print all of the keys and values from the dictionary - and make it look a bit nicer</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> personDict:</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, personDict[item])</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co"># or all of the keys</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(personDict.keys())</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co"># or all of the values</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(personDict.values())</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># I can access the value for a given key</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> personDict[<span class="st">'Name'</span>]</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co"># I can change value for a given key</span></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>personDict[<span class="st">'Name'</span>] <span class="op">=</span> <span class="st">"Fred"</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(personDict[<span class="st">'Name'</span>])</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co"># I can check if a key exists</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'Name'</span></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> personDict :</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"already exists"</span>)</span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    personDict[key] <span class="op">=</span> <span class="st">"New value"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># an empty dictionary</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>myDict <span class="op">=</span> {}</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># A dictionary with a single Key-value pair</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>personDict <span class="op">=</span> {<span class="st">'Name'</span> : <span class="st">'Peter'</span>}</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co"># I can add more about 'Peter' to the dictionary</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>personDict[<span class="st">'Location'</span>] <span class="op">=</span> <span class="st">'Manchester'</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co"># I can print all of the keys and values from the dictionary</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="bu">print</span>(personDict.items())</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="co"># I can print all of the keys and values from the dictionary - and make it look a bit nicer</span></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> personDict:</span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, personDict[item])</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="co"># or all of the keys</span></span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="bu">print</span>(personDict.keys())</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="co"># or all of the values</span></span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a><span class="bu">print</span>(personDict.values())</span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a><span class="co"># I can access the value for a given key</span></span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>x <span class="op">=</span> personDict[<span class="st">'Name'</span>]</span>
+<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a><span class="co"># I can change value for a given key</span></span>
+<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a>personDict[<span class="st">'Name'</span>] <span class="op">=</span> <span class="st">"Fred"</span></span>
+<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a><span class="bu">print</span>(personDict[<span class="st">'Name'</span>])</span>
+<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a><span class="co"># I can check if a key exists</span></span>
+<span id="cb10-41"><a href="#cb10-41" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'Name'</span></span>
+<span id="cb10-43"><a href="#cb10-43" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> personDict :</span>
+<span id="cb10-45"><a href="#cb10-45" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"already exists"</span>)</span>
+<span id="cb10-46"><a href="#cb10-46" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb10-47"><a href="#cb10-47" tabindex="-1"></a>    personDict[key] <span class="op">=</span> <span class="st">"New value"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -749,31 +749,31 @@ value by 1</li>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>dict_roof_types <span class="op">=</span> {<span class="st">'type1'</span> : <span class="dv">1</span> , <span class="st">'type2'</span> : <span class="dv">3</span>}</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>dict_roof_types[<span class="st">'type3'</span>] <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'type4'</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> dict_roof_types :</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    dict_roof_types[key] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    dict_roof_types[key] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'type2'</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> dict_roof_types :</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    dict_roof_types[key] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    dict_roof_types[key] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 5</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> dict_roof_types:</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, dict_roof_types[item])</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>dict_roof_types <span class="op">=</span> {<span class="st">'type1'</span> : <span class="dv">1</span> , <span class="st">'type2'</span> : <span class="dv">3</span>}</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>dict_roof_types[<span class="st">'type3'</span>] <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'type4'</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> dict_roof_types :</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>    dict_roof_types[key] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>    dict_roof_types[key] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a>key <span class="op">=</span> <span class="st">'type2'</span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a><span class="cf">if</span> key <span class="kw">in</span> dict_roof_types :</span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    dict_roof_types[key] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>    dict_roof_types[key] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a> </span>
+<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a><span class="co"># 5</span></span>
+<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> dict_roof_types:</span>
+<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, dict_roof_types[item])</span>
+<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a>    </span></code></pre>
 </div>
 </div>
 </div>
@@ -784,28 +784,28 @@ without knowing in advance what any of the roof types are.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    f.readline()</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    dict_roof_types <span class="op">=</span> {}</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        roof_type <span class="op">=</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>]</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 5    </span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> roof_type <span class="kw">in</span> dict_roof_types :</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>            dict_roof_types[roof_type] <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> :</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>            dict_roof_types[roof_type] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 6</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> dict_roof_types:</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, dict_roof_types[item])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">"SAFI_results.csv"</span>) <span class="im">as</span> f:</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>    f.readline()</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>    dict_roof_types <span class="op">=</span> {}</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="co"># 4</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>        roof_type <span class="op">=</span> line.split(<span class="st">","</span>)[<span class="dv">18</span>]</span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="co"># 5    </span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>        <span class="cf">if</span> roof_type <span class="kw">in</span> dict_roof_types :</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>            dict_roof_types[roof_type] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a>        <span class="cf">else</span> :</span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a>            dict_roof_types[roof_type] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a><span class="co"># 6</span></span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> dict_roof_types:</span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a>    <span class="bu">print</span>(item, <span class="st">"="</span>, dict_roof_types[item])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -906,7 +906,7 @@ individual tokens</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/instructor/05-processing-data-from-file.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

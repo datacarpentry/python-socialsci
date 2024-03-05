@@ -392,8 +392,8 @@ into a Dataframe.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df_SN7577 <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>df_SN7577 <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="selecting-rows-and-columns-from-a-pandas-dataframe">Selecting rows and columns from a pandas Dataframe<a class="anchor" aria-label="anchor" href="#selecting-rows-and-columns-from-a-pandas-dataframe"></a></h3>
@@ -405,11 +405,11 @@ provide a list of column names.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_cols <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>, usecols<span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">173</span>,<span class="dv">174</span>,<span class="dv">175</span>])</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.shape)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.columns)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_cols <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>, usecols<span class="op">=</span> [<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'sex'</span>, <span class="st">'age'</span>, <span class="st">'agegroups'</span>])</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.columns)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>df_SN7577_some_cols <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>, usecols<span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">173</span>,<span class="dv">174</span>,<span class="dv">175</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.shape)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.columns)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>df_SN7577_some_cols <span class="op">=</span> pd.read_csv(<span class="st">"SN7577.tab"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>, usecols<span class="op">=</span> [<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'sex'</span>, <span class="st">'age'</span>, <span class="st">'agegroups'</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="bu">print</span>(df_SN7577_some_cols.columns)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -426,10 +426,10 @@ labels):</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Both of these statements are the same</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[<span class="st">'Q1'</span>])</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># and</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577.Q1)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Both of these statements are the same</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[<span class="st">'Q1'</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co"># and</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="bu">print</span>(df_SN7577.Q1)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -447,17 +447,17 @@ strings. Remember that lists are enclosed in <code>[]</code>.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>]])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>]])</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Q1  Q2  Q3</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>      <span class="dv">1</span>  <span class="op">-</span><span class="dv">1</span>   <span class="dv">1</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>      <span class="dv">3</span>  <span class="op">-</span><span class="dv">1</span>   <span class="dv">1</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>     <span class="dv">10</span>   <span class="dv">3</span>   <span class="dv">2</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>      <span class="dv">9</span>  <span class="op">-</span><span class="dv">1</span>  <span class="dv">10</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>...</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>Q1  Q2  Q3</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="dv">0</span>      <span class="dv">1</span>  <span class="op">-</span><span class="dv">1</span>   <span class="dv">1</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="dv">1</span>      <span class="dv">3</span>  <span class="op">-</span><span class="dv">1</span>   <span class="dv">1</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="dv">2</span>     <span class="dv">10</span>   <span class="dv">3</span>   <span class="dv">2</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="dv">3</span>      <span class="dv">9</span>  <span class="op">-</span><span class="dv">1</span>  <span class="dv">10</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>...</span></code></pre>
 </div>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
@@ -485,9 +485,9 @@ the file?</li>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q3'</span>, <span class="st">'Q2'</span>]])</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q3'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>]])</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q33'</span>, <span class="st">'Q2'</span>]])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q3'</span>, <span class="st">'Q2'</span>]])</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q3'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>]])</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="bu">print</span>(df_SN7577[[<span class="st">'Q33'</span>, <span class="st">'Q2'</span>]])</span></code></pre>
 </div>
 </div>
 </div>
@@ -502,9 +502,9 @@ form of <code>a:b</code>. <code>a</code> is the first row and
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select row with index of 1, 2 and 3 (rows 2, 3 and 4 in the Dataframe)</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[<span class="dv">1</span>:<span class="dv">4</span>]</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># select row with index of 1, 2 and 3 (rows 2, 3 and 4 in the Dataframe)</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[<span class="dv">1</span>:<span class="dv">4</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <div id="exercise-1" class="callout challenge">
 <div class="callout-square">
@@ -528,7 +528,7 @@ form of <code>a:b</code>. <code>a</code> is the first row and
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_SN7577[<span class="dv">1</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>df_SN7577[<span class="dv">1</span>]</span></code></pre>
 </div>
 <p>You get an error if you only specify <code>1</code>. You need to use
 <code>:1</code> or <code>0:1</code> to get the first row returned. The
@@ -546,23 +546,23 @@ Q2 is -1”.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[(df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>)]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[(df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>)]</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>The criteria can be more complex and isn’t limited to a single
 column’s values:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[ (df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">&amp;</span> (df_SN7577.numage <span class="op">&gt;</span> <span class="dv">60</span>)]</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[ (df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">&amp;</span> (df_SN7577.numage <span class="op">&gt;</span> <span class="dv">60</span>)]</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>We can combine the row selection with column selection:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[ (df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">&amp;</span> (df_SN7577.numage <span class="op">&gt;</span> <span class="dv">60</span>)][[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>,<span class="st">'numage'</span>]]</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577[ (df_SN7577.Q2 <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">&amp;</span> (df_SN7577.numage <span class="op">&gt;</span> <span class="dv">60</span>)][[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>,<span class="st">'numage'</span>]]</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>Selecting rows on the row index is of limited use unless you need to
 select a contiguous range of rows.</p>
@@ -571,8 +571,8 @@ index:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="dv">1</span>:<span class="dv">4</span>]</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="dv">1</span>:<span class="dv">4</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>Using the <code>iloc</code> method gives the same results as our
 previous example.</p>
@@ -583,33 +583,33 @@ from across the Dataframe.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the first row from the Dataframe</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="dv">0</span>]</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># select every 100th record from the Dataframe.</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>)]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Select the first row from the Dataframe</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="dv">0</span>]</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>df_SN7577_some_rows</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="co"># select every 100th record from the Dataframe.</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>)]</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>You can also specify column ranges using the <code>iloc</code> method
 again using the column index numbers:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># columns 0,1,2 and 3</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),<span class="dv">0</span>:<span class="dv">4</span>]</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># columns 0,1,2,78 and 95</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">78</span>,<span class="dv">95</span>]]</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># columns 0,1,2 and 3</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),<span class="dv">0</span>:<span class="dv">4</span>]</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>df_SN7577_some_rows</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="co"># columns 0,1,2,78 and 95</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.iloc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">78</span>,<span class="dv">95</span>]]</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 <p>There is also a <code>loc</code> method which allows you to use the
 column names.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># columns 0,1,2,78 and 95 using the column names and changing 'iloc' to 'loc'</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.loc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'Q18bii'</span>, <span class="st">'access6'</span> ]]</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># columns 0,1,2,78 and 95 using the column names and changing 'iloc' to 'loc'</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>df_SN7577_some_rows <span class="op">=</span> df_SN7577.loc[<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df_SN7577), <span class="dv">100</span>),[<span class="st">'Q1'</span>, <span class="st">'Q2'</span>, <span class="st">'Q3'</span>, <span class="st">'Q18bii'</span>, <span class="st">'access6'</span> ]]</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>df_SN7577_some_rows</span></code></pre>
 </div>
 </section><section id="sampling"><h2 class="section-heading">Sampling<a class="anchor" aria-label="anchor" href="#sampling"></a>
 </h2>
@@ -618,8 +618,8 @@ extract a sample of the records from the Dataframe.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_SN7577.sample(<span class="dv">10</span>, replace<span class="op">=</span><span class="va">False</span>)             <span class="co"># ten records, do not select same record twice (this is the default)</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_SN7577.sample(frac<span class="op">=</span><span class="fl">0.05</span>, random_state<span class="op">=</span><span class="dv">1</span>)     <span class="co"># 5% of records , same records if run again</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>df_SN7577.sample(<span class="dv">10</span>, replace<span class="op">=</span><span class="va">False</span>)             <span class="co"># ten records, do not select same record twice (this is the default)</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>df_SN7577.sample(frac<span class="op">=</span><span class="fl">0.05</span>, random_state<span class="op">=</span><span class="dv">1</span>)     <span class="co"># 5% of records , same records if run again</span></span></code></pre>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -700,7 +700,7 @@ extract a sample of rows from a dataframe</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/instructor/09-extracting-data.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

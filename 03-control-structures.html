@@ -404,13 +404,13 @@ based on the evaluation of an expression</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> expression :</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    statement <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    statement <span class="dv">2</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    statement n</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>statement always executed</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="cf">if</span> expression :</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    statement <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>    statement <span class="dv">2</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    ...</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    statement n</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>statement always executed</span></code></pre>
 </div>
 <p>If the expression evaluates to <code>True</code> then the statements
 1 to n will be executed followed by
@@ -423,29 +423,29 @@ necessary.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 1</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>threshold<span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"threshold is "</span>,threshold)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> threshold :</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(value, <span class="st">"is bigger than "</span>, threshold)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>high_threshold <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"new threshold is "</span>,high_threshold)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> high_threshold :</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(value , <span class="st">"is above "</span>, high_threshold, <span class="st">"threshold"</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 3</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>mid_threshold <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"final threshold is "</span>,mid_threshold)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">==</span> mid_threshold :</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"value, "</span>, value, <span class="st">" and threshold,"</span>, mid_threshold, <span class="st">", are equal"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 1</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>threshold<span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"threshold is "</span>,threshold)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> threshold :</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>    <span class="bu">print</span>(value, <span class="st">"is bigger than "</span>, threshold)</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>high_threshold <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"new threshold is "</span>,high_threshold)</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> high_threshold :</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="bu">print</span>(value , <span class="st">"is above "</span>, high_threshold, <span class="st">"threshold"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 3</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>mid_threshold <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value is"</span>, value, <span class="st">"final threshold is "</span>,mid_threshold)</span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="cf">if</span> value <span class="op">==</span> mid_threshold :</span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"value, "</span>, value, <span class="st">" and threshold,"</span>, mid_threshold, <span class="st">", are equal"</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -502,15 +502,15 @@ than or equal to a</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2a</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a is"</span>, a, <span class="st">"b is"</span>,b)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&gt;</span> b :</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">"is bigger than "</span>, b)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&lt;=</span> b :</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(b, <span class="st">"is bigger than or equal to "</span>, a)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2a</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>a<span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>b<span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a is"</span>, a, <span class="st">"b is"</span>,b)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&gt;</span> b :</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">"is bigger than "</span>, b)</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&lt;=</span> b :</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="bu">print</span>(b, <span class="st">"is bigger than or equal to "</span>, a)</span></code></pre>
 </div>
 </div>
 </div>
@@ -522,16 +522,16 @@ construct</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if ... else ...</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>threshold <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value = "</span>, value, <span class="st">"and threshold = "</span>, threshold)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> threshold :</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"above threshold"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"below threshold"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># if ... else ...</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>threshold <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"value = "</span>, value, <span class="st">"and threshold = "</span>, threshold)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> threshold :</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"above threshold"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"below threshold"</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -558,18 +558,18 @@ of a and b.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if ... elif ... else ... endIf</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a = "</span>, a, <span class="st">"and b = "</span>, b)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&gt;</span> b :</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" is greater than "</span>, b)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> a <span class="op">==</span> b :</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" equals "</span>, b)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" is less than "</span>, b)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># if ... elif ... else ... endIf</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a = "</span>, a, <span class="st">"and b = "</span>, b)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&gt;</span> b :</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" is greater than "</span>, b)</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="cf">elif</span> a <span class="op">==</span> b :</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" equals "</span>, b)</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>    <span class="bu">print</span>(a, <span class="st">" is less than "</span>, b)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -593,15 +593,15 @@ which will potentially change the condition.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loop</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n :</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># while loop</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n :</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -644,60 +644,60 @@ Python interpreter is still working.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n :</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n :</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    </span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>boolvalue <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n <span class="kw">and</span> boolvalue:</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>boolvalue <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">&lt;=</span> n <span class="kw">and</span> boolvalue:</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>    </span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">!=</span> n :</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1 to 10</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">!=</span> n :</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1 to"</span>, n, <span class="st">"is "</span>, cur_sum)</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1.1 to 9.9 i. steps of 1.1</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="fl">9.9</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">!=</span> n :</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="fl">1.1</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1.1 to"</span>, n, <span class="st">"is "</span>, <span class="bu">sum</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># while loop - summing the numbers 1.1 to 9.9 i. steps of 1.1</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>n <span class="op">=</span> <span class="fl">9.9</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>cur_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="co"># sum of n  numbers</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="cf">while</span>  i <span class="op">!=</span> n :</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>    cur_sum <span class="op">=</span> cur_sum <span class="op">+</span> i</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="fl">1.1</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a>    </span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of the numbers from 1.1 to"</span>, n, <span class="st">"is "</span>, <span class="bu">sum</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -736,11 +736,11 @@ statements.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable_name <span class="kw">in</span> some_sequence :</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    statement1</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    statement2</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    statementn</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="cf">for</span> variable_name <span class="kw">in</span> some_sequence :</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>    statement1</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>    statement2</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    ...</span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>    statementn</span></code></pre>
 </div>
 <p>The key part of this is the <code>some_sequence</code>. The phrase
 used in the documentation is that it must be ‘iterable’. That means, you
@@ -755,38 +755,38 @@ over the elements in the list.</li>
 </ul><div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 1</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] :</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">"Tom"</span>, <span class="st">"Dick"</span>, <span class="st">"Harry"</span>] :</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 3</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">"Tom"</span>, <span class="dv">42</span>, <span class="fl">3.142</span>] :</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 4</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>) :</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 5</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>) :</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 6</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">2</span>) :</span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 7</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="st">"ABCDE"</span> :</span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 8</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>longString <span class="op">=</span> <span class="st">"The quick brown fox jumped over the lazy sleeping dog"</span></span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> longString.split() :</span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 1</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] :</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 2</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">"Tom"</span>, <span class="st">"Dick"</span>, <span class="st">"Harry"</span>] :</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>    <span class="bu">print</span>(name)</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 3</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">"Tom"</span>, <span class="dv">42</span>, <span class="fl">3.142</span>] :</span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a>    <span class="bu">print</span>(name)</span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 4</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>) :</span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 5</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>) :</span>
+<span id="cb16-19"><a href="#cb16-19" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb16-20"><a href="#cb16-20" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 6</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">2</span>) :</span>
+<span id="cb16-23"><a href="#cb16-23" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb16-24"><a href="#cb16-24" tabindex="-1"></a></span>
+<span id="cb16-25"><a href="#cb16-25" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 7</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="st">"ABCDE"</span> :</span>
+<span id="cb16-27"><a href="#cb16-27" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb16-28"><a href="#cb16-28" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Example 8</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb16-30"><a href="#cb16-30" tabindex="-1"></a>longString <span class="op">=</span> <span class="st">"The quick brown fox jumped over the lazy sleeping dog"</span></span>
+<span id="cb16-31"><a href="#cb16-31" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> longString.split() :</span>
+<span id="cb16-32"><a href="#cb16-32" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -863,7 +863,7 @@ of values separated by <code>,</code> like this:</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>variablelist <span class="op">=</span> <span class="st">"01/01/2010,34.5,Yellow,True"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>variablelist <span class="op">=</span> <span class="st">"01/01/2010,34.5,Yellow,True"</span></span></code></pre>
 </div>
 <p>Research the <code>split()</code> method and then rewrite example 8
 from the <code>for</code> loop section above so that it prints the 4
@@ -881,10 +881,10 @@ components of <code>variablelist</code></p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From the for loop section above</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>variablelist <span class="op">=</span> <span class="st">"01/01/2010,34.5,Yellow,True"</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> variablelist.split(<span class="st">","</span>) :</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># From the for loop section above</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>variablelist <span class="op">=</span> <span class="st">"01/01/2010,34.5,Yellow,True"</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> variablelist.split(<span class="st">","</span>) :</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code></pre>
 </div>
 <p>The format of <code>variablelist</code> is very much like that of a
 record in a csv file. In later episodes we will see how we can extract
@@ -971,7 +971,7 @@ loop.</li>
   "identifier": "https://datacarpentry.github.io/python-socialsci/03-control-structures.html",
   "dateCreated": "2017-05-25",
   "dateModified": "2023-05-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
