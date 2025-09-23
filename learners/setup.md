@@ -12,19 +12,19 @@ We will use the files listed below for the data in this lesson. You can download
 
 **Note: make sure to place the data files on the same folder that your notebook is running on.**
 
-- [SAFI\_clean.csv](/data/SAFI_clean.csv)
-- [SAFI\_results.csv](/data/SAFI_results.csv)
-- [SAFI\_full\_shortname.csv](/data/SAFI_full_shortname.csv)
-- [SAFI.json](/data/SAFI.json)
-- [SN7577.tab](/data/SN7577.tab)
-- [SN7577i\_a.csv](/data/SN7577i_a.csv)
-- [SN7577i\_aa.csv](/data/SN7577i_aa.csv)
-- [SN7577i\_b.csv](/data/SN7577i_b.csv)
-- [SN7577i\_bb.csv](/data/SN7577i_bb.csv)
-- [SN7577i\_c.csv](/data/SN7577i_c.csv)
-- [SN7577i\_d.csv](/data/SN7577i_d.csv)
-- [SN7577.sqlite](/data/SN7577.sqlite)
-- [Newspapers.csv](/data/Newspapers.csv)
+- [SAFI\_clean.csv](./data/SAFI_clean.csv)
+- [SAFI\_results.csv](./data/SAFI_results.csv)
+- [SAFI\_full\_shortname.csv](./data/SAFI_full_shortname.csv)
+- [SAFI.json](./data/SAFI.json)
+- [SN7577.tab](./data/SN7577.tab)
+- [SN7577i\_a.csv](./data/SN7577i_a.csv)
+- [SN7577i\_aa.csv](./data/SN7577i_aa.csv)
+- [SN7577i\_b.csv](./data/SN7577i_b.csv)
+- [SN7577i\_bb.csv](./data/SN7577i_bb.csv)
+- [SN7577i\_c.csv](./data/SN7577i_c.csv)
+- [SN7577i\_d.csv](./data/SN7577i_d.csv)
+- [SN7577.sqlite](./data/SN7577.sqlite)
+- [Newspapers.csv](./data/Newspapers.csv)
   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -64,7 +64,7 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of Python will a
 3. For Windows and Linux there is the option of either a 64 bit (default) download or a 32 bit download. Unless you know that you have an old 32 bit pc you should choose the 64 bit installer.
 4. Run the downloaded installer program. Accept the default settings until you are given the option to add Anaconda to your environmental Path variable. Despite the recommendation not to and the subsequent warning, you should select this option. This will make it easier later on to start Jupyter notebooks from any location.
 5. The installation can take a few minutes. When finished you should be able to open a cmd prompt (Type cmd from Windows start and into the cmd window type python. You should get a display similar to that below.
-  ![](/fig/Python_install_1.png){alt='Python Install'}
+  ![](./fig/Python_install_1.png){alt='Python Install'}
 6. The `>>>` prompt tells you that you are in the Python environment. You can exit Python with the `exit()` command.
 
 ### Running Jupyter Notebooks in Windows
@@ -75,7 +75,7 @@ The [Anaconda](https://www.anaconda.com/download/) distribution of Python will a
 4. When the window opens, type the command `jupyter notebook`.
 5. Several messages will appear in the command window. In addition your default web browser will open and display the Jupyter notebook home page. The main part of this is a file browser window starting at the folder you selected in step 1.
 6. There may be existing notebooks which you can select and open in a new tab in your browser or there is a menu option to create a new notebook.
-  ![](/fig/Python_install_2.png){alt='Python Install'}
+  ![](./fig/Python_install_2.png){alt='Python Install'}
 7. The Jupyter package creates a small web services and opens your browser pointing at it. If your browser does not open, you can open it manually and specify ‘localhost:8888' as the URL.
 8. Port 8888 is the default port used by the Jupyter web service, but if it is already in use it will increment the port number automatically. Either way the port number it does use is given in a message in the cmd/powershell window.
 9. Once running, the cmd/powershell window will display additional messages, e.g. about saving notebooks, but there is no need to interact with it directly. The window can be minimized and ignored.
