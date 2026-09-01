@@ -1,0 +1,11 @@
+1,Conservative
+2,Labour
+3,Liberal Democrats (Lib Dem)
+4,Scottish/Welsh Nationalist
+5,Green Party
+6,UK Independence Party
+7,British National Party (BNP)
+8,Other
+9,Would not vote
+10,Undecided
+11,Refused

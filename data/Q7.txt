@@ -1,0 +1,5 @@
+1,A great deal
+2,A fair amount
+3,Not very much
+4,Nothing at all
+5,Don't know
