@@ -26,7 +26,7 @@ Whether the paper is read or not is recorded using the values of 0 or 1 as a boo
 
 Recording information in this *wide* format is not always beneficial when trying to analyse the data.
 
-Pandas provides methods for converting data from *wide* to *long* format and from *long* to *wide* format
+pandas provides methods for converting data from *wide* to *long* format and from *long* to *wide* format
 
 The SN7577 dataset does not contain a variable that can be used to uniquely identify a row. This is often referred to as a 'primary key' field (or column).
 

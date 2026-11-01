@@ -15,7 +15,7 @@ exercises: 25
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I access database  tables using Pandas and Python?
+- How can I access database  tables using pandas and Python?
 - What are the advantages of storing data in a database
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -28,7 +28,7 @@ In this lesson we will use Python code using the sqlite3 module to access the en
 
 In practice we spend a lot of the time querying database tables.
 
-## Pandas Dataframe v SQL table
+## pandas Dataframe v SQL table
 
 It is very easy and often very convenient to think of SQL tables and pandas Dataframes as being similar types of objects. All of the data manipulations, slicing, dicing, aggragetions and joins associated with SQL and SQL tables can all be accomplished with pandas methods operating on a pandas Dataframe.
 
@@ -53,7 +53,7 @@ import pandas as pd
 
 We will start looking at the sqlite3 library by connecting to an existing database and returning the results of running a query.
 
-Initially we will do this without using Pandas and then we will repreat the exercise so that you can see the difference.
+Initially we will do this without using pandas and then we will repreat the exercise so that you can see the difference.
 
 The first thing we need to do is to make a connection to the database. An SQLite database is just a file. To make a connection to it we only need to use the sqlite3 `connect()` function and specify the database file as the first parameter.
 
@@ -205,11 +205,11 @@ for row in rows:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Using Pandas to read a database table.
+## Using pandas to read a database table.
 
-When you use Pandas to read a database table, you connect to the database in the same way as before using the SQLite3 `connect()` function and providing the filename of the database file.
+When you use pandas to read a database table, you connect to the database in the same way as before using the SQLite3 `connect()` function and providing the filename of the database file.
 
-Pandas has a method `read_sql_query` to which you provide both the string containing the SQL query you wish to run and also the connection variable.
+pandas has a method `read_sql_query` to which you provide both the string containing the SQL query you wish to run and also the connection variable.
 
 The results from running the query are placed in a pandas Dataframe with the table column names automatically added.
 
@@ -301,7 +301,7 @@ pd.read_sql_query("drop table Q1_undecided_v2", con)
 
 The SQL statement we sent is valid SQL but it doesn't return rows from a table, it simply reports success of failure (in dropping the table in this case). The first time we run it the table is deleted and a response to the effect is returned. The resonse cannot be converted to a Dataframe, hence the first error message, which is a pandas error.
 
-When we run it for the second time, the table has already has already been dropped, so this time the error message is from SQLite saying the table didn't exist. Pandas recognises that this is an SQLite error message and simply passes it on to the user.
+When we run it for the second time, the table has already has already been dropped, so this time the error message is from SQLite saying the table didn't exist. pandas recognises that this is an SQLite error message and simply passes it on to the user.
 
 The moral of the story: pandas may be better for getting data returned into a Dataframe, but there are some things best left to the sqlite functions directly.
 

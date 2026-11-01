@@ -203,7 +203,7 @@ df_SN7577_some_rows
 
 ## Sampling
 
-Pandas does have a `sample` method which allows you to extract a sample of the records from the Dataframe.
+pandas does have a `sample` method which allows you to extract a sample of the records from the Dataframe.
 
 ```python
 df_SN7577.sample(10, replace=False)             # ten records, do not select same record twice (this is the default)

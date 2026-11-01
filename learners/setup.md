@@ -42,7 +42,7 @@ For this workshop we use Python version 3.x.
 
 ### Required Python Packages for this workshop
 
-- [Pandas](https://pandas.pydata.org/)
+- [pandas](https://pandas.pydata.org/)
 - [Jupyter notebook](https://jupyter.org/)
 - [Numpy](https://www.numpy.org/)
 - [Matplotlib](https://matplotlib.org/)

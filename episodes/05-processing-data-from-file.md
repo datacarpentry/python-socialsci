@@ -42,7 +42,7 @@ In this episode we will;
 
 The file we will be using is only a small file (131 data records), but the approach we are using will work for any size of file. Imagine 131M records. This is because we only process one record at a time so the memory requirements of the programs will be very small. The larger the file the more the processing time required.
 
-Other approaches to reading files will typically expect to read the whole file in one go. This can be efficient when you subsequently process the data but it require large amounts of memory to hold the entire file. We will look at this approach later when the look at the Pandas package.
+Other approaches to reading files will typically expect to read the whole file in one go. This can be efficient when you subsequently process the data but it require large amounts of memory to hold the entire file. We will look at this approach later when the look at the pandas package.
 
 For our examples in this episode we are going to use the SAFI\_results.csv file. This is available for download [here](data/SAFI_results.csv) and the description of the file is available [here](https://datacarpentry.org/socialsci-workshop/data/index.html).
 

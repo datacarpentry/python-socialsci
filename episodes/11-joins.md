@@ -1,5 +1,5 @@
 ---
-title: Joining Pandas Dataframes
+title: Joining pandas Dataframes
 teaching: 25
 exercises: 10
 ---
@@ -130,7 +130,7 @@ A detailed discussion of different join types is given in the [SQL lesson](./epi
 You specify the type of join you want using the `how` parameter. The default is the `inner` join which returns the
 columns from both tables where the `key` or common column values match in both Dataframes.
 
-The possible values of the `how` parameter are shown in the picture below (taken from the Pandas documentation)
+The possible values of the `how` parameter are shown in the picture below (taken from the pandas documentation)
 
 ![](fig/pandas_join_types.png){alt='pandas\_join\_types'}
 
