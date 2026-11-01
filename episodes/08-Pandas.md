@@ -1,5 +1,5 @@
 ---
-title: Reading data from a file using Pandas
+title: Reading data from a file using pandas
 teaching: 15
 exercises: 5
 ---
@@ -15,13 +15,13 @@ exercises: 5
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is Pandas?
-- How do I read files using Pandas?
-- What is the difference between reading files using Pandas and other methods of reading files?
+- What is pandas?
+- How do I read files using pandas?
+- What is the difference between reading files using pandas and other methods of reading files?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## What is Pandas?
+## What is pandas?
 
 pandas is a Python library containing a set of functions and specialised data structures that have been designed to help Python programmers to perform data analysis tasks in a structured way.
 
@@ -47,13 +47,13 @@ Importing the pandas library is done in exactly the same way as for any other li
 import pandas as pd
 ```
 
-## Pandas data structures
+## pandas data structures
 
 There are two main data structure used by pandas, they are the Series and the Dataframe. The Series equates in general to a vector or a list. The Dataframe is equivalent to a table. Each column in a pandas Dataframe is a pandas Series data structure.
 
 We will mainly be looking at the Dataframe.
 
-We can easily create a Pandas Dataframe by reading a .csv file
+We can easily create a pandas Dataframe by reading a .csv file
 
 ## Reading a csv file
 
@@ -61,7 +61,7 @@ When we read a csv dataset in base Python we did so by opening the dataset, read
 
 The main advantage of this approach, however, is that you only have to store one dataset record in memory at a time. This means that if you have the time, you can process datasets of any size.
 
-In Pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a Dataframe. If your dataset has column headers in the first record then these can be used as the Dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
+In pandas, csv files are read as complete datasets. You do not have to explicitly open and close the dataset. All of the dataset records are assembled into a Dataframe. If your dataset has column headers in the first record then these can be used as the Dataframe column names. You can explicitly state this in the parameters to the call, but pandas is usually able to infer that there ia a header row and use it automatically.
 
 For our examples in this episode we are going to use the SN7577.tab file. This is available for download [here](data/SN7577.tab) and the description of the file is available [here](https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7577&type=data%20catalogue#!/details)
 

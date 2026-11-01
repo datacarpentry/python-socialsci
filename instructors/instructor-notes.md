@@ -118,7 +118,7 @@ from a file of JSON.
 
 The overall aim is to demonstrate extracting a set of specific fields from a JSON formatted file and writing them to a flat structured csv file making subsequent processing more straight forward.
 
-[Pandas](link)
+[pandas](link)
 
 This episode introduces the pandas module and explains the advantages of using it for data analysis.
 
@@ -202,7 +202,7 @@ The `execute` method is used to run an SQL query on the database system is demon
 
 Various ways of retrieving the results of the query are covered.
 
-Pandas is used to run a similar query, its greater simplicity is explained.
+pandas is used to run a similar query, its greater simplicity is explained.
 
 The problem with running DML statements with pandas is illustrated in the final exercise.
 

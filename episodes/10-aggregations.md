@@ -1,5 +1,5 @@
 ---
-title: Data Aggregation using Pandas
+title: Data Aggregation using pandas
 teaching: 20
 exercises: 10
 ---
@@ -7,7 +7,7 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Access and summarize data stored in a Data Frame
-- Perform basic mathematical operations and summary statistics on data in a Pandas Data Frame
+- Perform basic mathematical operations and summary statistics on data in a pandas Data Frame
 - Understand missing data
 - Changing to and from 'NaN' values
 
@@ -19,7 +19,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Using Pandas functions to summarise data in a Data Frame
+## Using pandas functions to summarise data in a Data Frame
 
 For variables which contain numerical values we are often interested in various statistical measures relating to those values. For categorical variable we are often interested in the how many of each unique values are present in the dataset.
 

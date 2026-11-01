@@ -22,27 +22,27 @@ exercises: 25
 
 There is a wide variety of ways to plot in Python, like many programming languages.
 Some do more of the design work for you and others let you customize the look of the plots and all of the little details yourself.
-[Pandas][pandas-web] has basic plots built into it that reduce the amount of syntax, if your data is already in a DataFrame.
+[pandas][pandas-web] has basic plots built into it that reduce the amount of syntax, if your data is already in a DataFrame.
 [Matplotlib][matplotlib-web]. is a Python graphical library that can be used to produce a variety of different graph types,
 it is fully controllable down to basic elements and includes a module `pylab` that is somewhere in between
 (designed to feel like MATLAB plotting, if you happen to have done that before).
 
-The Matplotlib library can be imported using any of the import techniques we have seen. As Pandas is generally imported
+The Matplotlib library can be imported using any of the import techniques we have seen. As pandas is generally imported
 with `import pandas as pd`, you will find that Matplotlib is most commonly imported with `import matplotlib as plt` where 'plt' is the alias.
 
 In addition to importing the library, in a Jupyter notebook environment we need to tell Jupyter that when we produce a
 graph, we want it to be display the graph in a cell in the notebook just like any other results. To do this we use the `%matplotlib inline` directive.
 
-Although we are using Matplotlib in this episode, Pandas can make use of several other graphical libraries available
+Although we are using Matplotlib in this episode, pandas can make use of several other graphical libraries available
 from within Python such as [ggplot2][ggplot2-web] and [Seaborn][seaborn-web]. Seaborn has some very powerful features
 and advanced plot types.  One of its most useful features is formatting.
 
-## Plotting with Pandas
+## Plotting with pandas
 
-The Pandas library contains very tight integration with Matplotlib. There are functions in Pandas that
+The pandas library contains very tight integration with Matplotlib. There are functions in pandas that
 automatically call Matplotlib functions to produce graphs.
 
-To plot with Pandas we have to import it as we have done in past episodes.
+To plot with pandas we have to import it as we have done in past episodes.
 To tell Jupyter that when we produce a graph we want it to be displayed in a cell in the notebook just like any other results,
 we use the `%matplotlib inline` directive. Without that we need to do a `show()` command.
 
@@ -68,7 +68,7 @@ Next, we can plot the a histogram of a variable.
 df['years_liv'].hist()
 ```
 
-![](fig/histogram1.png){alt='Histogram of years lived spotlighting how to plot a variable with Pandas'}
+![](fig/histogram1.png){alt='Histogram of years lived spotlighting how to plot a variable with pandas'}
 
 We can change the number of bins to make it look how we would like, for example
 
@@ -78,7 +78,7 @@ df['years_liv'].hist(bins=20)
 
 We can also specify the column as a parameter and a groupby column with the `by` keyword.
 there are a lot of keywords available to make it look better, we can see some of the most likely ones
-(as decided by Pandas developers) by using <kbd>shift</kbd> + <kbd>tab<kbd> .
+(as decided by pandas developers) by using <kbd>shift</kbd> + <kbd>tab<kbd> .
 
 Lets try `layout`, `figsize`, and `sharex`.
 
@@ -156,7 +156,7 @@ rooms_mean.plot.bar()
 A boxplot provides a simple representation of a variety of statistical qualities of a single set of data values.
 A common use of the boxplot is to compare the statistical variations across a set of variables.
 
-The variables can be an independent series or columns of a Dataframe using the Pandas plot method
+The variables can be an independent series or columns of a Dataframe using the pandas plot method
 
 ```
 df.boxplot(by ='village',column=['buildings_in_compound'])
@@ -201,13 +201,13 @@ We will use a scatter plot to demonstrate some of the available features.
 ## Fine-tuning figures with Matplotlib
 
 If we want to do more advanced or lower level things with our plots, we need to use Matplotlib directly,
-not through Pandas. First we need to import it.
+not through pandas. First we need to import it.
 
 ## Customising our plots with Matplotlib
 
 We can further customise our plots with Matplotlib directly. First we need to import it.
 The Matplotlib library can be imported using any of the import techniques we have seen.
-As Pandas is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported
+As pandas is generally imported with `import pandas as pd`, you will find that `matplotlib` is most commonly imported
 with `import matplotlib.pyplot as plt` where `plt` is the alias.
 For demonstration purposes, we are going to use randomly generated data, using the NumPy library (aliased here as `np`).
 
@@ -245,7 +245,7 @@ The `c` or `color` parameter can be set to any color Matplotlib recognises. Full
 
 ## Exercise
 
-In the scatterplot the s parameter determines the size of the dots. s can be a simple numeric value, say s=100, which will produce dots all of the same size. However, you can pass a list of values (or a Pandas Series) to provide sizes for the individual dots. This approach is very common as it allows us to provide an extra variable worth of information on the graph.
+In the scatterplot the s parameter determines the size of the dots. s can be a simple numeric value, say s=100, which will produce dots all of the same size. However, you can pass a list of values (or a pandas Series) to provide sizes for the individual dots. This approach is very common as it allows us to provide an extra variable worth of information on the graph.
 
 1. Modify the code we used for the scatter plot to include a size value for each of the points in the series being plotted.
   (The downside is that some of the smaller dots may be completely covered by the larger dots. To try and highlight when this has happened, we can change the opacity of the dots.)
@@ -284,9 +284,9 @@ plt.show()
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Internally the Pandas 'plot' method has called the 'bar' method of Matplotlib and provided a set of parameters, including the pandas.Series s to generate the graph.
+Internally the pandas 'plot' method has called the 'bar' method of Matplotlib and provided a set of parameters, including the pandas.Series s to generate the graph.
 
-We can use Matplotlib directly to produce a similar graph. In this case we need to pass two parameters, the number of bars we need and the Pandas Series holding the values.
+We can use Matplotlib directly to produce a similar graph. In this case we need to pass two parameters, the number of bars we need and the pandas Series holding the values.
 
 Let's redo the boxplot we did above:
 
@@ -363,7 +363,7 @@ extension: try plotting by wall and roof type!
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Graphs can be drawn directly from Pandas, but it still uses Matplotlib
+- Graphs can be drawn directly from pandas, but it still uses Matplotlib
 - Different graph types have different data requirements
 - Graphs are created from a variety of discrete components placed on a 'canvas', you don't have to use them all
 
